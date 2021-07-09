@@ -1,0 +1,71 @@
+.btn {
+	display: inline-flex;
+	font-family: $mainFont;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	line-height: 20px;
+	padding: 14px;
+	box-sizing: border-box;
+	max-width: 100%;
+	align-items: center;
+	border: 1px solid $mainColor;
+	background: $mainColor;
+	color: #ffffff;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		background: $mainColor;
+		border-color: $mainColor;
+		color: #ffffff;
+	}
+
+	&:disabled,
+	&.disabled {
+		background: $mainColor;
+		border-color: $mainColor;
+		cursor: default;
+
+		&--border {
+			color: $mainColor;
+			background: #ffffff;
+			border-color: $mainColor;
+		}
+	}
+	&--border {
+		background: transparent;
+		color: $mainColor;
+
+		&:hover {
+			background: $mainColor;
+			border-color: $mainColor;
+			color: #ffffff;
+		}
+
+		&:disabled,
+		&.disabled {
+			color: $mainColor;
+			background: #ffffff;
+			border-color: $mainColor;
+		}
+	}
+	svg,
+	img {
+		max-width: 20px;
+		height: 20px;
+		object-fit: contain;
+
+		&:first-child:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		&:last-child:not(:first-child) {
+			margin-left: 10px;
+		}
+	}
+
+	&--icon {
+		padding: 15px;
+	}
+}

@@ -1,0 +1,25 @@
+/* base */
+@import "base/var";
+@import "base/reset";
+@import "base/fonts";
+@import "base/animation";
+
+/* mixin */
+@import "base/mixin";
+
+/* libs */
+@import "./../../node_modules/swiper/swiper";
+
+/* main */
+@import "partials/main";
+
+/* components */
+@import "partials/header";
+@import "partials/footer";
+@import "partials/buttons";
+@import "partials/form-elements";
+@import "partials/title";
+
+/* blocks */
+@import "blocks/grid";
+@import "blocks/search-dictionary";

@@ -1,0 +1,28 @@
+/* media */
+$media-list: (
+	'xxs': 375,
+	'xs': 560,
+	'sm': 767,
+	'md': 1079,
+	'lg': 1279,
+	'xl': 1599,
+	'xxl': 1900
+);
+
+
+/* шрифты */
+$mainFont: 'Montserrat', sans-serif;
+
+
+/* цвета */
+$mainColor: #000;
+$black: #000;
+$white: #fff;
+$gray-9e: #9e9e9e;
+$gray-ed: #ededed;
+$gray-de: #dedede;
+$gray-af: #afafaf;
+$gray-f5: #f5f5f5;
+$gray-d5: #d5d2d2;
+$gray-a1: #a1a1a1;
+$red: #f10202;
