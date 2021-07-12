@@ -225,6 +225,51 @@
 			}
 		}
 	}
+	&--dark-green {
+		background-color: $green-9e;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				box-shadow: 0 0 10px rgba($green-9e, 0.65);
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			background-color: $green-9e;
+			border-color: $green-9e;
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: rgba($green-9e, 0.65);
+		}
+
+		&.button {
+			&--outline {
+				background-color: transparent;
+				border-color: $green-9e;
+				color: $green-9e;
+
+				@media (min-width: 1080px) {
+					&:hover {
+						background-color: rgba($green-9e, 0.04);
+					}
+				}
+
+				&:focus,
+				&:active,
+				&.active {
+					background: rgba($green-9e, 0.2);
+				}
+
+				svg {
+					fill: $green-9e;
+				}
+			}
+		}
+	}
 
 	&--red {
 		background-color: $red;

@@ -9,8 +9,97 @@ header.header
 					a(href="#").header__link Платформа
 						+icon('chevron-down')(width="24" height="24")
 			.header-top__col
-				a(href="#").btn Button
+				.header-top__buttons 
+					a(href="#")
+						+icon('message')(width="24" height="24")
+					a(href="#")
+						+icon('cart')(width="28" height="28")
+					a(href="#")
+						+icon('notification')(width="24" height="24")
+				a(href="#").header__avatar
+					.header__avatar-img
+						img(src="images/avatar.png", alt="")
+					span.header__avatar-status.header__avatar-status--success
+				a(href="#").button.button--dark-green.header__button Button
 		.header-bottom
-
+			.nav.header__nav 
+				ul.nav-list
+					li.nav-list__item
+						a(href="#") Главная 
+					li.nav-list__item.nav-list__dropdown-item
+						a(href="#") 
+							+icon('pie-chart')(width="14" height="14")
+							| Button
+							+icon('chevron-down')(width="16" height="16")
+						ul.nav-list__sub-menu 
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item.nav-list__sub-menu-item--separated
+								a(href="#") Separated link
+					li.nav-list__item.nav-list__dropdown-item
+						a(href="#") 
+							+icon('pie-chart')(width="14" height="14")
+							| Button
+							+icon('chevron-down')(width="16" height="16")
+						ul.nav-list__sub-menu 
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item
+								a(href="#") 😎 Another action
+							li.nav-list__sub-menu-item.nav-list__sub-menu-item--separated
+								a(href="#") Separated link
+							li.nav-list__sub-menu-item.nav-list__sub-menu-item--separated
+								a(href="#") Separated link
+					li.nav-list__item.nav-list__dropdown-item
+						a(href="#") 
+							+icon('pie-chart')(width="14" height="14")
+							| Button
+							+icon('chevron-down')(width="16" height="16")
+						ul.nav-list__sub-menu 
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item.nav-list__sub-menu-item--separated
+								a(href="#") Separated link
+					li.nav-list__item.nav-list__dropdown-item
+						a(href="#") 
+							+icon('pie-chart')(width="14" height="14")
+							| Button
+							+icon('chevron-down')(width="16" height="16")
+						ul.nav-list__sub-menu 
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item.nav-list__sub-menu-item--separated
+								a(href="#") Separated link
+					li.nav-list__item.nav-list__dropdown-item
+						a(href="#") 
+							+icon('pie-chart')(width="14" height="14")
+							| Button
+							+icon('chevron-down')(width="16" height="16")
+						ul.nav-list__sub-menu 
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item
+								a(href="#") Something else
+							li.nav-list__sub-menu-item.nav-list__sub-menu-item--separated
+								a(href="#") Separated link
+			.search.header__search
+				a(href="#") Поиск
+					+icon('search')(width="20" height="20")
 
 
