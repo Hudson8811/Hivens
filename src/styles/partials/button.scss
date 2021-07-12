@@ -1,0 +1,412 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	padding: 9px 22px;
+	border-radius: 5px;
+	background-color: $purple;
+	font-size: 14px;
+	line-height: 17px;
+	font-weight: 500;
+	letter-spacing: 0.4px;
+	color: $white;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	@media (min-width: 1080px) {
+		&:hover {
+			box-shadow: 0 0 10px rgba(115, 103, 240, 0.65);
+		}
+	}
+
+	&:focus,
+	&:active,
+	&.active {
+		background-color: $purple-active;
+		border-color: $purple-active;
+	}
+
+	&:disabled,
+	&.disabled {
+		opacity: 0.65;
+		pointer-events: none;
+	}
+
+	svg {
+		width: 18px;
+		height: 18px;
+		fill: $white;
+		margin-right: 8px;
+	}
+
+	/* Type */
+	&--rounded {
+		border-radius: 24px;
+	}
+
+	&--outline {
+		background-color: transparent;
+		border: 1px solid $purple;
+		color: $purple;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				background-color: rgba(115, 103, 240, 0.04);
+				box-shadow: none;
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			background: rgba(115, 103, 240, 0.2);
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: transparent;
+			opacity: 0.65;
+		}
+
+		svg {
+			fill: $purple;
+		}
+	}
+
+	&--flat {
+		background-color: transparent;
+		border: 0;
+		color: $purple;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				background-color: rgba(115, 103, 240, 0.04);
+				box-shadow: none;
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			background: rgba(115, 103, 240, 0.2);
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: transparent;
+			opacity: 0.65;
+		}
+	}
+
+	&--relief {
+		box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+
+		@media (min-width: 1080px) {
+			&:hover {
+				box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			box-shadow: none;
+		}
+
+		&:disabled,
+		&.disabled {
+			opacity: 0.65;
+		}
+	}
+
+	/* Size */
+	&--big {
+		padding: 13px 28px;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+	&--small {
+		padding: 8px 19px;
+		font-size: 11px;
+		line-height: 13px;
+	}
+
+	/* Color */
+	&--gray {
+		background-color: $gray;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				box-shadow: 0 0 10px rgba($gray, 0.65);
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			background-color: $gray;
+			border-color: $gray;
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: rgba($gray, 0.65);
+		}
+
+		&.button {
+			&--outline {
+				background-color: transparent;
+				border-color: $gray;
+				color: $gray;
+
+				@media (min-width: 1080px) {
+					&:hover {
+						background-color: rgba($gray, 0.04);
+					}
+				}
+
+				&:focus,
+				&:active,
+				&.active {
+					background: rgba($gray, 0.2);
+				}
+
+				svg {
+					fill: $gray;
+				}
+			}
+		}
+	}
+
+	&--green {
+		background-color: $green;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				box-shadow: 0 0 10px rgba($green, 0.65);
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			background-color: $green;
+			border-color: $green;
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: rgba($green, 0.65);
+		}
+
+		&.button {
+			&--outline {
+				background-color: transparent;
+				border-color: $green;
+				color: $green;
+
+				@media (min-width: 1080px) {
+					&:hover {
+						background-color: rgba($green, 0.04);
+					}
+				}
+
+				&:focus,
+				&:active,
+				&.active {
+					background: rgba($green, 0.2);
+				}
+
+				svg {
+					fill: $green;
+				}
+			}
+		}
+	}
+
+	&--red {
+		background-color: $red;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				box-shadow: 0 0 10px rgba($red, 0.65);
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			background-color: $red;
+			border-color: $red;
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: rgba($red, 0.65);
+		}
+
+		&.button {
+			&--outline {
+				background-color: transparent;
+				border-color: $red;
+				color: $red;
+
+				@media (min-width: 1080px) {
+					&:hover {
+						background-color: rgba($red, 0.04);
+					}
+				}
+
+				&:focus,
+				&:active,
+				&.active {
+					background: rgba($red, 0.2);
+				}
+
+				svg {
+					fill: $red;
+				}
+			}
+		}
+	}
+
+	&--orange {
+		background-color: $orange;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				box-shadow: 0 0 10px rgba($orange, 0.65);
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			background-color: $orange;
+			border-color: $orange;
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: rgba($orange, 0.65);
+		}
+
+		&.button {
+			&--outline {
+				background-color: transparent;
+				border-color: $orange;
+				color: $orange;
+
+				@media (min-width: 1080px) {
+					&:hover {
+						background-color: rgba($orange, 0.04);
+					}
+				}
+
+				&:focus,
+				&:active,
+				&.active {
+					background: rgba($orange, 0.2);
+				}
+
+				svg {
+					fill: $orange;
+				}
+			}
+		}
+	}
+
+	&--light-blue {
+		background-color: $light-blue;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				box-shadow: 0 0 10px rgba($light-blue, 0.65);
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			background-color: $light-blue;
+			border-color: $light-blue;
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: rgba($light-blue, 0.65);
+		}
+
+		&.button {
+			&--outline {
+				background-color: transparent;
+				border-color: $light-blue;
+				color: $light-blue;
+
+				@media (min-width: 1080px) {
+					&:hover {
+						background-color: rgba($light-blue, 0.04);
+					}
+				}
+
+				&:focus,
+				&:active,
+				&.active {
+					background: rgba($light-blue, 0.2);
+				}
+
+				svg {
+					fill: $light-blue;
+				}
+			}
+		}
+	}
+
+	&--dark-gray {
+		background-color: $dark-gray;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				box-shadow: 0 0 10px rgba($dark-gray, 0.65);
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			background-color: $dark-gray;
+			border-color: $dark-gray;
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: rgba($dark-gray, 0.65);
+		}
+
+		&.button {
+			&--outline {
+				background-color: transparent;
+				border-color: $dark-gray;
+				color: $dark-gray;
+
+				@media (min-width: 1080px) {
+					&:hover {
+						background-color: rgba($dark-gray, 0.04);
+					}
+				}
+
+				&:focus,
+				&:active,
+				&.active {
+					background: rgba($dark-gray, 0.2);
+				}
+
+				svg {
+					fill: $dark-gray;
+				}
+			}
+		}
+	}
+}

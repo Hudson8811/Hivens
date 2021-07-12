@@ -1,0 +1,19 @@
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+
+		a {
+			transition: opacity 0.3s ease;
+
+			@include hover {
+				opacity: 0.65;
+			}
+		}
+	}
+}

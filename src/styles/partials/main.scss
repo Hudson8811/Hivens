@@ -17,6 +17,21 @@ svg {
 	height: auto;
 }
 
+input, button {
+	-webkit-appearance: none;
+}
+
+input,
+button,
+select,
+textarea {
+	font-family: $mainFont;
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+	outline: 0;
+}
+
 .container {
 	width: 1270px;
 	padding: 0 15px;

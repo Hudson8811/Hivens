@@ -43,6 +43,10 @@
 		a {
 			font-size: 16px;
 			color: $white;
+
+			@include hover {
+				text-decoration: underline;
+			}
 		}
 	}
 

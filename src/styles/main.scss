@@ -14,11 +14,12 @@
 @import "partials/main";
 
 /* components */
-@import "partials/header";
-@import "partials/footer";
-@import "partials/buttons";
+@import "partials/button";
+@import "partials/social";
 @import "partials/form-elements";
 @import "partials/title";
+@import "partials/header";
+@import "partials/footer";
 
 /* blocks */
 @import "blocks/grid";
