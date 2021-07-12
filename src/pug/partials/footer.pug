@@ -1,9 +1,9 @@
-footer.footer(style='background-image: url("./images/footer-bg.png")')
+footer.footer
 	.container.footer__container
-		.footer__title Decentralization Data Ecosystem <br> and Marketplace Platform Directories
+		.footer__title Decentralization Data Ecosystem and Marketplace Platform Directories
 		.footer__browse
 			a(href='#', target='_blank') Browse directories
-				+icon('arrow-link')(width='66', height='10')
+				+icon('arrow-link')
 
 		include ../blocks/search-dictionary.pug
 
@@ -70,3 +70,5 @@ footer.footer(style='background-image: url("./images/footer-bg.png")')
 
 		.footer__copyrights Hivens is not a consumer reporting agency as defined by the Fair Credit Reporting Act (FCRA).
 			|  Do not use this site to make decisions about employment, tenant screening, or any purpose covered by the FCRA.
+
+		include ../partials/cookies.pug

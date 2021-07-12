@@ -1,14 +1,30 @@
 .footer {
+	width: 100%;
 	padding: 276px 0 144px;
 	color: $white;
+	background-image: url("../images/footer-bg.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 
+	@include max(sm) {
+		padding: 95px 0 144px;
+		background-image: url("../images/footer-bg-small.png");
+		background-size: contain;
+	}
+
 	&__title {
+		max-width: 610px;
+		margin: 0 auto;
 		font-size: 32px;
 		line-height: 39px;
 		font-weight: 500;
 		text-align: center;
+
+		@include max(sm) {
+			max-width: 247px;
+			font-size: 24px;
+			line-height: 29px;
+		}
 	}
 
 	&__browse {
@@ -16,12 +32,21 @@
 		margin-top: 52px;
 		margin-bottom: 89px;
 
+		@include max(sm) {
+			margin-top: 38px;
+		}
+
 		a {
 			display: inline-flex;
 			align-items: center;
 			font-size: 16px;
 			line-height: 19px;
 			color: $white;
+
+			@include max(sm) {
+				font-size: 12px;
+				line-height: 15px;
+			}
 
 			@include hover {
 				svg {
@@ -31,8 +56,16 @@
 		}
 
 		svg {
+			width: 66px;
+			height: 10px;
 			fill: $white;
 			margin-left: 35px;
+
+			@include max(sm) {
+				width: 52px;
+				height: 8px;
+				margin-left: 25px;
+			}
 		}
 	}
 
