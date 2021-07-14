@@ -1,33 +1,32 @@
 /* media */
 $media-list: (
-	'xxs': 375,
-	'xs': 560,
-	'sm': 767,
-	'md': 1079,
-	'lg': 1279,
-	'xl': 1599,
-	'xxl': 1900
+  "xxs": 375,
+  "xs": 560,
+  "sm": 767,
+  "md": 1079,
+  "lg": 1279,
+  "xl": 1599,
+  "xxl": 1900,
 );
 
-
 /* шрифты */
-$mainFont: 'Montserrat', sans-serif;
-
+$mainFont: "Montserrat", sans-serif;
 
 /* цвета */
 $mainColor: #000;
 $black: #000;
 $white: #fff;
-$white-eb: #EBE9F1;
+$white-eb: #ebe9f1;
 $gray-9e: #9e9e9e;
 $gray-f5: #f5f5f5;
 $gray-d5: #d5d2d2;
-$purple: #7367F0;
-$purple-active: #5E50EE;
-$gray: #82868B;
-$green: #28C76F;
-$green-9e: #00A79E;
-$red: #EA5455;
-$orange: #FF9F43;
-$light-blue: #00CFE8;
-$dark-gray: #4B4B4B;
+$gray-ba: #babfc7;
+$purple: #7367f0;
+$purple-active: #5e50ee;
+$gray: #82868b;
+$green: #28c76f;
+$green-9e: #00a79e;
+$red: #ea5455;
+$orange: #ff9f43;
+$light-blue: #00cfe8;
+$dark-gray: #4b4b4b;
