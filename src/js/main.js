@@ -3,5 +3,8 @@
 //= ./libs/js.cookie.js
 
 
+//= ./partials/equal-height.js
 //= ./partials/main.js
 //= ./partials/cookies.js
+//= ./partials/footer-carousel.js
+//= ./partials/footer-menu-dots.js

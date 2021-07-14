@@ -225,6 +225,7 @@
 			}
 		}
 	}
+
 	&--dark-green {
 		background-color: $green-9e;
 
@@ -250,6 +251,27 @@
 			&--outline {
 				background-color: transparent;
 				border-color: $green-9e;
+				color: $green-9e;
+
+				@media (min-width: 1080px) {
+					&:hover {
+						background-color: rgba($green-9e, 0.04);
+					}
+				}
+
+				&:focus,
+				&:active,
+				&.active {
+					background: rgba($green-9e, 0.2);
+				}
+
+				svg {
+					fill: $green-9e;
+				}
+			}
+
+			&--flat {
+				background-color: transparent;
 				color: $green-9e;
 
 				@media (min-width: 1080px) {
@@ -450,6 +472,52 @@
 
 				svg {
 					fill: $dark-gray;
+				}
+			}
+		}
+	}
+
+	&--white {
+		background-color: $white;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				box-shadow: 0 0 10px rgba($white, 0.65);
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			background-color: $white;
+			border-color: $white;
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: rgba($white, 0.65);
+		}
+
+		&.button {
+			&--outline {
+				background-color: transparent;
+				border-color: $white;
+				color: $white;
+
+				@media (min-width: 1080px) {
+					&:hover {
+						background-color: rgba($white, 0.04);
+					}
+				}
+
+				&:focus,
+				&:active,
+				&.active {
+					background: rgba($white, 0.2);
+				}
+
+				svg {
+					fill: $white;
 				}
 			}
 		}
