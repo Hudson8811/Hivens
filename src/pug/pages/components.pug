@@ -1,0 +1,14 @@
+extends ../layouts/components
+
+block vars
+  -
+    const page = {
+      title: 'Общие компоненты'
+    };
+
+block main
+  .container
+    .component-wrapper
+      +innerpage-title('Что такое экосистема Hivens?', 'Присоединяйтесь к Hivens и получите доступ ко всем возможностям', 'ecosystem__title')
+    .component-wrapper
+    .component-wrapper
