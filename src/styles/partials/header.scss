@@ -32,7 +32,10 @@
 		&__col {
 			display: flex;
 			align-items: center;
-			padding: 10px 0;
+
+			@include max(md) {
+				padding: 10px 0;
+			}
 
 			@include max(sm) {
 				justify-content: space-between;
