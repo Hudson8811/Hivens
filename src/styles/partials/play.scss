@@ -1,0 +1,78 @@
+.play {
+	display: block;
+	width: 157px;
+	height: 157px;
+	cursor: pointer;
+	position: relative;
+	transition: opacity 0.3s ease;
+
+	@include hover {
+		opacity: 0.9;
+	}
+
+	@include max(sm) {
+		width: 57px;
+		height: 57px;
+	}
+
+	svg {
+		width: 35%;
+		height: 35%;
+		position: relative;
+		left: 6px;
+
+		@include max(sm) {
+			left: 3px;
+		}
+	}
+
+	.pulse-core {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background-color: $white;
+		position: relative;
+	}
+
+	.pulse {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: $white;
+		opacity: 0.3;
+		border-radius: 50%;
+		pointer-events: none;
+
+		&-1 {
+			animation: pulse-1 7s linear infinite;
+		}
+
+		&-2 {
+			animation: pulse-2 7s linear infinite;
+		}
+	}
+
+	&--yellow {
+		width: 122px;
+		height: 122px;
+
+		@include max(sm) {
+			width: 52px;
+			height: 52px;
+		}
+
+		svg {
+			fill: $white;
+		}
+
+		.pulse-core,
+		.pulse {
+			background-color: $citrus;
+		}
+	}
+}

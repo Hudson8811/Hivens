@@ -9,6 +9,7 @@
 
 /* libs */
 @import "./../../node_modules/swiper/swiper";
+@import "libs/jquery.fancybox.css";
 
 /* main */
 @import "partials/main";
@@ -21,6 +22,7 @@
 @import "partials/header";
 @import "partials/footer";
 @import "partials/cookies";
+@import "partials/play";
 
 /* blocks */
 @import "blocks/grid";
