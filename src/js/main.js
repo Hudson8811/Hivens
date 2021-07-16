@@ -5,3 +5,4 @@
 
 //= ./partials/main.js
 //= ./partials/cookies.js
+//= ./partials/services-section.js

@@ -1,12 +1,16 @@
 .video-block {
   padding: 70px 0;
 
+  @include max(767) {
+    padding: 40px 0;
+  }
+
   &__container {
     position: relative;
     display: flex;
     align-items: flex-start;
 
-    @include max(768) {
+    @include max(767) {
       display: block;
     }
   }
@@ -19,7 +23,7 @@
       max-width: vw(537, 1270);
     }
 
-    @include max(768) {
+    @include max(767) {
       max-width: none;
       margin-bottom: 35px;
     }
@@ -34,7 +38,7 @@
     background-position: left 90% bottom 10%;
     background-repeat: no-repeat;
 
-    @include max(768) {
+    @include max(767) {
       overflow: hidden;
       max-width: none;
       width: calc(100% + 64px);
@@ -49,7 +53,12 @@
       max-width: 100%;
       height: auto;
 
-      @include max(768) {
+      @include max(1270) {
+        max-width: none;
+        width: vw(474, 1270);
+      }
+
+      @include max(767) {
         max-width: none;
         width: 77%;
         left: 24%;
@@ -64,7 +73,7 @@
     left: 50%;
     transform: translateX(-47%) translateY(-30%);
 
-    @include max(768) {
+    @include max(767) {
       width: 84px;
       top: 50%;
       left: 32px;
