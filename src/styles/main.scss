@@ -9,6 +9,7 @@
 
 /* libs */
 @import "./../../node_modules/swiper/swiper";
+@import "libs/jquery.fancybox.css";
 
 /* main */
 @import "partials/main";
@@ -27,3 +28,7 @@
 @import "blocks/grid";
 @import "blocks/search-dictionary";
 @import "blocks/first-screen";
+
+@import "blocks/innerpage-title";
+@import "blocks/custom-title";
+@import "blocks/briefly";
