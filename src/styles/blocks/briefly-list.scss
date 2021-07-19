@@ -1,15 +1,19 @@
 .briefly-list {
-  padding: 70px 0 57px;
+	padding: 70px 0 57px;
 
-  @include max(767) {
-    padding: 40px 0;
-  }
+	&--sm-padding {
+		padding: 40px 0;
+	}
 
-  &__item + &__item {
-    margin-top: 140px;
+	@include max(767) {
+		padding: 40px 0;
+	}
 
-    @include max(767) {
-      margin-top: 80px;
-    }
-  }
+	&__item + &__item {
+		margin-top: 140px;
+
+		@include max(767) {
+			margin-top: 80px;
+		}
+	}
 }
