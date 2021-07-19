@@ -1,0 +1,144 @@
+.ecosystem {
+  padding: 31px 0 70px;
+  text-align: center;
+
+  @include max(767) {
+    padding: 27px 0 57px;
+    overflow: hidden;
+  }
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 13px;
+
+    @include max(767) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+
+    @include max(767) {
+      position: relative;
+      width: vw(351, 375);
+      left: 50%;
+      transform: translateX(-49%);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    z-index: 1;
+
+    color: $gray-ba;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: (29 / 20);
+
+    @include max(1270) {
+      font-size: vw(20, 1270);
+    }
+
+    &--signboard {
+      top: 26.9%;
+      left: 48.85%;
+      transform: translateX(-50%);
+
+      font-size: 10px;
+      line-height: 1.2;
+      color: $white;
+      font-weight: 500;
+
+      @include max(1270) {
+        font-size: vw(10, 1270);
+      }
+
+      b {
+        display: block;
+        font-weight: 700;
+      }
+    }
+
+    &--bottom {
+      &-left {
+        left: 11.5%;
+        bottom: 1.5%;
+      }
+
+      &-right {
+        left: 87.4%;
+        bottom: 1.5%;
+      }
+
+      &-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 50%;
+        bottom: 4%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__span {
+    display: block;
+    font-size: 11px;
+    line-height: (29 / 11);
+
+    @include max(1270) {
+      font-size: vw(11, 1270);
+    }
+
+    &--one {
+      width: 88px;
+      margin-right: 23px;
+
+      @include max(1270) {
+        width: vw(88, 1270);
+        margin-right: vw(23, 1270);
+      }
+    }
+
+    &--two {
+      width: 210px;
+      margin-right: 29px;
+
+      @include max(1270) {
+        width: vw(210, 1270);
+        margin-right: vw(29, 1270);
+      }
+    }
+
+    &--three {
+      width: 88px;
+      margin-right: 56px;
+
+      @include max(1270) {
+        width: vw(88, 1270);
+        margin-right: vw(88, 1270);
+      }
+    }
+
+    &--four {
+      width: 101px;
+
+      @include max(1270) {
+        width: vw(101, 1270);
+      }
+    }
+  }
+}

@@ -1,0 +1,543 @@
+.custom-title {
+  $self: &;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 71px;
+  line-height: (86.55 / 71);
+  color: $citrus;
+  font-weight: 600;
+
+  @include max(1270) {
+    max-width: vw(1080, 1270);
+    font-size: vw(71, 1270);
+  }
+
+  span {
+    display: inline-flex;
+    flex-shrink: 0;
+    margin-bottom: 25px;
+
+    @include max(1270) {
+      margin-bottom: vw(25, 1270);
+    }
+
+    @include max(1079) {
+      margin-bottom: vw(18, 375);
+    }
+
+    &::before,
+    &::after {
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      flex-shrink: 0;
+    }
+  }
+
+  &__meet {
+    align-items: center;
+    margin-right: 31px;
+
+    @include max(1270) {
+      margin-right: vw(31, 1270);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 33px; //25px;
+      height: 66px;
+
+      margin-left: 8px; //-30px;
+      transform: translateX(-19px) translateY(8px);
+      margin-right: 0;
+      background-position: 50% 50%;
+      background-image: url("../images/leaf.svg");
+
+      @include max(1270) {
+        $x: vw(-19, 1270);
+        $y: vw(8, 1270);
+        width: vw(33, 1270);
+        height: vw(66, 1270);
+        margin-left: vw(8, 1270);
+        transform: translateX($x) translateY($y);
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 76px;
+      height: 96px;
+      margin-left: 18px;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-image: url("../images/spikelets.svg");
+
+      @include max(1270) {
+        width: vw(76, 1270);
+        height: vw(96, 1270);
+        margin-left: vw(18, 1270);
+      }
+    }
+  }
+
+  &__bee {
+    align-items: center;
+    margin-right: 18px;
+
+    @include max(1270) {
+      margin-right: vw(18, 1270);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 93px;
+      margin-left: 18px;
+      background-image: url("../images/bee.jpg");
+
+      @include max(1270) {
+        width: vw(80, 1270);
+        height: vw(93, 1270);
+        margin-left: vw(18, 1270);
+      }
+
+      @include retina {
+        background-image: url("../images/bee@2x.jpg");
+      }
+    }
+  }
+
+  &__characters {
+    display: inline-flex;
+
+    &::after {
+      content: "";
+      width: 33px;
+      height: 66px;
+      margin-left: 18px;
+      transform: translateY(15px) translateX(10px);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-image: url("../images/leaf.svg");
+
+      @include max(1270) {
+        $y1: vw(15, 1270);
+        $x1: vw(10, 1270);
+
+        width: vw(33, 1270);
+        height: vw(66, 1270);
+        margin-left: vw(18, 1270);
+        transform: translateY($y1) translateX($x1);
+      }
+    }
+  }
+
+  &__from {
+    position: relative;
+    margin-right: 18px;
+    margin-left: 18px;
+    padding: 10px;
+    color: $white;
+    border-radius: 55px;
+    background-color: $green-9e;
+    transform: translateY(8px);
+
+    @include max(1270) {
+      $y2: vw(8, 1270);
+
+      margin-right: vw(18, 1270);
+      margin-left: vw(18, 1270);
+      padding: vw(10, 1270);
+      border-radius: vw(55, 1270);
+      transform: translateY($y2);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+      margin-left: 8px;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-image: url("../images/coin.svg");
+
+      @include max(1270) {
+        width: vw(80, 1270);
+        height: vw(80, 1270);
+        margin-left: vw(8, 1270);
+      }
+    }
+  }
+
+  &__hivens {
+    position: relative;
+    align-items: baseline;
+    margin-right: 18px;
+    margin-left: 18px;
+
+    @include max(1270) {
+      margin-right: vw(18, 1270);
+      margin-left: vw(18, 1270);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(112%);
+      display: block;
+      width: 100%;
+      padding-top: 7.079646017699115%;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-image: url("../images/lines.svg");
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 23px;
+      height: 35px;
+      margin-left: 18px;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-image: url("../images/arrow-top-right.svg");
+
+      @include max(1270) {
+        width: vw(23, 1270);
+        height: vw(35, 1270);
+        margin-left: vw(18, 1270);
+      }
+    }
+  }
+
+  &__glossary {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0 !important;
+    margin-top: 20px;
+
+    @include max(1270) {
+      margin-top: vw(20, 1270);
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 95px;
+      height: 40px;
+      margin-right: 23px;
+      background-image: url("../images/circle-arrow.svg");
+
+      @include max(1270) {
+        width: vw(95, 1270);
+        height: vw(40, 1270);
+        margin-right: vw(23, 1270);
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 159px;
+      height: 66px;
+      margin-left: 18px;
+      background-image: url("../images/leaf.svg"), url("../images/circles.svg");
+      background-size: 33px auto, 89px auto !important;
+      background-position: 0 50%, right 0 top 50%;
+
+      @include max(1270) {
+        $w1: vw(33, 1270);
+        $w2: vw(89, 1270);
+
+        width: vw(159, 1270);
+        height: vw(66, 1270);
+        margin-left: vw(18, 1270);
+        background-size: $w1 auto, $w2 auto !important;
+      }
+    }
+  }
+
+  &--ta-left {
+    max-width: 537px;
+    margin: 0;
+    justify-content: flex-start;
+    font-size: 54px;
+    line-height: (65.89 / 54);
+
+    @include max(1270) {
+      max-width: vw(537, 1270);
+      font-size: vw(54, 1270);
+    }
+
+    @include max(1079) {
+      max-width: vw(1080, 1270);
+      margin-left: auto;
+      margin-right: auto;
+      font-size: vw(71, 1270);
+      justify-content: center;
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+
+      @include max(1079) {
+        display: none;
+      }
+    }
+
+    #{$self}__meet {
+      display: flex;
+      width: 100%;
+      order: -1 !important;
+
+      @include max(1079) {
+        display: inline-flex;
+        width: auto;
+        margin-right: vw(31, 1270);
+      }
+
+      &::before {
+        display: none;
+
+        @include max(1079) {
+          display: block;
+
+          $x10: vw(-19, 1270);
+          $y10: vw(8, 1270);
+          width: vw(33, 1270);
+          height: vw(66, 1270);
+          margin-left: vw(8, 1270);
+          transform: translateX($x10) translateY($y10);
+        }
+      }
+
+      &::after {
+        width: 58px;
+        height: 72px;
+        margin-left: 14px;
+
+        @include max(1270) {
+          width: vw(58, 1270);
+          height: vw(72, 1270);
+          margin-left: vw(14, 1270);
+        }
+
+        @include max(1079) {
+          width: vw(76, 1270);
+          height: vw(96, 1270);
+          margin-left: vw(18, 1270);
+        }
+      }
+    }
+
+    #{$self}__bee {
+      order: -1 !important;
+
+      @include max(1079) {
+        margin-right: vw(18, 1270);
+      }
+
+      &::after {
+        width: 61px;
+        height: 71px;
+        margin-left: 14px;
+
+        @include max(1270) {
+          width: vw(61, 1270);
+          height: vw(71, 1270);
+          margin-left: vw(14, 1270);
+        }
+
+        @include max(1079) {
+          width: vw(80, 1270);
+          height: vw(93, 1270);
+          margin-left: vw(18, 1270);
+        }
+      }
+    }
+
+    #{$self}__characters {
+      order: -1 !important;
+
+      &::after {
+        width: 25px;
+        margin-left: 21px;
+        transform: translateY(3px);
+
+        @include max(1270) {
+          $y3: vw(3, 1270);
+
+          width: vw(25, 1270);
+          margin-left: vw(21, 1270);
+          transform: translateY($y3);
+        }
+
+        @include max(1079) {
+          $y11: vw(15, 1270);
+          $x11: vw(10, 1270);
+
+          width: vw(33, 1270);
+          height: vw(66, 1270);
+          margin-left: vw(18, 1270);
+          transform: translateY($y11) translateX($x11);
+        }
+      }
+    }
+
+    #{$self}__from {
+      margin-right: 14px;
+      margin-left: 0;
+      padding: 8px;
+      border-radius: 42px;
+      transform: translateY(4px);
+      order: -1 !important;
+
+      @include max(1270) {
+        $y4: vw(4, 1270);
+        margin-right: vw(14, 1270);
+        padding: vw(8, 1270);
+        border-radius: vw(42, 1270);
+        transform: translateY($y4);
+      }
+
+      @include max(1079) {
+        $y12: vw(8, 1270);
+
+        margin-right: vw(18, 1270);
+        margin-left: vw(18, 1270);
+        padding: vw(10, 1270);
+        border-radius: vw(55, 1270);
+        transform: translateY($y12);
+      }
+
+      &::after {
+        width: 60px;
+        height: 60px;
+        margin-left: 6px;
+
+        @include max(1270) {
+          width: vw(60, 1270);
+          height: vw(60, 1270);
+          margin-left: vw(6, 1270);
+        }
+
+        @include max(1079) {
+          width: vw(80, 1270);
+          height: vw(80, 1270);
+          margin-left: vw(8, 1270);
+        }
+      }
+    }
+
+    #{$self}__hivens {
+      @include max(1079) {
+        margin-right: vw(18, 1270);
+        margin-left: vw(18, 1270);
+      }
+
+      &::before {
+        transform: translateY(100%);
+
+        @include max(1079) {
+          transform: translateY(112%);
+        }
+      }
+
+      &::after {
+        width: 18px;
+        height: 27px;
+        margin-left: 14px;
+
+        @include max(1270) {
+          width: vw(18, 1270);
+          height: vw(27, 1270);
+          margin-left: vw(14, 1270);
+        }
+
+        @include max(1079) {
+          width: vw(23, 1270);
+          height: vw(35, 1270);
+          margin-left: vw(18, 1270);
+        }
+      }
+    }
+
+    #{$self}__glossary {
+      justify-content: flex-start;
+
+      @include max(1079) {
+        justify-content: center;
+        margin-top: vw(20, 1270);
+      }
+
+      &::before {
+        width: 76px;
+        height: 34px;
+        margin-right: 18px;
+
+        @include max(1270) {
+          width: vw(76, 1270);
+          height: vw(34, 1270);
+          margin-right: vw(18, 1270);
+        }
+
+        @include max(1079) {
+          width: vw(95, 1270);
+          height: vw(40, 1270);
+          margin-right: vw(23, 1270);
+        }
+      }
+
+      &::after {
+        width: 116px;
+        margin-left: 16px;
+        background-size: 25px auto, 68px auto !important;
+
+        @include max(1270) {
+          $w3: vw(25, 1270);
+          $w4: vw(68, 1270);
+
+          width: vw(116, 1270);
+          margin-left: vw(16, 1270);
+          background-size: $w3 auto, $w4 auto !important;
+        }
+
+        @include max(1079) {
+          $w13: vw(33, 1270);
+          $w14: vw(89, 1270);
+
+          width: vw(159, 1270);
+          height: vw(66, 1270);
+          margin-left: vw(18, 1270);
+          background-size: $w13 auto, $w14 auto !important;
+        }
+      }
+    }
+
+    span {
+      margin-bottom: 22px;
+      order: 1;
+
+      @include max(1270) {
+        margin-bottom: vw(22, 1270);
+      }
+
+      @include max(1079) {
+        margin-bottom: vw(18, 375);
+      }
+    }
+  }
+}

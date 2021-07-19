@@ -1,0 +1,21 @@
+.innerpage-title {
+  color: $green-9e;
+  text-align: center;
+
+  &__title {
+    font-size: 30px;
+    line-height: (36.57 / 30);
+    font-weight: 600;
+  }
+
+  &__text {
+    margin-top: 9px;
+    font-size: 18px;
+    line-height: (21.94 / 18);
+    font-weight: 500;
+
+    @include max(767) {
+      margin-top: 18px;
+    }
+  }
+}

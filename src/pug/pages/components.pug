@@ -1,0 +1,67 @@
+extends ../layouts/components
+
+block vars
+  -
+    const page = {
+      title: 'Общие компоненты'
+    };
+
+block main
+  .container
+    .component-wrapper
+      +innerpage-title('Что такое экосистема Hivens?', 'Присоединяйтесь к Hivens и получите доступ ко всем возможностям', 'ecosystem__title')
+    .component-wrapper
+      .custom-title.custom-title--ta-left
+        span.custom-title__meet Meet
+        span.custom-title__bee the
+        span.custom-title__characters characters
+        span.custom-title__from from
+        span the
+        span.custom-title__hivens Hivens
+        span.custom-title__glossary glossary
+    .component-wrapper
+      +title('Что такое Hivens?', 'h3', 'block__element')
+    .component-wrapper
+      .briefly.briefly--reverse
+        +title('Кто участники экосистемы?', 'h2', 'briefly__title')
+
+        .briefly__image
+          img(src="images/briefly/ecosystem-participants.jpg", srcset="images/briefly/ecosystem-participants@2x.jpg 2x", width="774", height="634", alt="")
+
+          .briefly__image-text.briefly__image-text--have I have
+          .briefly__image-text.briefly__image-text--need I need
+
+        .briefly__content
+          .briefly__text 
+            p <strong>Провайдеры</strong> - поставщики данных, это компании, аналитические агентства, обычные пользователи интернета.
+            p <strong>Покупатели</strong> - компании, их представители, другие провайдеры, а также обычные пользователи интернета.
+            p Количество участников неограничено, что делает возможности поиска или аудиторию покупателей безграничной.
+
+          +button('Подробнее', 'briefly__btn button--big button--dark-green', '', '#')
+      br
+      .briefly.briefly--triple
+        +title('Как участники экосистемы находят друг друга?', 'h2', 'briefly__title')
+        .briefly__content
+          .briefly__text
+            p Маркетплейс платформа - место, где поставщики и покупатели находят друг друга.
+            ol
+              li Провайдеры отправляют в маркетплейс данные, которые они хотят монетизировать в обезличенном хешированном виде и устанавливают стоимость доступа.
+              li Покупатели, используя поиск по параметрам, находят нужную информацию и принимают решение о покупке доступа.
+
+        .briefly__image.briefly__image--first
+          .briefly__image-caption Провадеры данных
+          .briefly__image.briefly__image-wrapper
+            img(src="images/briefly/participants-find-1.jpg", srcset="images/briefly/participants-find-1@2x.jpg 2x", width="391", height="590", alt="Провадеры данных")
+
+            .briefly__image-text.briefly__image-text--products Products
+            .briefly__image-text.briefly__image-text--market-providers To the marketplace
+
+        .briefly__image.briefly__image--last
+          .briefly__image-caption Покупатели данных
+          .briefly__image.briefly__image-wrapper
+            img(src="images/briefly/participants-find-2.jpg", srcset="images/briefly/participants-find-2@2x.jpg 2x", width="392", height="590", alt="Покупатели данных")
+
+            .briefly__image-text.briefly__image-text--products Products
+            .briefly__image-text.briefly__image-text--market-buyers To the marketplace
+    +play('http://www.youtube.com/embed/DkaUsBwe0fo')
+

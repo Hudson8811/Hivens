@@ -1,12 +1,12 @@
 mixin button(text='Button', className, svgName, href)
 	if href
-		a.button(href=href, class=className)
+		a.button(href=href, class=className)&attributes(attributes)
 			if svgName
 				svg
 					use(xlink:href=`./images/sprite.svg#${svgName}`)
 			span= text
 	else
-		button.button(class=className)
+		button.button(class=className)&attributes(attributes)
 			if svgName
 				svg
 					use(xlink:href=`./images/sprite.svg#${svgName}`)

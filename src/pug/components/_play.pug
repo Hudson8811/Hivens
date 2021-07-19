@@ -1,0 +1,9 @@
+mixin play(link, className, text)
+	a.play(class=className, href=link, data-fancybox)
+		.pulse.pulse-1
+		.pulse.pulse-2
+		.pulse-core
+			svg
+				use(xlink:href="./images/sprite.svg#play")
+		if text 
+			.play__text= text
