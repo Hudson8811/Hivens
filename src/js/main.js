@@ -6,3 +6,4 @@
 //= ./partials/main.js
 //= ./partials/cookies.js
 //= ./partials/services-section.js
+//= ./partials/how-it-works.js

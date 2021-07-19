@@ -1,6 +1,10 @@
 .platform-preview {
   padding: 70px 0;
 
+  @include max(767) {
+    padding: 40px 0;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: 1fr 443px;

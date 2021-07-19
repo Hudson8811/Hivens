@@ -23,3 +23,9 @@ section.services-section
                 source(media="(max-width: 767px)", srcset="images/page-2/carousel-card-placeholder-mobile.jpg 1x, images/page-2/carousel-card-placeholder-mobile@2x.jpg 2x")
                 img(src="images/page-2/carousel-card-placeholder.jpg", srcset="images/page-2/carousel-card-placeholder@2x.jpg 2x", alt="")
             .services-section__card-content= item.text
+      .swiper-navigation
+        button.swiper-button-prev(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+        button.swiper-button-next(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+
