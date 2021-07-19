@@ -74,10 +74,9 @@
     transform: translateX(-47%) translateY(-30%);
 
     @include max(767) {
-      width: 84px;
       top: 50%;
-      left: 32px;
-      transform: translateX(0) translateY(-61%);
+      left: 48px;
+      transform: translateX(0) translateY(-95%);
 
       img {
         display: block;
