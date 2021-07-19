@@ -3,24 +3,27 @@ header.header
 		.header-top
 			.header-top__col
 				a(href="#").logo.header__logo
-					+icon('logo')(width="320" height="40")
+					+icon('logo')
 				.header-top__links 
 					a(href="#").header__link Экосистема
 					a(href="#").header__link Платформа
-						+icon('chevron-down')(width="24" height="24")
+						+icon('chevron-down')(width="20" height="14")
 			.header-top__col
+				.header-burger 
+					span
 				.header-top__buttons 
 					a(href="#")
-						+icon('message')(width="24" height="24")
+						+icon('message')
 					a(href="#")
-						+icon('cart')(width="28" height="28")
+						+icon('cart')
 					a(href="#")
-						+icon('notification')(width="24" height="24")
+						+icon('notification')
 				a(href="#").header__avatar
 					.header__avatar-img
 						img(src="images/avatar.png", alt="")
 					span.header__avatar-status.header__avatar-status--success
-				a(href="#").button.button--dark-green.header__button Button
+				a(href="#").button.button--dark-green.header__button В кабинет
+
 		.header-bottom
 			.nav.header__nav 
 				ul.nav-list
@@ -28,8 +31,7 @@ header.header
 						a(href="#") Главная 
 					li.nav-list__item.nav-list__dropdown-item
 						a(href="#") 
-							+icon('pie-chart')(width="14" height="14")
-							| Button
+							| Продукты
 							+icon('chevron-down')(width="16" height="16")
 						ul.nav-list__sub-menu 
 							li.nav-list__sub-menu-item
@@ -42,8 +44,7 @@ header.header
 								a(href="#") Separated link
 					li.nav-list__item.nav-list__dropdown-item
 						a(href="#") 
-							+icon('pie-chart')(width="14" height="14")
-							| Button
+							| Решения
 							+icon('chevron-down')(width="16" height="16")
 						ul.nav-list__sub-menu 
 							li.nav-list__sub-menu-item
@@ -58,8 +59,7 @@ header.header
 								a(href="#") Separated link
 					li.nav-list__item.nav-list__dropdown-item
 						a(href="#") 
-							+icon('pie-chart')(width="14" height="14")
-							| Button
+							| Наши данные
 							+icon('chevron-down')(width="16" height="16")
 						ul.nav-list__sub-menu 
 							li.nav-list__sub-menu-item
@@ -72,8 +72,7 @@ header.header
 								a(href="#") Separated link
 					li.nav-list__item.nav-list__dropdown-item
 						a(href="#") 
-							+icon('pie-chart')(width="14" height="14")
-							| Button
+							| Децентрализация
 							+icon('chevron-down')(width="16" height="16")
 						ul.nav-list__sub-menu 
 							li.nav-list__sub-menu-item
@@ -86,8 +85,7 @@ header.header
 								a(href="#") Separated link
 					li.nav-list__item.nav-list__dropdown-item
 						a(href="#") 
-							+icon('pie-chart')(width="14" height="14")
-							| Button
+							| Ресурсы
 							+icon('chevron-down')(width="16" height="16")
 						ul.nav-list__sub-menu 
 							li.nav-list__sub-menu-item

@@ -1,15 +1,26 @@
 .search-dictionary
-	.search-dictionary__image
-		+icon('person')(width='28', height='29')
+	.search-dictionary__left
+		.search-dictionary__image
+			+icon('person')(width='28', height='29')
+		.search-dictionary__group.search-dictionary__group--mobile
+			.search-dictionary__title people sesrch
+			.search-dictionary__cities
+				a(href='#', target='_blank') Boston
+				a(href='#', target='_blank') New York City
+				a(href='#', target='_blank') Houston
+				a(href='#', target='_blank') Chocago
+				a(href='#', target='_blank') Los Angeles
+				a(href='#', target='_blank') Atlanta
 	.search-dictionary__right
-		.search-dictionary__title people sesrch
-		.search-dictionary__cities
-			a(href='#', target='_blank') Boston
-			a(href='#', target='_blank') New York City
-			a(href='#', target='_blank') Houston
-			a(href='#', target='_blank') Chocago
-			a(href='#', target='_blank') Los Angeles
-			a(href='#', target='_blank') Atlanta
+		.search-dictionary__group
+			.search-dictionary__title people sesrch
+			.search-dictionary__cities
+				a(href='#', target='_blank') Boston
+				a(href='#', target='_blank') New York City
+				a(href='#', target='_blank') Houston
+				a(href='#', target='_blank') Chocago
+				a(href='#', target='_blank') Los Angeles
+				a(href='#', target='_blank') Atlanta
 		.search-dictionary__filter
 			a(href='#', target='_blank') A
 			a(href='#', target='_blank') B

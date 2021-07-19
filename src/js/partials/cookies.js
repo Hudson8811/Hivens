@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	var parent = $('.cookies'),
-		btnAccept = $('.cookies__button--accept');
+		btnAccept = parent.find('.cookies__button--accept'),
+		btnClose = parent.find('.cookies__button--close');
 
 	if (parent) {
 		if (!Cookies.get('cookieAccepted')) {
@@ -10,6 +11,10 @@ $(document).ready(function() {
 
 			btnAccept.click(function () {
 				Cookies.set('cookieAccepted');
+				parent.removeClass('visible');
+			});
+
+			btnClose.click(function () {
 				parent.removeClass('visible');
 			});
 		}
