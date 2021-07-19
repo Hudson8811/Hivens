@@ -1,0 +1,40 @@
+section.data-purchase
+	.container.data-purchase__container 
+		header.data-purchase__header
+			+title('Как происходит покупка данных:', 'h2', 'data-purchase__title')
+		.data-purchase__dots.swiper-container
+			.swiper-wrapper
+				+button('Шаг 1', 'data-purchase__dot swiper-slide button--rounded button--outline-green button--big active', '', '')(type="button")
+				+button('Шаг 2', 'data-purchase__dot swiper-slide button--rounded button--outline-green button--big', '', '')(type="button")
+				+button('Шаг 3', 'data-purchase__dot swiper-slide button--rounded button--outline-green button--big', '', '')(type="button")
+				+button('Шаг 4', 'data-purchase__dot swiper-slide button--rounded button--outline-green button--big', '', '')(type="button")
+		.data-purchase__slider.swiper-container
+			.swiper-button-prev
+				+icon('chevron-left')(width="46", height="46")
+			.swiper-wrapper 
+				.swiper-slide.data-purchase__slide
+					.data-purchase__slide-content
+						h3.data-purchase__slide-title Шаг 1:
+						p.data-purchase__slide-text У вас есть данные и вы хотите их монетизировать? Для этого вам нужно подключиться к экосистеме Hivens. Выбирйте один из типов Нод, проконсультируйтесь с представителем по интеграции и переведите токены HIV с вашего баланса аккаунта на баланс Ноды. Используя Master Node вы можете участвовать в проргамме Proof-of-stake (PoS - доказательство доли владения) и поддерживать функциональность экосистемы и получать комиссию.
+					.data-purchase__slide-image
+						img(src="images/page-3/slide-img.jpg", srcset="images/page-3/slide-img@2x.jpg 2x", alt="")
+				.swiper-slide.data-purchase__slide
+					.data-purchase__slide-content
+						h3.data-purchase__slide-title Шаг 2:
+						p.data-purchase__slide-text У вас есть данные и вы хотите их монетизировать? Для этого вам нужно подключиться к экосистеме Hivens. Выбирйте один из типов Нод, проконсультируйтесь с представителем по интеграции и переведите токены HIV с вашего баланса аккаунта на баланс Ноды. Используя Master Node вы можете участвовать в проргамме Proof-of-stake (PoS - доказательство доли владения) и поддерживать функциональность экосистемы и получать комиссию.
+					.data-purchase__slide-image
+						img(src="images/page-3/slide-img.jpg", srcset="images/page-3/slide-img@2x.jpg 2x", alt="")
+				.swiper-slide.data-purchase__slide
+					.data-purchase__slide-content
+						h3.data-purchase__slide-title Шаг 3:
+						p.data-purchase__slide-text У вас есть данные и вы хотите их монетизировать? Для этого вам нужно подключиться к экосистеме Hivens. Выбирйте один из типов Нод, проконсультируйтесь с представителем по интеграции и переведите токены HIV с вашего баланса аккаунта на баланс Ноды. Используя Master Node вы можете участвовать в проргамме Proof-of-stake (PoS - доказательство доли владения) и поддерживать функциональность экосистемы и получать комиссию.
+					.data-purchase__slide-image
+						img(src="images/page-3/slide-img.jpg", srcset="images/page-3/slide-img@2x.jpg 2x", alt="")
+				.swiper-slide.data-purchase__slide
+					.data-purchase__slide-content
+						h3.data-purchase__slide-title Шаг 4:
+						p.data-purchase__slide-text У вас есть данные и вы хотите их монетизировать? Для этого вам нужно подключиться к экосистеме Hivens. Выбирйте один из типов Нод, проконсультируйтесь с представителем по интеграции и переведите токены HIV с вашего баланса аккаунта на баланс Ноды. Используя Master Node вы можете участвовать в проргамме Proof-of-stake (PoS - доказательство доли владения) и поддерживать функциональность экосистемы и получать комиссию.
+					.data-purchase__slide-image
+						img(src="images/page-3/slide-img.jpg", srcset="images/page-3/slide-img@2x.jpg 2x", alt="")
+			.swiper-button-next
+				+icon('chevron-right')(width="46", height="46")

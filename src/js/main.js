@@ -3,9 +3,9 @@
 //= ./libs/js.cookie.js
 //= ./libs/jquery.fancybox.min.js
 
-
 //= ./partials/equal-height.js
 //= ./partials/main.js
 //= ./partials/cookies.js
 //= ./partials/footer-carousel.js
 //= ./partials/footer-menu-dots.js
+//= ./partials/data-purchase-slider.js

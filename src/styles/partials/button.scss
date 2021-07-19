@@ -522,4 +522,31 @@
 			}
 		}
 	}
+
+	/* mix */
+	&--outline-green {
+		@extend .button--outline;
+		color: $gray;
+		border-color: $green-9e;
+		background-color: transparent;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				background-color: rgba($green-9e, 0.04);
+				box-shadow: none;
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			color: $white;
+			border-color: $green-9e;
+			background-color: $green-9e;
+		}
+
+		&.active {
+			pointer-events: none;
+		}
+	}
 }
