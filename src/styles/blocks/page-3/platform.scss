@@ -1,0 +1,71 @@
+.platform {
+	padding: 32px 0 40px;
+	text-align: center;
+
+	@include max(767) {
+		padding: 27px 0 40px;
+		overflow: hidden;
+	}
+
+	&__title {
+		margin-bottom: 13px;
+
+		@include max(767) {
+			margin-bottom: 27px;
+		}
+	}
+
+	&__image {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		text-align: center;
+
+		@include max(767) {
+			position: relative;
+			width: vw(351, 375);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+
+	&__text {
+		position: absolute;
+		z-index: 1;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: (29 / 20);
+
+		@include max(1270) {
+			font-size: vw(20, 1270);
+		}
+
+		&--signboard {
+			top: 74.8%;
+			left: 81.95%;
+			transform: translateX(-50%);
+
+			font-size: 13px;
+			line-height: 1.2;
+			color: $white;
+			font-weight: 500;
+
+			@include max(1270) {
+				font-size: vw(10, 1270);
+				line-height: 1.4;
+			}
+
+			b {
+				display: block;
+				font-weight: 700;
+			}
+		}
+	}
+}
