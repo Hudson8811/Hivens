@@ -1,0 +1,8 @@
+mixin innerpage-title(title, text, selector, tag)
+  - let cl = selector ? selector + ' ' : '';
+  - let tg = tag ? tag : 'h1';
+
+  div(class= cl + "innerpage-title")
+    #{tg}.innerpage-title__title= title
+    if text 
+    .innerpage-title__text= text
