@@ -1,0 +1,140 @@
+.crypto-solution {
+  padding: 70px 0;
+  overflow: hidden;
+
+  @include max(sm) {
+    padding: 40px 0;
+  }
+
+  &__container {
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+  }
+
+  &__text {
+    max-width: 920px;
+    margin-top: 35px;
+    font-size: 14px;
+    color: $dark-gray-6e;
+    line-height: (18.5 / 14);
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__list {
+    overflow: visible;
+
+    .swiper-wrapper {
+      width: auto;
+      flex-wrap: wrap;
+      margin-top: -40px;
+      margin-left: calc((100% - 820px) / -4);
+
+      @include max(md) {
+        margin-left: calc((100% - 615px) / -3);
+      }
+
+      @include max(sm) {
+        flex-wrap: nowrap;
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+
+    .swiper-navigation {
+      display: none;
+
+      @include max(sm) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 25px;
+      }
+
+      button {
+        cursor: pointer;
+        appearance: none;
+
+        @include max(sm) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        svg {
+          fill: $gray-97;
+          transition: fill 0.3s ease;
+        }
+
+        @include hover {
+          svg {
+            fill: $citrus;
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        svg {
+          transform: scale(-1, 1);
+        }
+      }
+
+      .swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+
+        @include max(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 205px;
+    margin-top: 40px;
+    margin-left: calc((100% - 820px) / 4);
+
+    @include max(md) {
+      margin-left: calc((100% - 615px) / 3);
+    }
+
+    @include max(sm) {
+      margin-left: 0;
+      margin-top: 0;
+    }
+
+    &-image {
+      width: 103px;
+      height: 103px;
+      margin: 0 auto 17px;
+      border-radius: 50%;
+      background-color: $citrus;
+      overflow: hidden;
+    }
+
+    &-title {
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: (21 / 14);
+      color: $dark-gray-6e;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: (21 / 14);
+      color: $dark-gray-6e;
+      text-align: center;
+    }
+  }
+}
