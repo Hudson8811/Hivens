@@ -17,6 +17,7 @@
 /* components */
 @import "partials/button";
 @import "partials/social";
+@import "partials/social2";
 @import "partials/form-elements";
 @import "partials/title";
 @import "partials/header";
@@ -31,7 +32,6 @@
 @import "blocks/innerpage-title";
 @import "blocks/custom-title";
 
-/* page-2 */
 @import "blocks/page-2/ecosystem";
 @import "blocks/page-2/video-block";
 @import "blocks/page-2/platform-preview";
@@ -43,3 +43,4 @@
 @import "blocks/briefly";
 @import "blocks/briefly-list";
 @import "blocks/first-screen";
+@import "blocks/picture-info-block";
