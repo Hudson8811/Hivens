@@ -9,5 +9,6 @@
 //= ./partials/cookies.js
 //= ./partials/services-section.js
 //= ./partials/how-it-works.js
+//= ./partials/rating-section.js
 //= ./partials/footer-carousel.js
 //= ./partials/footer-menu-dots.js

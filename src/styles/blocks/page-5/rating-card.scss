@@ -1,0 +1,38 @@
+.rating-card {
+  //max-width: 185px;
+  background: $white;
+  box-shadow: 0px 2.04886px 13.6591px 0.682953px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+
+  &__value {
+    padding: 16px 12px;
+    font-size: 45px;
+    line-height: (62.28 / 45);
+    color: $green-9e;
+    text-align: center;
+
+    @include max(sm) {
+      padding-top: 18px;
+      padding-bottom: 18px;
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    padding: 25px;
+    font-size: 14px;
+    line-height: (18.5 / 14);
+    color: $white;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 4px;
+    background-color: $citrus;
+
+    @include max(sm) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 11px;
+      letter-spacing: 0.37px;
+    }
+  }
+}
