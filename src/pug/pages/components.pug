@@ -63,5 +63,14 @@ block main
 
             .briefly__image-text.briefly__image-text--products Products
             .briefly__image-text.briefly__image-text--market-buyers To the marketplace
-    +play('http://www.youtube.com/embed/DkaUsBwe0fo')
+    .component-wrapper
+      +play('http://www.youtube.com/embed/DkaUsBwe0fo')
+    .component-wrapper
+      //- const SOCIAL = [{id:'tw-clear', w:'24', h:'20'}, {id:'fb-clear', w:'14', h:'25'}, {id:'in-clear', w:'24', h:'24'}, {id:'git-clear', w:'25', h:'24'}, {id:'google-clear', w:'24', h:'24'}, {id:'insta-clear', w:'25', h:'25'}, {id:'star-clear', w:'25', h:'25'}, {id:'heart-clear', w:'25', h:'25'}];
+      
+
+      +social('', ['tw', 'fb', 'in', 'git', 'google', 'insta', 'star', 'heart'])
+      br
+      div(style="background-color: #00A79E; padding: 16px;")
+        +social2('social2--white', ['tw-clear', 'fb-clear', 'in-clear', 'git-clear', 'google-clear', 'insta-clear', 'star-clear', 'heart-clear'])
 
