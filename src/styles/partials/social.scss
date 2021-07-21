@@ -1,61 +1,72 @@
 .social {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  $self: &;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	&__item {
-		&:not(:last-child) {
-			margin-right: 20px;
+  &--white {
+    #{$self}__item {
+      a {
+        svg {
+          fill: $white !important;
+        }
+      }
+    }
+  }
 
-			@include max(md) {
-				margin-right: 10px;
-			}
-		}
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
 
-		a {
-			transition: opacity 0.3s ease;
+      @include max(md) {
+        margin-right: 10px;
+      }
+    }
 
-			@include hover {
-				opacity: 0.65;
-			}
+    a {
+      transition: opacity 0.3s ease;
 
-			svg {
-				@include max(md) {
-					fill: $white !important;
-				}
-			}
-		}
-	}
+      @include hover {
+        opacity: 0.65;
+      }
 
-	.tw {
-		fill: #00ACEE;
-	}
+      svg {
+        @include max(md) {
+          fill: $white !important;
+        }
+      }
+    }
+  }
 
-	.fb {
-		fill: #3B5998;
-	}
+  .tw {
+    fill: #00acee;
+  }
 
-	.in {
-		fill: #0E76A8;
-	}
+  .fb {
+    fill: #3b5998;
+  }
 
-	.git {
-		fill: #211F1F;
-	}
+  .in {
+    fill: #0e76a8;
+  }
 
-	.google {
-		fill: #DB3236;
-	}
+  .git {
+    fill: #211f1f;
+  }
 
-	.insta {
-		fill: #3F729B;
-	}
+  .google {
+    fill: #db3236;
+  }
 
-	.star {
-		fill: #FF9F43;
-	}
+  .insta {
+    fill: #3f729b;
+  }
 
-	.heart {
-		fill: #EA5455;
-	}
+  .star {
+    fill: #ff9f43;
+  }
+
+  .heart {
+    fill: #ea5455;
+  }
 }

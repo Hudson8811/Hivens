@@ -66,10 +66,28 @@ block main
     .component-wrapper
       +play('http://www.youtube.com/embed/DkaUsBwe0fo')
     .component-wrapper
-      +social('', ['tw', 'fb', 'in', 'git', 'google', 'insta', 'star', 'heart'])
+      +social('', [
+        {name: 'tw', class: 'tw'},
+        {name: 'fb', class: 'fb'},
+        {name: 'in', class: 'in'},
+        {name: 'git', class: 'git'},
+        {name: 'google', class: 'google'},
+        {name: 'insta', class: 'insta'},
+        {name: 'star', class: 'star'},
+        {name: 'heart', class: 'heart'}
+      ])
       br
       div(style="background-color: #00A79E; padding: 16px;")
-        +social2('social2--white', ['tw-clear', 'fb-clear', 'in-clear', 'git-clear', 'google-clear', 'insta-clear', 'star-clear', 'heart-clear'])
+        +social('social--white', [
+          {name: 'tw', class: 'tw'},
+          {name: 'fb', class: 'fb'},
+          {name: 'in', class: 'in'},
+          {name: 'git', class: 'git'},
+          {name: 'google', class: 'google'},
+          {name: 'insta', class: 'insta'},
+          {name: 'star', class: 'star'},
+          {name: 'heart', class: 'heart'}
+        ])
     
     .component-wrapper 
       .picture-info-block(style="max-width: 395px")
