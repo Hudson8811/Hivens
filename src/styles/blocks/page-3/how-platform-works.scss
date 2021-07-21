@@ -1,0 +1,56 @@
+.how-platform-works {
+	&__header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		@include max(sm) {
+			align-items: flex-start;
+			text-align: left;
+		}
+	}
+
+	&__text {
+		max-width: 920px;
+		font-size: 14px;
+		line-height: 21px;
+		margin-top: 18px;
+		color: $dark-gray-6e;
+	}
+
+	&__schema {
+		margin-top: 44px;
+		position: relative;
+	}
+
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__item {
+		position: absolute;
+		font-size: 12px;
+		line-height: 18px;
+		color: $dark-gray-6e;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #a8a8a8;
+
+		&--eighth-floor {
+			width: 37.258%;
+			height: 83px;
+			left: 8.548%;
+			top: 18.345%;
+
+			p {
+				max-width: 229px;
+			}
+		}
+	}
+}
