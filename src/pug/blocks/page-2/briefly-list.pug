@@ -1,0 +1,99 @@
+section.briefly-list
+  .briefly-list__container.container 
+    .briefly-list__item.briefly.briefly--reverse
+      +title('Кто участники экосистемы?', 'h2', 'briefly__title')
+
+      .briefly__image.briefly__image--enlarged
+        img(src="images/briefly/ecosystem-participants.jpg", srcset="images/briefly/ecosystem-participants@2x.jpg 2x", width="774", height="634", alt="")
+
+        .briefly__image-text.briefly__image-text--have I have
+        .briefly__image-text.briefly__image-text--need I need
+
+      .briefly__content
+        .briefly__text 
+          p <strong>Провайдеры</strong> - поставщики данных, это компании, аналитические агентства, обычные пользователи интернета.
+          p <strong>Покупатели</strong> - компании, их представители, другие провайдеры, а также обычные пользователи интернета.
+          p Количество участников неограничено, что делает возможности поиска или аудиторию покупателей безграничной.
+
+        +button('Подробнее', 'briefly__btn button--big button--dark-green', '', '#')
+    
+    .briefly-list__item.briefly
+      +title('Кто такие провайдеры данных?', 'h2', 'briefly__title')
+
+      .briefly__image 
+        picture
+          source(media="(max-width: 767px)", srcset="images/briefly/data-providers-mobile.jpg 1x, images/briefly/data-providers-mobile@2x.jpg 2x")
+          img(src="images/briefly/data-providers.jpg", srcset="images/briefly/data-providers@2x.jpg 2x", alt="")
+
+        .briefly__image-text.briefly__image-text--provider Provider 1
+
+      .briefly__content
+        .briefly__text 
+          | <strong>Провайдеры данных</strong> - это распределенная сеть обладателей информации, данных в каком-либо сегменте. Чтобы стать провадйером, необходимо на своих ресурсах развернуть ноду (узел) и интегрироваться с источником  информации...
+
+
+        +button('Подробнее', 'briefly__btn button--big button--dark-green', '', '#')
+  
+    .briefly-list__item.briefly.briefly--reverse
+      +title('Кто такие покупатели маркетплейса?', 'h2', 'briefly__title')
+
+      .briefly__image
+        picture
+          source(media="(max-width: 767px)", srcset="images/briefly/marketplace-buyers-mobile.jpg 1x, images/briefly/marketplace-buyers-mobile@2x.jpg 2x")
+          img(src="images/briefly/marketplace-buyers.jpg", srcset="images/briefly/marketplace-buyers@2x.jpg 2x", alt="")
+
+        .briefly__image-text.briefly__image-text--marketing Marketing
+        .briefly__image-text.briefly__image-text--sales Sales
+        .briefly__image-text.briefly__image-text--managers Managers
+        .briefly__image-text.briefly__image-text--hr HR
+
+      .briefly__content
+        .briefly__text 
+          | <strong>Покупатели</strong> - представители компаний, руководители, маркетологи, продавцы, менеджеры, рекрутеры, а также обычные пользоваели сайтов, которые хотят получить данные, которые доступны для продажи в маркетплейсе. Данные также могут быть бесплатными, если провайдер установил стоимость “Free”.
+
+        +button('Подробнее', 'briefly__btn button--big button--dark-green', '', '#')
+      
+    .briefly-list__item.briefly.briefly--triple
+      +title('Как участники экосистемы находят друг друга?', 'h2', 'briefly__title')
+      .briefly__content
+        .briefly__text
+          p Маркетплейс платформа - место, где поставщики и покупатели находят друг друга.
+          ol
+            li Провайдеры отправляют в маркетплейс данные, которые они хотят монетизировать в обезличенном хешированном виде и устанавливают стоимость доступа.
+            li Покупатели, используя поиск по параметрам, находят нужную информацию и принимают решение о покупке доступа.
+
+      .briefly__image.briefly__image--first
+        .briefly__image-caption Провадеры данных
+        .briefly__image.briefly__image-wrapper
+          img(src="images/briefly/participants-find-1.jpg", srcset="images/briefly/participants-find-1@2x.jpg 2x", width="391", height="590", alt="Провадеры данных")
+
+          .briefly__image-text.briefly__image-text--products Products
+          .briefly__image-text.briefly__image-text--market-providers To the marketplace
+
+      .briefly__image.briefly__image--last
+        .briefly__image-caption Покупатели данных
+        .briefly__image.briefly__image-wrapper
+          img(src="images/briefly/participants-find-2.jpg", srcset="images/briefly/participants-find-2@2x.jpg 2x", width="392", height="590", alt="Покупатели данных")
+
+          .briefly__image-text.briefly__image-text--products Products
+          .briefly__image-text.briefly__image-text--market-buyers To the marketplace
+
+    .briefly-list__item.briefly.briefly--marketplace
+      +title('Что такое маркетплейс?', 'h2', 'briefly__title')
+
+      .briefly__image
+        picture
+          source(media="(max-width: 767px)", srcset="images/briefly/marketplace-mobile.jpg 1x, images/briefly/marketplace-mobile@2x.jpg 2x")
+          img(src="images/briefly/marketplace.jpg", srcset="images/briefly/marketplace@2x.jpg 2x", alt="")
+
+        .briefly__image-text.briefly__image-text--marketplace
+          | Hivens <b>Marketplace</b>
+
+      .briefly__content
+        .briefly__text 
+          p <strong> Маркетплейс платформа</strong> - место, где поставщики и покупатели находят друг друга.
+          ol
+            li Платформа представляем собой сервис, который позволяет сформированные датасеты доставлять до покупателей, формировать заказы от покупателей, а также производить расчет токенами за оказанные услуги и запросы.
+            li Платформа - это также сервис поиска по 6 типам данных по открытым датасетам.
+
+        +button('Подробнее', 'briefly__btn button--big button--dark-green', '', '#')

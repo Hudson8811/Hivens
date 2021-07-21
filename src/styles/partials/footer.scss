@@ -7,9 +7,12 @@
 	background-size: cover;
 
 	@include max(sm) {
-		padding: 95px 0 144px;
+		padding: 160px 0 240px;
 		background-image: url("../images/footer-bg-small.png");
-		background-size: contain;
+	}
+
+	@include max(xxs) {
+		padding: 95px 0 240px;
 	}
 
 	&__title {
@@ -34,6 +37,7 @@
 
 		@include max(sm) {
 			margin-top: 38px;
+			margin-bottom: 49px;
 		}
 
 		a {
@@ -71,6 +75,10 @@
 
 	&__search-dictionary {
 		margin-top: 62px !important;
+
+		@include max(md) {
+			margin-top: 56px !important;
+		}
 	}
 
 	&__line {
@@ -78,40 +86,110 @@
 		height: 1px;
 		background-color: $white;
 		margin: 94px 0 80px;
+
+		@include max(md) {
+			margin: 50px 0 38px;
+		}
 	}
 
 	&__menu {
 		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
 	}
 
 	&__menu-item {
 		display: flex;
 		flex-direction: column;
+		width: auto;
 		padding: 12px 39px 0 25px;
 		border-left: 1px solid $white-eb;
+
+		@include max(lg) {
+			padding: 12px 15px 0;
+		}
+
+		@include max(md) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			width: 50%;
+			border-left: 0;
+			padding: 0;
+		}
 
 		a {
 			font-size: 15.8438px;
 			line-height: 24px;
 			font-weight: 700;
 			color: $white;
+			position: relative;
+
+			@include max(lg) {
+				font-size: 14px;
+				line-height: 20px;
+			}
+
+			@include max(md) {
+				font-size: 12px;
+				line-height: 18px;
+				margin: 0 8.5px 8px;
+			}
 
 			@include hover {
 				text-decoration: underline;
 			}
 
+			&.dot {
+				&::before {
+					content: '';
+					display: block;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					background-color: $white;
+					position: absolute;
+					top: 6px;
+					left: -12px;
+				}
+			}
+
 			+ a {
 				margin-top: 38px;
+
+				@include max(lg) {
+					margin-top: 25px;
+				}
+
+				@include max(md) {
+					margin-top: 0;
+				}
 			}
 
 			&.top-link {
 				text-transform: uppercase;
+
+				@include max(md) {
+					display: block;
+					width: 100%;
+					text-align: center;
+					margin-bottom: 12px;
+				}
 			}
 		}
 	}
 
 	&__col {
 		padding-left: 107px;
+
+		@include max(lg) {
+			padding-left: 0;
+			margin: 0 auto;
+		}
+
+		@include max(md) {
+			display: none;
+		}
 	}
 
 	&__button {
@@ -124,25 +202,102 @@
 	}
 
 	&__login {
+		display: block;
 		font-size: 15.8438px;
 		line-height: 24px;
 		font-weight: 700;
+		color: $white;
 		margin-top: 37px;
+		transition: opacity 0.3s ease;
 
-		a {
+		@include max(md) {
+			font-size: 12px;
+			line-height: 18px;
+			text-align: center;
+			margin-top: 16px;
+		}
+
+		@include hover {
+			opacity: 0.65;
+		}
+	}
+
+	&__nickname {
+		font-size: 15.8438px;
+		line-height: 24px;
+		font-weight: 700;
+		color: $white;
+		padding-top: 11px;
+
+		@include max(md) {
+			font-size: 12px;
+			line-height: 18px;
+			text-align: center;
+		}
+	}
+
+	&__login-mobile {
+		display: none;
+
+		@include max(md) {
 			display: block;
-			color: $white;
-			padding-top: 11px;
-			transition: opacity 0.3s ease;
+		}
+	}
 
-			@include hover {
-				opacity: 0.65;
+	&__trial {
+		width: 137px;
+		margin: 27px auto 0;
+	}
+
+	&__pagination {
+		display: none;
+		justify-content: center;
+		width: 100%;
+		margin-top: 33px;
+
+		@include max(md) {
+			display: flex;
+		}
+	}
+
+	.swiper-pagination-bullet {
+		width: 30.15px;
+		height: 8px;
+		border-radius: 5px;
+		background-color: rgba($white, 0.5);
+		cursor: pointer;
+		position: relative;
+		overflow: hidden;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 0;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: $white;
+			transition: width 0.3s ease;
+		}
+
+		&:not(:last-child) {
+			margin-right: 7.14px;
+		}
+
+		&.swiper-pagination-bullet-active {
+			&::before {
+				width: 100%;
 			}
 		}
 	}
 
 	&__social {
 		margin-top: 85px;
+
+		@include max(md) {
+			margin-top: 47px;
+		}
 	}
 
 	&__bottom-links {
@@ -151,8 +306,28 @@
 		text-align: center;
 		margin-top: 63px;
 
+		@include max(md) {
+			font-size: 12px;
+			line-height: 15px;
+			margin-top: 39px;
+		}
+
 		span {
 			padding-right: 10px;
+
+			@include max(md) {
+				display: block;
+				padding-right: 0;
+				padding-bottom: 5px;
+			}
+
+			br {
+				display: none;
+
+				@include max(md) {
+					display: block;
+				}
+			}
 		}
 
 		a {
@@ -162,8 +337,17 @@
 			color: $white;
 			transition: color 0.3s ease;
 
+			@include max(md) {
+				padding-left: 0;
+				margin-bottom: 13px;
+			}
+
 			&:not(:last-child) {
 				margin-right: 16px;
+
+				@include max(md) {
+					margin-right: 0;
+				}
 			}
 
 			@include hover {
@@ -181,6 +365,35 @@
 				top: 50%;
 				left: 0;
 				transform: translateY(-50%);
+
+				@include max(md) {
+					display: none;
+				}
+			}
+
+			&.dot {
+				@include max(md) {
+					margin-left: 25px;
+				}
+
+				&::before {
+					content: '';
+					display: block;
+					width: 10px;
+					height: 10px;
+					background-color: $white;
+					border-radius: 50%;
+					position: absolute;
+					top: 50%;
+					left: -3px;
+					transform: translateY(-50%);
+
+					@include max(md) {
+						width: 8px;
+						height: 8px;
+						left: -16px;
+					}
+				}
 			}
 		}
 	}
@@ -190,5 +403,20 @@
 		line-height: 19px;
 		text-align: center;
 		margin-top: 28px;
+
+		@include max(md) {
+			font-size: 12px;
+			line-height: 15px;
+			opacity: 0.5;
+			margin-top: 38px;
+		}
+
+		br {
+			display: none;
+
+			@include max(md) {
+				display: block;
+			}
+		}
 	}
 }

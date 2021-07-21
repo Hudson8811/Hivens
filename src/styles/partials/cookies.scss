@@ -5,9 +5,14 @@
 	position: fixed;
 	bottom: 0;
 	left: 0;
+	z-index: 20;
 	transform: translateY(100%);
 	transition: transform 0.3s ease;
 	pointer-events: none;
+
+	@include max(md) {
+		padding: 20px 0 32px;
+	}
 
 	&.visible {
 		transform: translateY(0);
@@ -17,18 +22,46 @@
 	&__container {
 		display: flex;
 		justify-content: space-between;
+
+		@include max(md) {
+			flex-direction: column;
+		}
 	}
 
 	&__buttons {
 		display: flex;
 		align-items: flex-start;
+
+		@include max(md) {
+			display: none;
+			justify-content: center;
+		}
+
+		&--mobile {
+			display: none;
+
+			@include max(md) {
+				display: flex;
+			}
+		}
 	}
 
 	&__button {
 		width: 122px;
 
+		@include max(md) {
+			width: 107px;
+			padding: 13px 22px;
+			font-size: 16px;
+		}
+
 		&:not(:last-child) {
 			margin-right: 63px;
+
+			@include max(md) {
+				width: 136px;
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -37,5 +70,29 @@
 		font-size: 15.8438px;
 		line-height: 19px;
 		color: $black;
+		margin-right: 15px;
+
+		@include max(md) {
+			max-width: 100%;
+			font-size: 12px;
+			line-height: 15px;
+			text-align: center;
+			margin-bottom: 23px;
+			margin-right: 0;
+		}
+
+		a {
+			@include hover {
+				text-decoration: underline;
+			}
+		}
+
+		br {
+			display: none;
+
+			@include max(md) {
+				display: block;
+			}
+		}
 	}
 }
