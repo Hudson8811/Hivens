@@ -32,15 +32,25 @@
 				font-weight: bold;
 				font-size: 10px;
 				line-height: 10px;
+
+				@include max(1270) {
+					font-size: vw(10, 1270);
+				}
 			}
 
 			&--marketplace {
 				left: 65.5%;
-				top: 75.6%;
+				top: 75.8%;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				color: #fff;
+				font-size: 17px;
+				line-height: (19 / 17);
+
+				@include max(1270) {
+					font-size: vw(17, 1270);
+				}
 
 				span {
 					font-weight: bold;
@@ -111,6 +121,10 @@
 			height: 83px;
 			top: 18.345%;
 
+			@include max(1270) {
+				top: 17%;
+			}
+
 			p {
 				max-width: 229px;
 			}
@@ -120,6 +134,10 @@
 			width: 33.95%;
 			height: 83px;
 			top: 29.811%;
+
+			@include max(1270) {
+				top: 28%;
+			}
 
 			p {
 				max-width: 170px;
@@ -131,6 +149,10 @@
 			height: 83px;
 			top: 34.197%;
 
+			@include max(1270) {
+				top: 33%;
+			}
+
 			p {
 				max-width: 211px;
 			}
@@ -140,6 +162,10 @@
 			width: 33.83%;
 			height: 83px;
 			top: 41.376%;
+
+			@include max(1270) {
+				top: 40%;
+			}
 
 			p {
 				max-width: 211px;
@@ -151,6 +177,10 @@
 			height: 83px;
 			top: 49.651%;
 
+			@include max(1270) {
+				top: 47.5%;
+			}
+
 			p {
 				max-width: 211px;
 			}
@@ -161,6 +191,10 @@
 			height: 83px;
 			top: 60.319%;
 
+			@include max(1270) {
+				top: 59%;
+			}
+
 			p {
 				max-width: 211px;
 			}
@@ -170,6 +204,10 @@
 			width: 39.677%;
 			height: 83px;
 			top: 69.09%;
+
+			@include max(1270) {
+				top: 68%;
+			}
 
 			&::after {
 				left: 0;
@@ -196,6 +234,10 @@
 			width: 24.59677%;
 			height: 83px;
 			top: 81.3%;
+
+			@include max(1270) {
+				top: 80%;
+			}
 
 			p {
 				max-width: 211px;
