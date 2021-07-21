@@ -1,7 +1,0 @@
-mixin social2(className, arr)
-  .social2(class= className)
-    each item in arr
-      - const mod = item.slice(0, item.indexOf('-clear'))
-      .social2__item(class="social2__item--" + mod)
-        a(href='#', target='_blank')
-          +icon(item)(width="24", height="24")
