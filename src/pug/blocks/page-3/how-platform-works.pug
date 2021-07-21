@@ -1,3 +1,5 @@
+-let SLIDES = [{title: 'Этаж 8 - Биржа и торговля', text: 'Децентрализованная криптобиржа для покупки, продажи, обеспечения экосисетмы токенами.', class: 'eighth-floor'}, {title: 'Этаж 7 - Финансы', text: 'Управление платежной системой, кошельком, оплатами, аналитикой.', class: 'seventh-floor'}, {title: 'Этаж 6 - Разработка и защита', text: 'Отдел проектирования,  разработки и информационной безопасности экосистемы.', class: 'sixth-floor'}, {title: 'Этаж 5 - Data compliance', text: 'Управлеяем, проверяем данные, выставляемые на продажу на соответствие закону.', class: 'fifth-floor'}, {title: 'Этаж 4 - Сбор данных', text: 'Разрабатываем скрипты (пчел) сбора и синхронизации данных из различных источников.', class: 'fourth-floor'}, {title: 'Этаж 3 - Разработка нод', text: 'Разрабатываем, обновляем ноды (ульи), систематизируем функционал в модули.', class: 'third-floor'}, {title: 'Этаж 2 - Передача данными', text: 'Разрабатываем протоколы (пчел) передачи и обмена данными.', class: 'second-floor'}, {title: 'Этаж 1 - Маркет', text: 'Витрина данных, которые можно купить. Пользуйтесь поиском, чтобы найти нужны данные!', class: 'first-floor'}];
+
 section.how-platform-works 
 	.container
 		header.how-platform-works__header
@@ -9,8 +11,14 @@ section.how-platform-works
 		.how-platform-works__schema
 			.how-platform-works__schema-image
 				img(src="images/page-3/how-platform-works.jpg", srcset="images/page-3/how-platform-works@2x.jpg 2x", alt="")
+				.how-platform-works__schema-text.how-platform-works__schema-text--search
+					| Search
+				.how-platform-works__schema-text.how-platform-works__schema-text--marketplace 
+					| Hivens
+					span Marketplace
 			.how-platform-works__content.swiper-container 
 				.swiper-wrapper 
-					.how-platform-works__item.how-platform-works__item--eighth-floor.swiper-slide
-						h4.how-platform-works__item-title Этаж 8 - Биржа и торговля
-						p.how-platform-works__item-text Децентрализованная криптобиржа для покупки, продажи, обеспечения экосисетмы токенами.
+					each item in SLIDES
+						.how-platform-works__item.swiper-slide(class= 'how-platform-works__item--' + item.class)
+							h4.how-platform-works__item-title= item.title
+							p.how-platform-works__item-text= item.text

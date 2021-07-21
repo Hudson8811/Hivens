@@ -22,6 +22,31 @@
 	&__schema {
 		margin-top: 44px;
 		position: relative;
+
+		&-text {
+			position: absolute;
+
+			&--search {
+				top: 84.7%;
+				left: 47%;
+				font-weight: bold;
+				font-size: 10px;
+				line-height: 10px;
+			}
+
+			&--marketplace {
+				left: 65.5%;
+				top: 75.6%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				color: #fff;
+
+				span {
+					font-weight: bold;
+				}
+			}
+		}
 	}
 
 	&__content {
@@ -36,20 +61,144 @@
 
 	&__item {
 		position: absolute;
+		display: flex;
+		flex-direction: column;
 		font-size: 12px;
 		line-height: 18px;
 		color: $dark-gray-6e;
 		padding-bottom: 10px;
-		border-bottom: 1px solid #a8a8a8;
+
+		&--eighth-floor,
+		&--seventh-floor,
+		&--fifth-floor,
+		&--third-floor {
+			align-items: flex-start;
+			text-align: left;
+			left: 8.548%;
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 1px;
+				width: 100%;
+				background-color: #a8a8a8;
+			}
+		}
+
+		&--sixth-floor,
+		&--fourth-floor,
+		&--second-floor,
+		&--first-floor {
+			align-items: flex-end;
+			text-align: right;
+			right: 0;
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				height: 1px;
+				width: 100%;
+				background-color: #a8a8a8;
+			}
+		}
 
 		&--eighth-floor {
 			width: 37.258%;
 			height: 83px;
-			left: 8.548%;
 			top: 18.345%;
 
 			p {
 				max-width: 229px;
+			}
+		}
+
+		&--seventh-floor {
+			width: 33.95%;
+			height: 83px;
+			top: 29.811%;
+
+			p {
+				max-width: 170px;
+			}
+		}
+
+		&--sixth-floor {
+			width: 40.161%;
+			height: 83px;
+			top: 34.197%;
+
+			p {
+				max-width: 211px;
+			}
+		}
+
+		&--fifth-floor {
+			width: 33.83%;
+			height: 83px;
+			top: 41.376%;
+
+			p {
+				max-width: 211px;
+			}
+		}
+
+		&--fourth-floor {
+			width: 40.121%;
+			height: 83px;
+			top: 49.651%;
+
+			p {
+				max-width: 211px;
+			}
+		}
+
+		&--third-floor {
+			width: 33.669%;
+			height: 83px;
+			top: 60.319%;
+
+			p {
+				max-width: 211px;
+			}
+		}
+
+		&--second-floor {
+			width: 39.677%;
+			height: 83px;
+			top: 69.09%;
+
+			&::after {
+				left: 0;
+				right: auto;
+				width: 8.7398%;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				background-color: #a8a8a8;
+				width: 60.569%;
+				height: 1px;
+			}
+
+			p {
+				max-width: 190px;
+			}
+		}
+
+		&--first-floor {
+			width: 24.59677%;
+			height: 83px;
+			top: 81.3%;
+
+			p {
+				max-width: 211px;
 			}
 		}
 	}
