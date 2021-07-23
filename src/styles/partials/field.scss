@@ -1,0 +1,51 @@
+.field {
+	&--checkbox {
+		display: inline-flex;
+		cursor: pointer;
+
+		@include hover {
+			span {
+				opacity: 0.7;
+			}
+		}
+
+		input {
+			max-width: 23px;
+			width: 100%;
+			height: 23px;
+			border-radius: 4px;
+			border: 2px solid $white;
+			box-sizing: border-box;
+			cursor: pointer;
+
+			@include max(md) {
+				max-width: 18px;
+				height: 18px;
+				border-radius: 3px;
+			}
+
+			&:checked {
+				background: url("../images/check.svg") no-repeat center center;
+
+				@include max(md) {
+					background-size: 14px;
+				}
+			}
+		}
+
+		span {
+			font-size: 18px;
+			line-height: 22px;
+			font-weight: 500;
+			color: $white;
+			padding-left: 20px;
+			transition: opacity 0.3s ease;
+
+			@include max(md) {
+				font-size: 12px;
+				line-height: 15px;
+				padding-left: 10px;
+			}
+		}
+	}
+}

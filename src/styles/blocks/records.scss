@@ -1,0 +1,16 @@
+.records {
+	&__title {
+		margin-left: 16px;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 47px -21px 0;
+	}
+
+	&__item {
+		width: calc(50% - 42px);
+		margin: 0 21px 26px;
+	}
+}
