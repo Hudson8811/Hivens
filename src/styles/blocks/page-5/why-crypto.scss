@@ -3,6 +3,7 @@
 
   @include max(sm) {
     padding: 40px 0;
+    overflow: hidden;
   }
 
   &__container {
@@ -13,6 +14,10 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 25px;
+
+    @include max(sm) {
+      display: block;
+    }
   }
 
   &__title {
@@ -25,6 +30,10 @@
     color: $dark-gray-6e;
     line-height: (18.5 / 14);
     text-align: center;
+
+    @include max(sm) {
+      text-align: left;
+    }
   }
 
   &__list {
@@ -35,6 +44,13 @@
       flex-wrap: wrap;
       margin-left: -30px;
       margin-top: -30px;
+
+      @include max(sm) {
+        width: 100%;
+        flex-wrap: nowrap;
+        margin-left: 0;
+        margin-top: 0;
+      }
     }
 
     .swiper-navigation {
@@ -48,6 +64,8 @@
       }
 
       button {
+        margin-left: auto;
+        margin-right: auto;
         cursor: pointer;
         appearance: none;
 
@@ -90,6 +108,16 @@
     margin-left: 30px;
     margin-top: 30px;
 
+    @include max(sm) {
+      width: 395px;
+      max-width: 100%;
+      margin: 0 30px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
     .picture-info-block__image {
       margin-bottom: 19px;
     }
@@ -100,10 +128,20 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 45px;
+
+    @include max(sm) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__btn + &__btn {
     margin-left: 43px;
+
+    @include max(sm) {
+      margin-left: 0;
+      margin-top: 21px;
+    }
   }
 
   &__join {

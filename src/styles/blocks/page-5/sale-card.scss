@@ -1,0 +1,53 @@
+.sale-card {
+  box-shadow: 0px 2.04886px 13.6591px 0.682953px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  background-color: $white;
+  overflow: hidden;
+
+  &__title {
+    padding: 20px 10px 21px;
+
+    font-size: 21px;
+    line-height: (25.6 / 21);
+    font-weight: 500;
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 0 0 4px 4px;
+    background-color: $citrus;
+  }
+
+  &__datetime,
+  &__main {
+    font-size: 14px;
+    line-height: (21 / 14);
+    color: $dark-gray-6e;
+    text-align: center;
+  }
+
+  &__datetime {
+    padding: 16px 10px 17px;
+  }
+
+  &__main {
+    padding: 17px 10px;
+    border-top: solid 1px $gray-f1;
+  }
+
+  &__date {
+    color: $green-9e;
+    font-weight: 700;
+  }
+  &__period {
+    font-weight: 700;
+  }
+
+  &__bonus,
+  &__cap,
+  &__price {
+  }
+
+  &__bonus {
+    color: $green-9e;
+  }
+}

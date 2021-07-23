@@ -1,0 +1,223 @@
+.contact-section {
+  padding: 70px 0;
+
+  @include max(sm) {
+    padding: 40px 0;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 962px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 51px;
+
+    @include max(sm) {
+      display: block;
+    }
+  }
+
+  &__notice {
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: (23 / 12);
+    letter-spacing: 0.05em;
+    color: $gray-b9;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  &__grid {
+    display: flex;
+
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+    background-color: $white;
+
+    @include max(sm) {
+      display: block;
+    }
+  }
+
+  &__form {
+    //width: calc(100% - 252px);
+    padding: 24px 32px;
+    flex-grow: 1;
+
+    @include max(sm) {
+      padding: 24px 18px 21px;
+    }
+
+    label {
+      display: block;
+    }
+
+    label + label {
+      margin-top: 21px;
+    }
+
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 6px 15px;
+      font-size: 12px;
+      line-height: 2;
+      border: solid 1px $gray-d8;
+      border-radius: 5px;
+      appearance: none;
+      transition: border-color 0.3s ease;
+
+      &::placeholder {
+        color: $gray-b9;
+        opacity: 1;
+      }
+
+      &:focus {
+        border-color: $black;
+      }
+
+      @include hover {
+        border-color: $black;
+      }
+    }
+
+    textarea {
+      min-height: 113px;
+      resize: none;
+    }
+
+    button[type="submit"] {
+      margin-top: 31px;
+    }
+
+    &-checkbox {
+      margin-top: 24px;
+
+      label {
+        position: relative;
+        display: block;
+        width: 100%;
+        padding-left: 24px;
+
+        font-size: 12px;
+        line-height: (14.63 / 12);
+        color: $gray-5e;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -3px;
+          left: 0;
+          width: 18px;
+          height: 18px;
+          margin-right: 5px;
+          border: solid 1px $gray-d8;
+          border-radius: 3px;
+          transition: border-color 0.3s ease;
+        }
+
+        @include hover {
+          &::before {
+            border-color: $black;
+          }
+        }
+      }
+
+      input:checked ~ label {
+        &::before {
+          background-repeat: no-repeat;
+          background-position: 67% 50%;
+          background-size: 70% auto;
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 515.556 515.556'%3e%3cpath d='M0 274.226l176.549 176.886L515.556 112.44l-48.67-47.997-290.337 290L47.996 225.891z'/%3e%3c/svg%3e");
+        }
+      }
+    }
+  }
+
+  &__aside {
+    width: 100%;
+    max-width: 252px;
+    padding: 24px 28px 24px 32px;
+    border-radius: 6px;
+    background-color: $green-9e;
+    flex-shrink: 0;
+
+    @include max(sm) {
+      max-width: none;
+      padding: 20px 34px 28px 40px;
+    }
+
+    &-item {
+      display: flex;
+
+      & + & {
+        margin-top: 30px;
+      }
+
+      &-image {
+        width: 38px;
+        height: 38px;
+        margin-right: 16px;
+        border-radius: 50%;
+        background-color: $white;
+        overflow: hidden;
+        flex-shrink: 0;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 12px;
+        line-height: (14.63 / 12);
+        color: $white;
+
+        .social {
+          &__item {
+            margin-right: 6px;
+
+            svg {
+              width: 16px;
+              height: 16px;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+
+      &-bold {
+        line-height: (18 / 12);
+        font-weight: 700;
+
+        & + * {
+          margin-top: 4px;
+        }
+
+        a {
+          color: $white;
+          transition: opacity 0.3s ease;
+
+          @include hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}

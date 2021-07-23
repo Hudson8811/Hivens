@@ -5,7 +5,7 @@
   border-radius: 4px;
 
   &__value {
-    padding: 16px 12px;
+    padding: 22px 12px 11px;
     font-size: 45px;
     line-height: (62.28 / 45);
     color: $green-9e;
@@ -20,6 +20,7 @@
 
   &__text {
     padding: 25px;
+    padding-bottom: 23px;
     font-size: 14px;
     line-height: (18.5 / 14);
     color: $white;

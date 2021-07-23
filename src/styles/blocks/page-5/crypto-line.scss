@@ -15,6 +15,11 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 65px;
+
+    @include max(sm) {
+      display: block;
+      margin-bottom: 36px;
+    }
   }
 
   &__title {
@@ -28,16 +33,41 @@
     line-height: (18.5 / 14);
     font-weight: 500;
     text-align: center;
+
+    @include max(sm) {
+      text-align: left;
+    }
   }
 
   &__list {
     overflow: visible;
+
+    @include max(sm) {
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 100%;
+        height: 100%;
+        background-color: $gray-ef;
+      }
+    }
 
     .swiper-wrapper {
       width: auto;
       flex-wrap: wrap;
       margin-left: -83px;
       margin-top: -40px;
+
+      @include max(sm) {
+        width: 100%;
+        flex-wrap: nowrap;
+        margin-left: 0;
+        margin-top: 0;
+      }
     }
 
     .swiper-navigation {
@@ -93,6 +123,16 @@
     max-width: 106px;
     margin-top: 40px;
     margin-left: 83px;
+
+    @include max(sm) {
+      margin-left: 0;
+      margin-top: 0;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
 
     &-image {
       width: 106px;

@@ -3,7 +3,7 @@ $(window).on('load', () => {
   let isInit = false;
   let carousel = null;
   const breakpoint = 767;
-  const carouselEl = document.querySelector('.__js_why-crypto-carousel');
+  const carouselEl = document.querySelector('.__js-why-crypto-carousel');
 
   if (carouselEl) {
     if (width <= breakpoint) {

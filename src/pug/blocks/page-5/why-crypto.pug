@@ -11,9 +11,9 @@ section.why-crypto
         each item in CRYPTO_LIST_ITEMS
           .why-crypto__item.picture-info-block.swiper-slide
             .picture-info-block__image
-              picture 
+              //-picture 
                 source(media="(max-width: 767px)", srcset="images/page-5/" + item.img + "-mobile.jpg 1x, images/" + item.img + "-mobile@2x.jpg 2x")
-                img(src="images/page-5/" + item.img + ".jpg", srcset="images/" + item.img + "@2x.jpg 2x",  alt="")
+              img(src="images/page-5/" + item.img + ".jpg", srcset="images/" + item.img + "@2x.jpg 2x",  alt="")
             .picture-info-block__content
               h3.picture-info-block__title= item.title
               .picture-info-block__text= item.text

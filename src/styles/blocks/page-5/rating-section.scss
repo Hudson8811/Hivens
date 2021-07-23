@@ -12,7 +12,7 @@
   &__header {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 
     @include max(sm) {
       display: block;

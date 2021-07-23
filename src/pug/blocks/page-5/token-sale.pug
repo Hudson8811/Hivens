@@ -1,0 +1,55 @@
+- const TOKEN_SALE_CARDS = [{title: 'Pre sale', date: {attr: '2021-11-01', text: '1 Nov 2021', period: '30 Days'}, bonus: '30% Bonus', cap: 'Soft Cap', price: '$2M', mod: 'one'}, {title: 'Sale stage 1', date: {attr: '2021-12-01', text: '1 Dec 2021', period: '60 Days'}, bonus: '30% Bonus', cap: 'Soft Cap', price: '$2M', mod: 'two'}, {title: 'Sale stage 2t', date: {attr: '2021-02-01', text: '1 Feb 2021', period: '60 Days'}, bonus: '10% Bonus', cap: 'Hard Cap', price: '$3M', mod: 'three'} ];
+
+- const CELLS = [{th: 'Token Symbol', td: 'HIV'}, {th: 'Token Sale Start', td: '<time datetime="2021-11-01">1 November 2021</time>'}, {th: 'Token Sale End', td: '<time datetime="2022-03-31">31 March 2022</time>'}, {th: 'Tokens for sale', td: '457,000,000'}, {th: 'Specifications', td: 'HIV token'}, {th: 'Max circulating supply', td: '7 030 769 230'}, {th: 'PreSale duration', td: '20 days'}, {th: 'Sale duration', td: '120 days'} ];
+
+section.token-sale
+  .token-sale__container.container
+    header.token-sale__header
+      +title('Token Sale', 'h2', 'token-sale__title')
+      .token-sale__text The tokens will be available for transfer thar is rorem ipsum dolor sit amet, consectetur adipiscing elit.
+    
+    .token-sale__grid 
+      .token-sale__list.swiper-container.__js_token-sale-carousel
+        .swiper-wrapper
+          each item in TOKEN_SALE_CARDS 
+            .token-sale__item(class="token-sale__item--" + item.mod + " swiper-slide")
+              .sale-card
+                .sale-card__title= item.title
+                .sale-card__datetime 
+                  time.sale-card__date(datetime= item.date.attr)= item.date.text
+                  .sale-card__period= item.date.period
+                .sale-card__main 
+                  .sale-card__bonus= item.bonus 
+                  .sale-card__cap= item.cap 
+                  .sale-card__price= item.price
+        .swiper-navigation
+          button.swiper-button-prev(type="button")
+            +icon('long-right-arrow')(width="143", height="9")
+          button.swiper-button-next(type="button")
+            +icon('long-right-arrow')(width="143", height="9")
+      .token-sale__table 
+        table
+          tbody 
+            each item in CELLS
+              tr 
+                th!= item.th
+                td!= item.td
+    
+    .token-sale__more 
+      .token-sale__more-item
+        .token-sale__more-item-title Distribution of tokens
+        .token-sale__more-item-image
+          img(src="images/page-5/token-sale-placeholder.jpg", srcset="images/page-5/token-sale-placeholder@2x.jpg 2x", width="417", height="417", alt="")
+      .token-sale__card
+        .token-sale__card-title More
+        .token-sale__card-section
+          .token-sale__card-text Join Our Pre-Sale List
+        .token-sale__card-section
+          .token-sale__card-text Pre-Sale Start at
+          time.token-sale__card-date(datetime="2018-11-01") 1 Nov 2018
+          +button('Signup and join', 'token-sale__card-btn button--dark-green button--big', '', '#')
+      .token-sale__more-item
+        .token-sale__more-item-title Use of proceeds
+        .token-sale__more-item-image
+          img(src="images/page-5/token-sale-placeholder.jpg", srcset="images/page-5/token-sale-placeholder@2x.jpg 2x", width="417", height="417", alt="")
+      

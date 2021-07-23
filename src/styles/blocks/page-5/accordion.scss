@@ -1,0 +1,77 @@
+.accordion {
+  $self: &;
+  transition: opacity 0.3s ease;
+
+  &.opacity {
+    opacity: 0;
+  }
+
+  &__item {
+    padding: 10px 24px 11px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    background-color: $white;
+
+    & + & {
+      margin-top: 13px;
+    }
+
+    &--active {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+
+      #{$self}__item-header {
+        &::before {
+          transform: scale(1);
+        }
+      }
+
+      #{$self}__item-content {
+        display: block;
+      }
+    }
+
+    &-header {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding: 0 16px 0 0;
+      font-size: 15px;
+      line-height: (24 / 15);
+      color: $gray-5e;
+      font-weight: 500;
+      text-align: left;
+      appearance: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: -10px;
+        transform: scale(1, -1);
+
+        width: 12px;
+        height: 6px;
+
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.025 1.275l-4.5 4.5A.68.68 0 016 6a.68.68 0 01-.525-.225l-4.5-4.5c-.3-.3-.3-.75 0-1.05.3-.3.75-.3 1.05 0L6 4.2 9.975.225c.3-.3.75-.3 1.05 0 .3.3.3.75 0 1.05z' fill='%23000'/%3e%3c/svg%3e");
+      }
+
+      @include hover {
+        color: $black;
+      }
+    }
+
+    &-content {
+      padding-top: 26px;
+      font-size: 14px;
+      min-height: 97px;
+      line-height: (21 / 14);
+      color: $dark-gray-6e;
+
+      display: none;
+    }
+  }
+}
