@@ -1,61 +1,83 @@
 .social {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  $self: &;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	&__item {
-		&:not(:last-child) {
-			margin-right: 20px;
+  &--white {
+    #{$self}__item {
+      a {
+        svg {
+          fill: $white !important;
+        }
+      }
+    }
+  }
 
-			@include max(md) {
-				margin-right: 10px;
-			}
-		}
+  &--large {
+    #{$self}__item {
+      a {
+        svg {
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
 
-		a {
-			transition: opacity 0.3s ease;
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
 
-			@include hover {
-				opacity: 0.65;
-			}
+      @include max(md) {
+        margin-right: 10px;
+      }
+    }
 
-			svg {
-				@include max(md) {
-					fill: $white !important;
-				}
-			}
-		}
-	}
+    a {
+      transition: opacity 0.3s ease;
 
-	.tw {
-		fill: #00ACEE;
-	}
+      @include hover {
+        opacity: 0.65;
+      }
 
-	.fb {
-		fill: #3B5998;
-	}
+      svg {
+        @include max(md) {
+          fill: $white !important;
+        }
+      }
+    }
+  }
 
-	.in {
-		fill: #0E76A8;
-	}
+  .tw {
+    fill: #00acee;
+  }
 
-	.git {
-		fill: #211F1F;
-	}
+  .fb {
+    fill: #3b5998;
+  }
 
-	.google {
-		fill: #DB3236;
-	}
+  .in {
+    fill: #0e76a8;
+  }
 
-	.insta {
-		fill: #3F729B;
-	}
+  .git {
+    fill: #211f1f;
+  }
 
-	.star {
-		fill: #FF9F43;
-	}
+  .google {
+    fill: #db3236;
+  }
 
-	.heart {
-		fill: #EA5455;
-	}
+  .insta {
+    fill: #3f729b;
+  }
+
+  .star {
+    fill: #ff9f43;
+  }
+
+  .heart {
+    fill: #ea5455;
+  }
 }

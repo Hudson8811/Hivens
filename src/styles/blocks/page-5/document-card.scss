@@ -1,0 +1,81 @@
+.document-card {
+  position: relative;
+  width: 352px;
+  min-height: 236px;
+  padding-left: 27px;
+
+  @include max(767) {
+    width: 310px;
+    padding-left: 50px;
+  }
+
+  &__image {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 38px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    &-text {
+      position: absolute;
+      top: 45px;
+      left: 0;
+      width: 100%;
+      font-size: 15px;
+      line-height: (29 / 15);
+      color: $green-9e;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 34px 36px 34px 144px;
+    background-color: $white;
+    box-shadow: 0px 2.04886px 13.6591px 0.682953px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+
+    @include max(767) {
+      padding-left: 125px;
+      padding-right: 24px;
+      padding-bottom: 22px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: (18.5 / 14);
+    color: $green-9e;
+    font-weight: 500;
+  }
+
+  &__btn {
+    width: auto;
+    padding-left: 17px;
+    padding-right: 17px;
+
+    span {
+      color: $green-9e;
+    }
+
+    &:active {
+      span {
+        color: $white;
+      }
+    }
+  }
+
+  &__btn + &__btn {
+    margin-left: 15px;
+
+    @include max(767) {
+      margin-left: 0;
+      margin-top: 14px;
+    }
+  }
+}

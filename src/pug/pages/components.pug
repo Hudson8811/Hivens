@@ -63,5 +63,45 @@ block main
 
             .briefly__image-text.briefly__image-text--products Products
             .briefly__image-text.briefly__image-text--market-buyers To the marketplace
-    +play('http://www.youtube.com/embed/DkaUsBwe0fo')
+    .component-wrapper
+      +play('http://www.youtube.com/embed/DkaUsBwe0fo')
+    .component-wrapper
+      +social('', [
+        {name: 'tw', class: 'tw'},
+        {name: 'fb', class: 'fb'},
+        {name: 'in', class: 'in'},
+        {name: 'git', class: 'git'},
+        {name: 'google', class: 'google'},
+        {name: 'insta', class: 'insta'},
+        {name: 'star', class: 'star'},
+        {name: 'heart', class: 'heart'}
+      ])
+      br
+      div(style="background-color: #00A79E; padding: 16px;")
+        +social('social--white', [
+          {name: 'tw', class: 'tw'},
+          {name: 'fb', class: 'fb'},
+          {name: 'in', class: 'in'},
+          {name: 'git', class: 'git'},
+          {name: 'google', class: 'google'},
+          {name: 'insta', class: 'insta'},
+          {name: 'star', class: 'star'},
+          {name: 'heart', class: 'heart'}
+        ])
+    
+    .component-wrapper 
+      .picture-info-block(style="max-width: 395px")
+        .picture-info-block__image
+          picture 
+            source(media="(max-width: 767px)", srcset="images/node-type-1-mobile.jpg 1x, images/node-type-1-mobile@2x.jpg 2x")
+            img(src="images/node-type-1.jpg", srcset="images/node-type-1@2x.jpg",  alt="")
+        .picture-info-block__content
+          h3.picture-info-block__title Master Nodes
+          .picture-info-block__text 
+            ul
+              li Функцонал MiniNode + SlaveNode + ... 
+              li Верификация транзакций Core, получение комиссии 
+              li Функционирование сервисов платформы 
+              li Обработка данных при помощи нейросетей
 
+          .picture-info-block__notice Баланс для функционирования: 1400000 HIV

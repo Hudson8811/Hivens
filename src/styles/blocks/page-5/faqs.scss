@@ -1,0 +1,94 @@
+.faqs {
+  padding: 70px 0;
+
+  @include max(sm) {
+    padding: 40px 0;
+    overflow: hidden;
+  }
+
+  &__container {
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 37px;
+
+    @include max(sm) {
+      display: block;
+    }
+  }
+
+  &__title {
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include max(sm) {
+        left: -15px;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__text {
+    max-width: 920px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: $dark-gray-6e;
+    line-height: (18.5 / 14);
+    font-weight: 500;
+    text-align: center;
+
+    @include max(sm) {
+      text-align: left;
+    }
+  }
+
+  &__filters {
+    overflow: visible;
+    margin-bottom: 45px;
+
+    .swiper-wrapper {
+      flex-wrap: wrap;
+      margin-top: -5px;
+      margin-bottom: -5px;
+      justify-content: center;
+
+      @include max(sm) {
+        flex-wrap: nowrap;
+        margin-top: 0;
+        margin-bottom: 0;
+        justify-content: flex-start;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          transform: translateX(-100%);
+          width: 100%;
+          height: 100%;
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  &__filter {
+    width: auto;
+    margin: 5px 32px;
+    //padding: 10px 23px;
+
+    @include max(sm) {
+      margin: 0 62px 0 0;
+    }
+  }
+
+  &__accordion {
+    max-width: 932px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,21 @@
+- const CRYPTO_SOLUTION_ITEMS = ['Relational Blockchain', 'Fraud Reduction', 'Next Generation Wallet', 'Recovery Nodes', 'Relational Blockchain', 'Fraud Reduction', 'Next Generation Wallet', 'Recovery Nodes'];
+
+section.crypto-solution
+  .crypto-solution__container.container 
+    header.crypto-solution__header
+      +title('The crypto solution', 'h2', 'crypto-solution__title')
+      .crypto-solution__text The Cryptocurrency industry is one of the Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    
+    .crypto-solution__list.swiper-container.__js_crypto-solution-carousel
+      .swiper-wrapper
+        each item in CRYPTO_SOLUTION_ITEMS
+          .crypto-solution__item.swiper-slide
+            .crypto-solution__item-image 
+            h3.crypto-solution__item-title= item 
+            .crypto-solution__item-text Contributors and members est et expedita distinctio. Nam libero tempore
+      
+      .swiper-navigation
+        button.swiper-button-prev(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+        button.swiper-button-next(type="button")
+          +icon('long-right-arrow')(width="143", height="9")

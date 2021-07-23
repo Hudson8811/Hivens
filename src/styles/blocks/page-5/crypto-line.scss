@@ -1,0 +1,151 @@
+.crypto-line {
+  padding: 58px 0 62px;
+  background-color: $gray-ef;
+  overflow: hidden;
+
+  @include max(sm) {
+    padding: 40px 0;
+  }
+
+  &__container {
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 65px;
+
+    @include max(sm) {
+      display: block;
+      margin-bottom: 36px;
+    }
+  }
+
+  &__title {
+  }
+
+  &__text {
+    max-width: 920px;
+    margin-top: 35px;
+    font-size: 14px;
+    color: $dark-gray-6e;
+    line-height: (18.5 / 14);
+    font-weight: 500;
+    text-align: center;
+
+    @include max(sm) {
+      text-align: left;
+    }
+  }
+
+  &__list {
+    overflow: visible;
+
+    @include max(sm) {
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 100%;
+        height: 100%;
+        background-color: $gray-ef;
+      }
+    }
+
+    .swiper-wrapper {
+      width: auto;
+      flex-wrap: wrap;
+      margin-left: -83px;
+      margin-top: -40px;
+
+      @include max(sm) {
+        width: 100%;
+        flex-wrap: nowrap;
+        margin-left: 0;
+        margin-top: 0;
+      }
+    }
+
+    .swiper-navigation {
+      display: none;
+
+      @include max(sm) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 25px;
+      }
+
+      button {
+        cursor: pointer;
+        appearance: none;
+
+        @include max(sm) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        svg {
+          fill: $gray-97;
+          transition: fill 0.3s ease;
+        }
+
+        @include hover {
+          svg {
+            fill: $citrus;
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        svg {
+          transform: scale(-1, 1);
+        }
+      }
+
+      .swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+
+        @include max(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 106px;
+    margin-top: 40px;
+    margin-left: 83px;
+
+    @include max(sm) {
+      margin-left: 0;
+      margin-top: 0;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &-image {
+      width: 106px;
+      height: 106px;
+      margin: 0 auto 40px;
+    }
+
+    &-name {
+      font-size: 14px;
+      line-height: (21 / 14);
+      color: $dark-gray-6e;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+}
