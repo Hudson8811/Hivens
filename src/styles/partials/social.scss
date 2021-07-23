@@ -20,42 +20,8 @@
 			}
 
 			svg {
-				@include max(md) {
-					fill: $white !important;
-				}
+				fill: $white;
 			}
 		}
-	}
-
-	.tw {
-		fill: #00ACEE;
-	}
-
-	.fb {
-		fill: #3B5998;
-	}
-
-	.in {
-		fill: #0E76A8;
-	}
-
-	.git {
-		fill: #211F1F;
-	}
-
-	.google {
-		fill: #DB3236;
-	}
-
-	.insta {
-		fill: #3F729B;
-	}
-
-	.star {
-		fill: #FF9F43;
-	}
-
-	.heart {
-		fill: #EA5455;
 	}
 }

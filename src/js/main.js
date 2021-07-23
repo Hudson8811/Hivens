@@ -9,3 +9,4 @@
 //= ./partials/cookies.js
 //= ./partials/footer-carousel.js
 //= ./partials/footer-menu-dots.js
+//= ./partials/applying-carousel.js

@@ -1,0 +1,6 @@
+.search-main
+	input(type='search', name='search', placeholder='Enter name, email, url or any neighorhood')
+	.search-main__extended
+		+icon('search-ext')(width='25', height='25')
+		span Расширенный поиск
+	+button('Искать', 'button--citrus search-main__button', 'search')

@@ -17,17 +17,24 @@
 /* components */
 @import "partials/button";
 @import "partials/social";
-@import "partials/form-elements";
 @import "partials/title";
 @import "partials/header";
 @import "partials/footer";
 @import "partials/cookies";
 @import "partials/play";
+@import "partials/field";
 
 /* blocks */
 @import "blocks/grid";
 @import "blocks/search-dictionary";
+@import "blocks/search-main";
 @import "blocks/first-screen";
+@import "blocks/records";
+@import "blocks/records-card";
+@import "blocks/applying";
+@import "blocks/what-is";
+@import "blocks/blog-card";
+@import "blocks/blog";
 
 @import "blocks/innerpage-title";
 @import "blocks/custom-title";

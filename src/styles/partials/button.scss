@@ -276,14 +276,16 @@
 
 				@media (min-width: 1080px) {
 					&:hover {
-						background-color: rgba($green-9e, 0.04);
+						background-color: transparent;
+						box-shadow: none;
+						opacity: 0.7;
 					}
 				}
 
 				&:focus,
 				&:active,
 				&.active {
-					background: rgba($green-9e, 0.2);
+					background: transparent;
 				}
 
 				svg {
@@ -518,6 +520,52 @@
 
 				svg {
 					fill: $white;
+				}
+			}
+		}
+	}
+
+	&--citrus {
+		background-color: $citrus;
+
+		@media (min-width: 1080px) {
+			&:hover {
+				box-shadow: 0 0 10px rgba($citrus, 0.65);
+			}
+		}
+
+		&:focus,
+		&:active,
+		&.active {
+			background-color: $citrus;
+			border-color: $citrus;
+		}
+
+		&:disabled,
+		&.disabled {
+			background-color: rgba($citrus, 0.65);
+		}
+
+		&.button {
+			&--outline {
+				background-color: transparent;
+				border-color: $citrus;
+				color: $citrus;
+
+				@media (min-width: 1080px) {
+					&:hover {
+						background-color: rgba($citrus, 0.04);
+					}
+				}
+
+				&:focus,
+				&:active,
+				&.active {
+					background: rgba($citrus, 0.2);
+				}
+
+				svg {
+					fill: $citrus;
 				}
 			}
 		}

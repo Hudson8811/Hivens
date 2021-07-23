@@ -10,18 +10,19 @@
 		opacity: 0.9;
 	}
 
-	@include max(sm) {
+	@include max(md) {
 		width: 57px;
 		height: 57px;
 	}
 
 	svg {
+		fill: $green-9e;
 		width: 35%;
 		height: 35%;
 		position: relative;
 		left: 6px;
 
-		@include max(sm) {
+		@include max(md) {
 			left: 3px;
 		}
 	}
@@ -49,11 +50,11 @@
 		pointer-events: none;
 
 		&-1 {
-			animation: pulse-1 7s linear infinite;
+			animation: pulse-1 2s linear infinite;
 		}
 
 		&-2 {
-			animation: pulse-2 7s linear infinite;
+			animation: pulse-2 2s linear infinite;
 		}
 	}
 
@@ -61,7 +62,7 @@
 		width: 122px;
 		height: 122px;
 
-		@include max(sm) {
+		@include max(md) {
 			width: 52px;
 			height: 52px;
 		}
