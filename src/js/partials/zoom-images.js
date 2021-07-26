@@ -10,6 +10,10 @@ $(document).ready(function () {
 		const zoomImages = floors.querySelectorAll(
 			".how-platform-works__zoom-image"
 		);
+		const zoomBorder = floors.querySelector(".how-platform-works__schema-zoom");
+
+		const borderPositionY = [20.1, 28.1, 35.9, 43.8, 51.8, 61.7, 72.2, 82.7];
+		const borderPositionX = [50, 50, 50, 50, 50, 50, 50, 56.5];
 
 		function clickHandler(event) {
 			let target = event.target;
@@ -45,21 +49,26 @@ $(document).ready(function () {
 
 				slideChangeHandler();
 			} else {
+				floors.addEventListener("click", clickHandler);
+
 				if (schemaSlider) {
 					schemaSlider.destroy();
-					floors.addEventListener("click", clickHandler);
 				}
 			}
 		}
 
 		function slideChangeHandler() {
 			schemaSlider.on("activeIndexChange", function () {
-				console.log(schemaSlider.activeIndex);
 				zoomImages.forEach((item, index) => {
 					item.classList.remove("active");
 
 					if (schemaSlider.activeIndex === index) {
 						item.classList.add("active");
+						zoomBorder.style.cssText = `
+							top: ${borderPositionY[index]}%;
+							left: ${borderPositionX[index]}%;
+							width: ${schemaSlider.activeIndex === 7 ? 41 : 34.1}%;
+						`;
 					}
 				});
 			});
