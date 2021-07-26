@@ -9,3 +9,4 @@
 //= ./partials/footer-carousel.js
 //= ./partials/footer-menu-dots.js
 //= ./partials/data-purchase-slider.js
+//= ./partials/zoom-images.js
