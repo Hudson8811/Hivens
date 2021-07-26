@@ -122,3 +122,12 @@ input {
 .slider-next svg {
   transform: rotate(-90deg);
 }
+
+/* Следующий слайд стрелка */
+.slider-next-long {
+  cursor: pointer;
+
+  svg {
+    fill: $gray-97;
+  }
+}

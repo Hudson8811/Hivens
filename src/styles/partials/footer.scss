@@ -6,6 +6,10 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 
+	@include min(xxl) {
+		padding: 15vw 0 144px;
+	}
+
 	@include max(sm) {
 		padding: 160px 0 240px;
 		background-image: url("../images/footer-bg-small.png");

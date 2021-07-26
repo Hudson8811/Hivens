@@ -3,6 +3,16 @@
 	box-shadow: 0 3px 23px 1px rgba(0, 0, 0, 0.07);
 	border-radius: 7px;
 	overflow: hidden;
+	transition: transform 0.3s ease;
+
+	@include max(md) {
+		box-shadow: 0 2px 12px 0.6px rgba(0, 0, 0, 0.07);
+		border-radius: 5px;
+	}
+
+	@include hover {
+		transform: scale(1.01);
+	}
 
 	&__image {
 		display: flex;
@@ -13,11 +23,21 @@
 		border-radius: 7px;
 		position: relative;
 
+		@include max(md) {
+			height: 206px;
+			border-radius: 3px;
+		}
+
 		span {
 			font-size: 21px;
 			line-height: 25px;
 			font-weight: 500;
 			color: rgba(0, 0, 0, 0.22);
+
+			@include max(md) {
+				font-size: 11px;
+				line-height: 13px;
+			}
 		}
 	}
 
@@ -25,6 +45,10 @@
 		padding: 40px 30px 48px 31px;
 		background-color: $white;
 		margin-top: -7px;
+
+		@include max(md) {
+			padding: 25px 13px 39px 15px;
+		}
 	}
 
 	&__top {
@@ -36,6 +60,11 @@
 		font-size: 12px;
 		line-height: 15px;
 		color: $gray-ph;
+
+		@include max(md) {
+			font-size: 7px;
+			line-height: 8px;
+		}
 	}
 
 	&__info {
@@ -49,6 +78,10 @@
 
 		&:not(:last-child) {
 			margin-right: 35px;
+
+			@include max(md) {
+				margin-right: 20px;
+			}
 		}
 
 		svg {
@@ -56,20 +89,46 @@
 			width: 20px;
 			height: 20px;
 			margin-right: 10px;
+
+			@include max(md) {
+				width: 12px;
+				height: 12px;
+				margin-right: 4px;
+			}
 		}
 
 		span {
 			font-size: 10px;
 			line-height: 12px;
 			color: $gray-ph;
+
+			@include max(md) {
+				font-size: 7px;
+				line-height: 8px;
+			}
+
+			br {
+				display: none;
+
+				@include max(md) {
+					display: block;
+				}
+			}
 		}
 	}
 
 	&__title {
+		display: block;
 		font-size: 24px;
 		line-height: 29px;
 		font-weight: 500;
 		color: $gray;
 		margin-top: 23px;
+
+		@include max(md) {
+			font-size: 12px;
+			line-height: 15px;
+			margin-top: 6px;
+		}
 	}
 }
