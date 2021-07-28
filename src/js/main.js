@@ -10,3 +10,4 @@
 //= ./partials/footer-menu-dots.js
 //= ./partials/data-purchase-slider.js
 //= ./partials/zoom-images.js
+//= ./partials/data-types-slider.js
