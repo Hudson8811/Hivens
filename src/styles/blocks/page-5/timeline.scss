@@ -1,0 +1,193 @@
+.timeline {
+  padding: 140px 0 112px;
+  overflow: hidden;
+
+  @include max(sm) {
+    padding: 40px 0;
+    overflow: hidden;
+  }
+
+  &__container {
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 55px;
+
+    @include max(sm) {
+      display: block;
+    }
+  }
+
+  &__title {
+  }
+
+  &__text {
+    max-width: 920px;
+    margin-top: 35px;
+    font-size: 14px;
+    color: $dark-gray-6e;
+    line-height: (18.5 / 14);
+    font-weight: 500;
+    text-align: center;
+
+    @include max(sm) {
+      text-align: left;
+    }
+  }
+
+  &__scene {
+    position: relative;
+    padding-bottom: 254px;
+
+    /**/
+
+    &-out {
+      position: fixed;
+      z-index: 1000;
+      top: 50%;
+      left: 50px;
+      transform: translateY(-100%);
+    }
+
+    &-btn {
+      border: solid 1px red;
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    $item: &;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+    &--active {
+      &::before {
+        background-color: $green-9e;
+        box-shadow: 0 0 0 14px rgba($green-9e, 0.14);
+      }
+
+      #{$item}-content {
+        border-left-color: $green-9e;
+      }
+
+      #{$item}-q {
+        color: $green-9e;
+      }
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 25px;
+      margin-left: 15px;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      background-color: $gray-c7;
+      transition: box-shadow 0.3s ease;
+    }
+
+    &-q {
+      margin-bottom: 21px;
+      font-size: 14px;
+      line-height: (21 / 14);
+      color: $gray-c7;
+      font-weight: 700;
+
+      order: -1;
+    }
+
+    &-content {
+      max-width: 174px;
+      margin-left: 27px;
+      padding-top: 55px;
+      padding-left: 12px;
+      border-left: solid 1px $gray-c7;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        font-size: 16px;
+        line-height: (20 / 16);
+        color: $dark-gray-6e;
+      }
+    }
+
+    &-title {
+      max-width: 140px;
+      margin-bottom: 14px;
+      font-size: 16px;
+      line-height: (21 / 16);
+      color: $dark-gray-6e;
+      font-weight: 700;
+    }
+
+    &--2017-Q1 {
+      top: -0.3%;
+      left: 9.7%;
+    }
+
+    &--2017-Q2 {
+      top: -0.3%;
+      left: 32.9%;
+    }
+
+    &--2018-Q1 {
+      top: -0.3%;
+      left: 56%;
+    }
+
+    &--2018-Q2 {
+      top: -0.3%;
+      left: 79.1%;
+    }
+
+    &--2018-Q3 {
+      top: 34.3%;
+      left: 72.1%;
+    }
+
+    &--2018-Q4 {
+      top: 34.3%;
+      left: 46.3%;
+    }
+
+    &--2019-Q1 {
+      top: 34.3%;
+      left: 19.1%;
+    }
+
+    &--2019-Q2 {
+      top: 69.3%;
+      left: 9.6%;
+    }
+
+    &--2019-Q3 {
+      top: 69.3%;
+      left: 33.6%;
+    }
+
+    &--2019-Q4 {
+      top: 69.3%;
+      left: 57.4%;
+    }
+
+    &--2020-Q1 {
+      top: 69.3%;
+      left: 81.3%;
+    }
+  }
+}

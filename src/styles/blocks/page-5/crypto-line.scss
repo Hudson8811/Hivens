@@ -1,10 +1,10 @@
 .crypto-line {
-  padding: 58px 0 62px;
+  padding: 58px 0;
   background-color: $gray-ef;
   overflow: hidden;
 
   @include max(sm) {
-    padding: 40px 0;
+    padding: 57px 0 29px;
   }
 
   &__container {
@@ -77,7 +77,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 25px;
+        margin-top: 18px;
       }
 
       button {

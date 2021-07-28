@@ -60,7 +60,7 @@
       margin-top: 21px;
     }
 
-    input,
+    input:not(.visually-hidden),
     textarea {
       display: block;
       width: 100%;
