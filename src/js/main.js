@@ -21,6 +21,8 @@
 //= ./partials/faqs.js
 //= ./partials/token-sale.js
 //= ./partials/timer.js
+//= ./partials/payments-map.js
+//= ./partials/timeline.js
 //= ./partials/footer-carousel.js
 //= ./partials/footer-menu-dots.js
 //= ./partials/applying-carousel.js

@@ -20,6 +20,11 @@
         svg {
           width: 32px;
           height: 32px;
+
+          @include max(md) {
+            width: 26px;
+            height: 26px;
+          }
         }
       }
     }
