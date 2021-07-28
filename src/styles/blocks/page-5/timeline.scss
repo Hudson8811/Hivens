@@ -1,6 +1,9 @@
 .timeline {
   padding: 140px 0 112px;
-  overflow: hidden;
+
+  @include max(1270) {
+    display: none;
+  }
 
   @include max(sm) {
     padding: 40px 0;
