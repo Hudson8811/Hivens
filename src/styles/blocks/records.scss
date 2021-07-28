@@ -1,0 +1,123 @@
+.records {
+	@include max(md) {
+		padding: 29px 0;
+	}
+
+	&__title {
+		margin-left: 16px;
+
+		@include max(md) {
+			margin-left: 0;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 47px -21px 0;
+
+		@include max(lg) {
+			margin: 47px 0 0;
+		}
+
+		@include max(md) {
+			margin: 35px -32px 0 0;
+		}
+
+		.swiper-wrapper {
+			flex-wrap: wrap;
+
+			@include max(md) {
+				flex-wrap: unset;
+			}
+		}
+	}
+
+	&__item {
+		width: calc(50% - 42px);
+		margin: 0 21px 26px;
+
+		@include max(lg) {
+			width: 100%;
+			margin: 0 0 26px;
+		}
+
+		@include max(md) {
+			width: auto;
+			margin: 0;
+		}
+
+		.records-card__image {
+			.one {
+				top: 52px;
+				left: 79px;
+
+				@include max(md) {
+					top: 24px;
+					left: 34px;
+				}
+			}
+
+			.two {
+				top: 69px;
+				left: 66px;
+
+				@include max(md) {
+					top: 31px;
+					left: 27px;
+				}
+			}
+
+			.three {
+				bottom: 80px;
+				left: 53px;
+
+				@include max(md) {
+					bottom: 36px;
+					left: 22px;
+				}
+			}
+
+			.four {
+				top: 155px;
+				left: 96px;
+				font-size: 7px;
+
+				@include max(md) {
+					top: 70px;
+					left: 41px;
+					font-size: 5px;
+				}
+			}
+
+			.five {
+				top: 47px;
+				left: 53px;
+
+				@include max(md) {
+					top: 21px;
+					left: 22px;
+				}
+			}
+
+			.six {
+				bottom: 28px;
+				left: 49px;
+
+				@include max(md) {
+					bottom: 14px;
+					left: 24px;
+				}
+			}
+		}
+	}
+
+	&__next {
+		display: none;
+		margin-top: 23px;
+
+		@include max(md) {
+			display: block;
+		}
+	}
+}

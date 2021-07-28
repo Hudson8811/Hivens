@@ -1,0 +1,138 @@
+.blog {
+	padding: 110px 0 53px;
+	position: relative;
+	overflow: hidden;
+
+	@include max(md) {
+		padding: 55px 0 120px;
+	}
+
+	@include max(sm) {
+		padding: 55px 0 106px;
+	}
+
+	&__pattern {
+		width: 100%;
+		position: absolute;
+		top: 21%;
+		left: -20%;
+
+		@include max(md) {
+			display: none;
+		}
+
+		svg {
+			fill: $citrus;
+		}
+
+		&--mobile {
+			display: none;
+			top: 80px;
+			left: 0;
+			right: 0;
+
+			@include max(md) {
+				display: block;
+			}
+
+			svg {
+				width: 100%;
+				height: 586px;
+			}
+		}
+	}
+
+	&__container {
+		position: relative;
+	}
+
+	&__title {
+		margin-left: 15px;
+
+		@include max(md) {
+			margin-left: 0;
+		}
+	}
+
+	&__wrapper {
+		margin: 36px -6px 0;
+		overflow: visible;
+
+		@include max(md) {
+			margin: 36px -32px 0 0;
+			overflow: hidden;
+		}
+
+		.swiper-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+
+			@include max(md) {
+				flex-wrap: nowrap;
+			}
+		}
+	}
+
+	&__item {
+		width: calc(33.3333% - 12px);
+		margin: 0 6px 12px;
+
+		@include max(md) {
+			margin: 0;
+		}
+
+		&--big {
+			width: calc(66.6666% - 12px);
+
+			.blog-card__content {
+				padding: 32px 79px 113px 46px;
+
+				@include max(md) {
+					padding: 25px 13px 39px 15px;
+				}
+			}
+
+			.blog-card__info-item:not(:last-child) {
+				margin-right: 48px;
+
+				@include max(md) {
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+
+	&__next {
+		display: none;
+		width: 142px;
+		margin-top: 8px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include max(md) {
+			display: block;
+		}
+
+		@include max(xs) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		@include max(xxs) {
+			margin-top: 0;
+		}
+
+		svg {
+			fill: $white;
+		}
+	}
+
+	&__more {
+		width: 178px;
+		margin: 24px auto 0;
+
+		@include max(md) {
+			display: none;
+		}
+	}
+}

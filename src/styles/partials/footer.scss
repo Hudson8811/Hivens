@@ -6,6 +6,10 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 
+	@include min(xxl) {
+		padding: 15vw 0 144px;
+	}
+
 	@include max(sm) {
 		padding: 160px 0 240px;
 		background-image: url("../images/footer-bg-small.png");
@@ -192,29 +196,19 @@
 		}
 	}
 
-	&__button {
-		width: 122px;
-
-		svg {
-			width: 16px;
-			height: 16px;
-		}
-	}
-
 	&__login {
 		display: block;
 		font-size: 15.8438px;
 		line-height: 24px;
 		font-weight: 700;
 		color: $white;
-		margin-top: 37px;
+		margin-top: 16px;
 		transition: opacity 0.3s ease;
 
 		@include max(md) {
 			font-size: 12px;
 			line-height: 18px;
 			text-align: center;
-			margin-top: 16px;
 		}
 
 		@include hover {
@@ -245,8 +239,12 @@
 	}
 
 	&__trial {
-		width: 137px;
+		width: 160px;
 		margin: 27px auto 0;
+
+		@include max(md) {
+			width: 137px;
+		}
 	}
 
 	&__pagination {

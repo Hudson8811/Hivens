@@ -1,0 +1,188 @@
+.records-card {
+	display: flex;
+
+	&__image {
+		max-width: 271px;
+		min-width: 271px;
+		width: 100%;
+		height: 518px;
+		position: relative;
+
+		@include max(md) {
+			max-width: 123px;
+			min-width: 123px;
+			height: 235px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		span {
+			font-size: 12px;
+			line-height: 29px;
+			font-weight: 700;
+			color: $dark-gray;
+			position: absolute;
+
+			@include max(md) {
+				font-size: 6px;
+				line-height: 13px;
+			}
+		}
+	}
+
+	&__description {
+		width: 100%;
+		height: 518px;
+		padding: 32px 35px 47px 40px;
+		background-color: $white;
+		border-top-right-radius: 8.09576px;
+		border-bottom-right-radius: 8.09576px;
+		box-shadow: 0 5.39717px 32.383px rgba(0, 0, 0, 0.06);
+		overflow: hidden;
+
+		@include max(md) {
+			width: 149px;
+			height: 235px;
+			padding: 13px 15px 21px 16px;
+		}
+	}
+
+	&__title {
+		display: flex;
+		align-items: flex-end;
+
+		svg {
+			fill: $green-9e;
+			margin-right: 7px;
+
+			@include max(md) {
+				width: 12px;
+				height: 12px;
+				margin-right: 3px;
+			}
+		}
+
+		span {
+			font-size: 24px;
+			line-height: 20px;
+			font-weight: 500;
+			color: $gray-5e;
+
+			@include max(md) {
+				font-size: 11px;
+				line-height: 13px;
+			}
+		}
+
+		&--fill {
+			svg {
+				fill: $white;
+			}
+		}
+	}
+
+	&__links {
+		margin-top: 30px;
+
+		@include max(md) {
+			margin-top: 12px;
+		}
+	}
+
+	&__links-item {
+		+ .records-card__links-item {
+			margin-top: 31px;
+
+			@include max(md) {
+				margin-top: 11px;
+			}
+		}
+
+		p {
+			font-size: 18px;
+			line-height: 22px;
+			font-weight: 500;
+
+			@include max(md) {
+				font-size: 9px;
+				line-height: 11px;
+			}
+		}
+	}
+
+	&__links-item-more {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		font-size: 16px;
+		line-height: 20px;
+		color: $gray-6e;
+		margin-top: -8px;
+
+		@include max(md) {
+			font-size: 7px;
+		}
+
+		span {
+			width: 36%;
+			line-height: 12px;
+
+			@include max(lg) {
+				width: 92px;
+			}
+
+			@include max(md) {
+				width: 35%;
+			}
+		}
+
+		div {
+			display: flex;
+			justify-content: flex-end;
+			width: 64%;
+			border-bottom: 1px solid $white-eb;
+
+			@include max(lg) {
+				width: calc(100% - 92px);
+			}
+
+			@include max(md) {
+				width: 65%;
+			}
+		}
+
+		svg {
+			fill: $gray-6e;
+			width: 32px;
+			height: 32px;
+			transform: rotate(-90deg);
+			margin-right: -12px;
+			margin-bottom: 3px;
+
+			@include max(md) {
+				width: 18px;
+				height: 18px;
+				margin-right: -5px;
+			}
+		}
+	}
+
+	&__trial {
+		display: inline-flex;
+		padding: 13px 28px;
+		margin-top: 46px;
+
+		@include max(md) {
+			width: 94px;
+			padding: 7px 8px;
+			margin-top: 20px;
+			border-radius: 3px;
+			font-size: 7px;
+			line-height: 7px;
+		}
+	}
+}

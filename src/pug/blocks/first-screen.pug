@@ -1,2 +1,13 @@
 section.first-screen
+	.first-screen__bg
+		picture
+			source(media='(max-width: 1079px)', srcset='images/first-bg-small.png')
+			img(src='images/first-bg.png', alt='')
 	.container.first-screen__container
+		+play('https://www.youtube.com/embed/tEPB7uzKuh4', 'first-screen__play')
+		.first-screen__title Hivens
+		.first-screen__subtitle Decentralization <br> Data Ecosystem and <br> Marketplace <br> Platform
+		include search-main.pug
+		label.field.field--checkbox.first-screen__privacy
+			input(type='checkbox', name='policy')
+			span Соглашаюсь с правилами пользования сайтом и политикой приватности

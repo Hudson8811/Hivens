@@ -25,3 +25,6 @@
 //= ./partials/timeline.js
 //= ./partials/footer-carousel.js
 //= ./partials/footer-menu-dots.js
+//= ./partials/applying-carousel.js
+//= ./partials/records-carousel.js
+//= ./partials/blog-carousel.js

@@ -112,7 +112,726 @@
     </header>
     <main class="main">
       <section class="first-screen">
-        <div class="container first-screen__container"></div>
+        <div class="first-screen__bg">
+          <picture>
+            <source media="(max-width: 1079px)" srcset="images/first-bg-small.png"><img src="images/first-bg.png" alt="">
+          </picture>
+        </div>
+        <div class="container first-screen__container"><a class="play first-screen__play" href="https://www.youtube.com/embed/tEPB7uzKuh4" data-fancybox>
+            <div class="pulse pulse-1"></div>
+            <div class="pulse pulse-2"></div>
+            <div class="pulse-core">
+              <svg>
+                <use xlink:href="./images/sprite.svg#play"></use>
+              </svg>
+            </div></a>
+          <div class="first-screen__title">Hivens</div>
+          <div class="first-screen__subtitle">Decentralization <br> Data Ecosystem and <br> Marketplace <br> Platform</div>
+          <div class="search-main">
+            <input type="search" name="search" placeholder="Enter name, email, url or any neighorhood">
+            <div class="search-main__extended">
+              <svg width="25" height="25">
+                <use xlink:href="./images/sprite.svg#search-ext"></use>
+              </svg><span>Расширенный поиск</span>
+            </div>
+            <button class="button button--citrus search-main__button">
+              <svg>
+                <use xlink:href="./images/sprite.svg#search"></use>
+              </svg><span>Искать</span>
+            </button>
+          </div>
+          <label class="field field--checkbox first-screen__privacy">
+            <input type="checkbox" name="policy"><span>Соглашаюсь с правилами пользования сайтом и политикой приватности</span>
+          </label>
+        </div>
+      </section>
+      <section class="records">
+        <div class="container records__container">
+          <h2 class="records__title title">SEARCH INSTANTLY - Billions of Records</h2>
+          <div class="records__wrapper swiper-container __js_records-carousel">
+            <div class="swiper-wrapper">
+              <div class="records-card records__item swiper-slide">
+                <div class="records-card__image"><img src="images/records/1.jpg" alt=""><span class="one">Company</span></div>
+                <div class="records-card__description">
+                  <div class="records-card__title">
+                    <svg width="24" height="24">
+                      <use xlink:href="./images/sprite.svg#company"></use>
+                    </svg><span>Компании</span>
+                  </div>
+                  <div class="records-card__links">
+                    <div class="records-card__links-item">
+                      <p>Contact Information</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Location History</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Social Media Accounts</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Reviews</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a class="button button--dark-green button--big records-card__trial" href="#"><span>Найти компанию</span></a>
+                </div>
+              </div>
+              <div class="records-card records__item swiper-slide">
+                <div class="records-card__image"><img src="images/records/2.jpg" alt=""><span class="two">People</span></div>
+                <div class="records-card__description">
+                  <div class="records-card__title">
+                    <svg width="24" height="24">
+                      <use xlink:href="./images/sprite.svg#person"></use>
+                    </svg><span>Люди</span>
+                  </div>
+                  <div class="records-card__links">
+                    <div class="records-card__links-item">
+                      <p>Контакты</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Должность</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Интересы</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Connections</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a class="button button--dark-green button--big records-card__trial" href="#"><span>Найти человека</span></a>
+                </div>
+              </div>
+              <div class="records-card records__item swiper-slide">
+                <div class="records-card__image"><img src="images/records/3.jpg" alt=""><span class="three">Website</span></div>
+                <div class="records-card__description">
+                  <div class="records-card__title">
+                    <svg width="24" height="24">
+                      <use xlink:href="./images/sprite.svg#globe"></use>
+                    </svg><span>Вебсайты</span>
+                  </div>
+                  <div class="records-card__links">
+                    <div class="records-card__links-item">
+                      <p>Владелец</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Категория</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Технологии</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>История</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a class="button button--dark-green button--big records-card__trial" href="#"><span>Найти вебсайт</span></a>
+                </div>
+              </div>
+              <div class="records-card records__item swiper-slide">
+                <div class="records-card__image"><img src="images/records/4.jpg" alt=""><span class="four">Object</span></div>
+                <div class="records-card__description">
+                  <div class="records-card__title records-card__title--fill">
+                    <svg width="19" height="25">
+                      <use xlink:href="./images/sprite.svg#marker"></use>
+                    </svg><span>Объекты</span>
+                  </div>
+                  <div class="records-card__links">
+                    <div class="records-card__links-item">
+                      <p>Недвижимость</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Авто</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Отели</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Места</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a class="button button--dark-green button--big records-card__trial" href="#"><span>Найти объект</span></a>
+                </div>
+              </div>
+              <div class="records-card records__item swiper-slide">
+                <div class="records-card__image"><img src="images/records/5.jpg" alt=""><span class="five">Products</span></div>
+                <div class="records-card__description">
+                  <div class="records-card__title">
+                    <svg width="24" height="24">
+                      <use xlink:href="./images/sprite.svg#product"></use>
+                    </svg><span>Товары</span>
+                  </div>
+                  <div class="records-card__links">
+                    <div class="records-card__links-item">
+                      <p>Электроника</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Продовольствие</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Медицина</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Промышленность</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a class="button button--dark-green button--big records-card__trial" href="#"><span>Найти товар</span></a>
+                </div>
+              </div>
+              <div class="records-card records__item swiper-slide">
+                <div class="records-card__image"><img src="images/records/6.jpg" alt=""><span class="six">Services</span></div>
+                <div class="records-card__description">
+                  <div class="records-card__title">
+                    <svg width="24" height="24">
+                      <use xlink:href="./images/sprite.svg#service"></use>
+                    </svg><span>Услуги</span>
+                  </div>
+                  <div class="records-card__links">
+                    <div class="records-card__links-item">
+                      <p>IT</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Hospitality</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Travel</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="records-card__links-item">
+                      <p>Transportation</p>
+                      <div class="records-card__links-item-more"><span>show more</span>
+                        <div>
+                          <svg>
+                            <use xlink:href="./images/sprite.svg#chevron-down"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a class="button button--dark-green button--big records-card__trial" href="#"><span>Найти услугу</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="records__next slider-next-long">
+            <svg width="142" height="8">
+              <use xlink:href="./images/sprite.svg#arrow-link-long"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="applying">
+        <div class="container applying__container">
+          <h2 class="applying__title title">Платформа уже активно применяется специалистами: <br> маркетинга, менеджента, продаж и HR</h2>
+          <div class="applying__pagination swiper-container __js_applying-pagi-carousel">
+            <div class="swiper-wrapper"></div>
+          </div>
+          <div class="applying__carousel swiper-container __js_applying-carousel">
+            <div class="swiper-wrapper">
+              <div class="applying__slide swiper-slide">
+                <div class="applying__image"><img src="images/applying.jpg" alt=""><span>Staff</span></div>
+                <div class="applying__content">
+                  <div class="applying__content-wrapper">
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="88" height="75">
+                          <use xlink:href="./images/sprite.svg#applying-1"></use>
+                        </svg>
+                      </div><span>Get more leads. Advanced Targeting and Segmentation</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="80" height="86">
+                          <use xlink:href="./images/sprite.svg#applying-2"></use>
+                        </svg>
+                      </div><span>Build a Robust Contact Database. Automates collection of information for analysis of marketing campaign success</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="81" height="74">
+                          <use xlink:href="./images/sprite.svg#applying-3"></use>
+                        </svg>
+                      </div><span>Automates collection of information for marketing campaigns planning</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="81" height="75">
+                          <use xlink:href="./images/sprite.svg#applying-4"></use>
+                        </svg>
+                      </div><span>Know Who Visits Your Website. Keeps the customer profile information up to date</span>
+                    </div>
+                  </div>
+                  <button class="button button--dark-green button--big applying__content-btn"><span>Accelerate Marketing Funnel</span>
+                  </button>
+                </div>
+              </div>
+              <div class="applying__slide swiper-slide">
+                <div class="applying__image"><img src="images/applying.jpg" alt=""><span>Staff</span></div>
+                <div class="applying__content">
+                  <div class="applying__content-wrapper">
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="88" height="75">
+                          <use xlink:href="./images/sprite.svg#applying-1"></use>
+                        </svg>
+                      </div><span>Get more leads. Advanced Targeting and Segmentation</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="80" height="86">
+                          <use xlink:href="./images/sprite.svg#applying-2"></use>
+                        </svg>
+                      </div><span>Build a Robust Contact Database. Automates collection of information for analysis of marketing campaign success</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="81" height="74">
+                          <use xlink:href="./images/sprite.svg#applying-3"></use>
+                        </svg>
+                      </div><span>Automates collection of information for marketing campaigns planning</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="81" height="75">
+                          <use xlink:href="./images/sprite.svg#applying-4"></use>
+                        </svg>
+                      </div><span>Know Who Visits Your Website. Keeps the customer profile information up to date</span>
+                    </div>
+                  </div>
+                  <button class="button button--dark-green button--big applying__content-btn"><span>Accelerate Marketing Funnel</span>
+                  </button>
+                </div>
+              </div>
+              <div class="applying__slide swiper-slide">
+                <div class="applying__image"><img src="images/applying.jpg" alt=""><span>Staff</span></div>
+                <div class="applying__content">
+                  <div class="applying__content-wrapper">
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="88" height="75">
+                          <use xlink:href="./images/sprite.svg#applying-1"></use>
+                        </svg>
+                      </div><span>Get more leads. Advanced Targeting and Segmentation</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="80" height="86">
+                          <use xlink:href="./images/sprite.svg#applying-2"></use>
+                        </svg>
+                      </div><span>Build a Robust Contact Database. Automates collection of information for analysis of marketing campaign success</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="81" height="74">
+                          <use xlink:href="./images/sprite.svg#applying-3"></use>
+                        </svg>
+                      </div><span>Automates collection of information for marketing campaigns planning</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="81" height="75">
+                          <use xlink:href="./images/sprite.svg#applying-4"></use>
+                        </svg>
+                      </div><span>Know Who Visits Your Website. Keeps the customer profile information up to date</span>
+                    </div>
+                  </div>
+                  <button class="button button--dark-green button--big applying__content-btn"><span>Accelerate Marketing Funnel</span>
+                  </button>
+                </div>
+              </div>
+              <div class="applying__slide swiper-slide">
+                <div class="applying__image"><img src="images/applying.jpg" alt=""><span>Staff</span></div>
+                <div class="applying__content">
+                  <div class="applying__content-wrapper">
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="88" height="75">
+                          <use xlink:href="./images/sprite.svg#applying-1"></use>
+                        </svg>
+                      </div><span>Get more leads. Advanced Targeting and Segmentation</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="80" height="86">
+                          <use xlink:href="./images/sprite.svg#applying-2"></use>
+                        </svg>
+                      </div><span>Build a Robust Contact Database. Automates collection of information for analysis of marketing campaign success</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="81" height="74">
+                          <use xlink:href="./images/sprite.svg#applying-3"></use>
+                        </svg>
+                      </div><span>Automates collection of information for marketing campaigns planning</span>
+                    </div>
+                    <div class="applying__content-item">
+                      <div class="applying__content-item-icon">
+                        <svg width="81" height="75">
+                          <use xlink:href="./images/sprite.svg#applying-4"></use>
+                        </svg>
+                      </div><span>Know Who Visits Your Website. Keeps the customer profile information up to date</span>
+                    </div>
+                  </div>
+                  <button class="button button--dark-green button--big applying__content-btn"><span>Accelerate Marketing Funnel</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="applying__prev slider-prev">
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-down"></use>
+              </svg>
+            </div>
+            <div class="applying__next slider-next">
+              <svg>
+                <use xlink:href="./images/sprite.svg#chevron-down"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="what-is">
+        <div class="container what-is__container">
+          <div class="what-is__wrapper">
+            <div class="what-is__content">
+              <h2 class="what-is__title title">Что такое Hivens?</h2>
+              <div class="what-is__image what-is__image--mobile"><img src="images/marketplace.jpg" alt=""><span>Hivens <br> <b>Marketplace</b></span></div>
+              <div class="what-is__text">Hivens - децентрализованная экосистема данных и маркетплейс платформа.
+                <ol>
+                  <li>
+                    <b>Децентрализованная экосистема данных Hivens</b> представляет собой сеть поставщиков данных и пользователей сервисов, сайтов, которые объединяются в сообществе для хранения, обмена, увеличения ценности имеющиейся информации.</li>
+                  <li>
+                    <b>Маркетплейс платформа Hivens</b> - это часть экосистемы и предназначена <br> для монетизации данных <br> поставщиков, и объядиняет поставщиков и покупателей данных, а также служит для продвижения компаний, поиска людей,
+                     услуг, товаров, объектов и др.
+                  </li>
+                </ol>
+              </div>
+              <button class="button button--dark-green button--big what-is__more"><span>Подробнее</span>
+              </button>
+              <div class="what-is__content-icon">
+                <svg width="493" height="68">
+                  <use xlink:href="./images/sprite.svg#trees"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="what-is__image"><img src="images/marketplace.jpg" alt=""><span>Hivens <br> <b>Marketplace</b></span></div>
+          </div>
+        </div>
+      </section>
+      <section class="blog">
+        <div class="blog__pattern">
+          <svg width="2200" height="1620">
+            <use xlink:href="./images/sprite.svg#pattern"></use>
+          </svg>
+        </div>
+        <div class="blog__pattern blog__pattern--mobile">
+          <svg width="375" height="586">
+            <use xlink:href="./images/sprite.svg#pattern-small"></use>
+          </svg>
+        </div>
+        <div class="container blog__container">
+          <h2 class="blog__title title">Блоги</h2>
+          <div class="blog__wrapper swiper-container __js_blog-carousel">
+            <div class="swiper-wrapper">
+              <div class="blog-card blog__item swiper-slide">
+                <div class="blog-card__image"><span>Иллюстрация</span></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__top">
+                    <div class="blog-card__date">15 апреля 2021</div>
+                    <div class="blog-card__info">
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#pie-chart"></use>
+                        </svg><span>10 <br> мин.</span>
+                      </div>
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#message"></use>
+                        </svg><span>0</span>
+                      </div>
+                    </div>
+                  </div><a class="blog-card__title" href="#" target="_blank">What Can You Find with a Reverse Phone Lookup?</a>
+                </div>
+              </div>
+              <div class="blog-card blog__item blog__item--big swiper-slide">
+                <div class="blog-card__image"><span>Иллюстрация</span></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__top">
+                    <div class="blog-card__date">15 апреля 2021</div>
+                    <div class="blog-card__info">
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#pie-chart"></use>
+                        </svg><span>10 <br> m</span>
+                      </div>
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#message"></use>
+                        </svg><span>0</span>
+                      </div>
+                    </div>
+                  </div><a class="blog-card__title" href="#" target="_blank">How to Find Someone's Cell Phone Number by Name</a>
+                </div>
+              </div>
+              <div class="blog-card blog__item blog__item--big swiper-slide">
+                <div class="blog-card__image"><span>Иллюстрация</span></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__top">
+                    <div class="blog-card__date">15 апреля 2021</div>
+                    <div class="blog-card__info">
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#pie-chart"></use>
+                        </svg><span>10 <br> m</span>
+                      </div>
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#message"></use>
+                        </svg><span>0</span>
+                      </div>
+                    </div>
+                  </div><a class="blog-card__title" href="#" target="_blank">How to Track a Phone Number</a>
+                </div>
+              </div>
+              <div class="blog-card blog__item swiper-slide">
+                <div class="blog-card__image"><span>Иллюстрация</span></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__top">
+                    <div class="blog-card__date">15 апреля 2021</div>
+                    <div class="blog-card__info">
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#pie-chart"></use>
+                        </svg><span>10 <br> мин.</span>
+                      </div>
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#message"></use>
+                        </svg><span>0</span>
+                      </div>
+                    </div>
+                  </div><a class="blog-card__title" href="#" target="_blank">Online Safety 101: Finding What Accounts use Your Email Address</a>
+                </div>
+              </div>
+              <div class="blog-card blog__item swiper-slide">
+                <div class="blog-card__image"><span>Иллюстрация</span></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__top">
+                    <div class="blog-card__date">15 апреля 2021</div>
+                    <div class="blog-card__info">
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#pie-chart"></use>
+                        </svg><span>10 <br> мин.</span>
+                      </div>
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#message"></use>
+                        </svg><span>0</span>
+                      </div>
+                    </div>
+                  </div><a class="blog-card__title" href="#" target="_blank">There’s a Better Way: Why You Should Stop Googling People</a>
+                </div>
+              </div>
+              <div class="blog-card blog__item swiper-slide">
+                <div class="blog-card__image"><span>Иллюстрация</span></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__top">
+                    <div class="blog-card__date">15 апреля 2021</div>
+                    <div class="blog-card__info">
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#pie-chart"></use>
+                        </svg><span>10 <br> мин.</span>
+                      </div>
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#message"></use>
+                        </svg><span>0</span>
+                      </div>
+                    </div>
+                  </div><a class="blog-card__title" href="#" target="_blank">Are There Sex Offenders in Your Area?  How to Get The Information You Need</a>
+                </div>
+              </div>
+              <div class="blog-card blog__item swiper-slide">
+                <div class="blog-card__image"><span>Иллюстрация</span></div>
+                <div class="blog-card__content">
+                  <div class="blog-card__top">
+                    <div class="blog-card__date">15 апреля 2021</div>
+                    <div class="blog-card__info">
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#pie-chart"></use>
+                        </svg><span>10 <br> мин.</span>
+                      </div>
+                      <div class="blog-card__info-item">
+                        <svg>
+                          <use xlink:href="./images/sprite.svg#message"></use>
+                        </svg><span>0</span>
+                      </div>
+                    </div>
+                  </div><a class="blog-card__title" href="#" target="_blank">Are There Sex Offenders in Your Area?  How to Get The Information You Need</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog__next slider-next-long">
+            <svg width="142" height="8">
+              <use xlink:href="./images/sprite.svg#arrow-link-long"></use>
+            </svg>
+          </div><a class="button button--dark-green button--flat button--big blog__more" href="#"><span>Показать еще</span></a>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -125,7 +844,7 @@
         <div class="search-dictionary">
           <div class="search-dictionary__left">
             <div class="search-dictionary__image">
-              <svg width="28" height="29">
+              <svg width="53" height="54">
                 <use xlink:href="./images/sprite.svg#person"></use>
               </svg>
             </div>
@@ -145,7 +864,7 @@
         <div class="footer__search-dictionary search-dictionary search-dictionary--without-filter">
           <div class="search-dictionary__left">
             <div class="search-dictionary__image">
-              <svg width="25" height="25">
+              <svg width="54" height="54">
                 <use xlink:href="./images/sprite.svg#company"></use>
               </svg>
             </div>
@@ -168,10 +887,7 @@
             <div class="footer__menu-item swiper-slide"><a class="top-link" href="#" target="_blank">company</a><a href="#" target="_blank">About us</a><a href="#" target="_blank">Our Leadership</a><a href="#" target="_blank">Investor Relations</a><a href="#" target="_blank">FAQs</a><a href="#" target="_blank">Careers</a><a href="#" target="_blank">Contact Us</a></div>
             <div class="footer__menu-item swiper-slide"><a class="top-link" href="#" target="_blank">b2b database</a><a href="#" target="_blank">Our Data</a><a href="#" target="_blank">Data Transparency</a><a href="#" target="_blank">Update Your Company</a><a href="#" target="_blank">Claim Profile</a><a href="#" target="_blank">Browse Directories</a></div>
             <div class="footer__menu-item swiper-slide"><a class="top-link" href="#" target="_blank">more resources</a><a href="#" target="_blank">Zoominfo Videos</a><a href="#" target="_blank">Newsroom</a><a href="#" target="_blank">Engineering Blog</a><a href="#" target="_blank">COVID-19 Newsfeed</a><a href="#" target="_blank">Recipes for Success</a><a href="#" target="_blank">Privacy Center</a></div>
-            <div class="footer__col"><a class="button button--outline footer__button" href="#">
-                <svg>
-                  <use xlink:href="./images/sprite.svg#pie-chart"></use>
-                </svg><span>Button</span></a><a class="footer__login" href="#">Login</a>
+            <div class="footer__col"><a class="button button--outline button--white button--big footer__trial" href="#"><span>Free trial</span></a><a class="footer__login" href="#">Login</a>
               <div class="footer__nickname">666.6666.6666.66</div>
             </div>
           </div>
@@ -224,21 +940,9 @@
                to, you can change your cookie setting at any time. <br> <a href="#" target="_blank">Read More</a>
             </div>
             <div class="cookies__buttons">
-              <button class="button button--outline cookies__button cookies__button--accept">
-                <svg>
-                  <use xlink:href="./images/sprite.svg#pie-chart"></use>
-                </svg><span>Button</span>
+              <button class="button button--outline button--big button--dark-green cookies__button cookies__button--accept"><span>Free trial</span>
               </button>
-              <button class="button button--outline cookies__button cookies__button--close">
-                <svg>
-                  <use xlink:href="./images/sprite.svg#pie-chart"></use>
-                </svg><span>Button</span>
-              </button>
-            </div>
-            <div class="cookies__buttons cookies__buttons--mobile">
-              <button class="button button--outline button--dark-green cookies__button cookies__button--accept"><span>Free trial</span>
-              </button>
-              <button class="button button--flat button--dark-green cookies__button cookies__button--close"><span>Close</span>
+              <button class="button button--flat button--big button--dark-green cookies__button cookies__button--close"><span>Close</span>
               </button>
             </div>
           </div>
