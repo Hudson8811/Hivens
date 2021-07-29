@@ -6,6 +6,9 @@
 
   @include max(sm) {
     padding: 49px 0 0;
+
+    background-image: url("../images/page-5/hero-bg-mobile.svg");
+    background-position: left -637px bottom 22px;
   }
 
   &__container {
@@ -84,6 +87,11 @@
     font-weight: 500;
     border: solid 1px $white;
     border-radius: 7px;
+    transition: opacity 0.3s ease;
+
+    @include hover {
+      opacity: 0.7;
+    }
 
     @include max(md) {
       margin-right: 16px;
@@ -269,5 +277,9 @@
 
   .rating-section {
     margin-top: 79px;
+
+    @include max(sm) {
+      margin-top: 76px;
+    }
   }
 }

@@ -15,7 +15,7 @@
   }
 
   @include max(sm) {
-    padding: 40px 0;
+    padding: 40px 0 48px;
     background-size: 697px auto;
     background-position: left -31px bottom 32px;
   }
@@ -24,7 +24,7 @@
     display: flex;
     position: relative;
 
-    @include max(767) {
+    @include max(sm) {
       display: block;
     }
 
@@ -44,13 +44,14 @@
         width: 270px;
       }
 
-      @include max(767) {
+      @include max(sm) {
         position: static;
         display: block;
-        width: 100%;
-        max-width: 313px;
+        width: 313px;
         height: 80px;
-        margin: 20px auto 0;
+        margin: 10px auto 0;
+
+        background-image: url("../images/page-5/documents-bg-grass-mobile.svg");
       }
     }
   }
@@ -63,9 +64,9 @@
     padding-top: 32px;
     padding-bottom: 100px;
 
-    @include max(767) {
+    @include max(sm) {
       max-width: none;
-      margin-bottom: 27px;
+      margin-bottom: 47px;
       padding: 0;
     }
   }
@@ -101,7 +102,7 @@
       align-self: flex-start;
     }
 
-    @include max(767) {
+    @include max(sm) {
       width: 100%;
       overflow: visible;
     }
@@ -132,7 +133,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 25px;
+        margin-top: 39px;
       }
 
       button {
@@ -187,5 +188,13 @@
         margin-right: 0;
       }
     }
+  }
+}
+
+.documents + .partners {
+  margin-top: -152px;
+
+  @include max(sm) {
+    margin-top: 0;
   }
 }

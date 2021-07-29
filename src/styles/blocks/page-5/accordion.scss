@@ -46,6 +46,10 @@
       cursor: pointer;
       transition: color 0.3s ease;
 
+      @include max(sm) {
+        padding-right: 21px;
+      }
+
       &::before {
         content: "";
         position: absolute;
@@ -70,6 +74,11 @@
       min-height: 97px;
       line-height: (21 / 14);
       color: $dark-gray-6e;
+
+      @include max(sm) {
+        max-width: 90%;
+        padding-top: 22px;
+      }
 
       display: none;
     }
