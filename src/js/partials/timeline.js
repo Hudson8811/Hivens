@@ -1,6 +1,13 @@
 $(window).on('load', () => {
   const html = document.documentElement;
   const timelineScene = document.querySelector('.timeline__scene');
+  
+  let offset = timelineScene ? timelineScene.offsetTop : null;
+  let width = html.clientWidth;
+  let isInit = false;
+  let carousel = null;
+  const breakpoint = 1079;
+  const carouselEl = document.querySelector('.__js_timeline-carousel');
 
   const items = [
     {el: document.querySelector('.p1'), start: 4196, end: 4140},
@@ -75,45 +82,81 @@ $(window).on('load', () => {
     {el: document.querySelector('.timeline__item--2020-Q1'), start: 217, end: 192, isQ: true}
   ];
 
+  const slides = items.filter(it => it.isQ).map(it => it.el);
+
   if (timelineScene) {
-    const offset = timelineScene.offsetTop;
+    //const offset = timelineScene.offsetTop;
     const triggerStart = offset - html.clientHeight / 2;
+    let timelineSceneHeight = timelineScene.offsetHeight - parseInt(window.getComputedStyle(timelineScene).getPropertyValue('padding-bottom'), 10);
 
     const line = document.querySelector('.line');
     const length = line.getTotalLength();
     ///
-    const out = document.querySelector('.timeline__scene-out div');
-    //const btn = document.querySelector('.timeline__scene div');
+    /*const out = document.querySelector('.timeline__scene-out div');
 
     document.querySelector('.timeline__scene-out').addEventListener('click', function(e) {
       const current = e.target.closest('.timeline__scene-btn');
       if (current) {
         html.scrollTop += current.classList.contains('top') ? -1 : 1;
       }
-    })
+    })*/
     ////
 
-
-
-    items.forEach(it => {
-      if (it.el) {
-        if (it.el.hasAttribute('fill')) {
-          it.el.setAttribute('fill', 'none');
-        } else {
-          pathPrepare(it.el, it.isQ);
+    if (width <= breakpoint) {
+      initCarousel();
+      isInit = true;
+      slides.forEach(it => it.classList.add('timeline__item--active'));
+    } else {
+      items.forEach(it => {
+        if (it.el) {
+          if (it.el.hasAttribute('fill')) {
+            it.el.setAttribute('fill', 'none');
+          } else {
+            pathPrepare(it.el, it.isQ);
+          }
         }
-      }
-    });
-    
-    pathPrepare(line);
+      });
 
-    window.addEventListener('scroll', () => {
-      let timelineSceneHeight = timelineScene.offsetHeight - parseInt(window.getComputedStyle(timelineScene).getPropertyValue('padding-bottom'), 10);
+      pathPrepare(line);
+      setLineAnimation();
+    }
+
+    window.addEventListener('scroll', setLineAnimation);
+    window.addEventListener('resize', () => {
+      width = html.clientWidth;
+      offset = timelineScene.offsetTop;
+      timelineSceneHeight = timelineScene.offsetHeight - parseInt(window.getComputedStyle(timelineScene).getPropertyValue('padding-bottom'), 10);
+        
+      if (width <= breakpoint && !isInit) {
+        initCarousel();
+        isInit = true;
+      } else if (width > breakpoint && isInit) {
+        carousel.destroy();
+        isInit = false;
+      }
+
+      slides.forEach(it => {
+        width <= breakpoint ? it.classList.add('timeline__item--active') :  it.classList.remove('timeline__item--active');
+      });
+    });
+
+    function initCarousel() {
+      carousel = new Swiper(carouselEl, {
+        speed: 300,
+        slidesPerView: 'auto',
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    }
+
+    function setLineAnimation() {
       let scroll = window.pageYOffset;
       if (scroll >= triggerStart) {
         let percent = (scroll - triggerStart) * 100 / timelineSceneHeight ;
         let part = length * percent / 100;
-        out.textContent = Math.floor(length - part);
+        //out.textContent = Math.floor(length - part);
 
         line.style.strokeDashoffset = part < length ? length - part : 0;
         checkItems(length - part);
@@ -121,22 +164,17 @@ $(window).on('load', () => {
       } else {
         line.style.strokeDashoffset = length;
       }
-    });
+    }
   }
-
 
   function checkItems(current) {
     items.forEach(it => {
       const length = !it.isQ ? it.el.getTotalLength() : null;
       const isFill = it.el.hasAttribute('fill');
-      
-      //console.log(current <= (it.start + it.end) / 2)
-      if (it.el && current <= (it.start + it.end) / 2) {
-        //console.log(it.el)
 
+      if (it.el && current <= (it.start + it.end) / 2) {
         if (it.isQ) {
           it.el.classList.add('timeline__item--active')
-          //continue;
         }
         if (isFill) {
           it.el.setAttribute('fill', it.fill);
@@ -146,7 +184,6 @@ $(window).on('load', () => {
       } else if (it.el) {
         if (it.isQ) {
           it.el.classList.remove('timeline__item--active')
-          //continue;
         }
         if (isFill) {
           it.el.setAttribute('fill', 'none');
