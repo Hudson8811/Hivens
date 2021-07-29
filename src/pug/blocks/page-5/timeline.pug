@@ -8,25 +8,32 @@ section.timeline
     //-each item in TIMELINE_ITEMS
       p= '.timeline__item--' + item.count.replace(' ', '-')
 
-    .timeline__main.swiper-container1 
-      .timeline__scene
-        .timeline__scene-out для разработки секции timeline
-          div 0
-          button.timeline__scene-btn.top(type="button") top
-          button.timeline__scene-btn.bottom(type="button") bottom
+    .timeline__scene.swiper-container.__js_timeline-carousel
+      //-.timeline__scene-out для разработки секции timeline
+        div 0
+        button.timeline__scene-btn.top(type="button") top
+        button.timeline__scene-btn.bottom(type="button") bottom
+      .timeline__line
         img(src="images/page-5/timeline.svg", width="1241", height="768", alt="")
         .timeline__svg 
           include _timeline-svg
-        .swiper-wrapper1
-          each item in TIMELINE_ITEMS
-            - const mod = item.count.replace(' ', '-');
-            .timeline__item(class="timeline__item--" + mod + " swiper-slide1")
-              .timeline__item-q= item.count
-              .timeline__item-content 
-                h3.timeline__item-title= item.title
-                ul
-                  each it in item.list
-                    li!= '-' + it
+
+      .swiper-wrapper
+        each item in TIMELINE_ITEMS
+          - const mod = item.count.replace(' ', '-');
+          .timeline__item(class="timeline__item--" + mod + " swiper-slide")
+            .timeline__item-q= item.count
+            .timeline__item-content 
+              h3.timeline__item-title= item.title
+              ul
+                each it in item.list
+                  li!= '-' + it
+      
+      .swiper-navigation
+        button.swiper-button-prev(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+        button.swiper-button-next(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
 
         
         

@@ -1,13 +1,12 @@
 .timeline {
   padding: 140px 0 112px;
 
-  @include max(1270) {
-    display: none;
+  @include max(md) {
+    overflow: hidden;
   }
 
   @include max(sm) {
-    padding: 40px 0;
-    overflow: hidden;
+    padding: 80px 0 30px;
   }
 
   &__container {
@@ -18,6 +17,10 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 55px;
+
+    @include max(md) {
+      margin-bottom: 0;
+    }
 
     @include max(sm) {
       display: block;
@@ -37,6 +40,7 @@
     text-align: center;
 
     @include max(sm) {
+      max-width: 90%;
       text-align: left;
     }
   }
@@ -44,6 +48,18 @@
   &__scene {
     position: relative;
     padding-bottom: 254px;
+    overflow: visible;
+
+    @include max(1270) {
+      padding-bottom: vw(254, 1270);
+    }
+
+    @include max(md) {
+      //width: calc(100% + 15px);
+      //margin-left: -15px;
+      padding-bottom: 0;
+      //overflow: hidden;
+    }
 
     /**/
 
@@ -58,12 +74,99 @@
     &-btn {
       border: solid 1px red;
     }
+    /**/
+
+    .swiper-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      @include max(md) {
+        position: relative;
+        padding-top: 60px;
+        //background-color: rgba(yellow, 0.3);
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -104px;
+          width: 3813px;
+          height: 116px;
+          background-repeat: no-repeat;
+          background-image: url("../images/page-5/timeline-mobile.svg");
+        }
+      }
+    }
+
+    .swiper-navigation {
+      display: none;
+
+      @include max(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 25px;
+      }
+
+      button {
+        cursor: pointer;
+        appearance: none;
+
+        @include max(sm) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        svg {
+          fill: $gray-97;
+          transition: fill 0.3s ease;
+        }
+
+        @include hover {
+          svg {
+            fill: $citrus;
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        svg {
+          transform: scale(-1, 1);
+        }
+      }
+
+      .swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+
+        @include max(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__line {
+    img,
+    svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    @include max(md) {
+      display: none;
+    }
   }
 
   &__svg {
     position: absolute;
     left: 0;
-    top: 1px;
+    top: 0; //1px;
     width: 100%;
     height: 100%;
   }
@@ -73,11 +176,31 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    width: auto;
+    height: auto;
+
+    @include max(md) {
+      position: static;
+      width: 212px;
+      margin-right: 75px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
 
     &--active {
       &::before {
-        background-color: $green-9e;
+        background-color: $green-9e !important;
         box-shadow: 0 0 0 14px rgba($green-9e, 0.14);
+
+        @include max(1270) {
+          box-shadow: 0 0 0 vw(14, 1270) rgba($green-9e, 0.14);
+        }
+
+        @include max(md) {
+          box-shadow: 0 0 0 14px rgba($green-9e, 0.14);
+        }
       }
 
       #{$item}-content {
@@ -99,6 +222,20 @@
       border-radius: 50%;
       background-color: $gray-c7;
       transition: box-shadow 0.3s ease;
+
+      @include max(1270) {
+        width: vw(25, 1270);
+        height: vw(25, 1270);
+        margin-left: vw(15, 1270);
+        margin-bottom: vw(25, 1270);
+      }
+
+      @include max(md) {
+        width: 25px;
+        height: 25px;
+        margin-left: 15px;
+        margin-bottom: 25px;
+      }
     }
 
     &-q {
@@ -109,6 +246,16 @@
       font-weight: 700;
 
       order: -1;
+
+      @include max(1270) {
+        margin-bottom: vw(21, 1270);
+        font-size: vw(14, 1270);
+      }
+
+      @include max(md) {
+        margin-bottom: 21px;
+        font-size: 14px;
+      }
     }
 
     &-content {
@@ -118,6 +265,20 @@
       padding-left: 12px;
       border-left: solid 1px $gray-c7;
 
+      @include max(1270) {
+        max-width: vw(174, 1270);
+        margin-left: vw(27, 1270);
+        padding-top: vw(55, 1270);
+        padding-left: vw(12, 1270);
+      }
+
+      @include max(md) {
+        max-width: 174px;
+        margin-left: 27px;
+        padding-top: 55px;
+        padding-left: 12px;
+      }
+
       ul {
         list-style: none;
         margin: 0;
@@ -126,6 +287,14 @@
         font-size: 16px;
         line-height: (20 / 16);
         color: $dark-gray-6e;
+
+        @include max(1270) {
+          font-size: vw(16, 1270);
+        }
+
+        @include max(md) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -136,11 +305,27 @@
       line-height: (21 / 16);
       color: $dark-gray-6e;
       font-weight: 700;
+
+      @include max(1270) {
+        max-width: vw(140, 1270);
+        margin-bottom: vw(14, 1270);
+        font-size: vw(16, 1270);
+      }
+
+      @include max(md) {
+        max-width: 140px;
+        margin-bottom: 14px;
+        font-size: 16px;
+      }
     }
 
     &--2017-Q1 {
       top: -0.3%;
       left: 9.7%;
+
+      @include max(md) {
+        margin-left: 15px;
+      }
     }
 
     &--2017-Q2 {
@@ -156,40 +341,68 @@
     &--2018-Q2 {
       top: -0.3%;
       left: 79.1%;
+
+      @include max(md) {
+        margin-right: 258px;
+      }
     }
 
     &--2018-Q3 {
-      top: 34.3%;
+      top: 34.6%;
       left: 72.1%;
+
+      @include max(md) {
+        margin-right: 125px;
+      }
     }
 
     &--2018-Q4 {
-      top: 34.3%;
+      top: 34.6%;
       left: 46.3%;
+
+      @include max(md) {
+        margin-right: 110px;
+      }
     }
 
     &--2019-Q1 {
-      top: 34.3%;
+      top: 34.6%;
       left: 19.1%;
+
+      @include max(md) {
+        margin-right: 373px;
+      }
     }
 
     &--2019-Q2 {
-      top: 69.3%;
+      top: 69.5%;
       left: 9.6%;
+
+      @include max(md) {
+        margin-right: 84px;
+      }
     }
 
     &--2019-Q3 {
-      top: 69.3%;
+      top: 69.5%;
       left: 33.6%;
+
+      @include max(md) {
+        margin-right: 84px;
+      }
     }
 
     &--2019-Q4 {
-      top: 69.3%;
+      top: 69.5%;
       left: 57.4%;
+
+      @include max(md) {
+        margin-right: 84px;
+      }
     }
 
     &--2020-Q1 {
-      top: 69.3%;
+      top: 69.5%;
       left: 81.3%;
     }
   }

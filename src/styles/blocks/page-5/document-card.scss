@@ -52,6 +52,10 @@
     line-height: (18.5 / 14);
     color: $green-9e;
     font-weight: 500;
+
+    @include max(sm) {
+      margin-bottom: 21px;
+    }
   }
 
   &__btn {
