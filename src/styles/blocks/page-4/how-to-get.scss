@@ -1,0 +1,356 @@
+.how-to-get {
+  padding: 70px 0;
+
+  @include max(sm) {
+    padding: 40px 0;
+    overflow: hidden;
+  }
+
+  &__container {
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 39px;
+
+    @include max(sm) {
+      display: block;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__pagination {
+    overflow: visible;
+    margin-bottom: 34px;
+
+    @include max(sm) {
+      margin-bottom: 29px;
+    }
+
+    .swiper-wrapper {
+      margin-top: -16px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @include max(sm) {
+        margin-top: 0;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+
+  &__dot {
+    width: auto;
+    margin: 16px 31px 0;
+
+    @include max(sm) {
+      margin: 0 62px 0 0;
+    }
+
+    &.swiper-pagination-bullet-active,
+    &.swiper-pagination-bullet-active:focus {
+      background-color: $green-9e;
+      color: $white;
+      pointer-events: none;
+    }
+  }
+
+  &__navigation {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 0;
+
+    @include max(sm) {
+      display: none;
+    }
+  }
+
+  &__prev,
+  &__next {
+    transform: translateY(-50%);
+  }
+
+  &__carousel {
+    position: relative;
+
+    @include max(sm) {
+      width: calc(100% + 64px);
+      margin-left: -32px;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    box-sizing: border-box;
+
+    @include max(sm) {
+      display: block;
+    }
+
+    &-image {
+      position: relative;
+      width: 100%;
+      max-width: 586px;
+
+      @include max(1270) {
+        max-width: vw(586, 1270);
+      }
+
+      @include max(sm) {
+        left: -3px;
+        width: calc(100% - 56px);
+        max-width: none;
+        margin: 0 28px vw(26, 375);
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      &-text {
+        position: absolute;
+        z-index: 1;
+
+        &--token {
+          top: 49%;
+          left: 21.8%;
+          max-width: 110px;
+          font-size: 14px;
+          line-height: (15 / 14);
+          color: $green-9e;
+          font-weight: 700;
+          text-align: center;
+
+          @include max(1270) {
+            max-width: vw(110, 1270);
+            font-size: vw(14, 1270);
+          }
+
+          @include max(sm) {
+            max-width: vw(60, 375);
+            font-size: vw(8, 375);
+          }
+        }
+
+        &--node {
+          top: 47%;
+          left: 51%;
+          font-size: 11px;
+          line-height: 1;
+          color: $green-9e;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          @include max(1270) {
+            font-size: vw(11, 1270);
+          }
+
+          @include max(sm) {
+            font-size: vw(6, 375);
+          }
+        }
+
+        &--buy {
+          top: 69.5%;
+          left: 64.4%;
+          font-size: 14px;
+          line-height: (15 / 14);
+          color: $white;
+          font-weight: 700;
+
+          @include max(1270) {
+            font-size: vw(14, 1270);
+          }
+
+          @include max(sm) {
+            font-size: vw(8, 375);
+          }
+        }
+
+        &--area {
+          top: 41%;
+          left: 51%;
+          font-size: 7px;
+          line-height: 1;
+          color: $green-9e;
+          font-weight: 700;
+
+          @include max(1270) {
+            font-size: vw(7, 1270);
+          }
+
+          @include max(sm) {
+            font-size: vw(4, 375);
+          }
+        }
+      }
+    }
+
+    &-main {
+      position: relative;
+      left: -7px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 370px;
+      margin-right: 76px;
+      padding: 17px 42px 0;
+
+      @include max(1270) {
+        left: vw(-7, 1270);
+        max-width: vw(370, 1270);
+        margin-right: vw(76, 1270);
+        padding: vw(17, 1270) vw(42, 1270) 0;
+      }
+
+      @include max(sm) {
+        left: 0; //vw(-7, 375);
+        max-width: vw(360, 375);
+        margin-right: 0;
+        padding: vw(17, 375) vw(28, 375) 0 vw(42, 375);
+      }
+
+      &::after {
+        content: "";
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 356px;
+        margin-top: auto;
+        padding-top: 66px;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-image: url("../images/page-4/how-to-get-slide-main-bg.svg");
+
+        @include max(1270) {
+          width: vw(356, 1270);
+          padding-top: vw(66, 1270);
+        }
+
+        @include max(sm) {
+          width: vw(313, 375);
+          padding-top: vw(66, 375);
+          background-image: url("../images/page-4/how-to-get-slide-main-bg-mobile.svg");
+        }
+      }
+    }
+
+    &-price {
+      position: relative;
+      z-index: 0;
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 49px;
+      padding: 3px 26px 3px 15px;
+      font-size: 49px;
+      line-height: (60 / 49);
+      color: $white;
+      text-align: center;
+      background-color: $citrus;
+      border-radius: 13px 13px 0 13px;
+      align-self: flex-start;
+
+      @include max(1270) {
+        margin-bottom: vw(49, 1270);
+        padding: vw(3, 1270) vw(26, 1270) vw(3, 1270) vw(15, 1270);
+        font-size: vw(49, 1270);
+        border-radius: vw(13, 1270) vw(13, 1270) 0 vw(13, 1270);
+      }
+
+      @include max(sm) {
+        margin-bottom: vw(49, 375);
+        padding: vw(4, 375) vw(30, 375) vw(4, 375) vw(17, 375);
+        font-size: vw(49, 375);
+        border-radius: vw(13, 375) vw(13, 375) 0 vw(13, 375);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-repeat: no-repeat;
+      }
+
+      &::before {
+        top: -17px;
+        left: -42px;
+        width: 75px;
+        height: 75px;
+        background-image: url("../images/page-4/how-to-get-slide-price-bg-1.svg");
+
+        @include max(1270) {
+          top: vw(-17, 1270);
+          left: vw(-42, 1270);
+          width: vw(75, 1270);
+          height: vw(75, 1270);
+          background-size: cover;
+        }
+
+        @include max(sm) {
+          top: vw(-17, 375);
+          left: vw(-42, 375);
+          width: vw(75, 375);
+          height: vw(75, 375);
+        }
+      }
+
+      &::after {
+        top: 0;
+        right: -26px;
+        width: 38px;
+        height: 101px;
+        background-image: url("../images/page-4/how-to-get-slide-price-bg-2.svg");
+
+        @include max(1270) {
+          right: vw(-26, 1270);
+          width: vw(38, 1270);
+          height: vw(101, 1270);
+          background-size: cover;
+        }
+
+        @include max(sm) {
+          right: vw(-26, 375);
+          width: vw(38, 375);
+          height: vw(101, 375);
+        }
+      }
+
+      b {
+        display: block;
+      }
+    }
+
+    &-text {
+      max-width: 294px;
+      margin: 0 auto 20px;
+      font-size: 14px;
+      line-height: (21 / 14);
+      color: $dark-gray-6e;
+      text-align: center;
+
+      @include max(1270) {
+        max-width: vw(294, 1270);
+        margin-bottom: vw(20, 1270);
+        font-size: vw(14, 1270);
+      }
+
+      @include max(sm) {
+        max-width: vw(294, 375);
+        margin-bottom: vw(31, 375);
+        font-size: vw(14, 375);
+      }
+    }
+  }
+}
