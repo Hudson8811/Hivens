@@ -1,5 +1,5 @@
 //= ./../../node_modules/jquery/dist/jquery.min.js
-//= ./../../node_modules/swiper/swiper-bundle.min.js
+// ./../../node_modules/swiper/swiper-bundle.min.js
 //= ./libs/js.cookie.js
 //= ./libs/jquery.fancybox.min.js
 //= ./libs/jquery.time-to.min.js
@@ -23,6 +23,8 @@
 //= ./partials/timer.js
 //= ./partials/payments-map.js
 //= ./partials/timeline.js
+//= ./partials/node-types.js
+//= ./partials/how-to-get.js
 //= ./partials/footer-carousel.js
 //= ./partials/footer-menu-dots.js
 //= ./partials/applying-carousel.js
