@@ -2,29 +2,9 @@ section.thero
   .thero__container.container
     h1.thero__title Algorithmic & Blockchain Solutions for Crypto-Trading and Protect your Investments
 
-    .thero__content 
-      .thero__text Full transparency. More trust, Minimize risk, maximize rewards.
-
-      .thero__buttons 
-        a.thero__btn(href="#") Wite paper
-        a.thero__btn(href="#") One pages
-
-      .thero__social 
-        .thero__social-title Join your community
-        +social('social--white social--large', [
-          {name: 'tw', class: 'tw'},
-          {name: 'fb', class: 'fb'},
-          {name: 'in', class: 'in'},
-          {name: 'git', class: 'git'},
-          {name: 'google', class: 'google'},
-          {name: 'insta', class: 'insta'},
-          {name: 'star', class: 'star'},
-          {name: 'heart', class: 'heart'}
-        ])
-
     .thero__offer
       .thero__offer-title Pre-Sale Ends In
-      .thero__offer-timer.timer.__js_timer
+      .thero__offer-timer.timer.__js_timer(data-end-date="2021-07-30T19:00:00", data-expired-text="Expired text")
         each it in ['Days', 'Hours', 'Min', 'Sec']
           .timer__column(class="timer__column--" + it.toLowerCase())
             .timer__figure 
@@ -46,6 +26,27 @@ section.thero
       .thero__offer-bottom 
         +button('Buy token now', 'thero__offer-btn button--dark-green', '', '#')
         .thero__offer-heading Minimum purchase: <span>150,000 HIV</span>
+    
+
+    .thero__content 
+      .thero__text Full transparency. More trust, Minimize risk, maximize rewards.
+
+      .thero__buttons 
+        a.thero__btn(href="#") Wite paper
+        a.thero__btn(href="#") One pages
+
+      .thero__social 
+        .thero__social-title Join your community
+        +social('social--white social--large', [
+          {name: 'tw', class: 'tw'},
+          {name: 'fb', class: 'fb'},
+          {name: 'in', class: 'in'},
+          {name: 'git', class: 'git'},
+          {name: 'google', class: 'google'},
+          {name: 'insta', class: 'insta'},
+          {name: 'star', class: 'star'},
+          {name: 'heart', class: 'heart'}
+        ])
 
   include rating-section
 

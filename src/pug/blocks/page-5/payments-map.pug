@@ -1,0 +1,30 @@
+- const PINS_FILTERS = [{text: 'Teams', target: 'teams'},  {text: 'Advisors', target: 'advisors'},  {text: 'Holders', target: 'holders'}];
+
+- const PINS = [{category: 'teams, holders', mod: '', bottom: '59.5', left: '8'}, {category: 'teams, advisors', mod: 'theme-yellow', bottom: '26.5', left: '24.7'}, {category: 'teams, holders', mod: '', bottom: '53', left: '71.2'} ]
+
+section.payments-map
+  .payments-map__container.container
+    header.payments-map__header 
+      +title('Make instant global payments', 'h2', 'payments-map__title')
+      .payments-map__text Send and receive any amount of any kind of cryptocurrency from anyone one, anywhere in the world
+    
+    .payments-map__filters.swiper-container.__js_pins-filters
+      .swiper-wrapper 
+        each item, index in PINS_FILTERS 
+          - let cl = index === 0 ? ' active' : '';
+          +button(item.text, 'payments-map__filter swiper-slide button--rounded button--outline-green' + cl, '', '')(type="button", data-target= item.target)
+    .payments-map__wrapper
+      .payments-map__map
+        each item in PINS 
+          .payments-map__pin.pin(class= item.mod ? "pin--" + item.mod : '', style="bottom: " + item.bottom + "%; left: " + item.left + "%", data-category= item.category)
+            .pin__image 
+              img(src="images/page-5/pin-avatar.png", srcset="images/page-5/pin-avatar@2x.png 2x", width="76", height="72", alt="")
+            .pin__tooltip 
+              .pin__tooltip-name Alex Martin
+              .pin__tooltip-main Received 200 ETH from John Smith
+    .payments-map__buttons.hide
+      button.payments-map__btn.payments-map__btn--beginning.hide(type="button")
+        +icon('long-right-arrow')(width="143", height="9")
+      button.payments-map__btn.payments-map__btn--end(type="button")
+        +icon('long-right-arrow')(width="143", height="9")
+

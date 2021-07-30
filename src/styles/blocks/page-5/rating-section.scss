@@ -3,7 +3,7 @@
 
   @include max(sm) {
     overflow: hidden;
-    padding: 40px 0;
+    padding: 40px 0 31px;
   }
 
   &__container {
@@ -22,10 +22,10 @@
   &__list {
     overflow: visible;
 
-    @include max(767) {
+    @include max(sm) {
       position: relative;
 
-      &::before {
+      /*&::before {
         content: "";
         position: absolute;
         top: 0;
@@ -35,7 +35,7 @@
         width: 100%;
         height: 100%;
         background-color: $white;
-      }
+      }*/
     }
 
     .swiper-wrapper {
