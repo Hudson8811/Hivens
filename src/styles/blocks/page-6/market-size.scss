@@ -1,0 +1,170 @@
+.market-size {
+	padding-top: 70px;
+	padding-bottom: 70px;
+
+	&__header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__content {
+		margin-top: 65px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__indicators {
+		margin-right: 35px;
+	}
+
+	&__indicator {
+		display: flex;
+		align-items: flex-start;
+		border-left: 1px solid $white-eb;
+		padding-left: 39px;
+		min-height: 144px;
+
+		&:first-child {
+			margin-top: -4px;
+		}
+
+		&:not(:first-child) {
+			margin-top: 51px;
+		}
+
+		&--green {
+			.market-size__indicator-title {
+				color: $green-9e;
+			}
+
+			svg {
+				fill: $green-9e;
+			}
+		}
+		&--citrus {
+			.market-size__indicator-title {
+				color: $citrus;
+			}
+
+			svg {
+				fill: $citrus;
+			}
+		}
+
+		&-icon {
+			margin-top: 4px;
+
+			svg {
+				width: 50px;
+				height: 55px;
+			}
+		}
+
+		&-content {
+			max-width: 210px;
+			margin-left: 25px;
+		}
+
+		&-title {
+			font-weight: 500;
+			font-size: 28px;
+			line-height: (34 / 28);
+			text-transform: uppercase;
+		}
+
+		&-value,
+		&-desc {
+			font-weight: 500;
+			font-size: 24px;
+			line-height: (29 / 23);
+		}
+
+		&-value {
+			color: $dark-gray;
+		}
+
+		&-desc {
+			color: $gray-ba;
+		}
+	}
+
+	&__map {
+		position: relative;
+
+		&-label {
+			position: absolute;
+			background-color: $citrus;
+			display: flex;
+			align-items: center;
+			padding: 6px 12px 3px 10px;
+			border-radius: 6px;
+
+			&::after {
+				content: "";
+				position: absolute;
+			}
+
+			&--arrow-down {
+				&::after {
+					bottom: -11px;
+					left: 50%;
+					transform: translateX(-50%);
+					border: 6px solid transparent;
+					border-top: 6px solid $citrus;
+				}
+			}
+
+			&--arrow-right {
+				&::after {
+					top: 50%;
+					right: -11px;
+					transform: translateY(-50%);
+					border: 6px solid transparent;
+					border-left: 6px solid $citrus;
+				}
+			}
+
+			&--canada {
+				left: 3.3%;
+				top: 12.5%;
+			}
+
+			&--usa {
+				left: 14.6%;
+				top: 33.3%;
+			}
+
+			&--europe {
+				left: 50.7%;
+				top: 22.1%;
+			}
+
+			&--australia {
+				left: 81.4%;
+				top: 64%;
+			}
+
+			&--new-zealand {
+				left: 79.4%;
+				top: 81.8%;
+			}
+		}
+
+		&-icon {
+			margin-right: 4px;
+
+			svg {
+				fill: #fff;
+				width: 14px;
+				height: 14px;
+			}
+		}
+		&-country {
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 21px;
+			color: #fff;
+		}
+	}
+}
