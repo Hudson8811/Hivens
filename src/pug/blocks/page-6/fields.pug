@@ -1,0 +1,94 @@
+section.fields 
+	.container 
+		header.fields__header 
+			+title('Какие поля обрабатываются для 6 типов данных?')
+		.fields__content 
+			.fields__categories
+				.swiper-wrapper
+					.fields__item.swiper-slide.active
+						.fields__item-inner 
+							.fields__item-icon
+								+icon('person')
+							.fields__item-text
+								| People Profile
+					.fields__item.swiper-slide 
+						.fields__item-inner 
+							.fields__item-icon
+								+icon('globe')
+							.fields__item-text
+								| Site Domain Info
+					.fields__item.swiper-slide 
+						.fields__item-inner 
+							.fields__item-icon
+								+icon('goods')
+							.fields__item-text
+								| Goods
+					.fields__item.swiper-slide 
+						.fields__item-inner 
+							.fields__item-icon
+								+icon('company')
+							.fields__item-text
+								| Company Profile
+					.fields__item.swiper-slide 
+						.fields__item-inner 
+							.fields__item-icon
+								+icon('mark')
+							.fields__item-text
+								| Addresses
+					.fields__item.swiper-slide 
+						.fields__item-inner 
+							.fields__item-icon
+								+icon('services-hand')
+							.fields__item-text
+								| Services
+			.fields__slider.swiper-container
+				.fields__button-prev.swiper-button-prev
+					+icon('chevron-left')
+				.swiper-wrapper 
+					.fields__slide.swiper-slide 
+						.fields__slide-inner 
+							.fields__slide-title People Profile
+							.fields__slide-image
+								img(src="images/page-6/fields/slide-img-1.png", srcset="images/page-6/fields/slide-img-1@2x.png 2x", alt="")
+							.fields__slide-list
+								.fields__slide-item 
+									| email
+								.fields__slide-item 
+									| email
+								.fields__slide-item 
+									| телефон
+								.fields__slide-item 
+									| телефон
+								.fields__slide-item 
+									| профили в соц сетях
+								.fields__slide-item 
+									| профили в соц сетях
+							a(href="#").fields__slide-show
+								+icon('chevron-down')
+								| показать
+					.fields__slide.swiper-slide 
+						.fields__slide-inner
+							.fields__slide-title People Profile
+							.fields__slide-image
+								img(src="images/page-6/fields/slide-img-1.png", srcset="images/page-6/fields/slide-img-1@2x.png 2x", alt="")
+							.fields__slide-list
+								.fields__slide-item 
+									| email
+								.fields__slide-item 
+									| email
+								.fields__slide-item 
+									| телефон
+								.fields__slide-item 
+									| телефон
+								.fields__slide-item 
+									| профили в соц сетях
+								.fields__slide-item 
+									| профили в соц сетях
+							a(href="#").fields__slide-show
+								+icon('chevron-down')
+								| показать
+				.fields__slider-pagination.swiper-pagination
+					.swiper-pagination-bullet.swiper-pagination-bullet-active
+					.swiper-pagination-bullet
+				.fields__button-next.swiper-button-next
+					+icon('chevron-right')

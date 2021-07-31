@@ -1,0 +1,276 @@
+.fields {
+	padding-top: 70px;
+	padding-bottom: 70px;
+
+	&__header {
+		display: flex;
+		justify-content: center;
+
+		@include max(sm) {
+			justify-content: flex-start;
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 34px;
+		padding-bottom: 80px;
+		background-image: url("../images/page-6/fields/fields-bg.svg");
+		background-repeat: no-repeat;
+		background-position: bottom left;
+		background-size: contain;
+	}
+
+	&__categories {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 250px;
+		flex-shrink: 0;
+
+		.swiper-wrapper {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		cursor: pointer;
+		height: auto;
+
+		&.active,
+		&.swiper-slide-active {
+			.fields__item {
+				&-text {
+					font-weight: 700;
+
+					&::after {
+						width: 132px;
+					}
+				}
+
+				&-icon {
+					border: 2px solid $green-9e;
+				}
+			}
+
+			svg {
+				fill: $green-9e;
+			}
+		}
+
+		&:not(:first-child) {
+			margin-top: 36px;
+		}
+
+		&:nth-child(3) {
+			svg {
+				width: 29px;
+				height: 28px;
+				margin-left: -3px;
+				margin-top: 3px;
+			}
+		}
+
+		&:nth-child(5) {
+			svg {
+				width: 23px;
+				height: 32px;
+				fill: none;
+				stroke: $gray-c7;
+			}
+
+			&.active,
+			&.swiper-slide-active {
+				&:nth-child(5) {
+					svg {
+						stroke: $green-9e;
+					}
+				}
+			}
+		}
+
+		&:nth-child(6) {
+			svg {
+				width: 30px;
+				height: 30px;
+			}
+		}
+
+		&-inner {
+			display: flex;
+			align-items: center;
+		}
+
+		&-icon {
+			width: 50px;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			border: 2px solid $gray-c7;
+			margin-right: 19px;
+			flex-shrink: 0;
+
+			svg {
+				width: 24px;
+				height: 24px;
+				fill: $gray-c7;
+			}
+		}
+
+		&-text {
+			position: relative;
+			color: $dark-gray-6e;
+			padding-bottom: 9px;
+			width: 100%;
+			font-size: 14px;
+			font-weight: normal;
+			line-height: (21 / 14);
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 0;
+				height: 2px;
+				border-radius: 1px;
+				background-color: $green-9e;
+			}
+		}
+	}
+
+	&__slider {
+		width: 100%;
+		padding: 5px 70px 50px;
+		position: relative;
+
+		&-pagination {
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 10px;
+
+			.swiper-pagination-bullet {
+				width: 15px;
+				height: 4px;
+				border-radius: 5px;
+				opacity: 0.3;
+				background-color: $green-9e;
+
+				&:not(:last-child) {
+					margin-right: 4px;
+				}
+			}
+
+			.swiper-pagination-bullet-active {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__slide {
+		padding: 18px 36px 21px 42px;
+		box-shadow: 0px 2.04886px 13.6591px 0.682953px rgba(0, 0, 0, 0.07);
+		border-radius: 4.09772px;
+
+		&-title {
+			font-weight: 500;
+			font-size: 21px;
+			line-height: (26 / 21);
+			text-align: center;
+			color: $green-9e;
+		}
+
+		&-image {
+			margin-top: 16px;
+		}
+
+		&-list {
+			margin-top: 30px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		&-item {
+			display: flex;
+			align-items: center;
+			flex-basis: 50%;
+			width: 50%;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: (20 / 16);
+			letter-spacing: 0.4px;
+			color: $green-9e;
+			margin-top: 10px;
+
+			&:nth-child(1),
+			&:nth-child(2) {
+				margin-top: 0;
+			}
+
+			&::before {
+				content: "";
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				background-color: $citrus;
+				flex-shrink: 0;
+				margin-right: 16px;
+			}
+		}
+
+		&-show {
+			width: 132px;
+			height: 32px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: (20 / 16);
+			letter-spacing: 0.4px;
+			color: $citrus;
+			margin: 30px auto 0 auto;
+
+			svg {
+				fill: $citrus;
+				margin-right: 4px;
+			}
+		}
+	}
+
+	&__button {
+		&-next,
+		&-prev {
+			position: absolute;
+			top: 30%;
+			width: 46px;
+			height: 43px;
+			cursor: pointer;
+
+			svg {
+				width: 46px;
+				height: 43px;
+				fill: $dark-gray-6e;
+			}
+		}
+
+		&-prev {
+			left: 0;
+		}
+		&-next {
+			right: 0;
+		}
+	}
+}
