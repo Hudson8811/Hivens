@@ -10,18 +10,35 @@
 		opacity: 0.9;
 	}
 
-	@include max(sm) {
+	@include max(md) {
 		width: 57px;
 		height: 57px;
 	}
 
+	&__text {
+		margin-top: 48px;
+		font-size: 28px;
+		line-height: (34.13 / 28);
+		color: $dark-gray;
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		opacity: 1 !important;
+
+		@include max(sm) {
+			margin-top: 28px;
+			font-size: 20px;
+		}
+	}
+
 	svg {
+		fill: $green-9e;
 		width: 35%;
 		height: 35%;
 		position: relative;
 		left: 6px;
 
-		@include max(sm) {
+		@include max(md) {
 			left: 3px;
 		}
 	}
@@ -35,6 +52,7 @@
 		border-radius: 50%;
 		background-color: $white;
 		position: relative;
+		transition: background-color 0.3s ease;
 	}
 
 	.pulse {
@@ -49,11 +67,11 @@
 		pointer-events: none;
 
 		&-1 {
-			animation: pulse-1 7s linear infinite;
+			animation: pulse-1 2s linear infinite;
 		}
 
 		&-2 {
-			animation: pulse-2 7s linear infinite;
+			animation: pulse-2 2s linear infinite;
 		}
 	}
 
@@ -61,7 +79,13 @@
 		width: 122px;
 		height: 122px;
 
-		@include max(sm) {
+		@include hover {
+			.pulse-core {
+				background-color: rgba($citrus, 0.9);
+			}
+		}
+
+		@include max(md) {
 			width: 52px;
 			height: 52px;
 		}

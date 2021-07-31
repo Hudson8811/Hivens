@@ -1,5 +1,111 @@
 .first-screen {
-	background-image: url("../images/first-bg.png");
-	background-repeat: no-repeat;
-	background-size: cover;
+	position: relative;
+
+	&__container {
+		position: absolute;
+		top: 240px;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@include max(md) {
+			top: 133px;
+		}
+	}
+
+	&__bg {
+		position: relative;
+		margin-top: -125px;
+
+		@include max(md) {
+			margin-top: -95px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			min-height: 1324px;
+			object-fit: cover;
+
+			@include max(md) {
+				min-height: 631px;
+				max-height: 631px;
+				object-fit: fill;
+			}
+		}
+	}
+
+	&__play {
+		margin: 0 auto;
+	}
+
+	&__title {
+		font-size: 77px;
+		line-height: 94px;
+		font-weight: 600;
+		text-align: center;
+		color: $white;
+		margin-top: 62px;
+
+		@include max(md) {
+			margin-top: 14px;
+		}
+
+		@include max(xxs) {
+			font-size: 55px;
+			line-height: 62px;
+		}
+	}
+
+	&__subtitle {
+		font-size: 28px;
+		line-height: 34px;
+		font-weight: 500;
+		text-align: center;
+		color: $white;
+		margin-top: 30px;
+		margin-bottom: 50px;
+
+		@include max(md) {
+			font-size: 24px;
+			line-height: 29px;
+			margin-top: 1px;
+			margin-bottom: 30px;
+		}
+
+		@include max(xxs) {
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 20px;
+		}
+
+		br {
+			display: none;
+
+			@include max(md) {
+				display: block;
+			}
+
+			@include max(xxs) {
+				display: none;
+			}
+		}
+	}
+
+	&__privacy {
+		max-width: 750px;
+		width: 100%;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-top: 48px;
+
+		@include max(md) {
+			max-width: 278px;
+			margin-top: 33px;
+		}
+
+		@include max(xxs) {
+			margin-top: 15px;
+		}
+	}
 }

@@ -1,0 +1,17 @@
+- const RATINGS = [{text: 'ICO Bench', val: '4,7/5'},{text: 'ICObazaar', val: 'A'},{text: 'ICORancer', val: '9.4/10'},{text: 'Trackico', val: '4,9/5'},{text: 'WiceriCO', val: '5/5'},{text: 'Fundico', val: '9.1/10'}];
+section.rating-section
+  .rating-section__container.container 
+    header.rating-section__header
+      +title('Your rating', 'h2', 'rating-section__title')
+    
+    .rating-section__list.swiper-container.__js_rating-carousel 
+      .swiper-wrapper
+        each item in RATINGS 
+          .rating-section__card.rating-card.swiper-slide 
+            .rating-card__value= item.val
+            .rating-card__text= item.text
+      .swiper-navigation
+        button.swiper-button-prev(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+        button.swiper-button-next(type="button")
+          +icon('long-right-arrow')(width="143", height="9")

@@ -1,0 +1,56 @@
+.hero-section {
+  padding: 31px 0 70px;
+  text-align: center;
+
+  @include max(sm) {
+    padding: 27px 0 57px;
+    overflow: hidden;
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  &__title {
+    margin-bottom: 13px;
+
+    @include max(sm) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+
+    @include max(sm) {
+      width: calc(100% + 64px);
+      margin-left: -32px;
+    }
+
+    &--nodes {
+      left: 15px;
+
+      @include max(sm) {
+        left: 0;
+      }
+    }
+
+    @include max(sm) {
+      position: relative;
+      //width: vw(351, 375);
+      //left: 50%;
+      //transform: translateX(-49%);
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

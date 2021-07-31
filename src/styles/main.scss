@@ -17,22 +17,65 @@
 /* components */
 @import "partials/button";
 @import "partials/social";
-@import "partials/form-elements";
 @import "partials/title";
+@import "partials/social2";
 @import "partials/header";
 @import "partials/footer";
 @import "partials/cookies";
 @import "partials/play";
+@import "partials/field";
 
 /* blocks */
 @import "blocks/grid";
 @import "blocks/search-dictionary";
+@import "blocks/search-main";
+@import "blocks/first-screen";
+@import "blocks/records";
+@import "blocks/records-card";
+@import "blocks/applying";
+@import "blocks/what-is";
+@import "blocks/blog-card";
+@import "blocks/blog";
 
 @import "blocks/innerpage-title";
 @import "blocks/custom-title";
+@import "blocks/timer";
+
+@import "blocks/page-2/ecosystem";
+@import "blocks/page-2/video-block";
+@import "blocks/page-2/platform-preview";
+@import "blocks/page-2/how-it-works";
+@import "blocks/page-2/services-section";
+@import "blocks/page-5/thero";
+@import "blocks/page-5/rating-card";
+@import "blocks/page-5/rating-section";
+@import "blocks/page-5/why-crypto";
+@import "blocks/page-5/crypto-solution";
+@import "blocks/page-5/crypto-line";
+@import "blocks/page-5/member-card";
+@import "blocks/page-5/team-section";
+@import "blocks/page-5/document-card";
+@import "blocks/page-5/documents";
+@import "blocks/page-5/partners";
+@import "blocks/page-5/accordion";
+@import "blocks/page-5/faqs";
+@import "blocks/page-5/contact-section";
+@import "blocks/page-5/sale-card";
+@import "blocks/page-5/token-sale";
+@import "blocks/page-5/pin";
+@import "blocks/page-5/payments-map";
+@import "blocks/page-5/timeline";
+
+@import "blocks/page-4/hero-section";
+@import "blocks/page-4/about-nodes";
+@import "blocks/page-4/node-types";
+@import "blocks/page-4/how-to-get";
+
 @import "blocks/briefly";
 @import "blocks/briefly-list";
 
 @import "blocks/page-3/platform";
 @import "blocks/page-3/data-purchase";
 @import "blocks/page-3/how-platform-works";
+@import "blocks/first-screen";
+@import "blocks/picture-info-block";

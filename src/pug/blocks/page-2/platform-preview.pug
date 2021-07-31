@@ -1,0 +1,25 @@
+section.platform-preview
+  .platform-preview__container.container
+    +title('Как функционирует маркетплейс платформа?', 'h2', 'platform-preview__title')
+    .platform-preview__image
+      picture
+        source(media="(max-width: 767px)", srcset="images/page-2/platform-preview-mobile.jpg 1x, images/page-2/platform-preview-mobile@2x.jpg 2x")
+        img(src="images/page-2/platform-preview.jpg", srcset="images/page-2/platform-preview@2x.jpg 2x", alt="")
+      .platform-preview__image-text.platform-preview__image-text--singboard what is happening there?
+      .platform-preview__image-text.platform-preview__image-text--search Search
+      .platform-preview__image-text.platform-preview__image-text--marketplace Hivens <b>Marketplace</b>
+    
+    .platform-preview__content
+      p Платформа представляет многофункциональную и многоуровневую систему 8 слоев:
+
+      ol
+        li Маркет для покупки и продажи доступа к данным;
+        li Разработка протоколов обмена информацией;
+        li Конструктор модулей для создания сервисов;
+        li Управление майнингом данных для нод провайдеров;
+        li Центр проверки данных на соответсвие GDPR, CCPA;
+        li Разработка и обновление фунционала экосистемы;
+        li Биржа покупки, обмена токенов HIV;
+        li Хеширование и обезличивание данных для маркета.
+
+      +button('Подробнее', 'platform-preview__btn button--big button--dark-green', '', '#')

@@ -1,0 +1,19 @@
+section.partners
+  .partners__container.container 
+    header.partners__header
+      +title('Our Partners', 'h2', 'partners__title')
+    
+    .partners__list.swiper-container.__js_partners-carousel
+      .swiper-wrapper 
+        - let c = 1;
+
+        while c <= 6
+          .partners__item.swiper-slide
+            img(src="images/partners/" + c + ".png", srcset="images/partners/" + c + "@2x.png 2x", width="160", height="60", alt="")
+          - c++;
+
+      .swiper-navigation
+        button.swiper-button-prev(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+        button.swiper-button-next(type="button")
+          +icon('long-right-arrow')(width="143", height="9")

@@ -1,11 +1,38 @@
 .social {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  $self: &;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	&__item {
-		&:not(:last-child) {
-			margin-right: 20px;
+  &--white {
+    #{$self}__item {
+      a {
+        svg {
+          fill: $white !important;
+        }
+      }
+    }
+  }
+
+  &--large {
+    #{$self}__item {
+      a {
+        svg {
+          width: 32px;
+          height: 32px;
+
+          @include max(md) {
+            width: 26px;
+            height: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
 
 			@include max(md) {
 				margin-right: 10px;
@@ -20,42 +47,8 @@
 			}
 
 			svg {
-				@include max(md) {
-					fill: $white !important;
-				}
+				fill: $white;
 			}
 		}
-	}
-
-	.tw {
-		fill: #00ACEE;
-	}
-
-	.fb {
-		fill: #3B5998;
-	}
-
-	.in {
-		fill: #0E76A8;
-	}
-
-	.git {
-		fill: #211F1F;
-	}
-
-	.google {
-		fill: #DB3236;
-	}
-
-	.insta {
-		fill: #3F729B;
-	}
-
-	.star {
-		fill: #FF9F43;
-	}
-
-	.heart {
-		fill: #EA5455;
 	}
 }

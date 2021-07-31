@@ -1,0 +1,31 @@
+- let SLIDES = [{text: 'Обмен заметками о страницах, профилях, резюме, компаний', category: 'marketing, sales'}, {text: 'Uncover Online Scammers', category: 'marketing, recruiting'}, {text: 'Справочник компаний', category: 'marketing, management'}, {text: 'Поиск инвестора, база инвесторов.', category: 'management, marketing'}, {text: 'Поиск инвестора, база инвесторов.', category: 'marketing, sales'}, {text: 'Поиск инвестора, база инвесторов.', category: 'marketing'}, {text: 'Поиск инвестора, база инвесторов.', category: 'sales'}, {text: 'Поиск инвестора, база инвесторов.', category: 'sales'}, {text: 'Поиск инвестора, база инвесторов.', category: 'recruiting'}, {text: 'Поиск инвестора, база инвесторов.', category: 'management'}];
+
+section.services-section 
+  .services-section__container.container
+    header.services-section__header
+      +title('Какие сервисы доступны для покупателей и поставщиков?', 'h2', 'services-section__title')
+
+    .services-section__filters.swiper-container
+      .swiper-wrapper
+        +button('Маркетинг', 'services-section__filter swiper-slide button--rounded button--outline-green button--big active', '', '')(type="button", data-target="marketing")
+        +button('Продажи', 'services-section__filter swiper-slide button--rounded button--outline-green button--big' + cl, '', '')(type="button", data-target="sales")
+        +button('Рекрутинг', 'services-section__filter swiper-slide button--rounded button--outline-green button--big', '', '')(type="button", data-target="recruiting")
+        +button('Менеджмент', 'services-section__filter swiper-slide button--rounded button--outline-green button--big', '', '')(type="button", data-target="management")
+
+          
+    
+    .services-section__carousel.swiper-container 
+      .swiper-wrapper 
+        each item in SLIDES
+          .services-section__card.swiper-slide(data-category= item.category)
+            .services-section__card-image
+              picture 
+                source(media="(max-width: 767px)", srcset="images/page-2/carousel-card-placeholder-mobile.jpg 1x, images/page-2/carousel-card-placeholder-mobile@2x.jpg 2x")
+                img(src="images/page-2/carousel-card-placeholder.jpg", srcset="images/page-2/carousel-card-placeholder@2x.jpg 2x", alt="")
+            .services-section__card-content= item.text
+      .swiper-navigation
+        button.swiper-button-prev(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+        button.swiper-button-next(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+

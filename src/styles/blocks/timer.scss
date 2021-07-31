@@ -1,0 +1,70 @@
+.timer {
+  display: flex;
+  width: 100%;
+
+  &__column {
+    width: 100%;
+    max-width: 94px;
+
+    @include max(md) {
+      max-width: 56px;
+    }
+
+    & + & {
+      margin-left: 24px;
+
+      @include max(md) {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  &__figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    //max-width: 94px;
+    height: 94px;
+    font-size: 30px;
+    line-height: (36.57 / 30);
+    font-weight: 600;
+    color: $white;
+    border-radius: 12px;
+    background-color: $green-9e;
+    box-shadow: 0px 2.04886px 13.6591px 0.682953px rgba(0, 0, 0, 0.07);
+
+    @include max(md) {
+      max-width: 56px;
+      height: 56px;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+  }
+
+  &__caption {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: (18.5 / 14);
+    font-weight: 500;
+    color: $green-9e;
+    text-align: center;
+
+    @include max(md) {
+      font-size: 9px;
+    }
+  }
+
+  &__expired {
+    width: 100%;
+    font-size: 20px;
+    line-height: (24 / 20);
+    font-weight: 500;
+    color: $white;
+    text-align: center;
+
+    @include max(md) {
+      font-size: 16px;
+    }
+  }
+}
