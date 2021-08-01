@@ -131,7 +131,7 @@
 		&-title {
 			font-weight: bold;
 			font-size: 12px;
-			line-height: 18px;
+			line-height: (18 / 12);
 			text-transform: uppercase;
 			color: $dark-gray-6e;
 		}
@@ -139,7 +139,7 @@
 		&-info {
 			font-weight: normal;
 			font-size: 12px;
-			line-height: 18px;
+			line-height: (18 / 12);
 			max-width: 125px;
 
 			&--left {
