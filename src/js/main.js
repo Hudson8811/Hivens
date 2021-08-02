@@ -3,6 +3,8 @@
 //= ./libs/js.cookie.js
 //= ./libs/jquery.fancybox.min.js
 //= ./libs/jquery.time-to.min.js
+//= ./libs/gsap.min.js
+//= ./libs/TweenMax.min.js
 
 
 //= ./partials/equal-height.js
@@ -28,3 +30,4 @@
 //= ./partials/applying-carousel.js
 //= ./partials/records-carousel.js
 //= ./partials/blog-carousel.js
+//= ./partials/slider-anim.js
