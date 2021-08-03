@@ -36,28 +36,35 @@
 		}
 	}
 
-	&__item {
+	&__filter {
 		cursor: pointer;
 		height: auto;
+		transition: 0.4s linear;
 
 		&.active,
 		&.swiper-slide-active {
-			.fields__item {
+			.fields__filter {
 				&-text {
 					font-weight: 700;
+					transition: 0.4s linear;
 
-					&::after {
-						width: 132px;
+					span {
+						&::after {
+							width: calc(100% + 24px);
+							transition: 0.4s linear;
+						}
 					}
 				}
 
 				&-icon {
 					border: 2px solid $green-9e;
+					transition: 0.4s linear;
 				}
 			}
 
 			svg {
 				fill: $green-9e;
+				transition: 0.4s linear;
 			}
 		}
 
@@ -123,7 +130,6 @@
 		}
 
 		&-text {
-			position: relative;
 			color: $dark-gray-6e;
 			padding-bottom: 9px;
 			width: 100%;
@@ -131,23 +137,36 @@
 			font-weight: normal;
 			line-height: (21 / 14);
 
-			&::after {
-				content: "";
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: 0;
-				height: 2px;
-				border-radius: 1px;
-				background-color: $green-9e;
+			span {
+				display: inline-block;
+				position: relative;
+
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: -6px;
+					left: 0;
+					width: 0;
+					height: 2px;
+					border-radius: 1px;
+					background-color: $green-9e;
+				}
 			}
 		}
 	}
 
 	&__slider {
 		width: 100%;
-		padding: 5px 70px 50px;
+		// padding: 5px 70px 50px;
+		padding-top: 5px;
+		padding-bottom: 50px;
 		position: relative;
+
+		transition: opacity 0.4s linear;
+
+		&.opacity {
+			opacity: 0;
+		}
 
 		&-pagination {
 			position: absolute;
@@ -177,9 +196,15 @@
 	}
 
 	&__slide {
-		padding: 18px 36px 21px 42px;
-		box-shadow: 0px 2.04886px 13.6591px 0.682953px rgba(0, 0, 0, 0.07);
-		border-radius: 4.09772px;
+		width: 100%;
+
+		&-inner {
+			margin: 0 auto;
+			padding: 18px 36px 21px 42px;
+			box-shadow: 0px 2.04886px 13.6591px 0.682953px rgba(0, 0, 0, 0.07);
+			border-radius: 4.09772px;
+			max-width: 801px;
+		}
 
 		&-title {
 			font-weight: 500;
@@ -258,6 +283,7 @@
 			width: 46px;
 			height: 43px;
 			cursor: pointer;
+			z-index: 10;
 
 			svg {
 				width: 46px;

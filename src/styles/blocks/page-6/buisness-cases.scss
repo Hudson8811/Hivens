@@ -1,10 +1,148 @@
-.buisness-cases {
+.business-cases {
+	padding-top: 70px;
+	padding-bottom: 70px;
 	&__header {
 		display: flex;
 		justify-content: center;
 	}
 
-	&__content {
-		margin-top: 35px;
+	&__filters {
+		max-width: 1084px;
+		margin: 40px auto 0;
+	}
+
+	&__filter {
+		width: auto;
+
+		&:not(:last-child) {
+			margin-right: 27px;
+		}
+	}
+
+	&__carousel {
+		margin-top: 38px;
+		transition: opacity 0.4s linear;
+
+		&.opacity {
+			opacity: 0;
+		}
+
+		.swiper-navigation {
+			position: absolute;
+			width: 100%;
+			top: 40%;
+			display: flex;
+			justify-content: space-between;
+			z-index: 10;
+
+			.swiper-button {
+				&-next,
+				&-prev {
+					position: relative;
+					z-index: 10;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.swiper-pagination {
+			display: flex;
+			justify-content: center;
+			margin-top: 43px;
+
+			&-bullet {
+				display: inline-block;
+				width: 15.03px;
+				height: 4.71px;
+				background: $green-9e;
+				opacity: 0.3;
+				border-radius: 5px;
+
+				&:not(:last-child) {
+					margin-right: 4px;
+				}
+
+				&-active {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__bg {
+		padding-bottom: 70px;
+		background-image: url("../images/page-6/business-cases/business-cases-bg.svg");
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size: contain;
+		max-width: 1084px;
+		margin: 25px auto 0;
+	}
+
+	&__card {
+		display: block;
+
+		&-inner {
+			display: flex;
+			justify-content: space-between;
+			max-width: 1084px;
+			margin: 0 auto;
+		}
+
+		&-list {
+			&-item {
+				display: flex;
+
+				&:first-child {
+					margin-top: 3px;
+				}
+
+				&:not(:first-child) {
+					margin-top: 58px;
+				}
+			}
+
+			&-icon {
+				width: 97px;
+				height: 75px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-image: url("../images/page-6/business-cases/slide-list-icon.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+				flex-shrink: 0;
+				margin-right: 13px;
+
+				svg {
+					width: 25px;
+					height: 25px;
+					margin-left: 1px;
+					fill: #fff;
+				}
+			}
+
+			&-text {
+				max-width: 360px;
+				font-weight: normal;
+				font-size: 12px;
+				line-height: (18 / 12);
+				color: $dark-gray-6e;
+			}
+		}
+
+		&-image {
+			position: relative;
+
+			&-text {
+				position: absolute;
+				left: 21.3%;
+				top: 5.2%;
+				font-weight: bold;
+				font-size: 17px;
+				line-height: (29 / 17);
+				color: $dark-gray;
+			}
+		}
 	}
 }

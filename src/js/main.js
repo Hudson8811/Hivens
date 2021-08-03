@@ -11,3 +11,5 @@
 //= ./partials/data-purchase-slider.js
 //= ./partials/zoom-images.js
 //= ./partials/data-types-slider.js
+//= ./partials/buisness-cases-slider.js
+//= ./partials/fields-slider.js
