@@ -17,7 +17,7 @@
 
     @include max(sm) {
       display: block;
-      margin-bottom: 28px;
+      margin-bottom: 42px;
     }
   }
 
@@ -32,21 +32,794 @@
     line-height: (21 / 14);
     text-align: center;
 
+    @include max(sm) {
+      margin-bottom: 44px;
+      text-align: left;
+    }
+
     strong,
     b {
       font-weight: 600;
     }
   }
 
-  &__image {
+  &__scene {
+    $scene: &;
     position: relative;
     margin-top: -13px;
+
+    &--opened {
+      @include max(sm) {
+        #{$scene}-outer {
+          display: none;
+        }
+
+        #{$scene}-inner {
+          display: block;
+        }
+      }
+    }
+
+    &-outer {
+      @include max(sm) {
+        overflow: hidden;
+        //display: none;
+
+        &.hide {
+          display: none;
+        }
+      }
+
+      img {
+        @include max(sm) {
+          position: relative;
+          left: 50%;
+          transform: translateX(-52.7%);
+          max-width: none;
+          width: 169.1318327974277%;
+          height: auto;
+        }
+      }
+    }
+
+    &-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1001;
+      //background-color: rgba(yellow, 0.4);
+      transition: opacity 0.3s ease;
+
+      @include max(sm) {
+        position: relative;
+        z-index: 1;
+      }
+
+      &-wrapper {
+        @include max(sm) {
+          width: calc(100% + 64px);
+          margin-left: -32px;
+        }
+      }
+
+      img:not(.about-nodes__zoom-image) {
+        @include max(sm) {
+          position: relative;
+          left: 50%;
+          transform: translateX(-53.2%);
+          max-width: none;
+          width: 144.4%;
+          height: auto;
+        }
+      }
+
+      map {
+        @include max(sm) {
+          display: none;
+        }
+        area {
+          cursor: pointer;
+        }
+      }
+
+      &.hide {
+        opacity: 0;
+        pointer-events: none;
+
+        @include max(sm) {
+          display: none;
+          pointer-events: auto;
+          opacity: 1;
+        }
+      }
+    }
+
+    &-dot {
+      position: absolute;
+      z-index: 1003;
+      border: none;
+      padding: 0;
+      appearance: none;
+      cursor: pointer;
+      //background-color: rgba(yellow, 0.2);
+
+      &--guards {
+        top: 47%;
+        left: 27.3%;
+        width: 10%;
+        height: 45.4%;
+
+        @include max(sm) {
+          top: 22.6%;
+          left: -4%;
+          width: 26%;
+          height: 25.52%;
+        }
+      }
+
+      &--acceptance {
+        top: 26.1%;
+        left: 38.6%;
+        width: 24%;
+        height: 9.2%;
+
+        @include max(sm) {
+          top: 11.6%;
+          left: 15%;
+          width: 69.135%;
+          height: 9.52%;
+        }
+      }
+
+      &--legal {
+        top: 36.1%;
+        left: 38.6%;
+        width: 24%;
+        height: 11.9%;
+
+        @include max(sm) {
+          top: 18.7%;
+          left: 61.3%;
+          width: 16.8%;
+          height: 4.85%;
+        }
+      }
+
+      &--processing {
+        top: 48.7%;
+        left: 50.6%;
+        width: 8.4%;
+        height: 6.8%;
+
+        @include max(sm) {
+          top: 23.7%;
+          left: 51.7%;
+          width: 13.7%;
+          height: 3.6%;
+        }
+      }
+
+      &--analytical {
+        top: 56.6%;
+        left: 38.6%;
+        width: 24%;
+        height: 5.9%;
+
+        @include max(sm) {
+          top: 27.5%;
+          left: 18%;
+          width: 62.135%;
+          height: 4%;
+        }
+      }
+
+      &--segmentation {
+        top: 63%;
+        left: 38.6%;
+        width: 24%;
+        height: 8.4%;
+
+        @include max(sm) {
+          top: 30.9%;
+          left: 18%;
+          width: 62.135%;
+          height: 5.3%;
+        }
+      }
+
+      &--storage {
+        top: 72.2%;
+        left: 38.6%;
+        width: 24%;
+        height: 6.7%;
+
+        @include max(sm) {
+          top: 35.6%;
+          left: 18%;
+          width: 62.135%;
+          height: 5.3%;
+        }
+      }
+
+      &--bank {
+        top: 83.2%;
+        left: 41.2%;
+        width: 19.3%;
+        height: 12.7%;
+
+        @include max(sm) {
+          top: 42.2%;
+          left: 18%;
+          width: 62.135%;
+          height: 7.4%;
+        }
+      }
+    }
+
+    &-zoom {
+      display: none;
+
+      @include max(sm) {
+        display: block;
+        position: absolute;
+        top: 11.6%;
+        left: 15%;
+        width: 69.135%; //215px;
+        height: 9.52%; //91px;
+        border: 4px solid $citrus;
+        border-radius: 2px;
+
+        &--guards-1 {
+          display: none;
+        }
+        &--guards-2 {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__zoom {
+    display: none;
+
+    @include max(sm) {
+      display: block;
+      position: relative;
+      width: 100%;
+      margin: 12px auto 36px;
+      padding-top: 65%;
+      box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.17);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      border: 8px solid $citrus;
+    }
+
+    &-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100% !important;
+      height: auto;
+      transform: translateX(0) !important;
+
+      &.active {
+        z-index: 1;
+      }
+    }
+  }
+
+  &__carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1004;
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    @include max(sm) {
+      position: relative;
+      height: auto;
+      pointer-events: auto;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+      }
+    }
+
+    .swiper-wrapper {
+      pointer-events: none;
+
+      @include max(sm) {
+        pointer-events: auto;
+      }
+    }
+
+    .swiper-navigation {
+      display: none;
+
+      @include max(sm) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px;
+      }
+
+      button {
+        cursor: pointer;
+        appearance: none;
+
+        @include max(sm) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        svg {
+          fill: $gray-97;
+          transition: fill 0.3s ease;
+        }
+
+        @include hover {
+          svg {
+            fill: $citrus;
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        svg {
+          transform: scale(-1, 1);
+        }
+      }
+
+      .swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+
+        @include max(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__item {
+    $item: &;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    width: auto;
+    height: auto;
+    pointer-events: auto;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 0;
+    box-sizing: border-box;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+
+    @include max(sm) {
+      position: static;
+      max-width: 211px;
+      margin-right: 12px;
+
+      &:not(.swiper-slide-active) {
+        opacity: 0.51 !important;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &-inner {
+      flex-grow: 1;
+      pointer-events: auto;
+    }
+
+    &.hide {
+      opacity: 0;
+
+      @include max(sm) {
+        opacity: 1;
+      }
+
+      #{$item}-inner {
+        pointer-events: none;
+
+        @include max(sm) {
+          pointer-events: auto;
+        }
+      }
+    }
+
+    &--guards {
+      top: 31%;
+      left: 4%;
+      width: 349px;
+      height: 570px;
+      padding: 41px 61px 47px 48px;
+      background-image: url("../images/page-4/tooltips/guards.png");
+
+      @include retina {
+        background-image: url("../images/page-4/tooltips/guards@2x.png");
+      }
+
+      @include max(1270) {
+        width: vw(349, 1270);
+        height: vw(570, 1270);
+        padding: vw(41, 1270) vw(61, 1270) vw(47, 1270) vw(48, 1270);
+      }
+
+      #{$item}-text {
+        max-width: 179px;
+
+        @include max(1270) {
+          max-width: vw(179, 1270);
+        }
+      }
+
+      #{$item}-inner {
+        padding: 28px 20px 20px 23px;
+
+        @include max(1270) {
+          padding: vw(28, 1270) vw(20, 1270) vw(20, 1270) vw(23, 1270);
+        }
+      }
+    }
+
+    &--acceptance {
+      top: 23%;
+      left: -7%;
+      width: 619px;
+      height: 391px;
+      padding: 87px 70px 64px 68px;
+
+      background-image: url("../images/page-4/tooltips/acceptance.png");
+
+      @include retina {
+        background-image: url("../images/page-4/tooltips/acceptance@2x.png");
+      }
+
+      @include max(1270) {
+        width: vw(619, 1270);
+        height: vw(391, 1270);
+        padding: vw(87, 1270) vw(70, 1270) vw(64, 1270) vw(68, 1270);
+      }
+
+      #{$item}-text {
+        max-width: 179px;
+
+        @include max(1270) {
+          max-width: vw(179, 1270);
+        }
+      }
+
+      #{$item}-inner {
+        padding: 27px 20px 20px 31px;
+
+        @include max(1270) {
+          padding: vw(27, 1270) vw(20, 1270) vw(20, 1270) vw(31, 1270);
+        }
+      }
+    }
+
+    &--legal {
+      top: 35%;
+      left: 9.5%;
+
+      width: 676px;
+      height: 429px;
+      padding: 104px 119px 86px 78px;
+
+      background-image: url("../images/page-4/tooltips/legal.png");
+
+      @include retina {
+        background-image: url("../images/page-4/tooltips/legal@2x.png");
+      }
+
+      @include max(1270) {
+        width: vw(676, 1270);
+        height: vw(429, 1270);
+        padding: vw(104, 1270) vw(119, 1270) vw(86, 1270) vw(78, 1270);
+      }
+
+      #{$item}-text {
+        max-width: 180px;
+
+        @include max(1270) {
+          max-width: vw(180, 1270);
+        }
+      }
+
+      #{$item}-inner {
+        padding: 21px 20px 20px 21px;
+
+        @include max(1270) {
+          padding: vw(21, 1270) vw(20, 1270) vw(20, 1270) vw(21, 1270);
+        }
+      }
+    }
+
+    &--processing {
+      top: 30.5%;
+      left: 26.6%;
+
+      width: 367px;
+      height: 583px;
+      padding: 53px 68px 51px 61px;
+
+      background-image: url("../images/page-4/tooltips/processing.png");
+
+      @include retina {
+        background-image: url("../images/page-4/tooltips/processing@2x.png");
+      }
+
+      @include max(1270) {
+        width: vw(367, 1270);
+        height: vw(583, 1270);
+        padding: vw(53, 1270) vw(68, 1270) vw(51, 1270) vw(61, 1270);
+      }
+
+      #{$item}-text {
+        max-width: 180px;
+
+        @include max(1270) {
+          max-width: vw(180, 1270);
+        }
+      }
+
+      #{$item}-inner {
+        padding: 23px 20px 20px 33px;
+
+        @include max(1270) {
+          padding: vw(23, 1270) vw(20, 1270) vw(20, 1270) vw(33, 1270);
+        }
+      }
+    }
+
+    &--analytical {
+      top: 55.8%;
+      left: 13.4%;
+      width: 579px;
+      height: 340px;
+      padding: 51px 55px 51px 47px;
+
+      background-image: url("../images/page-4/tooltips/analytical.png");
+
+      @include retina {
+        background-image: url("../images/page-4/tooltips/analytical@2x.png");
+      }
+
+      @include max(1270) {
+        width: vw(579, 1270);
+        height: vw(340, 1270);
+        padding: vw(51, 1270) vw(55, 1270) vw(51, 1270) vw(47, 1270);
+      }
+
+      #{$item}-text {
+        max-width: 179px;
+
+        @include max(1270) {
+          max-width: vw(179, 1270);
+        }
+      }
+
+      #{$item}-inner {
+        padding: 27px 20px 20px 31px;
+
+        @include max(1270) {
+          padding: vw(27, 1270) vw(20, 1270) vw(20, 1270) vw(31, 1270);
+        }
+      }
+    }
+
+    &--segmentation {
+      top: 32.6%;
+      left: 10.1%;
+      width: 653px;
+      height: 366px;
+      padding: 58px 108px 67px 61px;
+
+      background-image: url("../images/page-4/tooltips/segmentation.png");
+
+      @include retina {
+        background-image: url("../images/page-4/tooltips/segmentation@2x.png");
+      }
+
+      @include max(1270) {
+        width: vw(653, 1270);
+        height: vw(366, 1270);
+        padding: vw(58, 1270) vw(108, 1270) vw(67, 1270) vw(61, 1270);
+      }
+
+      #{$item}-text {
+        max-width: 179px;
+
+        @include max(1270) {
+          max-width: vw(179, 1270);
+        }
+      }
+
+      #{$item}-inner {
+        padding: 21px 20px 20px 24px;
+
+        @include max(1270) {
+          padding: vw(21, 1270) vw(20, 1270) vw(20, 1270) vw(24, 1270);
+        }
+      }
+    }
+
+    &--storage {
+      top: 34.5%;
+      left: 18%;
+      width: 344px;
+      height: 573px;
+      padding: 32px 48px 64px 58px;
+
+      background-image: url("../images/page-4/tooltips/storage.png");
+
+      @include retina {
+        background-image: url("../images/page-4/tooltips/storage@2x.png");
+      }
+
+      @include max(1270) {
+        width: vw(344, 1270);
+        height: vw(573, 1270);
+        padding: vw(32, 1270) vw(48, 1270) vw(64, 1270) vw(58, 1270);
+      }
+
+      #{$item}-text {
+        max-width: 179px;
+
+        @include max(1270) {
+          max-width: vw(179, 1270);
+        }
+      }
+
+      #{$item}-inner {
+        padding: 30px 20px 20px 30px;
+
+        @include max(1270) {
+          padding: vw(30, 1270) vw(20, 1270) vw(20, 1270) vw(30, 1270);
+        }
+      }
+    }
+
+    &--bank {
+      top: 34.8%;
+      left: 17.7%;
+      width: 354px;
+      height: 614px;
+      padding: 57px 53px 80px 64px;
+
+      background-image: url("../images/page-4/tooltips/bank.png");
+
+      @include retina {
+        background-image: url("../images/page-4/tooltips/bank@2x.png");
+      }
+
+      @include max(1270) {
+        width: vw(354, 1270);
+        height: vw(614, 1270);
+        padding: vw(57, 1270) vw(53, 1270) vw(80, 1270) vw(64, 1270);
+      }
+
+      #{$item}-text {
+        max-width: 179px;
+
+        @include max(1270) {
+          max-width: vw(179, 1270);
+        }
+      }
+
+      #{$item}-inner {
+        padding: 29px 20px 20px 34px;
+
+        @include max(1270) {
+          padding: vw(29, 1270) vw(20, 1270) vw(20, 1270) vw(34, 1270);
+        }
+      }
+    }
+
+    &--guards,
+    &--acceptance,
+    &--legal,
+    &--processing,
+    &--analytical,
+    &--segmentation,
+    &--storage,
+    &--bank {
+      @include max(sm) {
+        width: auto;
+        height: auto;
+        padding: 0;
+        background-image: none;
+
+        @include retina {
+          background-image: none;
+        }
+
+        #{$item}-text {
+          max-width: none;
+        }
+
+        #{$item}-inner {
+          padding: 0;
+        }
+      }
+    }
+
+    &-title {
+      margin: 0 0 11px;
+      font-size: 14px;
+      line-height: (17 / 14);
+      color: $white;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      @include max(1270) {
+        margin-bottom: vw(11, 1270);
+        font-size: vw(14, 1270);
+      }
+
+      @include max(sm) {
+        margin: 0;
+        font-size: 12px;
+        line-height: (18 / 12);
+        color: $dark-gray-6e;
+        text-transform: none;
+      }
+    }
+
+    &-text {
+      font-size: 8px;
+      line-height: (11 / 8);
+      color: $white;
+      font-weight: 500;
+
+      @include max(1270) {
+        font-size: vw(8, 1270);
+      }
+
+      @include max(sm) {
+        font-size: 12px;
+        line-height: (18 / 12);
+        color: $dark-gray-6e;
+        font-weight: 400;
+      }
+    }
   }
 
   &__btn {
     position: relative;
     z-index: 0;
     display: block;
+    width: 100%;
     max-width: 277px;
     margin: 0 auto;
     padding: 23px 16px;
@@ -56,8 +829,11 @@
     font-weight: 500;
     text-align: center;
     border-radius: 0 18px 18px 18px;
+    border: none;
     background-color: $citrus;
     transition: background-color 0.3s ease;
+    cursor: pointer;
+    appearance: none;
 
     &::before,
     &::after {
@@ -84,6 +860,22 @@
       background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg  viewBox='0 0 309 37' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle opacity='.42' cx='290.233' cy='18.233' r='18.233' fill='%23FC3'/%3e%3ccircle opacity='.42' cx='8.734' cy='17.535' r='8.734' fill='%23FC3'/%3e%3c/svg%3e");
     }
 
+    @include max(sm) {
+      max-width: 211px;
+      margin-top: 12px;
+      padding: 15px;
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        width: 243px;
+        height: 70px;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='243' height='70' viewBox='0 0 243 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle opacity='.42' r='6.239' transform='matrix(1 0 0 -1 236.239 37.239)' fill='%23FC3'/%3e%3ccircle opacity='.42' cx='14.734' cy='60.734' r='8.734' fill='%23FC3'/%3e%3ccircle opacity='.42' cx='18.716' cy='18.716' r='18.716' fill='%23FC3'/%3e%3c/svg%3e");
+      }
+    }
+
     @include hover {
       background-color: lighten($citrus, 5%);
 
@@ -94,6 +886,36 @@
       &::after {
         transform: translateX(-50%) translateY(18px);
       }
+    }
+  }
+
+  &__mobile-image {
+    display: none;
+
+    @include max(sm) {
+      display: block;
+      margin-bottom: 21px;
+      text-align: center;
+
+      img {
+        display: inline-block;
+        height: auto;
+      }
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($dark-gray-6e, 0.8);
+    cursor: pointer;
+
+    @include max(sm) {
+      //display: none;
     }
   }
 }

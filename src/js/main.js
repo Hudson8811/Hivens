@@ -26,6 +26,7 @@
 //= ./partials/timeline.js
 //= ./partials/node-types.js
 //= ./partials/how-to-get.js
+//= ./partials/about-nodes.js
 //= ./partials/footer-carousel.js
 //= ./partials/footer-menu-dots.js
 //= ./partials/data-purchase-slider.js
