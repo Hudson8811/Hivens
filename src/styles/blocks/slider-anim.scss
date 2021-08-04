@@ -46,12 +46,24 @@
 
 	&__animation {
 		width: calc(59.4% - 78px - 76px);
-		height: 100%;
+		height: 474px;
 		margin-right: 90px;
 		position: absolute;
 		top: 0;
 		right: 0;
 		overflow: hidden;
+
+		@include max(lg) {
+			max-width: 582.55px;
+			width: 100%;
+			margin-right: 0;
+			right: unset;
+			left: 0;
+		}
+
+		@include max(sm) {
+			max-width: 256px;
+		}
 	}
 
 	&__slider {
@@ -63,8 +75,8 @@
 		overflow: visible;
 
 		@include max(lg) {
-			padding: 0;
-			margin: 36px auto 0;
+			height: auto;
+			padding: 474px 0 0 0;
 		}
 	}
 
@@ -163,8 +175,12 @@
 		bottom: 0;
 		z-index: 5;
 
+		@include max(sm) {
+			left: 0;
+		}
+
 		&--1 {
-			@include max(lg) {
+			/*@include max(lg) {
 				width: vwm(222);
 				height: auto;
 				margin: 0 auto;
@@ -172,6 +188,9 @@
 
 			@include max(sm) {
 				width: vws(222);
+			}*/
+			@include max(sm) {
+				bottom: -28px;
 			}
 		}
 
@@ -180,6 +199,11 @@
 			opacity: 0;
 			left: 23%;
 			top: -7%;
+
+			@include max(sm) {
+				left: 13%;
+				top: -1%;
+			}
 		}
 	}
 
@@ -192,13 +216,14 @@
 			z-index: 2;
 
 			@include max(lg) {
-				width: vwm(280);
-				bottom: vwm(4);
+				width: vwm(388);
+				height: vwm(211);
 			}
 
 			@include max(sm) {
-				width: vws(280);
-				bottom: vws(4);
+				width: vws(388);
+				height: vws(211);
+				left: 0;
 			}
 		}
 
@@ -215,6 +240,7 @@
 			@include max(sm) {
 				width: vws(270);
 				bottom: vws(4);
+				left: 0;
 			}
 		}
 
@@ -244,12 +270,21 @@
 			bottom: 0;
 			left: 37%;
 			z-index: 1;
+
+			@include max(lg) {
+				left: 0;
+			}
 		}
 
 		&--5 {
 			top: 0;
 			left: 31%;
 			z-index: 6;
+
+			@include max(sm) {
+				top: 19%;
+				left: 0;
+			}
 		}
 
 		&--6 {
@@ -408,7 +443,7 @@
 		}
 
 		@include max(sm) {
-			bottom: vws(-63);
+			bottom: vws(55);
 		}
 
 		.swiper-pagination-bullet {
@@ -433,6 +468,10 @@
 
 			+ .swiper-pagination-bullet {
 				margin-left: 6px;
+
+				@include max(sm) {
+					margin-left: 3px;
+				}
 			}
 
 			&.swiper-pagination-bullet-active {
