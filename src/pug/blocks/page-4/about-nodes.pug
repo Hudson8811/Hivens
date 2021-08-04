@@ -23,16 +23,17 @@ section.about-nodes
             source(media="(max-width: 767px)", srcset="images/page-4/beehive-inner-mobile.jpg 1x, images/page-4/beehive-inner-mobile@2x.jpg 2x")
             img(src="images/page-4/beehive-inner.png", srcset="images/page-4/beehive-inner@2x.png 2x", width="", height="", usemap="#beehive-inner", alt="")
         
-        .about-nodes__scene-zoom
-        .about-nodes__scene-zoom.about-nodes__scene-zoom--guards-1
-        .about-nodes__scene-zoom.about-nodes__scene-zoom--guards-2
+          .about-nodes__scene-zoom
+          .about-nodes__scene-zoom.about-nodes__scene-zoom--guards-1
+          .about-nodes__scene-zoom.about-nodes__scene-zoom--guards-2
 
+          
+
+          each item, index in ABOUT_NODES_ITEMS
+            button.about-nodes__scene-dot(class="about-nodes__scene-dot--" + item.mod, data-target= item.mod, data-index= index)
+              span.visually-hidden= item.title
         map(name="beehive-inner")
           area(class="close-beehive", target="", alt="", title="", href="", coords="472,772,507,773,509,931,188,931,1,931,1,569,0,-1,428,3,626,0,1240,1,1240,214,444,214,444,238,471,238,472,744,782,744,884,741,889,757,897,762,917,764,927,776,940,774,950,764,1019,764,1031,776,1042,774,1048,763,1121,763,1131,777,1144,776,1152,762,1180,764,1187,755,1189,685,1174,645,1105,643,1098,695,1072,694,1062,652,1041,645,1038,602,1029,581,987,580,978,603,980,637,982,648,957,652,947,695,924,695,905,676,887,676,864,706,873,731,843,731,854,707,847,685,824,674,801,686,794,704,799,722,810,731,787,731,785,238,811,238,812,214,1240,215,1240,932,509,930,511,897,754,896,755,775,785,772,783,757,470,757", shape="poly")
-
-        each item, index in ABOUT_NODES_ITEMS
-          button.about-nodes__scene-dot(class="about-nodes__scene-dot--" + item.mod, data-target= item.mod, data-index= index)
-            span.visually-hidden= item.title
           
         .about-nodes__zoom
           each item, index in ABOUT_NODES_ITEMS

@@ -5,6 +5,7 @@
 //= ./libs/jquery.time-to.min.js
 //= ./libs/gsap.min.js
 //= ./libs/TweenMax.min.js
+//= ./libs/imageMapResizer.min.js
 
 //= ./partials/equal-height.js
 //= ./partials/main.js
