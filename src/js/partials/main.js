@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).on('load', function() {
 	if ($('.select').length){
 		$('.select').select2({
 			minimumResultsForSearch: Infinity
@@ -14,4 +14,8 @@ $(document).ready(function() {
 	$(document).on('click','.accordion__title',function (){
 		$(this).parent('.accordion').toggleClass('active').find('.accordion__text').slideToggle('300');
 	});
+
+	
+	$('map').imageMapResize();
+	
 })
