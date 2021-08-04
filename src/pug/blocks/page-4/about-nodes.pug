@@ -1,14 +1,55 @@
-- const ABOUT_NODES_ITEMS = [{title: 'Стражники', text: 'Весь улей защищают пчелы-стражники. Они летают и охраняют все, а отделам хранения и банку они уделяют особое внимание', mod: 'guards'}, {title: 'Приемка данных', text: 'Приемка - место, куда приходят данные из разных источников. Там пчелы-приемники их маркируют, согласно структуре поступившей информации', mod: 'acceptance'}, {title: 'Юридический отдел', text: 'Каждый источник проверяются пчелами-юристами на CCPA + GDPR compliance. Если проверку проходят, то данные идут дальше по алгоритму', mod: 'legal'}, {title: 'Обработка данных', text: 'В отделе обработки данных происходит: обработка, сортировка, агрегирование, вычисление. Исправление ошибок в указание данных.', mod: 'processing'}, {title: 'Аналитический отдел', text: 'Этот отдел занимается посторением связей между данными, определение схожих данных, дубликатов исправление данных, определение типов данных.', mod: 'analytical'}, {title: 'Отдел сегментации', text: 'После аналитического этапа пчелы отдела сегментации разделяют информацию по типам: люди, компании, услуги, сайты, товары, услуги.', mod: 'segmentation'}, {title: 'Хранилище', text: 'После сегментации данные помещаются в чистое хранилище с протоколом Data Transfer, для передачи данных по APL. Тут же происходит шифрование данных и получение кодированных хешей', mod: 'storage'}, {title: 'Банк', text: 'Банк хранит свой баланс и отвечает за транзакции. В его в ячейках хранятся ключи, ключ отправляют, деньги принимают  и в хранилище прячут. Если другой пасечник хочет купить, то деньги платят, и ключ принимают.', mod: 'bank'} ];
+- const ABOUT_NODES_ITEMS = [{title: 'Приемка данных', text: 'Приемка - место, куда приходят данные из разных источников. Там пчелы-приемники их маркируют, согласно структуре поступившей информации', mod: 'acceptance'}, {title: 'Юридический отдел', text: 'Каждый источник проверяются пчелами&#8209;юристами на CCPA + GDPR compliance. Если проверку проходят, то&nbsp;данные идут дальше по алгоритму', mod: 'legal'}, {title: 'Обработка данных', text: 'В отделе обработки данных происходит: обработка, сортировка, агрегирование, вычисление. Исправление ошибок в указание данных.', mod: 'processing'}, {title: 'Аналитический отдел', text: 'Этот отдел занимается посторением связей между данными, определение схожих данных, дубликатов исправление данных, определение типов данных.', mod: 'analytical'}, {title: 'Отдел сегментации', text: 'После аналитического этапа пчелы отдела сегментации разделяют информацию по типам: люди, компании, услуги, сайты, товары, услуги.', mod: 'segmentation'}, {title: 'Хранилище', text: 'После сегментации данные помещаются в чистое хранилище с протоколом Data Transfer, для передачи данных по APL. Тут&nbsp;же происходит шифрование данных и получение кодированных хешей', mod: 'storage'}, {title: 'Банк', text: 'Банк хранит свой баланс и отвечает за&nbsp;транзакции. В его в ячейках хранятся ключи, ключ отправляют, деньги принимают  и в хранилище прячут. Если&nbsp;другой пасечник хочет купить, то&nbsp;деньги платят, и ключ принимают.', mod: 'bank'}, {title: 'Стражники', text: 'Весь улей защищают&nbsp;пчелы&#8209;стражники. Они летают и охраняют все, а отделам хранения и банку они уделяют особое внимание', mod: 'guards'} ];
 
 section.about-nodes
+  //-each item, index in ABOUT_NODES_ITEMS
+    p= item.mod 
   .about-nodes__container.container 
     header.about-nodes__header 
       +title('Что такое Ноды и для чего они нужны?', 'h2', 'about-nodes__title')
     
+    .about-nodes__mobile-image 
+      img(src="images/page-4/about-nodes-mobile-image.jpg", srcset="images/page-4/about-nodes-mobile-image@2x.jpg 2x", width="620", height="528", alt="")
+    
     .about-nodes__text <strong>Нода</strong> - это узел в децентрализованной сети, представляет собой программный комплекс в виде модулей. Нода устанавливается на ПК или сервер владельца, интегрируется с клиентской базой, контактами, аналитическими системами, может собирать информацию из публичных источников, находить необходимую информацию на нодах экосистемы.
     
-    .about-nodes__image 
-      img(src="images/page-4/about-nodes.jpg", srcset="images/page-4/about-nodes@2x.jpg 2x", width="", height="", alt="")
+    .about-nodes__scene
+      .about-nodes__scene-outer
+        picture
+          source(media="(max-width: 767px)", srcset="images/page-4/beehive-outer-mobile.jpg 1x, images/page-4/beehive-outer-mobile@2x.jpg 2x")
+          img(src="images/page-4/beehive-outer.jpg", srcset="images/page-4/beehive-outer@2x.jpg 2x", alt="")
+      .about-nodes__scene-inner.hide
+        .about-nodes__scene-inner-wrapper
+          picture
+            source(media="(max-width: 767px)", srcset="images/page-4/beehive-inner-mobile.jpg 1x, images/page-4/beehive-inner-mobile@2x.jpg 2x")
+            img(src="images/page-4/beehive-inner.png", srcset="images/page-4/beehive-inner@2x.png 2x", width="", height="", usemap="#beehive-inner", alt="")
+        
+        .about-nodes__scene-zoom
+        .about-nodes__scene-zoom.about-nodes__scene-zoom--guards-1
+        .about-nodes__scene-zoom.about-nodes__scene-zoom--guards-2
 
-      a.about-nodes__btn(href="#") Click Here!
+        map(name="beehive-inner")
+          area(class="close-beehive", target="", alt="", title="", href="", coords="472,772,507,773,509,931,188,931,1,931,1,569,0,-1,428,3,626,0,1240,1,1240,214,444,214,444,238,471,238,472,744,782,744,884,741,889,757,897,762,917,764,927,776,940,774,950,764,1019,764,1031,776,1042,774,1048,763,1121,763,1131,777,1144,776,1152,762,1180,764,1187,755,1189,685,1174,645,1105,643,1098,695,1072,694,1062,652,1041,645,1038,602,1029,581,987,580,978,603,980,637,982,648,957,652,947,695,924,695,905,676,887,676,864,706,873,731,843,731,854,707,847,685,824,674,801,686,794,704,799,722,810,731,787,731,785,238,811,238,812,214,1240,215,1240,932,509,930,511,897,754,896,755,775,785,772,783,757,470,757", shape="poly")
+
+        each item, index in ABOUT_NODES_ITEMS
+          button.about-nodes__scene-dot(class="about-nodes__scene-dot--" + item.mod, data-target= item.mod, data-index= index)
+            span.visually-hidden= item.title
+          
+        .about-nodes__zoom
+          each item, index in ABOUT_NODES_ITEMS
+            - let actClass = index === 0 ? ' active': '';
+            img(class="about-nodes__zoom-image about-node__zoom-image--" + item.mod + actClass, src="images/page-4/depts/" + item.mod + ".jpg", srcset="images/page-4/depts/" + item.mod + "@2x.jpg 2x", width="618", height="404", data-id= item.mod, alt= item.title)
+
+        .about-nodes__carousel.swiper-slider.__js_about-nodes-carousel
+          .swiper-wrapper 
+            each item, index in ABOUT_NODES_ITEMS
+              .about-nodes__item(class="about-nodes__item--" + item.mod + " swiper-slide hide", data-zoom= item.mod)
+                .about-nodes__item-inner
+                  .about-nodes__item-title!= item.title
+                  .about-nodes__item-text!= item.text
+          +swiper-nav()
+
+
+      
+
+      button.about-nodes__btn(type="button") Click Here!
 
