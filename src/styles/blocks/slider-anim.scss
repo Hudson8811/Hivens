@@ -183,15 +183,6 @@
 		}
 
 		&--1 {
-			/*@include max(lg) {
-				width: vwm(222);
-				height: auto;
-				margin: 0 auto;
-			}
-
-			@include max(sm) {
-				width: vws(222);
-			}*/
 			@include max(sm) {
 				bottom: -28px;
 			}
@@ -218,11 +209,6 @@
 			left: 19%;
 			z-index: 2;
 
-			/*@include max(lg) {
-				width: vwm(388);
-				height: vwm(211);
-			}*/
-
 			@include max(sm) {
 				width: 388px;
 				height: 211px;
@@ -234,11 +220,6 @@
 			bottom: 16px;
 			left: 23%;
 			z-index: 1;
-
-			/*@include max(lg) {
-				width: vwm(270);
-				bottom: vwm(4);
-			}*/
 
 			@include max(sm) {
 				width: 270px;
@@ -253,12 +234,6 @@
 			bottom: 173px;
 			right: 63px;
 			z-index: 1;
-
-			/*@include max(lg) {
-				width: vwm(110);
-				bottom: vwm(105);
-				right: vwm(15);
-			}*/
 
 			@include max(sm) {
 				width: 110px;
@@ -549,6 +524,7 @@
 		bottom: 0;
 		left: 162px;
 		z-index: 10;
+		pointer-events: none;
 
 		@include max(lg) {
 			bottom: vwm(-63);
