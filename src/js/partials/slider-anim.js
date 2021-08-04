@@ -30,7 +30,8 @@ $(document).ready(function() {
 		transformOrigin: 'bottom'
 	}, 's0')
 	.to('.anim-pic--3', 1.5, {
-		scale: 1.9,
+		scale: 1.8,
+		x: -10,
 		transformOrigin: '72% 18% 0'
 	}, 's0')
 	.fromTo('.slider-anim__image--2', 1.5, {
@@ -47,9 +48,9 @@ $(document).ready(function() {
 	.addLabel('s1')
 	.to('.anim-pic--3', 1.5, {
 		y: -171,
-		x: -125,
+		x: -90,
 		opacity: 0.6,
-		scale: 2
+		scale: 1.5
 	}, 's1')
 	.fromTo('.anim-pic--5', 1.5, {
 		y: -300
@@ -63,7 +64,7 @@ $(document).ready(function() {
 	}, 's2')
 	.to('.anim-pic--3', 1.5, {
 		y: -30,
-		x: -224,
+		x: -244,
 		scale: 1
 	}, 's2')
 	.to('.anim-pic--5', 1.5, {
@@ -83,7 +84,7 @@ $(document).ready(function() {
 		scale: 1.37
 	}, 's3')
 	.to('.anim-pic--2', 1.5, {
-		x: -20,
+		x: 0,
 		y: -50,
 		scale: 1
 	}, 's3')
@@ -209,7 +210,7 @@ $(document).ready(function() {
 		scale: 0.85
 	}, 's9')
 	.to('.anim-pic--3', 1.5, {
-		x: -182,
+		x: -130,
 		y: -52
 	}, 's9')
 	.to('.anim-pic--3', 1.5, {
@@ -240,7 +241,7 @@ $(document).ready(function() {
 	}, 's10')
 	.to('.anim-pic--3', 1.5, {
 		y: -181,
-		x: -104,
+		x: -73,
 		scale: 1.7
 	}, 's10')
 	.to('.anim-pic--9', 1.5, {

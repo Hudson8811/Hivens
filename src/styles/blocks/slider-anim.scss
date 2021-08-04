@@ -58,7 +58,8 @@
 			width: 100%;
 			margin-right: 0;
 			right: unset;
-			left: 0;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 
 		@include max(sm) {
@@ -77,6 +78,7 @@
 		@include max(lg) {
 			height: auto;
 			padding: 474px 0 0 0;
+			margin: 0;
 		}
 	}
 
@@ -88,6 +90,7 @@
 
 		@include max(lg) {
 			flex-direction: column;
+			height: auto;
 		}
 	}
 
@@ -215,14 +218,14 @@
 			left: 19%;
 			z-index: 2;
 
-			@include max(lg) {
+			/*@include max(lg) {
 				width: vwm(388);
 				height: vwm(211);
-			}
+			}*/
 
 			@include max(sm) {
-				width: vws(388);
-				height: vws(211);
+				width: 388px;
+				height: 211px;
 				left: 0;
 			}
 		}
@@ -232,14 +235,14 @@
 			left: 23%;
 			z-index: 1;
 
-			@include max(lg) {
+			/*@include max(lg) {
 				width: vwm(270);
 				bottom: vwm(4);
-			}
+			}*/
 
 			@include max(sm) {
-				width: vws(270);
-				bottom: vws(4);
+				width: 270px;
+				bottom: 4px;
 				left: 0;
 			}
 		}
@@ -251,16 +254,16 @@
 			right: 63px;
 			z-index: 1;
 
-			@include max(lg) {
+			/*@include max(lg) {
 				width: vwm(110);
 				bottom: vwm(105);
 				right: vwm(15);
-			}
+			}*/
 
 			@include max(sm) {
-				width: vws(110);
-				bottom: vws(105);
-				right: vws(15);
+				width: 110px;
+				bottom: 105px;
+				right: 15px;
 			}
 		}
 
@@ -271,7 +274,7 @@
 			left: 37%;
 			z-index: 1;
 
-			@include max(lg) {
+			@include max(sm) {
 				left: 0;
 			}
 		}
@@ -282,7 +285,9 @@
 			z-index: 6;
 
 			@include max(sm) {
-				top: 19%;
+				width: 270px;
+				height: 237px;
+				top: 17%;
 				left: 0;
 			}
 		}
@@ -292,6 +297,13 @@
 			left: 39.5%;
 			z-index: 1;
 			opacity: 0;
+
+			@include max(sm) {
+				width: 177px;
+				height: 177px;
+				top: 79px;
+				left: 33px;
+			}
 		}
 
 		&--7 {
@@ -299,18 +311,38 @@
 			left: 52%;
 			z-index: 1;
 			opacity: 0;
+
+			@include max(sm) {
+				width: 200px;
+				height: 253px;
+				top: 9px;
+				left: 26%;
+			}
 		}
 
 		&--8 {
 			top: 0;
 			left: 18%;
 			z-index: 1;
+
+			@include max(sm) {
+				top: unset;
+				bottom: 16px;
+				left: 0;
+			}
 		}
 
 		&--9 {
 			bottom: 35%;
 			right: 51px;
 			z-index: 1;
+
+			@include max(sm) {
+				width: 50px;
+				height: 22px;
+				bottom: 26%;
+				right: 15px;
+			}
 		}
 
 		&--10 {
@@ -318,6 +350,12 @@
 			left: 18%;
 			z-index: 1;
 			opacity: 0;
+
+			@include max(sm) {
+				top: unset;
+				bottom: 4px;
+				left: 0;
+			}
 		}
 
 		&--11 {
@@ -325,6 +363,13 @@
 			left: 51%;
 			z-index: 1;
 			opacity: 0;
+
+			@include max(sm) {
+				width: 50px;
+				height: 50px;
+				top: 42%;
+				left: 47%;
+			}
 		}
 
 		&--12 {
@@ -332,6 +377,12 @@
 			left: 18%;
 			z-index: 1;
 			opacity: 0;
+
+			@include max(sm) {
+				width: 100px;
+				height: 143px;
+				left: 0;
+			}
 		}
 
 		&--13 {
@@ -339,6 +390,12 @@
 			right: 7%;
 			z-index: 1;
 			opacity: 0;
+
+			@include max(sm) {
+				width: 80px;
+				height: 120px;
+				right: 0;
+			}
 		}
 
 		&--14 {
@@ -346,18 +403,32 @@
 			right: 9%;
 			z-index: 2;
 			opacity: 0;
+
+			@include max(sm) {
+				width: 90%;
+				right: 0;
+			}
 		}
 
 		&--15 {
 			bottom: 0;
 			right: 7%;
 			z-index: 1;
+
+			@include max(sm) {
+				right: 0;
+			}
 		}
 
 		&--16 {
 			bottom: 0;
 			right: 7%;
 			z-index: 1;
+
+			@include max(sm) {
+				right: 0;
+				bottom: 3px;
+			}
 		}
 
 		&--17 {
@@ -365,48 +436,90 @@
 			right: 7%;
 			z-index: 1;
 			opacity: 0;
+
+			@include max(sm) {
+				right: 0;
+			}
 		}
 
 		&--18 {
 			bottom: 0;
 			right: 9%;
 			z-index: 1;
+
+			@include max(sm) {
+				right: 0;
+				bottom: 5px;
+			}
 		}
 
 		&--19 {
 			bottom: 10px;
 			right: 11%;
 			z-index: 1;
+
+			@include max(sm) {
+				right: 0;
+			}
 		}
 
 		&--20 {
-			bottom: 50px;
+			bottom: 49px;
 			right: 28.5%;
 			z-index: 3;
+
+			@include max(sm) {
+				width: 90px;
+				height: 145px;
+				right: 24.5%;
+			}
 		}
 
 		&--21 {
-			bottom: 50px;
+			bottom: 49px;
 			right: 8%;
 			z-index: 1;
+
+			@include max(sm) {
+				width: 70px;
+				height: 156px;
+				right: 4%;
+			}
 		}
 
 		&--22 {
-			bottom: 50px;
+			bottom: 49px;
 			left: 37%;
 			z-index: 2;
+
+			@include max(sm) {
+				width: 55px;
+				height: 155px;
+				left: 30%;
+			}
 		}
 
 		&--23 {
-			bottom: 50px;
+			bottom: 49px;
 			left: 18%;
 			z-index: 1;
+
+			@include max(sm) {
+				width: 110px;
+				height: 153px;
+				left: 6%;
+			}
 		}
 
 		&--24 {
 			top: 34px;
 			left: 19%;
 			z-index: 1;
+
+			@include max(sm) {
+				top: 170px;
+				left: 0;
+			}
 		}
 	}
 
@@ -443,7 +556,7 @@
 		}
 
 		@include max(sm) {
-			bottom: vws(55);
+			bottom: vws(-30);
 		}
 
 		.swiper-pagination-bullet {
