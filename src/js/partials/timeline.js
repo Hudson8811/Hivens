@@ -91,6 +91,9 @@ $(window).on('load', () => {
 
     const line = document.querySelector('.line');
     const length = line.getTotalLength();
+    const startLineLengthOffset = parseInt(timelineScene.dataset.fillStart, 10) || 152;
+    const endLineLengthOffset = parseInt(timelineScene.dataset.fillEnd, 10) || 3226;
+
     ///
     /*const out = document.querySelector('.timeline__scene-out div');
 
@@ -105,7 +108,7 @@ $(window).on('load', () => {
     if (width <= breakpoint) {
       initCarousel();
       isInit = true;
-      slides.forEach(it => it.classList.add('timeline__item--active'));
+      prepareSlides();
     } else {
       items.forEach(it => {
         if (it.el) {
@@ -117,11 +120,14 @@ $(window).on('load', () => {
         }
       });
 
-      pathPrepare(line);
+      //pathPrepare(line);
+      line.style.strokeDasharray = length;
+      line.style.strokeDashoffset = length - startLineLengthOffset;
       setLineAnimation();
+
+      window.addEventListener('scroll', setLineAnimation);
     }
 
-    window.addEventListener('scroll', setLineAnimation);
     window.addEventListener('resize', () => {
       width = html.clientWidth;
       offset = timelineScene.offsetTop;
@@ -130,10 +136,19 @@ $(window).on('load', () => {
       if (width <= breakpoint && !isInit) {
         initCarousel();
         isInit = true;
+        prepareSlides();
       } else if (width > breakpoint && isInit) {
         carousel.destroy();
         isInit = false;
+
+        slides.forEach(it => {
+          it.classList.remove('timeline__item--active');
+        });
+
+        setLineAnimation();
       }
+
+
 
       slides.forEach(it => {
         width <= breakpoint ? it.classList.add('timeline__item--active') :  it.classList.remove('timeline__item--active');
@@ -151,18 +166,36 @@ $(window).on('load', () => {
       });
     }
 
+    function prepareSlides() {
+      slides.forEach((it, index) => {
+        const method = index < 7 ? 'add' : 'remove';
+        it.classList[method]('timeline__item--active');
+      });
+    }
+
     function setLineAnimation() {
       let scroll = window.pageYOffset;
       if (scroll >= triggerStart) {
         let percent = (scroll - triggerStart) * 100 / timelineSceneHeight ;
         let part = length * percent / 100;
         //out.textContent = Math.floor(length - part);
+        //out.textContent = Math.floor(part);
 
-        line.style.strokeDashoffset = part < length ? length - part : 0;
-        checkItems(length - part);
+        if (part < startLineLengthOffset) {
+          part = startLineLengthOffset;
+        }
+
+        if (part <= endLineLengthOffset) {
+          line.style.strokeDashoffset = part < length ? length - part : 0;
+          checkItems(length - part);
+        } else {
+          line.style.strokeDashoffset = length - endLineLengthOffset;
+          checkItems(length - endLineLengthOffset);
+        }
 
       } else {
-        line.style.strokeDashoffset = length;
+        line.style.strokeDashoffset = length - startLineLengthOffset;
+        checkItems(length - startLineLengthOffset);
       }
     }
   }

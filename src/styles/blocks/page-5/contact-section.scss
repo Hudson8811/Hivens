@@ -78,6 +78,7 @@
       transition: border-color 0.3s ease;
 
       &::placeholder {
+        font-size: 12px;
         color: $gray-b9;
         opacity: 1;
       }
