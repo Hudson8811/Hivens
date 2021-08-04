@@ -16,74 +16,74 @@ window.onload = () => {
   const zoomElGuards2 = document.querySelector('.about-nodes__scene-zoom--guards-2');
   const zoom = {
     acceptance: {
-      top: '11.6%',
-      left: '15%',
-      width: '69.135%',
-      height: '9.52%',
+      top: '22%',
+      left: '20.7%',
+      width: '57.3%',
+      height: '18.1%',
       duration: 0.3
     },
     legal: {
-      top: '18.7%',
-      left: '61.3%',
-      width: '16.8%',
-      height: '4.85%',
+      top: '36%',
+      left: '59.6%',
+      width: '14.1%',
+      height: '9.4%',
       duration: 0.3
     },
     processing: {
-      top: '23.7%',
-      left: '51.7%',
-      width: '13.7%',
-      height: '3.6%',
+      top: '45.7%',
+      left: '51.5%',
+      width: '11.2%',
+      height: '6.9%',
       duration: 0.3
     },
     analytical: {
-      top: '27.5%',
-      left: '18%',
-      width: '62.135%',
-      height: '4%',
+      top: '52.6%',
+      left: '23.5%',
+      width: '51.2%',
+      height: '7.8%',
       duration: 0.3
     },
     segmentation: {
-      top: '30.9%',
-      left: '18%',
-      width: '62.135%',
-      height: '5.3%',
+      top: '59.2%',
+      left: '23.5%',
+      width: '51.3%',
+      height: '10.3%',
       duration: 0.3
     },
     storage: {
-      top: '35.6%',
-      left: '18%',
-      width: '62.135%',
-      height: '5.3%',
+      top: '68.4%',
+      left: '23.5%',
+      width: '51.3%',
+      height: '10.3%',
       duration: 0.3
     },
     bank: {
-      top: '42.2%',
-      left: '18%',
-      width: '62.135%',
-      height: '7.4%',
+      top: '81%',
+      left: '23.5%',
+      width: '51.3%',
+      height: '14.2%',
       duration: 0.3
     },
     guards: {
-      top: '22.6%',
-      left: '-4%',
-      width: '26%',
-      height: '25.52%',
+      top: '43.2%',
+      left: '5%',
+      width: '21.6%',
+      height: '49%',
       duration: 0.3
     },
     guards1: {
-      top: '22.6%',
-      left: '77%',
-      width: '26%',
-      height: '12.52%',
+      top: '43.2%',
+      left: '72%',
+      width: '21.5%',
+      height: '24%',
       display: 'block',
       duration: 0.3
     },
     guards2: {
-      top: '42.6%',
-      left: '77%',
-      width: '26%',
-      height: '5.52%',
+      top: '81.6%',
+      left: '72%',
+      width: '21.5%',
+      height: '10.6%',
       display: 'block',
       duration: 0.3
     }
@@ -94,14 +94,14 @@ window.onload = () => {
     showBeehiveDtn.addEventListener('click', (e) => {
       if (sceneInner.classList.contains('hide')) {
         if (width > breakpoint) {
-          window.scrollTo({
-            top: scene.offsetTop - (document.documentElement.clientHeight - scene.offsetHeight) / 2,
-            behavior: "smooth"
-          });
           scene.append(setOverlay(closeBeehive));
           document.body.style.overflow = 'hidden';
           document.body.style.marginRight = getScrollbarWidth() + 'px';
         }
+        window.scrollTo({
+          top: width > breakpoint ? scene.offsetTop - (document.documentElement.clientHeight - scene.offsetHeight) / 2 : scene.offsetTop,
+          behavior: "smooth"
+        });
         sceneOuter.classList.add('hide');
         sceneInner.classList.remove('hide');
       } else {
@@ -109,7 +109,9 @@ window.onload = () => {
       }
     });
 
-    scene.querySelector('.close-beehive').addEventListener('click', closeBeehive);
+    if (width > breakpoint) {
+      scene.querySelector('.close-beehive').addEventListener('click', closeBeehive);
+    }
 
     if (dots && slides) {
       sceneInner.addEventListener('click', e => {
@@ -141,7 +143,7 @@ window.onload = () => {
           slides.forEach(it => it.classList.add('hide'));
         }
 
-        console.log(e.target)
+        //console.log(e.target)
       });
     }
 

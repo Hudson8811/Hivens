@@ -97,6 +97,7 @@
 
       &-wrapper {
         @include max(sm) {
+          position: relative;
           width: calc(100% + 64px);
           margin-left: -32px;
         }
@@ -150,10 +151,10 @@
         height: 45.4%;
 
         @include max(sm) {
-          top: 22.6%;
-          left: -4%;
-          width: 26%;
-          height: 25.52%;
+          height: 49%;
+          width: 21.6%;
+          left: 5%;
+          top: 43.2%;
         }
       }
 
@@ -164,10 +165,10 @@
         height: 9.2%;
 
         @include max(sm) {
-          top: 11.6%;
-          left: 15%;
-          width: 69.135%;
-          height: 9.52%;
+          height: 18.1%;
+          width: 57.3%;
+          left: 20.7%;
+          top: 22%;
         }
       }
 
@@ -178,10 +179,10 @@
         height: 11.9%;
 
         @include max(sm) {
-          top: 18.7%;
-          left: 61.3%;
-          width: 16.8%;
-          height: 4.85%;
+          height: 9.4%;
+          width: 14.1%;
+          left: 59.6%;
+          top: 36%;
         }
       }
 
@@ -192,10 +193,10 @@
         height: 6.8%;
 
         @include max(sm) {
-          top: 23.7%;
-          left: 51.7%;
-          width: 13.7%;
-          height: 3.6%;
+          height: 6.9%;
+          width: 11.2%;
+          left: 51.5%;
+          top: 45.7%;
         }
       }
 
@@ -206,10 +207,10 @@
         height: 5.9%;
 
         @include max(sm) {
-          top: 27.5%;
-          left: 18%;
-          width: 62.135%;
-          height: 4%;
+          height: 7.8%;
+          width: 51.2%;
+          left: 23.5%;
+          top: 52.6%;
         }
       }
 
@@ -220,10 +221,10 @@
         height: 8.4%;
 
         @include max(sm) {
-          top: 30.9%;
-          left: 18%;
-          width: 62.135%;
-          height: 5.3%;
+          height: 10.3%;
+          width: 51.3%;
+          left: 23.5%;
+          top: 59.2%;
         }
       }
 
@@ -234,24 +235,24 @@
         height: 6.7%;
 
         @include max(sm) {
-          top: 35.6%;
-          left: 18%;
-          width: 62.135%;
-          height: 5.3%;
+          height: 10.3%;
+          width: 51.3%;
+          left: 23.5%;
+          top: 68.4%;
         }
       }
 
       &--bank {
         top: 83.2%;
-        left: 41.2%;
+        left: 41.3%;
         width: 19.3%;
         height: 12.7%;
 
         @include max(sm) {
-          top: 42.2%;
-          left: 18%;
-          width: 62.135%;
-          height: 7.4%;
+          height: 14.2%;
+          width: 51.3%;
+          left: 23.5%;
+          top: 81%;
         }
       }
     }
@@ -262,10 +263,10 @@
       @include max(sm) {
         display: block;
         position: absolute;
-        top: 11.6%;
-        left: 15%;
-        width: 69.135%; //215px;
-        height: 9.52%; //91px;
+        top: 22%;
+        left: 20.7%;
+        width: 57.3%; //215px;
+        height: 18.1%; //91px;
         border: 4px solid $citrus;
         border-radius: 2px;
 
