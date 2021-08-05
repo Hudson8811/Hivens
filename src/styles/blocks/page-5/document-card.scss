@@ -4,7 +4,7 @@
   min-height: 236px;
   padding-left: 27px;
 
-  @include max(767) {
+  @include max(sm) {
     width: 310px;
     padding-left: 50px;
   }
@@ -16,6 +16,11 @@
     top: 38px;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.07);
+
+    @include max(sm) {
+      box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.08);
+    }
 
     &-text {
       position: absolute;
@@ -38,7 +43,7 @@
     box-shadow: 0px 2.04886px 13.6591px 0.682953px rgba(0, 0, 0, 0.07);
     border-radius: 4px;
 
-    @include max(767) {
+    @include max(sm) {
       padding-left: 125px;
       padding-right: 24px;
       padding-bottom: 22px;
@@ -77,7 +82,7 @@
   &__btn + &__btn {
     margin-left: 15px;
 
-    @include max(767) {
+    @include max(sm) {
       margin-left: 0;
       margin-top: 14px;
     }

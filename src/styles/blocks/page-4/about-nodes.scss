@@ -120,6 +120,9 @@
         }
         area {
           cursor: pointer;
+          @include max(sm) {
+            display: none;
+          }
         }
       }
 
@@ -144,17 +147,48 @@
       cursor: pointer;
       //background-color: rgba(yellow, 0.2);
 
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $white;
+      }
+
+      &::after {
+        animation-name: pulseHint;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
       &--guards {
         top: 47%;
         left: 27.3%;
         width: 10%;
         height: 45.4%;
 
+        &::before,
+        &::after {
+          top: 91%;
+          left: 30%;
+        }
+
         @include max(sm) {
           height: 49%;
           width: 21.6%;
           left: 5%;
           top: 43.2%;
+
+          &::before,
+          &::after {
+            top: 50%;
+            left: 50%;
+
+            background-color: $citrus;
+          }
         }
       }
 
@@ -164,11 +198,23 @@
         width: 24%;
         height: 9.2%;
 
+        &::before,
+        &::after {
+          top: 50%;
+          left: 12.5%;
+        }
+
         @include max(sm) {
           height: 18.1%;
           width: 57.3%;
           left: 20.7%;
           top: 22%;
+
+          &::before,
+          &::after {
+            top: 26%;
+            left: 21%;
+          }
         }
       }
 
@@ -178,11 +224,23 @@
         width: 24%;
         height: 11.9%;
 
+        &::before,
+        &::after {
+          top: 70%;
+          left: 89%;
+        }
+
         @include max(sm) {
           height: 9.4%;
           width: 14.1%;
           left: 59.6%;
           top: 36%;
+
+          &::before,
+          &::after {
+            top: 50%;
+            left: 52%;
+          }
         }
       }
 
@@ -192,11 +250,23 @@
         width: 8.4%;
         height: 6.8%;
 
+        &::before,
+        &::after {
+          top: 48%;
+          left: 50%;
+        }
+
         @include max(sm) {
           height: 6.9%;
           width: 11.2%;
           left: 51.5%;
           top: 45.7%;
+
+          &::before,
+          &::after {
+            top: 46%;
+            left: 52%;
+          }
         }
       }
 
@@ -206,11 +276,23 @@
         width: 24%;
         height: 5.9%;
 
+        &::before,
+        &::after {
+          top: 63%;
+          left: 85%;
+        }
+
         @include max(sm) {
           height: 7.8%;
           width: 51.2%;
           left: 23.5%;
           top: 52.6%;
+
+          &::before,
+          &::after {
+            top: 50%;
+            left: 50%;
+          }
         }
       }
 
@@ -220,11 +302,23 @@
         width: 24%;
         height: 8.4%;
 
+        &::before,
+        &::after {
+          top: 23%;
+          left: 89%;
+        }
+
         @include max(sm) {
           height: 10.3%;
           width: 51.3%;
           left: 23.5%;
           top: 59.2%;
+
+          &::before,
+          &::after {
+            top: 50%;
+            left: 50%;
+          }
         }
       }
 
@@ -234,11 +328,23 @@
         width: 24%;
         height: 6.7%;
 
+        &::before,
+        &::after {
+          top: 38%;
+          left: 32.2%;
+        }
+
         @include max(sm) {
           height: 10.3%;
           width: 51.3%;
           left: 23.5%;
           top: 68.4%;
+
+          &::before,
+          &::after {
+            top: 50%;
+            left: 50%;
+          }
         }
       }
 
@@ -248,11 +354,23 @@
         width: 19.3%;
         height: 12.7%;
 
+        &::before,
+        &::after {
+          top: 68%;
+          left: 20%;
+        }
+
         @include max(sm) {
           height: 14.2%;
           width: 51.3%;
           left: 23.5%;
           top: 81%;
+
+          &::before,
+          &::after {
+            top: 50%;
+            left: 50%;
+          }
         }
       }
     }
@@ -918,5 +1036,16 @@
     @include max(sm) {
       //display: none;
     }
+  }
+}
+
+@keyframes pulseHint {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(7);
+    opacity: 0;
   }
 }
