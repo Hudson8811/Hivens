@@ -96,6 +96,7 @@
     flex-shrink: 0;
     margin: -3px 0 0 0;
     padding-top: 3px;
+    overflow: visible;
 
     @include max(md) {
       width: calc(100% - 392px);
@@ -104,7 +105,6 @@
 
     @include max(sm) {
       width: 100%;
-      overflow: visible;
     }
 
     .swiper-wrapper {
