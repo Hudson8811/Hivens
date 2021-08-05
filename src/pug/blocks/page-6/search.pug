@@ -6,10 +6,11 @@ section.search
 					span Know More.
 				form.search__form(action="#")
 					.search-filters
-						+button('People', 'button search-filters__button button--rounded button--outline-green active', 'person')(type="button")
-						+button('Services', 'button search-filters__button button--rounded button--outline-green', 'services-hand')(type="button")
-						+button('Company', 'button search-filters__button button--rounded button--outline-green', 'company')(type="button")
-						+button('...', 'button search-filters__button search-filters__button--more button--rounded button--outline-green button--big')(type="button")
+						.swiper-wrapper 
+							+button('People', 'button search-filters__button swiper-slide button--rounded button--outline-green active', 'person')(type="button")
+							+button('Services', 'button search-filters__button swiper-slide button--rounded button--outline-green', 'services-hand')(type="button")
+							+button('Company', 'button search-filters__button swiper-slide button--rounded button--outline-green', 'company')(type="button")
+							+button('...', 'button search-filters__button swiper-slide search-filters__button--more button--rounded button--outline-green')(type="button")
 					.search__input-group 
 						input(type="text" placeholder="Enter name, email, url or any neighorhood").search__input
 						button.search__input-button 

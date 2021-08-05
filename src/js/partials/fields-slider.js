@@ -1,5 +1,4 @@
 $(window).on("load", () => {
-	let filterCarousel = null;
 	const carouselEl = document.querySelector(".fields__slider");
 
 	if (carouselEl) {
@@ -17,11 +16,22 @@ $(window).on("load", () => {
 			},
 		});
 
+		const filtersSlider = new Swiper(".fields__categories", {
+			slidesPerView: "auto",
+			spaceBetween: 20,
+			breakpoints: {
+				768: {
+					enabled: false,
+				},
+			},
+		});
+
 		const filtersBtns = document.querySelectorAll(
 			".fields__filter[data-target]"
 		);
 
 		const slides = document.querySelectorAll(".fields__slide");
+		const filters = document.querySelectorAll(".fields__filter");
 
 		if (filtersBtns && slides) {
 			filterSlides();
@@ -35,6 +45,10 @@ $(window).on("load", () => {
 					this.classList.add("active");
 					filterSlides(this);
 				});
+			});
+
+			filtersSlider.on("activeIndexChange", (event) => {
+				filterSlides(filters[filtersSlider.activeIndex]);
 			});
 		}
 

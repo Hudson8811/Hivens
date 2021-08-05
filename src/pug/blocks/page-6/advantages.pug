@@ -5,7 +5,10 @@ section.advantages
 			p.advantages__text
 				| Данные о нужном объекте поступают из множесво дата нод и поставщиков данных экосистемы
 		.advantages__content
-			img(src="images/page-6/advantages/advantages-bg.jpg", srcset="images/page-6/advantages/advantages-bg@2x.jpg 2x", alt="")
+			.advantages__mobile-line
+			picture.advantages__bg
+				source(media="(max-width: 767px)", srcset="images/page-6/advantages/advantages-bg-mobile.jpg 1x, images/page-6/advantages/advantages-bg-mobile@2x.jpg 2x")
+				img(src="images/page-6/advantages/advantages-bg.jpg", srcset="images/page-6/advantages/advantages-bg@2x.jpg 2x", alt="")
 			.advantages__main-card
 				.advantages__main-card-image
 					img(src="images/page-6/advantages/main-card-img.png", srcset="images/page-6/advantages/main-card-img@2x.png 2x", alt="")
@@ -37,6 +40,8 @@ section.advantages
 						| Germany
 			.advantages__cards
 				.advantages__slider
+					button.swiper-button-next.advantages__button-next--long-arrow
+						+icon('arrow-next-icon')
 					.swiper-wrapper
 						.advantages__card.advantages__card--facebook.swiper-slide
 							.advantages__card-image

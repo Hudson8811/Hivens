@@ -2,20 +2,43 @@
 	padding-top: 70px;
 	padding-bottom: 70px;
 
+	@include max(sm) {
+		padding-bottom: 40px;
+		padding-top: 40px;
+	}
+
 	&__header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
+	&__container {
+		@include max(sm) {
+			padding: 0;
+		}
+	}
+
 	&__content {
 		margin-top: 65px;
 		display: flex;
 		justify-content: space-between;
+
+		@include max(sm) {
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+			overflow: hidden;
+		}
 	}
 
 	&__indicators {
 		margin-right: 35px;
+
+		@include max(sm) {
+			margin-right: 0;
+			margin-top: 35px;
+			padding: 0 32px;
+		}
 	}
 
 	&__indicator {
@@ -24,6 +47,12 @@
 		border-left: 1px solid $white-eb;
 		padding-left: 39px;
 		min-height: 144px;
+
+		@include max(sm) {
+			padding-left: 0;
+			border-left: none;
+			min-height: 101px;
+		}
 
 		&:first-child {
 			margin-top: -4px;
@@ -90,7 +119,22 @@
 	}
 
 	&__map {
-		position: relative;
+		overflow: scroll;
+
+		&-container {
+			position: relative;
+
+			@include max(sm) {
+				min-width: 580px;
+			}
+
+			img {
+				@include max(sm) {
+					min-width: 580px;
+					object-fit: contain;
+				}
+			}
+		}
 
 		&-label {
 			position: absolute;
@@ -133,10 +177,15 @@
 			&--usa {
 				left: 14.6%;
 				top: 33.3%;
+
+				@include max(sm) {
+					left: 15.8%;
+					top: 35.3%;
+				}
 			}
 
 			&--europe {
-				left: 50.7%;
+				left: 45.7%;
 				top: 22.1%;
 			}
 
@@ -148,6 +197,10 @@
 			&--new-zealand {
 				left: 79.4%;
 				top: 81.8%;
+
+				@include max(sm) {
+					left: 70.8%;
+				}
 			}
 		}
 

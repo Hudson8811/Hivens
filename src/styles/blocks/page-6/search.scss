@@ -1,4 +1,13 @@
 .search {
+	padding-top: 87px;
+	padding-bottom: 48px;
+	overflow: hidden;
+
+	@include max(sm) {
+		padding-top: 50px;
+		padding-bottom: 40px;
+	}
+
 	&__form {
 		&-wrapper {
 			margin-right: 70px;
@@ -24,8 +33,6 @@
 	&-flex {
 		display: flex;
 		align-items: flex-start;
-		padding-top: 87px;
-		padding-bottom: 48px;
 
 		@include max(sm) {
 			flex-direction: column;
@@ -71,7 +78,13 @@
 		display: flex;
 		margin-top: 40px;
 
+		@include max(sm) {
+			margin-top: 25px;
+		}
+
 		&__button {
+			width: auto;
+
 			&:nth-child(1) {
 				margin-right: 49px;
 			}
@@ -129,6 +142,10 @@
 			width: 100%;
 			background: rgba(0, 0, 0, 0.0001);
 			box-shadow: 0px 4.75566px 28.534px rgba(0, 0, 0, 0.06);
+
+			@include max(sm) {
+				margin-top: 28px;
+			}
 		}
 
 		&-button {
@@ -179,6 +196,7 @@
 
 		@include max(sm) {
 			font-size: 18px;
+			margin-top: 27px;
 		}
 	}
 }

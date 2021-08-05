@@ -1,6 +1,11 @@
 .business-cases {
 	padding-top: 70px;
 	padding-bottom: 70px;
+
+	@include max(sm) {
+		overflow: hidden;
+	}
+
 	&__header {
 		display: flex;
 		justify-content: center;
@@ -9,6 +14,10 @@
 	&__filters {
 		max-width: 1084px;
 		margin: 40px auto 0;
+
+		@include max(sm) {
+			overflow: visible;
+		}
 	}
 
 	&__filter {
@@ -41,6 +50,10 @@
 					position: relative;
 					z-index: 10;
 					cursor: pointer;
+
+					@include max(sm) {
+						display: none;
+					}
 				}
 			}
 		}
@@ -77,6 +90,10 @@
 		background-size: contain;
 		max-width: 1084px;
 		margin: 25px auto 0;
+
+		@include max(sm) {
+			background-image: url("../images/page-6/business-cases/business-cases-bg-mobile.svg");
+		}
 	}
 
 	&__card {
@@ -87,6 +104,16 @@
 			justify-content: space-between;
 			max-width: 1084px;
 			margin: 0 auto;
+
+			@include max(sm) {
+				flex-direction: column;
+			}
+		}
+
+		&-content {
+			@include max(sm) {
+				margin-top: 35px;
+			}
 		}
 
 		&-list {
@@ -99,6 +126,10 @@
 
 				&:not(:first-child) {
 					margin-top: 58px;
+
+					@include max(sm) {
+						margin-top: 48px;
+					}
 				}
 			}
 
@@ -142,6 +173,10 @@
 				font-size: 17px;
 				line-height: (29 / 17);
 				color: $dark-gray;
+
+				@include max(1270) {
+					font-size: vw(36, 1270);
+				}
 			}
 		}
 	}

@@ -1,6 +1,11 @@
 .data-sources {
 	padding-top: 70px;
 	padding-bottom: 70px;
+	overflow: hidden;
+
+	@include max(sm) {
+		padding-top: 40px;
+	}
 
 	&__header {
 		display: flex;
@@ -11,9 +16,18 @@
 	&__title {
 		text-align: center;
 		max-width: 615px;
+		color: $dark-gray;
+
+		@include max(sm) {
+			text-align: left;
+		}
 
 		&::before {
 			width: 217px;
+
+			@include max(sm) {
+				left: -8px;
+			}
 		}
 	}
 
@@ -52,11 +66,26 @@
 		height: 100%;
 		left: 0;
 		top: 0;
+		overflow: visible;
+
+		@include max(sm) {
+			position: relative;
+			margin-top: 35px;
+		}
 	}
 
 	&__item {
 		width: 32.58%;
 		position: absolute;
+
+		@include max(sm) {
+			position: relative;
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			width: 221px;
+			margin-right: 38px;
+		}
 
 		&:nth-child(2) {
 			top: 18%;
@@ -118,14 +147,33 @@
 			justify-content: space-between;
 			align-items: flex-end;
 
+			@include max(sm) {
+				flex-direction: column;
+				align-items: flex-start;
+				justify-content: flex-start;
+				margin-left: 15px;
+				padding: 36px 0;
+			}
+
 			&--left {
 				flex-direction: row;
-				padding-left: 36px;
+
+				@include max(sm) {
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+				}
 			}
 
 			&--right {
 				flex-direction: row-reverse;
 				padding-right: 36px;
+
+				@include max(sm) {
+					flex-direction: column;
+					align-items: flex-start;
+					justify-content: flex-start;
+				}
 			}
 		}
 
@@ -142,9 +190,18 @@
 			font-size: 12px;
 			line-height: (18 / 12);
 			max-width: 125px;
+			color: #6e6b7b;
+
+			@include max(sm) {
+				margin-top: 8px;
+			}
 
 			&--left {
 				text-align: right;
+
+				@include max(sm) {
+					text-align: left;
+				}
 			}
 
 			&--right {
@@ -189,6 +246,14 @@
 			top: 50%;
 			transform: translateY(-50%);
 
+			@include max(sm) {
+				height: 100%;
+				width: 2px;
+				top: 18px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
 			&--left {
 				left: 18px;
 			}
@@ -200,6 +265,33 @@
 			&-block {
 				position: relative;
 				height: 36px;
+
+				@include max(sm) {
+					min-width: 36px;
+					height: 129px;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+
+	&__button-next {
+		&--long-arrow {
+			display: none;
+			position: absolute;
+			bottom: -15px;
+			left: 0;
+			width: 142px;
+			height: 30px;
+			padding: 0;
+
+			svg {
+				width: 142px;
+				height: 10px;
+			}
+
+			@include max(sm) {
+				display: block;
 			}
 		}
 	}

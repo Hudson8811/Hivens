@@ -23,6 +23,16 @@ $(window).on("load", () => {
 
 		const slides = document.querySelectorAll(".business-cases__card");
 
+		function initFilterCarousel() {
+			filterCarousel = new Swiper(".business-cases__filters", {
+				speed: 300,
+				slidesPerView: "auto",
+				spaceBetween: 34,
+			});
+		}
+
+		initFilterCarousel();
+
 		if (filtersBtns && slides) {
 			filterSlides();
 
@@ -36,29 +46,16 @@ $(window).on("load", () => {
 					filterSlides(this);
 				});
 			});
-		}
 
-		// window.addEventListener("resize", () => {
-		// 	width = document.documentElement.clientWidth;
-
-		// 	if (width <= breakpoint && !isInit) {
-		// 		initFilterCarousel();
-		// 		isInit = true;
-		// 	} else if (width > breakpoint && isInit) {
-		// 		filterCarousel.destroy();
-		// 		isInit = false;
-		// 	}
-		// });
-
-		function initFilterCarousel() {
-			filterCarousel = new Swiper(".business-cases__filters", {
-				speed: 300,
-				slidesPerView: "auto",
-				spaceBetween: 34,
+			filterCarousel.on("activeIndexChange", (event) => {
+				filterSlides(filtersBtns[filterCarousel.activeIndex]);
+				const activeFilterBtn = document
+					.querySelector(".business-cases__filters")
+					.querySelector(".active");
+				activeFilterBtn.classList.remove("active");
+				filtersBtns[filterCarousel.activeIndex].classList.add("active");
 			});
 		}
-
-		initFilterCarousel();
 
 		function filterSlides(current) {
 			const activeFilter =

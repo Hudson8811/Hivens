@@ -1,6 +1,12 @@
 .cases {
 	padding-top: 70px;
 	padding-bottom: 70px;
+	overflow: hidden;
+
+	@include max(sm) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 
 	&__header {
 		display: flex;
@@ -16,6 +22,10 @@
 		text-align: center;
 		color: #6e6b7b;
 
+		@include max(sm) {
+			text-align: left;
+		}
+
 		b {
 			font-weight: 600;
 		}
@@ -29,6 +39,10 @@
 	&__content {
 		position: relative;
 		margin-top: 10px;
+
+		@include max(sm) {
+			margin-top: 35px;
+		}
 	}
 
 	&__items {
@@ -38,11 +52,22 @@
 		left: 0;
 		top: 0;
 
+		@include max(sm) {
+			overflow: visible;
+			margin-top: 35px;
+		}
+
 		.swiper-wrapper {
 			@include min(sm) {
 				width: 100%;
 				height: 100%;
 			}
+		}
+
+		@include max(sm) {
+			position: relative;
+			top: auto;
+			left: auto;
 		}
 	}
 
@@ -50,10 +75,29 @@
 		position: absolute;
 		height: 52px;
 
+		@include max(sm) {
+			position: relative;
+			min-height: 129px;
+			max-width: 200px;
+			left: 0 !important;
+		}
+
+		&-inner {
+			@include max(sm) {
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: flex-end;
+			}
+		}
+
 		&--left {
 			.cases__item {
 				&-title {
 					padding-left: 60px;
+
+					@include max(sm) {
+						padding-left: 0;
+					}
 				}
 
 				&-round {
@@ -62,6 +106,10 @@
 
 				&-line {
 					left: 18px;
+
+					@include max(sm) {
+						left: 17px;
+					}
 				}
 			}
 		}
@@ -71,14 +119,26 @@
 				&-title {
 					padding-right: 58px;
 					text-align: right;
+
+					@include max(sm) {
+						text-align: left;
+						padding-right: 0;
+					}
 				}
 
 				&-round {
 					right: 0;
+					@include max(sm) {
+						left: 0;
+					}
 				}
 
 				&-line {
 					right: 18px;
+
+					@include max(sm) {
+						left: 17px;
+					}
 				}
 			}
 		}
@@ -184,6 +244,11 @@
 			font-size: 12px;
 			line-height: (18 / 12);
 			color: $dark-gray-6e;
+
+			@include max(sm) {
+				margin-top: 40px;
+				max-width: 162px;
+			}
 		}
 
 		&-round {
@@ -207,11 +272,15 @@
 
 				@include max(sm) {
 					background: $green-9e;
+					width: 18px;
+					height: 18px;
 				}
 			}
 
 			@include max(sm) {
 				background-color: rgba($green-9e, 0.13);
+				width: 36px;
+				height: 36px;
 			}
 		}
 
@@ -225,12 +294,43 @@
 
 			@include max(sm) {
 				background-color: $green-9e;
+				top: 18px;
+				transform: translateY(0);
+				width: 2px;
+				height: calc(100% - 18px);
 			}
 
 			&-block {
 				position: relative;
 				height: 52px;
 				margin-top: -16px;
+
+				@include max(sm) {
+					height: 129px;
+					margin-top: 0;
+					width: 36px;
+				}
+			}
+		}
+	}
+
+	&__button-next {
+		&--long-arrow {
+			display: none;
+			position: absolute;
+			bottom: -50px;
+			left: 0;
+			width: 142px;
+			height: 30px;
+			padding: 0;
+
+			svg {
+				width: 142px;
+				height: 10px;
+			}
+
+			@include max(sm) {
+				display: block;
 			}
 		}
 	}

@@ -13,3 +13,8 @@
 //= ./partials/data-types-slider.js
 //= ./partials/buisness-cases-slider.js
 //= ./partials/fields-slider.js
+//= ./partials/advantages-slider.js
+//= ./partials/search-slider.js
+//= ./partials/data-sources-slider.js
+//= ./partials/data-sources-slider.js
+//= ./partials/cases-slider.js

@@ -1,6 +1,7 @@
 .fields {
 	padding-top: 70px;
 	padding-bottom: 70px;
+	overflow: hidden;
 
 	&__header {
 		display: flex;
@@ -8,6 +9,18 @@
 
 		@include max(sm) {
 			justify-content: flex-start;
+		}
+	}
+
+	&__title {
+		color: $dark-gray;
+
+		&::before {
+			left: -8px;
+		}
+
+		@include max(sm) {
+			text-align: left;
 		}
 	}
 
@@ -21,18 +34,34 @@
 		background-repeat: no-repeat;
 		background-position: bottom left;
 		background-size: contain;
+
+		@include max(sm) {
+			flex-direction: column;
+			justify-content: flex-start;
+			background-size: 150%;
+			padding-bottom: 100px;
+		}
+
+		@include max(550) {
+			background-size: 200%;
+		}
+
+		@include max(400) {
+			background-image: url("../images/page-6/fields/fields-bg-mobile.svg");
+			background-size: contain;
+			padding-bottom: 130px;
+		}
 	}
 
 	&__categories {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
 		width: 250px;
 		flex-shrink: 0;
 
 		.swiper-wrapper {
-			display: flex;
-			flex-direction: column;
+			@include min(sm) {
+				display: flex;
+				flex-direction: column;
+			}
 		}
 	}
 
@@ -69,7 +98,9 @@
 		}
 
 		&:not(:first-child) {
-			margin-top: 36px;
+			@include min(sm) {
+				margin-top: 36px;
+			}
 		}
 
 		&:nth-child(3) {
@@ -161,8 +192,12 @@
 		padding-top: 5px;
 		padding-bottom: 50px;
 		position: relative;
-
 		transition: opacity 0.4s linear;
+
+		@include max(sm) {
+			overflow: visible;
+			margin-top: 35px;
+		}
 
 		&.opacity {
 			opacity: 0;
@@ -204,6 +239,10 @@
 			box-shadow: 0px 2.04886px 13.6591px 0.682953px rgba(0, 0, 0, 0.07);
 			border-radius: 4.09772px;
 			max-width: 801px;
+
+			@include max(sm) {
+				padding: 15px 0 18px;
+			}
 		}
 
 		&-title {
@@ -224,6 +263,11 @@
 			flex-direction: row;
 			justify-content: space-between;
 			flex-wrap: wrap;
+
+			@include max(sm) {
+				padding: 0 27px;
+				flex-direction: column;
+			}
 		}
 
 		&-item {
@@ -238,9 +282,50 @@
 			color: $green-9e;
 			margin-top: 10px;
 
+			@include max(sm) {
+				margin-top: 9px;
+				width: 100%;
+				flex-basis: 100%;
+			}
+
 			&:nth-child(1),
 			&:nth-child(2) {
-				margin-top: 0;
+				@include min(sm) {
+					margin-top: 0;
+				}
+			}
+
+			&:first-child {
+				@include max(sm) {
+					margin-top: 0;
+					order: 0;
+				}
+			}
+
+			&:nth-child(2) {
+				@include max(sm) {
+					order: 2;
+				}
+			}
+			&:nth-child(3) {
+				@include max(sm) {
+					order: 1;
+				}
+			}
+			&:nth-child(4) {
+				@include max(sm) {
+					order: 3;
+				}
+			}
+			&:nth-child(5) {
+				@include max(sm) {
+					order: 4;
+				}
+			}
+			&:nth-child(6) {
+				@include max(sm) {
+					order: 5;
+				}
 			}
 
 			&::before {
@@ -284,6 +369,10 @@
 			height: 43px;
 			cursor: pointer;
 			z-index: 10;
+
+			@include max(sm) {
+				display: none;
+			}
 
 			svg {
 				width: 46px;

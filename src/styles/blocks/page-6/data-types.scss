@@ -1,11 +1,25 @@
 .data-types {
 	padding-top: 48px;
 	padding-bottom: 87px;
+	overflow: hidden;
+
+	@include max(sm) {
+		padding-bottom: 50px;
+		padding-top: 40px;
+	}
 
 	&__header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	&__title {
+		color: $dark-gray;
+
+		@include max(sm) {
+			text-align: left;
+		}
 	}
 
 	&__slider {
@@ -14,6 +28,13 @@
 		justify-content: center;
 		width: 88%;
 		padding: 10px;
+
+		@include max(sm) {
+			overflow: visible;
+			width: 100%;
+			padding: 0;
+			margin-top: 35px;
+		}
 
 		&-container {
 			position: relative;
@@ -62,6 +83,10 @@
 			height: 43px;
 			cursor: pointer;
 
+			@include max(sm) {
+				display: none;
+			}
+
 			svg {
 				width: 46px;
 				height: 43px;
@@ -74,6 +99,25 @@
 		}
 		&-next {
 			right: 0;
+
+			&--long-arrow {
+				display: none;
+				position: absolute;
+				bottom: -55px;
+				left: 0;
+				width: 132px;
+				height: 30px;
+				padding: 0;
+
+				svg {
+					width: 132px;
+					height: 10px;
+				}
+
+				@include max(sm) {
+					display: block;
+				}
+			}
 		}
 	}
 }

@@ -118,23 +118,25 @@
               <h1 class="search__title">Spokeo. <span>Know More.</span></h1>
               <form class="search__form" action="#">
                 <div class="search-filters">
-                  <button class="button button search-filters__button button--rounded button--outline-green active">
-                    <svg>
-                      <use xlink:href="./images/sprite.svg#person"></use>
-                    </svg><span>People</span>
-                  </button>
-                  <button class="button button search-filters__button button--rounded button--outline-green">
-                    <svg>
-                      <use xlink:href="./images/sprite.svg#services-hand"></use>
-                    </svg><span>Services</span>
-                  </button>
-                  <button class="button button search-filters__button button--rounded button--outline-green">
-                    <svg>
-                      <use xlink:href="./images/sprite.svg#company"></use>
-                    </svg><span>Company</span>
-                  </button>
-                  <button class="button button search-filters__button search-filters__button--more button--rounded button--outline-green button--big"><span>...</span>
-                  </button>
+                  <div class="swiper-wrapper"> 
+                    <button class="button button search-filters__button swiper-slide button--rounded button--outline-green active">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#person"></use>
+                      </svg><span>People</span>
+                    </button>
+                    <button class="button button search-filters__button swiper-slide button--rounded button--outline-green">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#services-hand"></use>
+                      </svg><span>Services</span>
+                    </button>
+                    <button class="button button search-filters__button swiper-slide button--rounded button--outline-green">
+                      <svg>
+                        <use xlink:href="./images/sprite.svg#company"></use>
+                      </svg><span>Company</span>
+                    </button>
+                    <button class="button button search-filters__button swiper-slide search-filters__button--more button--rounded button--outline-green"><span>...</span>
+                    </button>
+                  </div>
                 </div>
                 <div class="search__input-group"> 
                   <input class="search__input" type="text" placeholder="Enter name, email, url or any neighorhood">
@@ -166,6 +168,11 @@
             <button class="swiper-button-next data-types__button-next">
               <svg>
                 <use xlink:href="./images/sprite.svg#chevron-right"></use>
+              </svg>
+            </button>
+            <button class="swiper-button-next data-types__button-next--long-arrow">
+              <svg>
+                <use xlink:href="./images/sprite.svg#arrow-next-icon"></use>
               </svg>
             </button>
             <div class="data-types__slider swiper-container">
@@ -253,7 +260,11 @@
             <h2 class="advantages__title title">В чем преимущества Hivens?</h2>
             <p class="advantages__text">Данные о нужном объекте поступают из множесво дата нод и поставщиков данных экосистемы</p>
           </header>
-          <div class="advantages__content"><img src="images/page-6/advantages/advantages-bg.jpg" srcset="images/page-6/advantages/advantages-bg@2x.jpg 2x" alt="">
+          <div class="advantages__content">
+            <div class="advantages__mobile-line"></div>
+            <picture class="advantages__bg">
+              <source media="(max-width: 767px)" srcset="images/page-6/advantages/advantages-bg-mobile.jpg 1x, images/page-6/advantages/advantages-bg-mobile@2x.jpg 2x"><img src="images/page-6/advantages/advantages-bg.jpg" srcset="images/page-6/advantages/advantages-bg@2x.jpg 2x" alt="">
+            </picture>
             <div class="advantages__main-card">
               <div class="advantages__main-card-image"><img src="images/page-6/advantages/main-card-img.png" srcset="images/page-6/advantages/main-card-img@2x.png 2x" alt=""><span>profile</span></div>
               <div class="advantages__main-card-content"><a class="advantages__link" href="tel:+49409876123543">
@@ -290,6 +301,11 @@
             </div>
             <div class="advantages__cards">
               <div class="advantages__slider">
+                <button class="swiper-button-next advantages__button-next--long-arrow">
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#arrow-next-icon"></use>
+                  </svg>
+                </button>
                 <div class="swiper-wrapper">
                   <div class="advantages__card advantages__card--facebook swiper-slide">
                     <div class="advantages__card-image"><img src="images/page-6/advantages/card-img-1.png" srcset="images/page-6/advantages/card-img-1@2x.png 2x" alt=""></div>
@@ -364,7 +380,7 @@
         </div>
       </section>
       <section class="unique-data"> 
-        <div class="container"> 
+        <div class="container unique-data__container">
           <header class="unique-data__header">
             <h2 class="unique-data__title title">Сколько уже уникализированных данных в экосистеме?</h2>
           </header>
@@ -399,9 +415,14 @@
               <div class="data-sources__image-text">
                  i am collecting information</div>
             </div>
-            <div class="data-sources__description">
+            <div class="data-sources__description swiper-container">
+              <button class="swiper-button-next data-sources__button-next--long-arrow">
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-next-icon"></use>
+                </svg>
+              </button>
               <div class="swiper-wrapper"> 
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--left">
                     <div class="data-sources__item-title">поисковые системы</div>
                     <div class="data-sources__item-info data-sources__item-info--left">Google, Bing, Yahoo, Aall, Yandex</div>
@@ -411,7 +432,7 @@
                     <div class="data-sources__item-line data-sources__item-line--left"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--left">
                     <div class="data-sources__item-title">сервисы вопрос-ответов</div>
                     <div class="data-sources__item-info data-sources__item-info--left">answers.com, ask.fm</div>
@@ -421,7 +442,7 @@
                     <div class="data-sources__item-line data-sources__item-line--left"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--left">
                     <div class="data-sources__item-title">сайты отзывы</div>
                     <div class="data-sources__item-info data-sources__item-info--left">yelp, menuism, tripadvizor</div>
@@ -431,7 +452,7 @@
                     <div class="data-sources__item-line data-sources__item-line--left"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--left"> 
                     <div class="data-sources__item-title">сайты по поиску кандидатов</div>
                     <div class="data-sources__item-info data-sources__item-info--left">indeed.com</div>
@@ -441,7 +462,7 @@
                     <div class="data-sources__item-line data-sources__item-line--left"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--left"> 
                     <div class="data-sources__item-title">профессиональные сообщества</div>
                     <div class="data-sources__item-info data-sources__item-info--left">Github, sourceforge, deviant, ART, behance</div>
@@ -451,7 +472,7 @@
                     <div class="data-sources__item-line data-sources__item-line--left"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--left"> 
                     <div class="data-sources__item-title">социальные сети</div>
                     <div class="data-sources__item-info data-sources__item-info--left">facebook, linkedin, twitter, Instagram, google+, tagget, foursquare</div>
@@ -461,7 +482,7 @@
                     <div class="data-sources__item-line data-sources__item-line--left"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--right">
                     <div class="data-sources__item-title">рекомендательные сайты</div>
                     <div class="data-sources__item-info data-sources__item-info--right">stumbleupon</div>
@@ -471,7 +492,7 @@
                     <div class="data-sources__item-line data-sources__item-line--right"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--right">
                     <div class="data-sources__item-title">e-commerse платформы</div>
                     <div class="data-sources__item-info data-sources__item-info--right">amazon, zazzle, eBay, etsy</div>
@@ -481,7 +502,7 @@
                     <div class="data-sources__item-line data-sources__item-line--right"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--right">
                     <div class="data-sources__item-title">сервисы закладок</div>
                     <div class="data-sources__item-info data-sources__item-info--right">delicious</div>
@@ -491,7 +512,7 @@
                     <div class="data-sources__item-line data-sources__item-line--right"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--right">
                     <div class="data-sources__item-title">новостные сайты</div>
                     <div class="data-sources__item-info data-sources__item-info--right">reddit, topix</div>
@@ -501,7 +522,7 @@
                     <div class="data-sources__item-line data-sources__item-line--right"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--right">
                     <div class="data-sources__item-title">фотосервис</div>
                     <div class="data-sources__item-info data-sources__item-info--right">fotobucket, picturereale, flicer, picasso, dailymotion, fotolog</div>
@@ -511,7 +532,7 @@
                     <div class="data-sources__item-line data-sources__item-line--right"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--right">
                     <div class="data-sources__item-title">блог платформы</div>
                     <div class="data-sources__item-info data-sources__item-info--right">blogger, livejournal, about.com, wordpress, tumbler, typePad</div>
@@ -521,7 +542,7 @@
                     <div class="data-sources__item-line data-sources__item-line--right"></div>
                   </div>
                 </div>
-                <div class="data-sources__item">
+                <div class="data-sources__item swiper-slide">
                   <div class="data-sources__item-text data-sources__item-text--right">
                     <div class="data-sources__item-title">media ресурсы</div>
                     <div class="data-sources__item-info data-sources__item-info--right">YOUTUBE, vimeo, soundcloud, last.fm, metacafe, weoh, Pandora</div>
@@ -539,7 +560,7 @@
       <section class="fields"> 
         <div class="container"> 
           <header class="fields__header"> 
-            <h2 class="title">Какие поля обрабатываются для 6 типов данных?</h2>
+            <h2 class="fields__title title">Какие поля обрабатываются для 6 типов данных?</h2>
           </header>
           <div class="fields__content"> 
             <div class="fields__categories">
@@ -904,7 +925,7 @@
         </div>
       </section>
       <section class="market-size">
-        <div class="container"> 
+        <div class="container market-size__container">
           <header class="market-size__header"> 
             <h2 class="market-size__title title">Market size 2021</h2>
           </header>
@@ -947,46 +968,48 @@
                 </div>
               </div>
             </div>
-            <div class="market-size__map"> <img src="images/page-6/market-size-map.jpg" srcset="images/page-6/market-size-map@2x.jpg 2x" alt="">
-              <div class="market-size__map-label market-size__map-label--canada market-size__map-label--arrow-down">
-                <div class="market-size__map-icon">
-                  <svg>
-                    <use xlink:href="./images/sprite.svg#heart-outline"></use>
-                  </svg>
+            <div class="market-size__map">
+              <div class="market-size__map-container"><img src="images/page-6/market-size-map.jpg" srcset="images/page-6/market-size-map@2x.jpg 2x" alt="">
+                <div class="market-size__map-label market-size__map-label--canada market-size__map-label--arrow-down">
+                  <div class="market-size__map-icon">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#heart-outline"></use>
+                    </svg>
+                  </div>
+                  <div class="market-size__map-country">Canada</div>
                 </div>
-                <div class="market-size__map-country">Canada</div>
-              </div>
-              <div class="market-size__map-label market-size__map-label--usa market-size__map-label--arrow-down">
-                <div class="market-size__map-icon">
-                  <svg>
-                    <use xlink:href="./images/sprite.svg#heart-outline"></use>
-                  </svg>
+                <div class="market-size__map-label market-size__map-label--usa market-size__map-label--arrow-down">
+                  <div class="market-size__map-icon">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#heart-outline"></use>
+                    </svg>
+                  </div>
+                  <div class="market-size__map-country">USA</div>
                 </div>
-                <div class="market-size__map-country">USA</div>
-              </div>
-              <div class="market-size__map-label market-size__map-label--europe market-size__map-label--arrow-down">
-                <div class="market-size__map-icon">
-                  <svg>
-                    <use xlink:href="./images/sprite.svg#heart-outline"></use>
-                  </svg>
+                <div class="market-size__map-label market-size__map-label--europe market-size__map-label--arrow-down">
+                  <div class="market-size__map-icon">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#heart-outline"></use>
+                    </svg>
+                  </div>
+                  <div class="market-size__map-country">Europe & CIS</div>
                 </div>
-                <div class="market-size__map-country">Europe & CIS</div>
-              </div>
-              <div class="market-size__map-label market-size__map-label--australia market-size__map-label--arrow-down">
-                <div class="market-size__map-icon">
-                  <svg>
-                    <use xlink:href="./images/sprite.svg#heart-outline"></use>
-                  </svg>
+                <div class="market-size__map-label market-size__map-label--australia market-size__map-label--arrow-down">
+                  <div class="market-size__map-icon">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#heart-outline"></use>
+                    </svg>
+                  </div>
+                  <div class="market-size__map-country">Australia</div>
                 </div>
-                <div class="market-size__map-country">Australia</div>
-              </div>
-              <div class="market-size__map-label market-size__map-label--new-zealand market-size__map-label--arrow-right">
-                <div class="market-size__map-icon">
-                  <svg>
-                    <use xlink:href="./images/sprite.svg#heart-outline"></use>
-                  </svg>
+                <div class="market-size__map-label market-size__map-label--new-zealand market-size__map-label--arrow-right">
+                  <div class="market-size__map-icon">
+                    <svg>
+                      <use xlink:href="./images/sprite.svg#heart-outline"></use>
+                    </svg>
+                  </div>
+                  <div class="market-size__map-country">New Zealend</div>
                 </div>
-                <div class="market-size__map-country">New Zealend</div>
               </div>
             </div>
           </div>
@@ -1000,7 +1023,12 @@
           </header>
           <div class="cases__content">
             <div class="cases__image"><img src="images/page-6/cases-bg.jpg" srcset="images/page-6/cases-bg@2x.jpg 2x" alt=""></div>
-            <div class="cases__items swiper-container"> 
+            <div class="cases__items swiper-container">
+              <button class="swiper-button-next cases__button-next--long-arrow">
+                <svg>
+                  <use xlink:href="./images/sprite.svg#arrow-next-icon"></use>
+                </svg>
+              </button>
               <div class="swiper-wrapper">
                 <div class="cases__item cases__item--left swiper-slide">
                   <div class="cases__item-inner">
