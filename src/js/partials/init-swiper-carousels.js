@@ -16,6 +16,8 @@ window.addEventListener('load', () => {
 
   elements.forEach(it => {
     const carouselEl = document.querySelector(it.selector);
+    let isInit = false;
+    let carousel = null;
 
     if (carouselEl) {
       let isInit = false;
@@ -38,17 +40,19 @@ window.addEventListener('load', () => {
           isInit = false;
         }
       });
+
+      function initCarousel(el) {
+        carousel = new Swiper(el, {
+          speed: 300,
+          slidesPerView: 'auto',
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      }
     }
   });
 
-  function initCarousel(el) {
-    carousel = new Swiper(el, {
-      speed: 300,
-      slidesPerView: 'auto',
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  }
+  
 });
