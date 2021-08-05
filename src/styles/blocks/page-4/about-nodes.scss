@@ -120,6 +120,9 @@
         }
         area {
           cursor: pointer;
+          @include max(sm) {
+            display: none;
+          }
         }
       }
 

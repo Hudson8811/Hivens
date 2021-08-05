@@ -5,7 +5,7 @@ window.onload = () => {
   const breakpoint = 767;
   
   const carouselEl = document.querySelector('.__js_about-nodes-carousel');
-  const showBeehiveDtn = document.querySelector('.about-nodes__btn');
+  const showBeehiveBtn = document.querySelector('.about-nodes__btn');
   const scene = document.querySelector('.about-nodes__scene');
   const sceneOuter = document.querySelector('.about-nodes__scene-outer');
   const sceneInner = document.querySelector('.about-nodes__scene-inner');
@@ -14,6 +14,7 @@ window.onload = () => {
   const zoomEl = document.querySelector('.about-nodes__scene-zoom');
   const zoomElGuards1 = document.querySelector('.about-nodes__scene-zoom--guards-1');
   const zoomElGuards2 = document.querySelector('.about-nodes__scene-zoom--guards-2');
+  const area = document.querySelector('.close-beehive');
   const zoom = {
     acceptance: {
       top: '22%',
@@ -91,7 +92,12 @@ window.onload = () => {
   const zoomImages = document.querySelectorAll('.about-nodes__zoom-image');
 
   if (scene) {
-    showBeehiveDtn.addEventListener('click', (e) => {
+    scene.addEventListener('click', e => {
+      if (width <= breakpoint) {
+        e.preventDefault();
+      }
+    });
+    showBeehiveBtn.addEventListener('click', (e) => {
       if (sceneInner.classList.contains('hide')) {
         if (width > breakpoint) {
           scene.append(setOverlay(closeBeehive));
@@ -109,8 +115,10 @@ window.onload = () => {
       }
     });
 
-    if (width > breakpoint) {
-      scene.querySelector('.close-beehive').addEventListener('click', closeBeehive);
+    area.addEventListener('click', closeBeehive);
+
+    if (width <= breakpoint) {
+      area.removeEventListener('click', closeBeehive);
     }
 
     if (dots && slides) {
@@ -161,10 +169,12 @@ window.onload = () => {
       if (width <= breakpoint && !isInit) {
         initCarousel();
         isInit = true;
+        area.removeEventListener('click', closeBeehive);
       } else if (width > breakpoint && isInit) {
         carousel.destroy();
         isInit = false;
         sceneInner.classList.add('hide');
+        area.addEventListener('click', closeBeehive);
       }
     });
 
@@ -199,6 +209,9 @@ window.onload = () => {
       const overlay = scene.querySelector('.about-nodes__overlay');
       sceneOuter.classList.remove('hide');
       sceneInner.classList.add('hide');
+        zoomEl.removeAttribute('style');
+        zoomElGuards1.removeAttribute('style');
+        zoomElGuards2.removeAttribute('style');
 
       if (overlay) {
         sceneInner.addEventListener('transitionend', () => {
@@ -216,6 +229,9 @@ window.onload = () => {
 
       //if (isInit) {
         sceneInner.classList.add('hide');
+        zoomEl.removeAttribute('style');
+        zoomElGuards1.removeAttribute('style');
+        zoomElGuards2.removeAttribute('style');
       //}
 
       if (overlay) {
