@@ -1,227 +1,227 @@
 .market-size {
-	padding-top: 70px;
-	padding-bottom: 70px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 
-	@include max(sm) {
-		padding-bottom: 40px;
-		padding-top: 40px;
-	}
+  @include max(sm) {
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
 
-	&__header {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-	&__container {
-		@include max(sm) {
-			padding: 0;
-		}
-	}
+  &__container {
+    @include max(sm) {
+      padding: 0;
+    }
+  }
 
-	&__content {
-		margin-top: 65px;
-		display: flex;
-		justify-content: space-between;
+  &__content {
+    margin-top: 65px;
+    display: flex;
+    justify-content: space-between;
 
-		@include max(sm) {
-			flex-direction: column-reverse;
-			justify-content: flex-start;
-			overflow: hidden;
-		}
-	}
+    @include max(sm) {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      overflow: hidden;
+    }
+  }
 
-	&__indicators {
-		margin-right: 35px;
+  &__indicators {
+    margin-right: 35px;
 
-		@include max(sm) {
-			margin-right: 0;
-			margin-top: 35px;
-			padding: 0 32px;
-		}
-	}
+    @include max(sm) {
+      margin-right: 0;
+      margin-top: 35px;
+      padding: 0 32px;
+    }
+  }
 
-	&__indicator {
-		display: flex;
-		align-items: flex-start;
-		border-left: 1px solid $white-eb;
-		padding-left: 39px;
-		min-height: 144px;
+  &__indicator {
+    display: flex;
+    align-items: flex-start;
+    border-left: 1px solid $white-eb;
+    padding-left: 39px;
+    min-height: 144px;
 
-		@include max(sm) {
-			padding-left: 0;
-			border-left: none;
-			min-height: 101px;
-		}
+    @include max(sm) {
+      padding-left: 0;
+      border-left: none;
+      min-height: 101px;
+    }
 
-		&:first-child {
-			margin-top: -4px;
-		}
+    &:first-child {
+      margin-top: -4px;
+    }
 
-		&:not(:first-child) {
-			margin-top: 51px;
-		}
+    &:not(:first-child) {
+      margin-top: 51px;
+    }
 
-		&--green {
-			.market-size__indicator-title {
-				color: $green-9e;
-			}
+    &--green {
+      .market-size__indicator-title {
+        color: $green-9e;
+      }
 
-			svg {
-				fill: $green-9e;
-			}
-		}
-		&--citrus {
-			.market-size__indicator-title {
-				color: $citrus;
-			}
+      svg {
+        fill: $green-9e;
+      }
+    }
+    &--citrus {
+      .market-size__indicator-title {
+        color: $citrus;
+      }
 
-			svg {
-				fill: $citrus;
-			}
-		}
+      svg {
+        fill: $citrus;
+      }
+    }
 
-		&-icon {
-			margin-top: 4px;
+    &-icon {
+      margin-top: 4px;
 
-			svg {
-				width: 50px;
-				height: 55px;
-			}
-		}
+      svg {
+        width: 50px;
+        height: 55px;
+      }
+    }
 
-		&-content {
-			max-width: 210px;
-			margin-left: 25px;
-		}
+    &-content {
+      max-width: 210px;
+      margin-left: 25px;
+    }
 
-		&-title {
-			font-weight: 500;
-			font-size: 28px;
-			line-height: (34 / 28);
-			text-transform: uppercase;
-		}
+    &-title {
+      font-weight: 500;
+      font-size: 28px;
+      line-height: (34 / 28);
+      text-transform: uppercase;
+    }
 
-		&-value,
-		&-desc {
-			font-weight: 500;
-			font-size: 24px;
-			line-height: (29 / 23);
-		}
+    &-value,
+    &-desc {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: (29 / 23);
+    }
 
-		&-value {
-			color: $dark-gray;
-		}
+    &-value {
+      color: $dark-gray;
+    }
 
-		&-desc {
-			color: $gray-ba;
-		}
-	}
+    &-desc {
+      color: $gray-ba;
+    }
+  }
 
-	&__map {
-		overflow: scroll;
+  &__map {
+    overflow: auto;
 
-		&-container {
-			position: relative;
+    &-container {
+      position: relative;
 
-			@include max(sm) {
-				min-width: 580px;
-			}
+      @include max(sm) {
+        min-width: 580px;
+      }
 
-			img {
-				@include max(sm) {
-					min-width: 580px;
-					object-fit: contain;
-				}
-			}
-		}
+      img {
+        @include max(sm) {
+          min-width: 580px;
+          object-fit: contain;
+        }
+      }
+    }
 
-		&-label {
-			position: absolute;
-			background-color: $citrus;
-			display: flex;
-			align-items: center;
-			padding: 6px 12px 3px 10px;
-			border-radius: 6px;
+    &-label {
+      position: absolute;
+      background-color: $citrus;
+      display: flex;
+      align-items: center;
+      padding: 6px 12px 3px 10px;
+      border-radius: 6px;
 
-			&::after {
-				content: "";
-				position: absolute;
-			}
+      &::after {
+        content: "";
+        position: absolute;
+      }
 
-			&--arrow-down {
-				&::after {
-					bottom: -11px;
-					left: 50%;
-					transform: translateX(-50%);
-					border: 6px solid transparent;
-					border-top: 6px solid $citrus;
-				}
-			}
+      &--arrow-down {
+        &::after {
+          bottom: -11px;
+          left: 50%;
+          transform: translateX(-50%);
+          border: 6px solid transparent;
+          border-top: 6px solid $citrus;
+        }
+      }
 
-			&--arrow-right {
-				&::after {
-					top: 50%;
-					right: -11px;
-					transform: translateY(-50%);
-					border: 6px solid transparent;
-					border-left: 6px solid $citrus;
-				}
-			}
+      &--arrow-right {
+        &::after {
+          top: 50%;
+          right: -11px;
+          transform: translateY(-50%);
+          border: 6px solid transparent;
+          border-left: 6px solid $citrus;
+        }
+      }
 
-			&--canada {
-				left: 3.3%;
-				top: 12.5%;
-			}
+      &--canada {
+        left: 3.3%;
+        top: 12.5%;
+      }
 
-			&--usa {
-				left: 14.6%;
-				top: 33.3%;
+      &--usa {
+        left: 14.6%;
+        top: 33.3%;
 
-				@include max(sm) {
-					left: 15.8%;
-					top: 35.3%;
-				}
-			}
+        @include max(sm) {
+          left: 15.8%;
+          top: 35.3%;
+        }
+      }
 
-			&--europe {
-				left: 50.7%;
-				top: 22.1%;
+      &--europe {
+        left: 50.7%;
+        top: 22.1%;
 
-				@include max(sm) {
-					left: 45.7%;
-				}
-			}
+        @include max(sm) {
+          left: 45.7%;
+        }
+      }
 
-			&--australia {
-				left: 81.4%;
-				top: 64.6%;
-			}
+      &--australia {
+        left: 81.4%;
+        top: 64.6%;
+      }
 
-			&--new-zealand {
-				left: 79.4%;
-				top: 82.7%;
+      &--new-zealand {
+        left: 79.4%;
+        top: 82.7%;
 
-				@include max(sm) {
-					left: 70.8%;
-				}
-			}
-		}
+        @include max(sm) {
+          left: 70.8%;
+        }
+      }
+    }
 
-		&-icon {
-			margin-right: 4px;
+    &-icon {
+      margin-right: 4px;
 
-			svg {
-				fill: #fff;
-				width: 14px;
-				height: 14px;
-			}
-		}
-		&-country {
-			font-weight: bold;
-			font-size: 14px;
-			line-height: 21px;
-			color: #fff;
-		}
-	}
+      svg {
+        fill: #fff;
+        width: 14px;
+        height: 14px;
+      }
+    }
+    &-country {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 21px;
+      color: #fff;
+    }
+  }
 }

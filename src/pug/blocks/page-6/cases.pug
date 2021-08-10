@@ -1,3 +1,5 @@
+- const CASES_ITEMS = [{text: 'Software, Internet & Computer Services', mod: 'left'}, {text: 'Consumer Services', mod: 'left'}, {text: 'Travel, Recreation & Leisure', mod: 'left'}, {text: 'Transportation & Warehousing', mod: 'left'}, {text: 'Telecommunications', mod: 'left'}, {text: 'Professional Services', mod: 'left'}, {text: 'Technology Hardware & Equipment', mod: 'left'}, {text: 'Real Estate & Construction', mod: 'left'}, {text: 'Banking, Financial Services & Insurance', mod: 'right'}, {text: 'Food & Beverages', mod: 'right'}, {text: 'Industrial Goods & Services', mod: 'right'}, {text: 'Pharmaceuticals & Biotechnology', mod: 'right'}, {text: 'Retail', mod: 'right'}, {text: 'Media & Entertainment', mod: 'right'}, {text: 'Health Care Equipment & Services', mod: 'right'}, {text: 'Personal & Household Goods', mod: 'right'} ];
+
 section.cases 
 	.container 
 		header.cases__header 
@@ -12,99 +14,10 @@ section.cases
 				button.swiper-button-next.cases__button-next--long-arrow
 					+icon('arrow-next-icon')
 				.swiper-wrapper
-					.cases__item.cases__item--left.swiper-slide
-						.cases__item-inner
-							.cases__item-title Software, Internet & Computer Services
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--left.swiper-slide
-						.cases__item-inner
-							.cases__item-title Consumer Services
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--left.swiper-slide
-						.cases__item-inner
-							.cases__item-title Travel, Recreation & Leisure
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--left.swiper-slide
-						.cases__item-inner
-							.cases__item-title Transportation & Warehousing
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--left.swiper-slide
-						.cases__item-inner
-							.cases__item-title Telecommunications
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--left.swiper-slide
-						.cases__item-inner
-							.cases__item-title Professional Services
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--left.swiper-slide
-						.cases__item-inner
-							.cases__item-title Technology Hardware & Equipment
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--left.swiper-slide
-						.cases__item-inner
-							.cases__item-title Real Estate & Construction
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--right.swiper-slide
-						.cases__item-inner
-							.cases__item-title Banking, Financial Services & Insurance
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--right.swiper-slide
-						.cases__item-inner
-							.cases__item-title Food & Beverages
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--right.swiper-slide
-						.cases__item-inner
-							.cases__item-title Industrial Goods & Services
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--right.swiper-slide
-						.cases__item-inner
-							.cases__item-title Pharmaceuticals & Biotechnology
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--right.swiper-slide
-						.cases__item-inner
-							.cases__item-title Retail
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--right.swiper-slide
-						.cases__item-inner
-							.cases__item-title Media & Entertainment
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--right.swiper-slide
-						.cases__item-inner
-							.cases__item-title Health Care Equipment & Services
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
-					.cases__item.cases__item--right.swiper-slide
-						.cases__item-inner
-							.cases__item-title Personal & Household Goods
-							.cases__item-line-block
-								.cases__item-line
-								.cases__item-round
+					each item in CASES_ITEMS
+						.cases__item(class="cases__item--" + item.mod + " swiper-slide")
+							.cases__item-inner
+								.cases__item-title= item.text
+								.cases__item-line-block
+									.cases__item-line
+									.cases__item-round

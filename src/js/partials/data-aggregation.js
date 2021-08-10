@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			const avgSessionsMobile = document.querySelectorAll(
 				".avg-sessions--mobile"
 			);
-			console.log(avgSessionsMobile);
+			//console.log(avgSessionsMobile);
 
 			if (avgSessionsMobile.length) {
 				avgSessionsMobile.forEach((item) => item.remove());

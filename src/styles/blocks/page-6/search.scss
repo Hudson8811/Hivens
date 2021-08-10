@@ -1,238 +1,240 @@
 .search {
-	&-section {
-		padding-top: 87px;
-		padding-bottom: 48px;
-		overflow: hidden;
-	}
+  &-section {
+    padding-top: 87px;
+    padding-bottom: 48px;
+    overflow: hidden;
+  }
 
-	@include max(sm) {
-		padding-top: 50px;
-		padding-bottom: 40px;
-	}
+  @include max(sm) {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
 
-	&__form {
-		&-wrapper {
-			margin-right: 70px;
+  &__form {
+    &-wrapper {
+      margin-right: 70px;
 
-			@include max(lg) {
-				margin-right: 30px;
-			}
+      @include max(lg) {
+        margin-right: 30px;
+      }
 
-			@include max(sm) {
-				margin-right: 0;
-			}
-		}
-	}
-	&__title {
-		font-size: 39px;
-		line-height: (48 / 39);
-		font-weight: normal;
-		color: $green-9e;
+      @include max(md) {
+        margin-right: 0;
+      }
+    }
+  }
 
-		@include max(475) {
-			span {
-				display: block;
-			}
-		}
-	}
+  &__title {
+    font-size: 39px;
+    line-height: (48 / 39);
+    font-weight: normal;
+    color: $green-9e;
 
-	&-flex {
-		display: flex;
-		align-items: flex-start;
+    @include max(475) {
+      span {
+        display: block;
+      }
+    }
+  }
 
-		@include max(md) {
-			flex-direction: column;
-			align-items: stretch;
-		}
-	}
+  &-flex {
+    display: flex;
+    align-items: flex-start;
 
-	&__image {
-		position: relative;
-		margin-top: 14px;
+    @include max(md) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
 
-		@include max(md) {
-			margin-top: 34px;
-		}
+  &__image {
+    position: relative;
+    margin-top: 14px;
 
-		img {
-			@include max(md) {
-				width: 100%;
-			}
-		}
+    @include max(md) {
+      margin-top: 34px;
+    }
 
-		&-text {
-			position: absolute;
-			top: 5.8%;
-			left: 5.2%;
-			font-weight: bold;
-			font-size: 17px;
-			line-height: (29 / 17);
-			text-transform: lowercase;
-			color: $dark-gray;
+    img {
+      @include max(md) {
+        width: 100%;
+      }
+    }
 
-			@include max(lg) {
-				font-size: vw(14, 1270);
-				top: 6.5%;
-			}
+    &-text {
+      position: absolute;
+      top: 5.8%;
+      left: 5.2%;
+      font-weight: bold;
+      font-size: 17px;
+      line-height: (29 / 17);
+      text-transform: lowercase;
+      color: $dark-gray;
 
-			@include max(md) {
-				font-size: vw(28, 1270);
-				top: 6.5%;
-			}
+      @include max(lg) {
+        font-size: vw(14, 1270);
+        top: 6.5%;
+      }
 
-			@include max(sm) {
-				font-size: vw(10, 375);
-			}
-		}
-	}
+      @include max(md) {
+        font-size: vw(28, 1270);
+        top: 6.5%;
+      }
 
-	&-filters {
-		display: flex;
-		margin-top: 40px;
+      @include max(sm) {
+        font-size: vw(10, 375);
+      }
+    }
+  }
 
-		@include max(sm) {
-			margin-top: 25px;
-		}
+  &-filters {
+    display: flex;
+    margin-top: 40px;
 
-		&__button {
-			width: auto;
+    @include max(sm) {
+      margin-top: 25px;
+    }
 
-			&:nth-child(1) {
-				margin-right: 49px;
-			}
+    &__button {
+      width: auto;
 
-			&:nth-child(2) {
-				margin-right: 39px;
-			}
+      &:nth-child(1) {
+        margin-right: 49px;
+      }
 
-			&:nth-child(3) {
-				margin-right: 32px;
-			}
-			svg {
-				transition: 0.3s;
-				fill: $green-9e;
-			}
+      &:nth-child(2) {
+        margin-right: 39px;
+      }
 
-			&.active,
-			&:active,
-			&:focus {
-				svg {
-					fill: #fff;
-				}
-			}
-		}
-	}
+      &:nth-child(3) {
+        margin-right: 32px;
+      }
+      svg {
+        transition: 0.3s;
+        fill: $green-9e;
+      }
 
-	&__input {
-		width: 100%;
-		padding: 27px 175px 20px 20px;
-		border: 1.26306px solid $citrus;
-		border-radius: 7.57836px;
+      &.active,
+      &:active,
+      &:focus {
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
 
-		@include max(lg) {
-			padding: 8px 75px 8px 14px;
-		}
+  &__input {
+    width: 100%;
+    padding: 27px 175px 20px 20px;
+    border: 1.26306px solid $citrus;
+    border-radius: 7.57836px;
 
-		&::placeholder {
-			font-weight: 600;
-			font-size: 17.6828px;
-			line-height: (29 / 17);
-			color: #b9b9c3;
+    @include max(lg) {
+      padding: 8px 75px 8px 14px;
+    }
 
-			@include max(lg) {
-				font-size: 14px;
-			}
+    &::placeholder {
+      font-weight: 600;
+      font-size: 17.6828px;
+      line-height: (29 / 17);
+      color: #b9b9c3;
+      opacity: 1;
 
-			@include max(sm) {
-				max-width: 130px;
-				white-space: nowrap;
-				text-overflow: ellipsis;
-				font-size: 11px;
-			}
-		}
+      @include max(lg) {
+        font-size: 14px;
+      }
 
-		&-group {
-			margin-top: 48px;
-			position: relative;
-			display: flex;
-			width: 100%;
-			background: rgba(0, 0, 0, 0.0001);
-			box-shadow: 0px 4.75566px 28.534px rgba(0, 0, 0, 0.06);
+      @include max(sm) {
+        max-width: 130px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 11px;
+      }
+    }
 
-			@include max(lg) {
-				margin-top: 28px;
-				max-width: 580px;
-			}
+    &-group {
+      margin-top: 48px;
+      position: relative;
+      display: flex;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.0001);
+      box-shadow: 0px 4.75566px 28.534px rgba(0, 0, 0, 0.06);
 
-			@include max(md) {
-				max-width: 650px;
-			}
-		}
+      @include max(lg) {
+        margin-top: 28px;
+        max-width: 580px;
+      }
 
-		&-button {
-			position: absolute;
-			right: 0;
-			top: 0;
-			height: 100%;
-			padding: 22px 27px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: $citrus;
-			color: #fff;
-			font-weight: bold;
-			font-size: 17.68px;
-			line-height: (22 / 17.68);
-			text-align: center;
-			letter-spacing: 0.505224px;
-			border-radius: 6.3153px;
-			cursor: pointer;
+      @include max(md) {
+        max-width: none; //650px;
+      }
+    }
 
-			@include max(lg) {
-				padding: 10px 18px;
-				font-size: 14px;
-			}
+    &-button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      padding: 22px 27px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $citrus;
+      color: #fff;
+      font-weight: bold;
+      font-size: 17.68px;
+      line-height: (22 / 17.68);
+      text-align: center;
+      letter-spacing: 0.505224px;
+      border-radius: 6.3153px;
+      cursor: pointer;
 
-			@include max(md) {
-				padding: 10px 18px;
-				font-size: 11px;
-			}
+      @include max(lg) {
+        padding: 10px 18px;
+        font-size: 14px;
+      }
 
-			svg {
-				width: 25px;
-				height: 25px;
-				fill: #fff;
-				margin-left: 10px;
+      @include max(md) {
+        padding: 10px 18px;
+        font-size: 11px;
+      }
 
-				@include max(lg) {
-					width: 20px;
-					height: 20px;
-				}
+      svg {
+        width: 25px;
+        height: 25px;
+        fill: #fff;
+        margin-left: 10px;
 
-				@include max(md) {
-					display: none;
-				}
-			}
-		}
-	}
+        @include max(lg) {
+          width: 20px;
+          height: 20px;
+        }
 
-	&__text {
-		font-weight: 500;
-		font-size: 24px;
-		line-height: (29 / 24);
-		color: $green-9e;
-		opacity: 0.7;
-		max-width: 580px;
-		margin-top: 49px;
+        @include max(md) {
+          display: none;
+        }
+      }
+    }
+  }
 
-		@include max(lg) {
-			font-size: 18px;
-			margin-top: 27px;
-			max-width: 700px;
-		}
+  &__text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: (29 / 24);
+    color: $green-9e;
+    opacity: 0.7;
+    max-width: 580px;
+    margin-top: 49px;
 
-		@include max(md) {
-			max-width: 800px;
-		}
-	}
+    @include max(lg) {
+      font-size: 18px;
+      margin-top: 27px;
+      max-width: 700px;
+    }
+
+    @include max(md) {
+      max-width: none; //800px;
+    }
+  }
 }
