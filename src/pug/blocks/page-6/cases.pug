@@ -1,0 +1,23 @@
+- const CASES_ITEMS = [{text: 'Software, Internet & Computer Services', mod: 'left'}, {text: 'Consumer Services', mod: 'left'}, {text: 'Travel, Recreation & Leisure', mod: 'left'}, {text: 'Transportation & Warehousing', mod: 'left'}, {text: 'Telecommunications', mod: 'left'}, {text: 'Professional Services', mod: 'left'}, {text: 'Technology Hardware & Equipment', mod: 'left'}, {text: 'Real Estate & Construction', mod: 'left'}, {text: 'Banking, Financial Services & Insurance', mod: 'right'}, {text: 'Food & Beverages', mod: 'right'}, {text: 'Industrial Goods & Services', mod: 'right'}, {text: 'Pharmaceuticals & Biotechnology', mod: 'right'}, {text: 'Retail', mod: 'right'}, {text: 'Media & Entertainment', mod: 'right'}, {text: 'Health Care Equipment & Services', mod: 'right'}, {text: 'Personal & Household Goods', mod: 'right'} ];
+
+section.cases 
+	.container 
+		header.cases__header 
+			+title('Кейсы использования по сферам', 'h2', 'cases__title')
+			p.cases__text 
+				b Нода 
+				| - это узел в децентрализованной сети, представляет собой программный комплекс в виде модулей.
+		.cases__content
+			.cases__image
+				img(src="images/page-6/cases-bg.jpg", srcset="images/page-6/cases-bg@2x.jpg 2x", alt="")
+			.cases__items.swiper-container
+				button.swiper-button-next.cases__button-next--long-arrow
+					+icon('arrow-next-icon')
+				.swiper-wrapper
+					each item in CASES_ITEMS
+						.cases__item(class="cases__item--" + item.mod + " swiper-slide")
+							.cases__item-inner
+								.cases__item-title= item.text
+								.cases__item-line-block
+									.cases__item-line
+									.cases__item-round

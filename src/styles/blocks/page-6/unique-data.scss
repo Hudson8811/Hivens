@@ -1,0 +1,166 @@
+.unique-data {
+	padding-top: 70px;
+	padding-bottom: 70px;
+
+	@include max(sm) {
+		padding-bottom: 40px;
+	}
+
+	&__container {
+		padding: 0 20px;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		color: $dark-gray;
+
+		@include max(sm) {
+			text-align: left;
+		}
+
+		&::before {
+			left: -3px;
+		}
+	}
+
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		@include max(sm) {
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+	}
+
+	&__body {
+		margin-top: 54px;
+		position: relative;
+		padding: 0 12px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 40.1%;
+			border-left: solid 1px #ebe9f1;
+
+			@include max(sm) {
+				display: none;
+			}
+		}
+	}
+
+	&__image {
+		width: 55.7%;
+		flex-shrink: 0;
+		position: relative;
+
+		@include max(sm) {
+			width: 100%;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		&-text {
+			position: absolute;
+			top: 27.9%;
+			left: 48%;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			font-size: 10px;
+			line-height: (12 / 10);
+			color: #ffffff;
+
+			@include max(1270) {
+				font-size: vw(18, 1270);
+			}
+		}
+	}
+
+	&__content {
+		padding-bottom: 63px;
+		margin-left: 75px;
+		background-image: url("../images/page-6/unique-data-bg.svg");
+		background-repeat: no-repeat;
+		background-position: bottom left;
+		background-size: contain;
+		position: relative;
+		align-self: stretch;
+
+		@include max(sm) {
+			margin-top: 35px;
+			padding-left: 27px;
+			padding-bottom: 120px;
+			margin-left: 0;
+		}
+
+		@include max(400) {
+			padding-bottom: 70px;
+		}
+
+		&::before {
+			@include max(sm) {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 1px;
+				height: 438px;
+				background-color: #ebe9f1;
+			}
+		}
+	}
+
+	&__text {
+		max-width: 440px;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 21px;
+		color: $dark-gray-6e;
+		margin-bottom: 48px;
+	}
+
+	&__list {
+		&-item {
+			position: relative;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 22px;
+			color: $dark-gray-6e;
+			padding-left: 6px;
+
+			&:not(:first-child) {
+				margin-top: 20px;
+			}
+
+			span {
+				font-weight: normal;
+				font-size: 14px;
+				line-height: 21px;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -5px;
+				height: 31px;
+				width: 39px;
+				border-radius: 13px;
+				background-color: $citrus;
+				z-index: -1;
+			}
+		}
+	}
+}

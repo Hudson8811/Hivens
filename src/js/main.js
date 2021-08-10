@@ -22,6 +22,14 @@
 //= ./partials/footer-menu-dots.js
 //= ./partials/data-purchase-slider.js
 //= ./partials/zoom-images.js
+//= ./partials/data-types-slider.js
+//= ./partials/buisness-cases-slider.js
+//= ./partials/fields-slider.js
+//= ./partials/advantages-slider.js
+//= ./partials/search-slider.js
+//= ./partials/data-sources-slider.js
+//= ./partials/cases-slider.js
+//= ./partials/data-aggregation.js
 //= ./partials/applying-carousel.js
 //= ./partials/records-carousel.js
 //= ./partials/blog-carousel.js
