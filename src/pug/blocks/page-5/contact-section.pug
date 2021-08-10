@@ -1,0 +1,47 @@
+section.contact-section
+  .contact-section__container.container
+    header.contact-section__header
+      +title('Get In Touch', 'h2', 'contact-section__title')
+
+    .contact-section__notice Any question? Reach out to us and we’ll get back to you shortly
+    .contact-section__grid 
+      .contact-section__form
+        form(action="#", method="post")
+          label(aria-label="Your Name")
+            input(type="text", name="name", placeholder="Your Name")
+          label(aria-label="Your Emale")
+            input(type="email", name="email", placeholder="Your Emale")
+          label(aria-label="Comment")
+            textarea(name="comment", placeholder="Comment")
+          .contact-section__form-checkbox 
+            input.visually-hidden#contactSectionCheckbox(type="checkbox", name="consent", value="y")
+            label(for="contactSectionCheckbox") Save my name, email, and website in this browser for the next time I comment.
+          
+          +button('Submit', 'button--dark-green', '', '')(type="submit")
+      .contact-section__aside
+        .contact-section__aside-item
+          .contact-section__aside-item-image
+          .contact-section__aside-item-main
+            .contact-section__aside-item-bold Relational Blockchain
+            p Get more leads. Advanced Targeting and Segmentation
+        .contact-section__aside-item
+          .contact-section__aside-item-image
+          .contact-section__aside-item-main
+            .contact-section__aside-item-bold 
+              a(href="tel:+4401234567") +44 0123 4567
+        .contact-section__aside-item
+          .contact-section__aside-item-image
+          .contact-section__aside-item-main
+            .contact-section__aside-item-bold
+              a(href="maito:info@company.com") info@company.com
+        .contact-section__aside-item
+          .contact-section__aside-item-image
+          .contact-section__aside-item-main
+            .contact-section__aside-item-bold Join us: 
+            +social('social--white', [
+              {name: 'tw', class: 'tw'},
+              {name: 'fb', class: 'fb'},
+              {name: 'in', class: 'in'},
+              {name: 'git', class: 'git'},
+              {name: 'insta', class: 'insta'}
+            ])

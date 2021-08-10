@@ -1,0 +1,29 @@
+section.how-to-get
+  .how-to-get__container.container
+    header.how-to-get__header
+      +title('Как получить Ноду?', 'h2', 'how-to-get__title')
+
+    .how-to-get__pagination.swiper-container.__js_how-to-get-pagi-carousel
+      .swiper-wrapper
+    .how-to-get__carousel.swiper-container.__js_how-to-get-carousel
+      .swiper-wrapper
+        - let howToGetCounter = 1;
+        while howToGetCounter <= 3
+          .how-to-get__slide.swiper-slide(data-bullet="Нода " + howToGetCounter)
+            .how-to-get__slide-image 
+              img(src="images/page-4/how-to-get.jpg", srcset="images/page-4/how-to-get@2x.jpg 2x", alt="")
+              .how-to-get__slide-image-text.how-to-get__slide-image-text--token token balance replenished
+              .how-to-get__slide-image-text.how-to-get__slide-image-text--node NODE #{howToGetCounter}
+              .how-to-get__slide-image-text.how-to-get__slide-image-text--buy Buy
+              .how-to-get__slide-image-text.how-to-get__slide-image-text--area Personal Area
+            .how-to-get__slide-main
+              .how-to-get__slide-price <b>750 000</b> token HIV
+              .how-to-get__slide-text Пополните ваш баланс на указаанную сумму токенов и нажмите купить в&nbsp;личном кабинете в разделе Ноды
+
+          - howToGetCounter++;
+        
+      .how-to-get__navigation
+        .how-to-get__prev.slider-prev
+          +icon('chevron-down')
+        .how-to-get__next.slider-next
+          +icon('chevron-down')

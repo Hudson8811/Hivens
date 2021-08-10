@@ -1,0 +1,29 @@
+section.how-it-works
+  .how-it-works__container.container 
+    header.how-it-works__header
+      +title('Как работает маркетплейс?', 'h2', 'how-it-works__title')
+
+    .how-it-works__steps.swiper-container.__js_steps-carousel 
+      .swiper-wrapper 
+        .how-it-works__step.swiper-slide
+          .how-it-works__step-text Data collection
+          .how-it-works__step-image
+            img(src="images/page-2/step-1.jpg", srcset="images/page-2/step-1@2x.jpg", width="126", height="269", alt="")
+        .how-it-works__step.swiper-slide
+          .how-it-works__step-text Data transport
+          .how-it-works__step-image
+            img(src="images/page-2/step-2.jpg", srcset="images/page-2/step-2@2x.jpg", width="126", height="269", alt="")
+        .how-it-works__step.how-it-works__step--size-large.swiper-slide
+          .how-it-works__step-text Data shipment
+          .how-it-works__step-image
+            img(src="images/page-2/step-3.jpg", srcset="images/page-2/step-3@2x.jpg", width="633", height="442", alt="")
+        .how-it-works__step.how-it-works__step--size-middle.swiper-slide
+          .how-it-works__step-text Data acqustion
+          .how-it-works__step-image
+            img(src="images/page-2/step-4.jpg", srcset="images/page-2/step-4@2x.jpg", width="222", height="442", alt="")
+      .swiper-navigation
+        button.swiper-button-prev(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+        button.swiper-button-next(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+      .how-it-works__text Изначально данные поставщика недоступны для&nbsp;покупателей. Чтобы монетизировать и предоставить информацию в маркетплейс, нужно пройти верификацию и GDPR, CCPA complience. 

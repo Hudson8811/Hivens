@@ -1,0 +1,128 @@
+.partners {
+  padding: 70px 0;
+  overflow: hidden;
+
+  @include max(sm) {
+    padding: 40px 0;
+    overflow: hidden;
+  }
+
+  &__container {
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 58px;
+
+    @include max(sm) {
+      display: block;
+    }
+  }
+
+  &__list {
+    overflow: visible;
+
+    @include max(sm) {
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+      }
+    }
+
+    .swiper-wrapper {
+      width: auto;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: -40px;
+
+      @include max(md) {
+        justify-content: center;
+      }
+
+      @include max(sm) {
+        width: 100%;
+        flex-wrap: nowrap;
+        margin-left: 0;
+        margin-top: 0;
+        justify-content: flex-start;
+      }
+    }
+
+    .swiper-navigation {
+      display: none;
+
+      @include max(sm) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 18px;
+      }
+
+      button {
+        cursor: pointer;
+        appearance: none;
+
+        @include max(sm) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        svg {
+          fill: $gray-97;
+          transition: fill 0.3s ease;
+        }
+
+        @include hover {
+          svg {
+            fill: $citrus;
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        svg {
+          transform: scale(-1, 1);
+        }
+      }
+
+      .swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+
+        @include max(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__item {
+    width: 160px;
+    margin-top: 40px;
+
+    @include max(md) {
+      width: 25%;
+      text-align: center;
+
+      img {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+
+    @include max(sm) {
+      width: 160px;
+      margin: 0 56px 0 0;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.rating-section {
+  padding: 70px 0;
+
+  @include max(sm) {
+    overflow: hidden;
+    padding: 40px 0 31px;
+  }
+
+  &__container {
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+
+    @include max(sm) {
+      display: block;
+    }
+  }
+
+  &__list {
+    overflow: visible;
+
+    @include max(sm) {
+      position: relative;
+
+      /*&::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+      }*/
+    }
+
+    .swiper-wrapper {
+      width: auto;
+      margin-left: -29px;
+      margin-top: -29px;
+      flex-wrap: wrap;
+
+      @include max(sm) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+        flex-wrap: nowrap;
+      }
+    }
+
+    .swiper-navigation {
+      display: none;
+
+      @include max(767) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 25px;
+      }
+
+      button {
+        cursor: pointer;
+        appearance: none;
+
+        @include max(767) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        svg {
+          fill: $gray-97;
+          transition: fill 0.3s ease;
+        }
+
+        @include hover {
+          svg {
+            fill: $citrus;
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        svg {
+          transform: scale(-1, 1);
+        }
+      }
+
+      .swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+
+        @include max(767) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__card {
+    width: calc((100% / 6) - 29px);
+    margin-left: 29px;
+    margin-top: 29px;
+
+    @include max(md) {
+      width: calc(33.33% - 29px);
+    }
+
+    @include max(sm) {
+      width: 146px;
+      margin-left: 0;
+      margin-right: 18px;
+      margin-top: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+- const NODE_TYPES_ITEMS = [{img: '1', title: 'Master Nodes', list: ['Функцонал MiniNode + SlaveNode + ...', 'Верификация транзакций Core, получение комиссии', 'Функционирование сервисов платформы', 'Обработка данных при помощи нейросетей'], notice: 'Баланс для функционирования: 1400000 HIV'}, {img: '2', title: 'Standart Nodes', list: ['Функцонал MiniNode + ...', 'Обеспечение функционирования сервисов Core', 'Подключение постащиков данных: компании, аналитические сервисы', 'Верификация P2P-транзакций, получение комиссии', 'Сложные операции обработки данных, поиск связей'], notice: 'Баланс для функционирования: 750000 HIV'}, {img: '3', title: 'Mini Nodes', list: ['Хранение своих данных c индексацией и поиском', 'Подключение постащиков данных: физ. лица, отзывы', 'Подключение аналитики для сайта для анализа посетителей', 'Сбор данных из различных источников', 'Прокси для анонимного доступа к ресурсам'], notice: 'Баланс для функционирования: 150000 HIV'} ];
+
+section.node-types
+  .node-types__container.container
+    header.node-types__header
+      +title('Какие типы Нод существуют в экосистеме?', 'h2', 'node-types__title')
+    
+    .node-types__list.swiper-container.__js_node-types-carousel 
+      .swiper-wrapper
+        each item in NODE_TYPES_ITEMS
+          .node-types__item.picture-info-block.swiper-slide
+            .picture-info-block__image
+              picture 
+                source(media="(max-width: 767px)", srcset="images/node-type-" + item.img + "-mobile.jpg 1x, images/node-type-" + item.img + "-mobile@2x.jpg 2x")
+                img(src="images/node-type-" + item.img + ".jpg", srcset="images/node-type-" + item.img + "@2x.jpg",  alt="")
+            .picture-info-block__content
+              h3.picture-info-block__title= item.title
+              .picture-info-block__text 
+                ul
+                  each it in item.list
+                    li= it
+
+              .picture-info-block__notice= item.notice
+      
+      +swiper-nav()

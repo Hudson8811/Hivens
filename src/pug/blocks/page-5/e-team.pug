@@ -1,0 +1,27 @@
+
+section.team-section
+  .team-section__container.container
+    header.team-section__header 
+      +title('Expertive team', 'h2', 'e-team__title')
+      .team-section__text We believe in a new world, which helps you lunch and introduce your ICO Website. We designed it very carefully to make it more attractive, useful and fit any kind of ICO/Crypto website..
+    
+    .team-section__list.swiper-container.__js_team-carousel
+      .swiper-wrapper 
+        - let i = 0;
+        while i <= 3
+          .team-section__item.member-card.swiper-slide 
+            .member-card__image
+              img(src="images/page-5/member-image.png", srcset="images/page-5/member-image@2x.png 2x", width="188", height="188", alt="")
+            h3.member-card__name Curtis Stone
+            .member-card__country Malaysia
+            .member-card__social 
+              each item in ['tw-clear', 'fb-clear', 'insta-clear']
+                a(href="#")
+                  +icon(item)(width="20", height="20")
+          - i++;
+
+      .swiper-navigation
+        button.swiper-button-prev(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+        button.swiper-button-next(type="button")
+          +icon('long-right-arrow')(width="143", height="9")

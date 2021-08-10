@@ -1,0 +1,126 @@
+.node-types {
+  padding: 85px 0 78px;
+
+  @include max(sm) {
+    padding: 40px 0;
+    overflow: hidden;
+  }
+
+  &__container {
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 39px;
+
+    @include max(sm) {
+      display: block;
+      margin-bottom: 28px;
+    }
+  }
+
+  &__list {
+    overflow: visible;
+
+    @include max(sm) {
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        width: 100%;
+        height: calc(100% + 20px);
+        background-color: $white;
+      }
+    }
+
+    .swiper-wrapper {
+      width: auto;
+      flex-wrap: wrap;
+      //justify-content: center;
+      margin-top: -30px;
+      margin-left: -28px;
+
+      //margin-left: calc((100% - 820px) / -4);
+
+      @include max(md) {
+        //margin-left: calc((100% - 615px) / -3);
+      }
+
+      @include max(sm) {
+        width: 100%;
+        flex-wrap: nowrap;
+        margin-left: 0;
+        margin-top: 0;
+        justify-content: flex-start;
+      }
+    }
+
+    .swiper-navigation {
+      display: none;
+
+      @include max(sm) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 46px;
+      }
+
+      button {
+        cursor: pointer;
+        appearance: none;
+
+        @include max(sm) {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        svg {
+          fill: $gray-97;
+          transition: fill 0.3s ease;
+        }
+
+        @include hover {
+          svg {
+            fill: $citrus;
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        svg {
+          transform: scale(-1, 1);
+        }
+      }
+
+      .swiper-button-disabled {
+        opacity: 0;
+        pointer-events: none;
+
+        @include max(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__item {
+    width: calc(33.33% - 28px);
+    margin-left: 28px;
+    margin-top: 30px;
+
+    @include max(sm) {
+      width: 395px;
+      max-width: 100%;
+      margin: 0 30px 0 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+}

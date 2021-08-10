@@ -1,0 +1,22 @@
+- const CRYPTO_LINE_ITEMS = ['Litecoin', 'Ethereum', 'Morero', 'IOTA', 'Ripple', 'BitCoin', 'Dash Coin'];
+
+section.crypto-line
+  .crypto-line__container.container 
+    header.crypto-line__header
+      +title('The crypto solution', 'h2', 'crypto-line__title')
+      .crypto-line__text We believe in a new world, which helps you lunch and introduce your ICO Website. We designed it very carefully to make it more attractive, useful and fit any kind of ICO/Crypto website..
+    
+    .crypto-line__list.swiper-container.__js_crypto-line-carousel
+      .swiper-wrapper
+        each item in CRYPTO_LINE_ITEMS
+          .crypto-line__item.swiper-slide 
+            .crypto-line__item-image 
+              img(src="images/crypto/" + item.toLowerCase().replace(' ', '') + ".svg", width="106", height="106",  alt="Logo " + item)
+            .crypto-line__item-name= item
+      
+      .swiper-navigation
+        button.swiper-button-prev(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+        button.swiper-button-next(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+      

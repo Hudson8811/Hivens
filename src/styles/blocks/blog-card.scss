@@ -1,0 +1,144 @@
+.blog-card {
+	background-color: $white;
+	box-shadow: 0 3px 23px 1px rgba(0, 0, 0, 0.07);
+	border-radius: 7px;
+	overflow: hidden;
+	transition: transform 0.3s ease;
+
+	@include max(md) {
+		box-shadow: 0 2px 12px 0.6px rgba(0, 0, 0, 0.07);
+		border-radius: 5px;
+	}
+
+	@include hover {
+		transform: scale(1.01);
+	}
+
+	&__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 403px;
+		background-color: $gray-f4;
+		border-radius: 7px;
+		position: relative;
+
+		@include max(sm) {
+			height: auto;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 100%;
+				padding-top: 100%;
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+
+			@include max(sm) {
+				position: absolute;
+				top: 0;
+				left: 0;
+				object-position: center center;
+			}
+		}
+	}
+
+	&__content {
+		padding: 40px 30px 48px 31px;
+		background-color: $white;
+		margin-top: -7px;
+
+		@include max(md) {
+			padding: 25px 13px 39px 15px;
+		}
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__date {
+		font-size: 12px;
+		line-height: 15px;
+		color: $gray-ph;
+
+		@include max(md) {
+			font-size: 7px;
+			line-height: 8px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		align-items: center;
+	}
+
+	&__info-item {
+		display: flex;
+		align-items: center;
+
+		&:not(:last-child) {
+			margin-right: 35px;
+
+			@include max(md) {
+				margin-right: 20px;
+			}
+		}
+
+		svg {
+			fill: $gray-ph;
+			width: 20px;
+			height: 20px;
+			margin-right: 10px;
+
+			@include max(md) {
+				width: 12px;
+				height: 12px;
+				margin-right: 4px;
+			}
+		}
+
+		span {
+			font-size: 10px;
+			line-height: 12px;
+			color: $gray-ph;
+
+			@include max(md) {
+				font-size: 7px;
+				line-height: 8px;
+			}
+
+			br {
+				display: none;
+
+				@include max(md) {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&__title {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		font-size: 24px;
+		line-height: 29px;
+		font-weight: 500;
+		color: $gray;
+		margin-top: 23px;
+		overflow: hidden;
+		-webkit-line-clamp: 3;
+
+		@include max(md) {
+			font-size: 12px;
+			line-height: 15px;
+			margin-top: 6px;
+		}
+	}
+}

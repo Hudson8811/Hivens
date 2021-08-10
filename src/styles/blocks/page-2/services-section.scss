@@ -1,0 +1,145 @@
+.services-section {
+  overflow: hidden;
+  padding: 70px 0;
+
+  @include max(767) {
+    padding: 40px 0;
+  }
+
+  &__container {
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+  }
+
+  &__title {
+  }
+
+  &__filters {
+    overflow: visible;
+    margin-bottom: 35px;
+
+    .swiper-wrapper {
+      flex-wrap: wrap;
+      margin-top: -5px;
+      margin-bottom: -5px;
+      justify-content: center;
+
+      @include max(767) {
+        flex-wrap: nowrap;
+        margin-top: 0;
+        margin-bottom: 0;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__filter {
+    width: auto;
+    margin: 5px 17px;
+    padding: 10px 23px;
+
+    @include max(767) {
+      margin: 0;
+    }
+  }
+
+  &__carousel {
+    overflow: visible;
+
+    .swiper-slide {
+      transition: opacity 0.5s ease;
+    }
+
+    &.opacity .swiper-slide {
+      opacity: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+      width: 100%;
+      height: 100%;
+      background-color: $white;
+    }
+
+    .swiper-navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 35px;
+
+      @include max(767) {
+        margin-top: 50px;
+      }
+
+      button {
+        cursor: pointer;
+        appearance: none;
+
+        svg {
+          fill: $gray-97;
+          transition: fill 0.3s ease;
+        }
+
+        @include hover {
+          svg {
+            fill: $citrus;
+          }
+        }
+      }
+    }
+
+    .swiper-button-prev {
+      svg {
+        transform: scale(-1, 1);
+      }
+    }
+
+    .swiper-button-disabled {
+      opacity: 0;
+      pointer-events: none;
+
+      @include max(767) {
+        display: none;
+      }
+    }
+  }
+
+  &__card {
+    width: 254px;
+
+    &.hide {
+      display: none;
+    }
+
+    &-image {
+      overflow: hidden;
+      border-radius: 6px;
+      background-color: $gray-eb;
+
+      img {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+
+    &-content {
+      min-height: 132px;
+      padding: 22px 42px 22px 32px;
+
+      font-size: 15px;
+      line-height: (24 / 15);
+      color: $black;
+      font-weight: 500;
+      background-color: $smoky;
+    }
+  }
+}

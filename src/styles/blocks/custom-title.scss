@@ -27,7 +27,7 @@
       margin-bottom: vw(25, 1270);
     }
 
-    @include max(768) {
+    @include max(md) {
       margin-bottom: vw(18, 375);
     }
 
@@ -281,7 +281,7 @@
       font-size: vw(54, 1270);
     }
 
-    @include max(768) {
+    @include max(sm) {
       max-width: vw(1080, 1270);
       margin-left: auto;
       margin-right: auto;
@@ -293,7 +293,7 @@
       content: "";
       width: 100%;
 
-      @include max(768) {
+      @include max(sm) {
         display: none;
       }
     }
@@ -303,7 +303,7 @@
       width: 100%;
       order: -1 !important;
 
-      @include max(768) {
+      @include max(sm) {
         display: inline-flex;
         width: auto;
         margin-right: vw(31, 1270);
@@ -312,7 +312,7 @@
       &::before {
         display: none;
 
-        @include max(768) {
+        @include max(sm) {
           display: block;
 
           $x10: vw(-19, 1270);
@@ -335,7 +335,7 @@
           margin-left: vw(14, 1270);
         }
 
-        @include max(768) {
+        @include max(sm) {
           width: vw(76, 1270);
           height: vw(96, 1270);
           margin-left: vw(18, 1270);
@@ -346,7 +346,7 @@
     #{$self}__bee {
       order: -1 !important;
 
-      @include max(768) {
+      @include max(sm) {
         margin-right: vw(18, 1270);
       }
 
@@ -361,7 +361,7 @@
           margin-left: vw(14, 1270);
         }
 
-        @include max(768) {
+        @include max(sm) {
           width: vw(80, 1270);
           height: vw(93, 1270);
           margin-left: vw(18, 1270);
@@ -385,7 +385,7 @@
           transform: translateY($y3);
         }
 
-        @include max(768) {
+        @include max(sm) {
           $y11: vw(15, 1270);
           $x11: vw(10, 1270);
 
@@ -413,7 +413,7 @@
         transform: translateY($y4);
       }
 
-      @include max(768) {
+      @include max(sm) {
         $y12: vw(8, 1270);
 
         margin-right: vw(18, 1270);
@@ -434,7 +434,7 @@
           margin-left: vw(6, 1270);
         }
 
-        @include max(768) {
+        @include max(sm) {
           width: vw(80, 1270);
           height: vw(80, 1270);
           margin-left: vw(8, 1270);
@@ -443,7 +443,7 @@
     }
 
     #{$self}__hivens {
-      @include max(768) {
+      @include max(sm) {
         margin-right: vw(18, 1270);
         margin-left: vw(18, 1270);
       }
@@ -451,7 +451,7 @@
       &::before {
         transform: translateY(100%);
 
-        @include max(768) {
+        @include max(sm) {
           transform: translateY(112%);
         }
       }
@@ -467,7 +467,7 @@
           margin-left: vw(14, 1270);
         }
 
-        @include max(768) {
+        @include max(sm) {
           width: vw(23, 1270);
           height: vw(35, 1270);
           margin-left: vw(18, 1270);
@@ -478,7 +478,7 @@
     #{$self}__glossary {
       justify-content: flex-start;
 
-      @include max(768) {
+      @include max(sm) {
         justify-content: center;
         margin-top: vw(20, 1270);
       }
@@ -494,7 +494,7 @@
           margin-right: vw(18, 1270);
         }
 
-        @include max(768) {
+        @include max(sm) {
           width: vw(95, 1270);
           height: vw(40, 1270);
           margin-right: vw(23, 1270);
@@ -515,7 +515,7 @@
           background-size: $w3 auto, $w4 auto !important;
         }
 
-        @include max(768) {
+        @include max(sm) {
           $w13: vw(33, 1270);
           $w14: vw(89, 1270);
 
@@ -535,7 +535,7 @@
         margin-bottom: vw(22, 1270);
       }
 
-      @include max(768) {
+      @include max(sm) {
         margin-bottom: vw(18, 375);
       }
     }

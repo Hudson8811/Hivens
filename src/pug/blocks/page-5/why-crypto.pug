@@ -1,0 +1,33 @@
+- const CRYPTO_LIST_ITEMS = [{img: 'why-crypto-1', title: 'Blockchain Infrastructure', text: 'Саморазвивающая блокчейн экосистема, объединяющая людей по всему миру.'}, {img: 'why-crypto-2', title: 'Eazy Token Integration', text: 'Огромный спрос на токены - все можно покупать и продавать только за токены HIV.'}, {img: 'why-crypto-3', title: 'Global System and Secure', text: 'Приоритет для инвесторов, бонусы и супер скидки на услуги в экосистеме - партнеры на время хранения токенов. Храня токены от определенной суммы, имея скидки, на разнице можно зарабатывать как партнер.'}, ];
+
+section.why-crypto
+  .why-crypto__container.container 
+    header.why-crypto__header
+      +title('Why ICO crypto', 'h2', 'why-crypto__title')
+      .why-crypto__text We believe in a new world, which helps you lunch and introduce your ICO Website. We designed it very carefully to make it more attractive, useful and fit any kind of ICO/Crypto website..
+    
+    .why-crypto__list.swiper-container.__js-why-crypto-carousel
+      .swiper-wrapper
+        each item in CRYPTO_LIST_ITEMS
+          .why-crypto__item.picture-info-block.swiper-slide
+            .picture-info-block__image
+              //-picture 
+                source(media="(max-width: 767px)", srcset="images/page-5/" + item.img + "-mobile.jpg 1x, images/" + item.img + "-mobile@2x.jpg 2x")
+              img(src="images/page-5/" + item.img + ".jpg", srcset="images/" + item.img + "@2x.jpg 2x",  alt="")
+            .picture-info-block__content
+              h3.picture-info-block__title= item.title
+              .picture-info-block__text= item.text
+      .swiper-navigation
+        button.swiper-button-prev(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+        button.swiper-button-next(type="button")
+          +icon('long-right-arrow')(width="143", height="9")
+    
+    .why-crypto__bottom
+      +button('Download whitepaper', 'why-crypto__btn button--big button--dark-green', '', '#')(download)
+      +button('Apply to get whitelisted', 'why-crypto__btn button--big button--dark-green', '', '#')
+      .why-crypto__join
+        a(href="#", target="_blank")
+          span.why-crypto__join-icon 
+            +icon('insta-clear')(width="14", height="14")
+          | Join us on Instagram

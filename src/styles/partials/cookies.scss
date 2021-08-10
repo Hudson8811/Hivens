@@ -33,21 +33,13 @@
 		align-items: flex-start;
 
 		@include max(md) {
-			display: none;
 			justify-content: center;
-		}
-
-		&--mobile {
-			display: none;
-
-			@include max(md) {
-				display: flex;
-			}
 		}
 	}
 
 	&__button {
 		width: 122px;
+		padding: 13px 20px;
 
 		@include max(md) {
 			width: 107px;
@@ -56,7 +48,8 @@
 		}
 
 		&:not(:last-child) {
-			margin-right: 63px;
+			width: 160px;
+			margin-right: 24px;
 
 			@include max(md) {
 				width: 136px;
