@@ -8,7 +8,7 @@ $(window).on('load', () => {
   const filters = document.querySelectorAll('.faqs__filter[data-target]');
   const items = document.querySelectorAll('.accordion__item');
 
-  if (accordion) {
+  if (accordion && filters) {
 
     accordion.addEventListener('click', e => {
       const target = e.target;
@@ -67,7 +67,7 @@ $(window).on('load', () => {
 
   function filterAccordion(current) {
     const activeFilter = current || document.querySelector('.faqs__filter.active');
-    const target = activeFilter.dataset.target;
+    const target = activeFilter ? activeFilter.dataset.target : null;
 
     if (current) {
       accordion.classList.add('opacity');
