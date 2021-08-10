@@ -51,7 +51,7 @@
 					z-index: 10;
 					cursor: pointer;
 
-					@include max(sm) {
+					@include max(md) {
 						display: none;
 					}
 				}
@@ -119,6 +119,7 @@
 		&-list {
 			&-item {
 				display: flex;
+				height: auto;
 
 				&:first-child {
 					margin-top: 3px;
@@ -126,6 +127,10 @@
 
 				&:not(:first-child) {
 					margin-top: 58px;
+
+					@include max(md) {
+						margin-top: 4vw;
+					}
 
 					@include max(sm) {
 						margin-top: 48px;
@@ -165,6 +170,10 @@
 		&-image {
 			position: relative;
 
+			img {
+				width: 100%;
+			}
+
 			&-text {
 				position: absolute;
 				left: 21.3%;
@@ -174,7 +183,10 @@
 				line-height: (29 / 17);
 				color: $dark-gray;
 
-				@include max(1270) {
+				@include max(md) {
+					font-size: vw(24, 1270);
+				}
+				@include max(sm) {
 					font-size: vw(36, 1270);
 				}
 			}

@@ -1,6 +1,6 @@
 .data-sources {
 	padding-top: 70px;
-	padding-bottom: 70px;
+	padding-bottom: 85px;
 	overflow: hidden;
 
 	@include max(sm) {
@@ -41,7 +41,11 @@
 		max-width: 353px;
 		left: 50%;
 		transform: translateX(-50%);
-		padding-top: 12px;
+
+		@include min(sm) {
+			padding-top: 8px;
+			padding-left: 9px;
+		}
 
 		img {
 			width: 100%;
@@ -49,14 +53,24 @@
 
 		&-text {
 			position: absolute;
-			top: 5.5%;
-			left: 8.2%;
+			top: 5.3%;
+			left: 10.7%;
 			font-weight: bold;
 			font-size: 10px;
-			line-height: 12px;
+			line-height: (12 / 10);
 			text-align: center;
 			color: #ffffff;
 			width: 79px;
+
+			@include max(sm) {
+				top: 3.7%;
+				left: 8.3%;
+			}
+
+			@include max(420) {
+				font-size: 9px;
+				left: 7.5%;
+			}
 		}
 	}
 
@@ -78,6 +92,11 @@
 		width: 32.58%;
 		position: absolute;
 
+		@include min(sm) {
+			margin-right: 0 !important;
+			height: auto;
+		}
+
 		@include max(sm) {
 			position: relative;
 			display: flex;
@@ -87,12 +106,22 @@
 			margin-right: 38px;
 		}
 
+		&--right {
+			right: 0;
+		}
+
+		&:nth-child(1) {
+			.data-sources__item-info {
+				max-width: 125px;
+			}
+		}
+
 		&:nth-child(2) {
-			top: 18%;
+			top: 18.8%;
 		}
 
 		&:nth-child(3) {
-			top: 31%;
+			top: 34.1%;
 		}
 
 		&:nth-child(4) {
@@ -100,46 +129,47 @@
 		}
 
 		&:nth-child(5) {
-			top: 62.6%;
+			top: 66%;
 		}
 
 		&:nth-child(6) {
-			top: 82%;
+			top: 86.6%;
 		}
 
 		&:nth-child(7) {
-			top: 0;
-			right: 0;
+			top: 1.7px;
 		}
 
 		&:nth-child(8) {
-			top: 15%;
-			right: 0;
+			top: 12.2%;
 		}
 
 		&:nth-child(9) {
-			top: 28%;
-			right: 0;
+			top: 23.8%;
 		}
 
 		&:nth-child(10) {
-			top: 39%;
-			right: 0;
+			top: 35.6%;
 		}
 
 		&:nth-child(11) {
-			top: 46%;
-			right: 0;
+			top: 47.8%;
+
+			.data-sources__item-info {
+				max-width: 183px;
+			}
 		}
 
 		&:nth-child(12) {
-			top: 61%;
-			right: 0;
+			top: 63%;
 		}
 
 		&:nth-child(13) {
-			top: 82%;
-			right: 0;
+			top: 87.7%;
+
+			.data-sources__item-info {
+				max-width: 187px;
+			}
 		}
 
 		&-text {
@@ -158,6 +188,10 @@
 			&--left {
 				flex-direction: row;
 
+				@include min(sm) {
+					padding-left: 37px;
+				}
+
 				@include max(sm) {
 					flex-direction: column;
 					align-items: flex-start;
@@ -168,6 +202,10 @@
 			&--right {
 				flex-direction: row-reverse;
 				padding-right: 36px;
+
+				@include min(sm) {
+					margin-bottom: -9px;
+				}
 
 				@include max(sm) {
 					flex-direction: column;
@@ -189,7 +227,7 @@
 			font-weight: normal;
 			font-size: 12px;
 			line-height: (18 / 12);
-			max-width: 125px;
+			max-width: 166px;
 			color: #6e6b7b;
 
 			@include max(sm) {

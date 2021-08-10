@@ -185,18 +185,22 @@
 			}
 
 			&--europe {
-				left: 45.7%;
+				left: 50.7%;
 				top: 22.1%;
+
+				@include max(sm) {
+					left: 45.7%;
+				}
 			}
 
 			&--australia {
 				left: 81.4%;
-				top: 64%;
+				top: 64.6%;
 			}
 
 			&--new-zealand {
 				left: 79.4%;
-				top: 81.8%;
+				top: 82.7%;
 
 				@include max(sm) {
 					left: 70.8%;

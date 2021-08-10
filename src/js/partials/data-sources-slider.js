@@ -12,6 +12,11 @@ $(document).ready(function () {
 			navigation: {
 				nextEl: ".data-sources__button-next--long-arrow",
 			},
+			breakpoints: {
+				768: {
+					enabled: false,
+				},
+			},
 		});
 	}
 

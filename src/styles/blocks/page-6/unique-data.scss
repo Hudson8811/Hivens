@@ -31,6 +31,7 @@
 	&__flex {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 
 		@include max(sm) {
 			flex-direction: column;
@@ -48,7 +49,7 @@
 			position: absolute;
 			top: 0;
 			bottom: 0;
-			right: 41.29%;
+			right: 40.1%;
 			border-left: solid 1px #ebe9f1;
 
 			@include max(sm) {
@@ -58,8 +59,9 @@
 	}
 
 	&__image {
-		width: 54.19%;
+		width: 55.7%;
 		flex-shrink: 0;
+		position: relative;
 
 		@include max(sm) {
 			width: 100%;
@@ -72,7 +74,7 @@
 		&-text {
 			position: absolute;
 			top: 27.9%;
-			left: 26%;
+			left: 48%;
 			display: flex;
 			align-items: center;
 			flex-direction: column;
@@ -81,33 +83,42 @@
 			color: #ffffff;
 
 			@include max(1270) {
-				font-size: vw(10, 1270);
+				font-size: vw(18, 1270);
 			}
 		}
 	}
 
 	&__content {
 		padding-bottom: 63px;
+		margin-left: 75px;
 		background-image: url("../images/page-6/unique-data-bg.svg");
 		background-repeat: no-repeat;
 		background-position: bottom left;
 		background-size: contain;
 		position: relative;
+		align-self: stretch;
 
 		@include max(sm) {
 			margin-top: 35px;
 			padding-left: 27px;
+			padding-bottom: 120px;
+			margin-left: 0;
+		}
+
+		@include max(400) {
 			padding-bottom: 70px;
 		}
 
 		&::before {
-			content: "";
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 1px;
-			height: 438px;
-			background-color: #ebe9f1;
+			@include max(sm) {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 1px;
+				height: 438px;
+				background-color: #ebe9f1;
+			}
 		}
 	}
 
@@ -117,7 +128,7 @@
 		font-size: 14px;
 		line-height: 21px;
 		color: $dark-gray-6e;
-		margin-bottom: 30px;
+		margin-bottom: 48px;
 	}
 
 	&__list {
@@ -130,7 +141,7 @@
 			padding-left: 6px;
 
 			&:not(:first-child) {
-				margin-top: 21px;
+				margin-top: 20px;
 			}
 
 			span {

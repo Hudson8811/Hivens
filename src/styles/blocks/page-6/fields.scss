@@ -1,5 +1,5 @@
 .fields {
-	padding-top: 70px;
+	padding-top: 85px;
 	padding-bottom: 70px;
 	overflow: hidden;
 
@@ -28,7 +28,7 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-		margin-top: 34px;
+		margin-top: 38px;
 		padding-bottom: 80px;
 		background-image: url("../images/page-6/fields/fields-bg.svg");
 		background-repeat: no-repeat;
@@ -54,7 +54,7 @@
 	}
 
 	&__categories {
-		width: 250px;
+		width: 305px;
 		flex-shrink: 0;
 
 		.swiper-wrapper {
@@ -70,8 +70,7 @@
 		height: auto;
 		transition: 0.4s linear;
 
-		&.active,
-		&.swiper-slide-active {
+		&.active {
 			.fields__filter {
 				&-text {
 					font-weight: 700;
@@ -88,6 +87,34 @@
 				&-icon {
 					border: 2px solid $green-9e;
 					transition: 0.4s linear;
+				}
+			}
+
+			svg {
+				fill: $green-9e;
+				transition: 0.4s linear;
+			}
+		}
+
+		&.swiper-slide-active {
+			.fields__filter {
+				@include max(sm) {
+					&-text {
+						font-weight: 700;
+						transition: 0.4s linear;
+
+						span {
+							&::after {
+								width: calc(100% + 24px);
+								transition: 0.4s linear;
+							}
+						}
+					}
+
+					&-icon {
+						border: 2px solid $green-9e;
+						transition: 0.4s linear;
+					}
 				}
 			}
 
@@ -188,9 +215,8 @@
 
 	&__slider {
 		width: 100%;
-		// padding: 5px 70px 50px;
 		padding-top: 5px;
-		padding-bottom: 50px;
+		padding-bottom: 46px;
 		position: relative;
 		transition: opacity 0.4s linear;
 
@@ -235,7 +261,7 @@
 
 		&-inner {
 			margin: 0 auto;
-			padding: 18px 36px 21px 42px;
+			padding: 18px 36px 17px 42px;
 			box-shadow: 0px 2.04886px 13.6591px 0.682953px rgba(0, 0, 0, 0.07);
 			border-radius: 4.09772px;
 			max-width: 801px;
@@ -273,8 +299,8 @@
 		&-item {
 			display: flex;
 			align-items: center;
-			flex-basis: 50%;
-			width: 50%;
+			flex-basis: 45%;
+			width: 45%;
 			font-weight: 500;
 			font-size: 16px;
 			line-height: (20 / 16);
@@ -364,7 +390,7 @@
 		&-next,
 		&-prev {
 			position: absolute;
-			top: 30%;
+			top: 33.9%;
 			width: 46px;
 			height: 43px;
 			cursor: pointer;
@@ -382,7 +408,7 @@
 		}
 
 		&-prev {
-			left: 0;
+			left: -11px;
 		}
 		&-next {
 			right: 0;

@@ -18,3 +18,4 @@
 //= ./partials/data-sources-slider.js
 //= ./partials/data-sources-slider.js
 //= ./partials/cases-slider.js
+//= ./partials/data-aggregation.js

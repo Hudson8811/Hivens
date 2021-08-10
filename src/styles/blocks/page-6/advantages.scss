@@ -31,13 +31,17 @@
 	&__title {
 		color: $dark-gray;
 
+		&::before {
+			width: 212px;
+		}
+
 		@include max(sm) {
 			text-align: left;
 		}
 	}
 
 	&__text {
-		margin-top: 30px;
+		margin-top: 35px;
 		font-weight: normal;
 		font-size: 14px;
 		line-height: 21px;
@@ -49,20 +53,25 @@
 	}
 
 	&__mobile-line {
-		position: absolute;
-		width: 2px;
-		height: 309px;
-		background-color: $green-9e;
-		left: 50%;
-		transform: translateX(-50%);
-		bottom: -10px;
-		z-index: 5;
-		border-radius: 2px;
+		display: none;
+
+		@include max(sm) {
+			display: block;
+			position: absolute;
+			width: 2px;
+			height: 309px;
+			background-color: $green-9e;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -10px;
+			z-index: 5;
+			border-radius: 2px;
+		}
 	}
 
 	&__content {
 		position: relative;
-		margin-top: 86px;
+		margin-top: 101px;
 		max-width: 1075px;
 		margin-left: auto;
 		margin-right: auto;
@@ -120,36 +129,68 @@
 
 		&--facebook {
 			left: 25.7%;
+
+			.advantages__card-image {
+				left: 50%;
+			}
 		}
 
 		&--sap-crm {
-			top: 15%;
+			top: 15.6%;
+
+			.advantages__card-image {
+				left: 55%;
+				top: -38px;
+			}
 		}
 
 		&--sap-erp {
-			height: 257px;
+			height: 246px;
 			top: 42.3%;
-			left: 16%;
+			left: 16.6%;
+
+			.advantages__card-image {
+				left: 44%;
+				top: -61px;
+			}
 		}
 
 		&--gigya {
-			height: 257px;
-			bottom: 0;
-			top: auto;
+			height: 238px;
+			top: 67.8%;
 			left: 42.8%;
+
+			.advantages__card-image {
+				top: -45px;
+				left: 51.5%;
+			}
 		}
 
 		&--sap-s4 {
-			height: 270px;
+			height: 258px;
 			left: 69.4%;
-			top: 48.6%;
+			top: 48.3%;
+
+			.advantages__card-image {
+				top: -39px;
+				left: 45.7%;
+			}
 		}
 
 		&--sap-c4c {
-			height: 239px;
+			height: 220px;
 			left: auto;
-			right: 0;
-			top: 6.5%;
+			right: -24px;
+			top: 9.1%;
+
+			.advantages__card-header {
+				padding-bottom: 6px;
+			}
+
+			.advantages__card-image {
+				top: -45px;
+				left: 50.8%;
+			}
 		}
 
 		&-content {
@@ -245,6 +286,10 @@
 		.advantages__link {
 			position: relative;
 
+			&:not(:first-child) {
+				margin-top: 6px;
+			}
+
 			&::before {
 				@include max(sm) {
 					content: "";
@@ -323,7 +368,7 @@
 		color: $citrus;
 
 		&:not(:first-child) {
-			margin-top: 6px;
+			margin-top: 3px;
 		}
 		&-icon {
 			width: 16px;
