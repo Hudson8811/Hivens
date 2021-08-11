@@ -65,24 +65,15 @@ $(window).on('load', () => {
     const toBeginBtn = document.querySelector('.payments-map__btn--beginning');
     const toEndBtn = document.querySelector('.payments-map__btn--end');
 
-    qqq();
+    changeBtnVisibility();
 
     if (toBeginBtn && toEndBtn) {
-      toEndBtn.addEventListener('click', function() {
-        map.style.transform = 'translateX(-' + (map.offsetWidth - container.offsetWidth) + 'px)';
-        this.classList.add('hide');
-        toBeginBtn.classList.remove('hide');
-      });
-
-      toBeginBtn.addEventListener('click', function() {
-        map.style.transform = 'translateX(0)';
-        this.classList.add('hide');
-        toEndBtn.classList.remove('hide');
-      });
+      toEndBtn.addEventListener('click', moveToEndMap);
+      toBeginBtn.addEventListener('click', moveToBeginMap);
 
       window.addEventListener('resize', () => {
         width = document.documentElement.clientWidth;
-        qqq();
+        changeBtnVisibility();
 
         map.removeAttribute('style');
         toBeginBtn.classList.add('hide');
@@ -90,9 +81,44 @@ $(window).on('load', () => {
       });
     }
 
+    map.addEventListener('touchstart', e => {
+      if (width < map.offsetWidth) {
+        const startX = e.changedTouches[0].clientX;
 
-    function qqq() {
+        map.addEventListener("touchend", eEnd => {
+          const endX = eEnd.changedTouches[0].clientX;
+          endX < startX ? moveToEndMap() : moveToBeginMap();
+        });
+      }
+    })
+
+    
+
+    function moveToEndMap() {
+      map.style.transform = 'translateX(-' + (map.offsetWidth - container.offsetWidth) + 'px)';
+      if (toBeginBtn && toEndBtn) {
+        toEndBtn.classList.add('hide');
+        toBeginBtn.classList.remove('hide');
+      }
+    }
+
+    function moveToBeginMap() {
+      map.style.transform = 'translateX(0)';
+      if (toBeginBtn && toEndBtn) {
+        toBeginBtn.classList.add('hide');
+        toEndBtn.classList.remove('hide');
+      }
+    }
+
+    function changeBtnVisibility() {
       width < map.offsetWidth ? buttonsWrapper.classList.remove('hide') : buttonsWrapper.classList.add('hide');
+    }
+
+    function qq() {
+      el.addEventListener("touchstart", handleStart, false);
+  el.addEventListener("touchend", handleEnd, false);
+  el.addEventListener("touchcancel", handleCancel, false);
+  el.addEventListener("touchmove", handleMove, false);
     }
   }
 });
