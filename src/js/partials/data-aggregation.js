@@ -82,46 +82,52 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function sectionAdaptive(media) {
 		const accordion = document.querySelector(".accordion");
+		const avgSessions = document.querySelector(".avg-sessions");
 
-		if (media.matches) {
-			const avgSessions = document.querySelector(".avg-sessions");
-			const mobileClone = avgSessions.cloneNode(true);
+		if (avgSessions) {
+			if (media.matches) {
+				//const avgSessions = document.querySelector(".avg-sessions");
+				const mobileClone = avgSessions.cloneNode(true);
 
-			mobileClone.classList.add("avg-sessions--mobile");
+				mobileClone.classList.add("avg-sessions--mobile");
 
-			function mobileClickHandler(e) {
-				let target = e.target;
+				function mobileClickHandler(e) {
+					let target = e.target;
 
-				target = target.closest(".accordion-item");
+					target = target.closest(".accordion-item");
 
-				if (target && media.matches) {
-					const itemBody = target.querySelector(".accordion-item__body");
+					if (target && media.matches) {
+						const itemBody = target.querySelector(".accordion-item__body");
 
-					if (!itemBody.querySelector(".avg-sessions")) {
-						const avgSessionsMobile = document.querySelector(
-							".avg-sessions--mobile"
-						);
+						if (!itemBody.querySelector(".avg-sessions")) {
+							const avgSessionsMobile = document.querySelector(
+								".avg-sessions--mobile"
+							);
 
-						if (avgSessionsMobile) {
-							avgSessionsMobile.remove();
+							if (avgSessionsMobile) {
+								avgSessionsMobile.remove();
+							}
+
+							itemBody.append(mobileClone);
 						}
-
-						itemBody.append(mobileClone);
 					}
 				}
-			}
 
-			accordion.addEventListener("click", mobileClickHandler);
-		} else {
-			const avgSessionsMobile = document.querySelectorAll(
-				".avg-sessions--mobile"
-			);
-			//console.log(avgSessionsMobile);
+				accordion.addEventListener("click", mobileClickHandler);
+				
+			} else {
+				const avgSessionsMobile = document.querySelectorAll(
+					".avg-sessions--mobile"
+				);
+				//console.log(avgSessionsMobile);
 
-			if (avgSessionsMobile.length) {
-				avgSessionsMobile.forEach((item) => item.remove());
+				if (avgSessionsMobile.length) {
+					avgSessionsMobile.forEach((item) => item.remove());
+				}
 			}
 		}
+
+
 	}
 
 	function checkWidth() {
