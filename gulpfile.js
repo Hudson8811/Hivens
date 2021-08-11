@@ -126,6 +126,11 @@ function icons() {
 			.pipe(browserSync.stream())
 }
 
+function favicons() {
+	return src('src/favicons/*.*')
+		.pipe(dest('build/favicons'));
+}
+
 function cleanimg() {
 	return del('build/images/**/*', { force: true })
 }
@@ -144,7 +149,8 @@ exports.fonts = fonts;
 exports.images = images;
 exports.icons = icons;
 exports.copyImages = copyImages;
+exports.favicons = favicons;
 
-exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images, icons);
+exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images, icons, favicons);
 
-exports.default = parallel(pugHtml, fonts, styles, scripts, copyImages,/*images,*/ icons, browsersync, startwatch);
+exports.default = parallel(pugHtml, fonts, styles, scripts, copyImages,/*images,*/ icons, favicons, browsersync, startwatch);
