@@ -97,6 +97,13 @@ function images() {
 		.pipe(browserSync.stream())
 }
 
+function copyImages() {
+	return src('src/images/**/*')
+		.pipe(newer('build/images/'))
+		.pipe(dest('build/images/'))
+		.pipe(browserSync.stream());
+}
+
 function icons() {
 	return src('src/sprite/**/*.svg')
 			.pipe(plumber())
@@ -141,7 +148,9 @@ exports.styles = styles;
 exports.fonts = fonts;
 exports.images = images;
 exports.icons = icons;
+exports.copyImages = copyImages;
+exports.favicons = favicons;
 
 exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images, icons, favicons);
 
-exports.default = parallel(pugHtml, fonts, styles, scripts, images, icons, favicons, browsersync, startwatch);
+exports.default = parallel(pugHtml, fonts, styles, scripts, copyImages,/*images,*/ icons, favicons, browsersync, startwatch);

@@ -1,0 +1,23 @@
+section.search.search-section
+	.container.search__container 
+		.search-flex
+			.search__form-wrapper
+				h1.search__title Spokeo. 
+					span Know More.
+				form.search__form(action="#")
+					.search-filters
+						.swiper-wrapper 
+							+button('People', 'button search-filters__button swiper-slide button--rounded button--outline-green active', 'person')(type="button")
+							+button('Services', 'button search-filters__button swiper-slide button--rounded button--outline-green', 'services-hand')(type="button")
+							+button('Company', 'button search-filters__button swiper-slide button--rounded button--outline-green', 'company')(type="button")
+							+button('...', 'button search-filters__button swiper-slide search-filters__button--more button--rounded button--outline-green')(type="button")
+					.search__input-group 
+						input(type="text" placeholder="Enter name, email, url or any neighorhood").search__input
+						button.search__input-button 
+							| Искать
+							+icon('search')
+				p.search__text Search by name, phone, address, or email to confidentially lookup information about people you know such as yourself, friends, family, acquaintances, and old classmates.
+
+			.search__image
+				img(src="images/page-6/search.png", srcset="images/page-6/search@2x.png 2x", alt="Поиск")
+				span.search__image-text people

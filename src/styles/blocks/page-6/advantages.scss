@@ -1,0 +1,666 @@
+.advantages {
+  padding-top: 87px;
+  padding-bottom: 70px;
+  overflow: hidden;
+
+  @include max(sm) {
+    padding-top: 112px;
+  }
+
+  &__bg {
+    img {
+      margin-left: auto;
+
+      @include max(sm) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        width: 100%;
+        min-width: 577px;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    color: $dark-gray;
+
+    &::before {
+      width: 212px;
+    }
+
+    @include max(sm) {
+      text-align: left;
+    }
+  }
+
+  &__text {
+    margin-top: 35px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: $dark-gray-6e;
+
+    @include max(sm) {
+      margin-top: 24px;
+    }
+  }
+
+  &__mobile-line {
+    display: none;
+
+    @include max(sm) {
+      display: block;
+      position: absolute;
+      width: 2px;
+      height: 309px;
+      background-color: $green-9e;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+      z-index: 5;
+      border-radius: 2px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    margin-top: 101px;
+    max-width: 1075px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include max(sm) {
+      min-height: 500px;
+      margin-top: 47px;
+    }
+
+    &::after {
+      @include max(sm) {
+        content: "";
+        position: absolute;
+        width: 142px;
+        height: 2px;
+        background-color: $green-9e;
+        left: 0;
+        bottom: -10px;
+        border-radius: 2px;
+      }
+    }
+
+    &::before {
+      @include max(sm) {
+        content: "";
+        position: absolute;
+        width: 142px;
+        height: 2px;
+        background-color: $green-9e;
+        right: 0;
+        bottom: -10px;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &__card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 225px;
+    width: 100%;
+    max-width: 154px;
+    background-color: #fff;
+    box-shadow: 0px 1.14588px 7.63921px 0.38196px rgba(0, 0, 0, 0.07);
+    border-radius: 2.29176px;
+    z-index: 2;
+
+    @include max(1105) {
+      height: vw(225, 1105);
+      max-width: vw(154, 1105);
+    }
+
+    @include max(sm) {
+      position: relative;
+      left: auto !important;
+      top: 0;
+      bottom: 0;
+      max-width: none;
+      height: auto !important;
+      min-height: 232px;
+      width: 142px;
+
+      //align-self: stretch;
+    }
+
+    &--facebook {
+      left: 25.7%;
+
+      .advantages__card-image {
+        left: 50%;
+      }
+    }
+
+    &--sap-crm {
+      top: 15.6%;
+
+      .advantages__card-image {
+        left: 55%;
+        top: -38px;
+
+        @include max(1105) {
+          top: vw(-38, 1105);
+        }
+
+        @include max(sm) {
+          top: -49px;
+        }
+      }
+    }
+
+    &--sap-erp {
+      height: 246px;
+      top: 42.3%;
+      left: 16.6%;
+
+      @include max(1105) {
+        height: vw(246, 1105);
+      }
+
+      @include max(sm) {
+        height: 246px;
+      }
+
+      .advantages__card-image {
+        left: 44%;
+        top: -61px;
+
+        @include max(1105) {
+          top: vw(-61, 1105);
+        }
+
+        @include max(sm) {
+          top: -52px;
+        }
+      }
+    }
+
+    &--gigya {
+      height: 238px;
+      top: 67.8%;
+      left: 42.8%;
+
+      @include max(1105) {
+        height: vw(238, 1105);
+      }
+
+      @include max(sm) {
+        height: 238px;
+      }
+
+      .advantages__card-image {
+        top: -45px;
+        left: 51.5%;
+
+        @include max(1105) {
+          top: vw(-45, 1105);
+        }
+
+        @include max(sm) {
+          top: -49px;
+        }
+      }
+    }
+
+    &--sap-s4 {
+      height: 258px;
+      left: 69.4%;
+      top: 48.3%;
+
+      @include max(1105) {
+        height: vw(258, 1105);
+      }
+
+      @include max(sm) {
+        height: 258px;
+      }
+
+      .advantages__card-image {
+        top: -39px;
+        left: 45.7%;
+
+        @include max(1105) {
+          top: vw(-39, 1105);
+        }
+
+        @include max(sm) {
+          top: -50px;
+        }
+      }
+    }
+
+    &--sap-c4c {
+      height: 220px;
+      left: 85.5%;
+      top: 9.1%;
+
+      @include max(1105) {
+        height: vw(220, 1105);
+      }
+
+      @include max(sm) {
+        height: 220px;
+      }
+
+      .advantages__card-header {
+        padding-bottom: 6px;
+
+        @include max(1105) {
+          padding-bottom: vw(6, 1105);
+        }
+
+        @include max(sm) {
+          padding-bottom: 6px;
+        }
+      }
+
+      .advantages__card-image {
+        top: -45px;
+        left: 50.8%;
+
+        @include max(1105) {
+          top: vw(-45, 1105);
+        }
+
+        @include max(sm) {
+          top: -51px;
+        }
+      }
+    }
+
+    &-content {
+      padding: 112px 20px 18px 20px;
+
+      @include max(1105) {
+        padding: vw(112, 1105) vw(20, 1105) vw(18, 1105) vw(20, 1105);
+      }
+
+      @include max(sm) {
+        padding: 112px 20px 10px 20px;
+        overflow: hidden;
+        height: 100%;
+      }
+    }
+
+    &-header {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10px;
+
+      @include max(1105) {
+        padding-bottom: vw(10, 1105);
+      }
+
+      @include max(sm) {
+        padding-bottom: 10px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 28px;
+        background-color: $green-9e;
+
+        @include max(1105) {
+          width: vw(28, 1105);
+        }
+
+        @include max(sm) {
+          width: 28px;
+        }
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: (18 / 12);
+      color: $green-9e;
+
+      @include max(1105) {
+        font-size: vw(12, 1105);
+      }
+
+      @include max(sm) {
+        font-size: 12px;
+      }
+    }
+
+    &-subtitle {
+      font-size: 10px;
+      line-height: (12 / 10);
+      color: $green-9e;
+      margin-top: 3px;
+
+      @include max(1105) {
+        font-size: vw(10, 1105);
+        margin-top: vw(3, 1105);
+      }
+
+      @include max(sm) {
+        font-size: 10px;
+        margin-top: 3px;
+      }
+    }
+
+    &-body {
+      margin-top: 10px;
+
+      @include max(1105) {
+        margin-top: vw(10, 1105);
+      }
+
+      @include max(sm) {
+        margin-top: 10px;
+      }
+    }
+
+    &-image {
+      position: absolute;
+      top: -51px;
+      left: 50%;
+      transform: translateX(-49%);
+      width: 93px;
+      height: 83px;
+      z-index: 1;
+
+      @include max(1105) {
+        top: vw(-51, 1105);
+        height: vw(93, 1105);
+        width: vw(83, 1105);
+      }
+
+      @include max(sm) {
+        top: -51px;
+        width: 93px;
+        height: 83px;
+      }
+    }
+
+    &-bg {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 5px;
+      width: 141px;
+      height: 105px;
+
+      @include max(1105) {
+        top: vw(5, 1105);
+        width: vw(141, 1105);
+        height: vw(105, 1105);
+      }
+
+      @include max(sm) {
+        top: 5px;
+        width: 141px;
+        height: 105px;
+      }
+    }
+  }
+
+  &__cards {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    @include max(sm) {
+      position: relative;
+      z-index: 5;
+      margin-top: 78px;
+    }
+  }
+
+  &__main-card {
+    position: absolute;
+    left: 42.8%;
+    top: 34%;
+    min-height: 216px;
+    width: 100%;
+    max-width: 154px;
+    background-color: #fff;
+    box-shadow: 0 1.14588px 7.63921px 0.38196px rgba(0, 0, 0, 0.07);
+    border-radius: 2.29176px;
+    z-index: 2;
+
+    @include max(1105) {
+      min-height: vw(216, 1105);
+      max-width: vw(154, 1105);
+      box-shadow: 0 vw(1.14588, 1105) vw(7.63921, 1105) vw(0.38196, 1105)
+        rgba(0, 0, 0, 0.07);
+      border-radius: vw(2.29176, 1105);
+    }
+
+    @include max(sm) {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      position: relative;
+      min-height: 216px;
+      max-width: 154px;
+      box-shadow: 0 1.14588px 7.63921px 0.38196px rgba(0, 0, 0, 0.07);
+      border-radius: 2.29176px;
+    }
+
+    .advantages__link {
+      position: relative;
+
+      &:not(:first-child) {
+        margin-top: 6px;
+
+        @include max(1105) {
+          margin-top: vw(6, 1105);
+        }
+
+        @include max(sm) {
+          margin-top: 6px;
+        }
+      }
+
+      &::before {
+        @include max(sm) {
+          content: "";
+          position: absolute;
+          left: -27px;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 2px;
+          width: 20px;
+          background-color: $green-9e;
+          border-radius: 2px;
+        }
+      }
+    }
+
+    &-image {
+      position: absolute;
+      top: -53px;
+      left: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 5;
+
+      @include max(1105) {
+        top: vw(-53, 1105);
+        left: vw(16, 1105);
+      }
+
+      @include max(sm) {
+        top: -53px;
+        left: 16px;
+      }
+
+      span {
+        margin-left: -7px;
+        margin-top: -20px;
+        font-size: 12px;
+        line-height: (18 / 12);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $green-9e;
+
+        @include max(1105) {
+          margin-left: vw(-7, 1105);
+          margin-top: vw(-20, 1105);
+          font-size: vw(12, 1105);
+        }
+
+        @include max(sm) {
+          margin-left: -7px;
+          margin-top: -20px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    &-content {
+      padding: 71px 12px 17px 17px;
+
+      @include max(1105) {
+        padding: vw(71, 1105) vw(12, 1105) vw(17, 1105) vw(17, 1105);
+      }
+
+      @include max(sm) {
+        padding: 71px 12px 17px 17px;
+      }
+
+      &::after {
+        @include max(sm) {
+          content: "";
+          position: absolute;
+          width: calc(100% + 22px);
+          height: calc(100% + 22px);
+          left: -11px;
+          top: -11px;
+          border: 2px solid $green-9e;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 7.82989px;
+    line-height: (10 / 7.82989);
+    color: $citrus;
+
+    @include max(1105) {
+      font-size: vw(7.82989, 1105);
+    }
+
+    @include max(sm) {
+      font-size: 7.82989px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 3px;
+
+      @include max(1105) {
+        margin-top: vw(3, 1105);
+      }
+
+      @include max(sm) {
+        margin-top: 3px;
+      }
+    }
+
+    &-icon {
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $citrus;
+      border-radius: 50%;
+      padding: 3px;
+      flex-shrink: 0;
+      margin-right: 8px;
+
+      @include max(1105) {
+        width: vw(16, 1105);
+        height: vw(16, 1105);
+        padding: vw(3, 1105);
+        margin-right: vw(8, 1105);
+      }
+
+      @include max(sm) {
+        width: 16px;
+        height: 16px;
+        padding: 3px;
+        margin-right: 8px;
+      }
+
+      svg {
+        fill: #fff;
+        width: 10px;
+        height: 10px;
+
+        @include max(1105) {
+          width: vw(10, 1105);
+          height: vw(10, 1105);
+        }
+
+        @include max(sm) {
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+
+  &__slider {
+    height: 100%;
+
+    @include max(sm) {
+      height: auto;
+    }
+  }
+
+  &__button-next {
+    &--long-arrow {
+      display: none;
+      position: absolute;
+      bottom: -55px;
+      left: 0;
+      width: 142px;
+      height: 30px;
+      padding: 0;
+
+      svg {
+        width: 142px;
+        height: 10px;
+      }
+
+      @include max(sm) {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.data-types {
+	padding-top: 48px;
+	padding-bottom: 87px;
+	overflow: hidden;
+
+	@include max(sm) {
+		padding-bottom: 50px;
+		padding-top: 40px;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		color: $dark-gray;
+
+		@include max(sm) {
+			text-align: left;
+		}
+	}
+
+	&__slider {
+		margin-top: 41px;
+		display: flex;
+		justify-content: center;
+		width: 88%;
+		padding: 10px;
+
+		@include max(sm) {
+			overflow: visible;
+			width: 100%;
+			padding: 0;
+			margin-top: 35px;
+		}
+
+		&-container {
+			position: relative;
+		}
+	}
+
+	&__card {
+		width: 154px;
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		background: #ffffff;
+		box-shadow: 0px 2.04886px 13.6591px 0.682953px rgba(0, 0, 0, 0.07);
+		border-radius: 4.09772px;
+		min-height: 225px;
+
+		&-content {
+			text-align: center;
+			padding-bottom: 28px;
+			margin-top: auto;
+		}
+
+		&-title {
+			font-weight: 500;
+			font-size: 18px;
+			line-height: (22 / 18);
+			color: $green-9e;
+		}
+
+		&-text {
+			font-weight: 500;
+			font-size: 14px;
+			line-height: (18 / 14);
+			color: $green-9e;
+			margin-top: 9px;
+		}
+	}
+
+	&__button {
+		&-next,
+		&-prev {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 46px;
+			height: 43px;
+			cursor: pointer;
+
+			@include max(sm) {
+				display: none;
+			}
+
+			svg {
+				width: 46px;
+				height: 43px;
+				fill: $dark-gray-6e;
+			}
+		}
+
+		&-prev {
+			left: 0;
+		}
+		&-next {
+			right: 0;
+
+			&--long-arrow {
+				display: none;
+				position: absolute;
+				bottom: -55px;
+				left: 0;
+				width: 132px;
+				height: 30px;
+				padding: 0;
+
+				svg {
+					width: 132px;
+					height: 10px;
+				}
+
+				@include max(sm) {
+					display: block;
+				}
+			}
+		}
+	}
+}

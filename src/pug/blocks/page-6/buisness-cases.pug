@@ -1,0 +1,49 @@
+- let SLIDES = [{text: ['Get more leads. Advanced Targeting and Segmentation', 'Automates collection of information for marketing campaigns planning', 'Automates collection of information for marketing campaigns planning'], icons: ['person', 'globe-grid', 'goods'], category: 'marketing, sales'}, {text: ['Get more leads. Advanced Targeting and Segmentation', 'Automates collection of information for marketing campaigns planning', 'Automates collection of information for marketing campaigns planning'], icons: ['person', 'globe-grid', 'goods'], category: 'marketing, recruiting'}, {text: ['Get more leads. Advanced Targeting and Segmentation', 'Automates collection of information for marketing campaigns planning', 'Automates collection of information for marketing campaigns planning'], icons: ['person', 'globe-grid', 'goods'], category: 'marketing, management'}, {text: ['Get more leads. Advanced Targeting and Segmentation', 'Automates collection of information for marketing campaigns planning', 'Automates collection of information for marketing campaigns planning'], icons: ['person', 'globe-grid', 'goods'], category: 'management, marketing'}, {text: ['Get more leads. Advanced Targeting and Segmentation', 'Automates collection of information for marketing campaigns planning', 'Automates collection of information for marketing campaigns planning'], icons: ['person', 'globe-grid', 'goods'], category: 'marketing, sales'}, {text: ['Get more leads. Advanced Targeting and Segmentation', 'Automates collection of information for marketing campaigns planning', 'Automates collection of information for marketing campaigns planning'], icons: ['person', 'globe-grid', 'goods'], category: 'marketing'}, {text: ['Get more leads. Advanced Targeting and Segmentation', 'Automates collection of information for marketing campaigns planning', 'Automates collection of information for marketing campaigns planning'], icons: ['person', 'globe-grid', 'goods'], category: 'sales'}, {text: ['Get more leads. Advanced Targeting and Segmentation', 'Automates collection of information for marketing campaigns planning', 'Automates collection of information for marketing campaigns planning'], icons: ['person', 'globe-grid', 'goods'], category: 'sales'}, {text: ['Get more leads. Advanced Targeting and Segmentation', 'Automates collection of information for marketing campaigns planning', 'Automates collection of information for marketing campaigns planning'], icons: ['person', 'globe-grid', 'goods'], category: 'recruiting'}, {text: ['Get more leads. Advanced Targeting and Segmentation', 'Automates collection of information for marketing campaigns planning', 'Automates collection of information for marketing campaigns planning'], icons: ['person', 'globe-grid', 'goods'], category: 'management'}];
+
+section.business-cases
+	.container
+		header.business-cases__header
+			+title('Кейсы использования по Бизнес-задачам', 'h2', 'business-cases__title')
+		.business-cases__content 
+			.business-cases__filters.swiper-container
+				.swiper-wrapper
+					a.button.business-cases__filter.swiper-slide.button--rounded.button--outline-green.active(type="button", data-target="marketing")
+						span Маркетинг
+					a.button.business-cases__filter.swiper-slide.button--rounded.button--outline-green(type="button", data-target="recruiting")
+						span Рекрутинг
+					a.button.business-cases__filter.swiper-slide.button--rounded.button--outline-green(type="button", data-target="sales")
+						span Продажи
+					a.button.business-cases__filter.swiper-slide.button--rounded.button--outline-green(type="button", data-target="marketing")
+						span Маркетинг
+					a.button.business-cases__filter.swiper-slide.button--rounded.button--outline-green(type="button", data-target="recruiting")
+						span Рекрутинг
+					a.button.business-cases__filter.swiper-slide.button--rounded.button--outline-green(type="button", data-target="management")
+						span Менеджмент
+					a.button.business-cases__filter.swiper-slide.button--rounded.button--outline-green(type="button", data-target="management")
+						span Менеджмент
+					a.button.business-cases__filter.swiper-slide.button--rounded.button--outline-green(type="button", data-target="management")
+						span Менеджмент
+			
+		
+			.business-cases__carousel.swiper-container 
+				.swiper-wrapper
+					each item in SLIDES
+						.business-cases__card.swiper-slide(data-category= item.category)
+							.business-cases__card-inner
+								.business-cases__card-image
+									img(src="images/page-6/business-cases/slide-img-1.jpg", srcset="images/page-6/business-cases/slide-img-1@2x.jpg 2x", alt="")
+									.business-cases__card-image-text market
+								.business-cases__card-content 
+									ul.business-cases__card-list
+										each text, index in item.text
+											li.business-cases__card-list-item 
+												.business-cases__card-list-icon
+													+icon(item.icons[index])
+												.business-cases__card-list-text= text
+				.swiper-pagination.swiper-pagination-bullets
+				.swiper-navigation
+					button.swiper-button-prev(type="button")
+						+icon('chevron-left')(width="46", height="46")
+					button.swiper-button-next(type="button")
+						+icon('chevron-right')(width="46", height="46")
+			.business-cases__bg

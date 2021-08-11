@@ -18,4 +18,17 @@ $(window).on('load', function() {
 	
 	$('map').imageMapResize();
 	
+
+	const tokenSaleListItems = document.querySelectorAll('.token-sale__more-item-list li');
+
+	if (tokenSaleListItems) {
+		tokenSaleListItems.forEach(it => {
+			const text = it.textContent;
+
+			if (text.length > 22) {
+				it.setAttribute('title', text);
+				it.textContent = text.slice(0, 22).trim() + '...';
+			}
+		})
+	}
 })
