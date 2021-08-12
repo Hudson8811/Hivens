@@ -11,6 +11,7 @@ section.how-platform-works
 		.how-platform-works__schema
 			.how-platform-works__schema-image
 				img(src="images/page-3/how-platform-works.jpg", srcset="images/page-3/how-platform-works@2x.jpg 2x", alt="Схема")
+
 				.how-platform-works__schema-zoom
 				.how-platform-works__schema-text.how-platform-works__schema-text--search
 					| Search
@@ -34,3 +35,8 @@ section.how-platform-works
 							p.how-platform-works__item-text= item.text
 				.swiper-button-next.how-platform-works__button
 					+icon('arrow-next-icon')
+			.how-platform-works__schema-floors
+				each item, index in SLIDES
+					- const mod = item.class.slice(0, item.class.indexOf('-'));
+					button.how-platform-works__schema-floor(class="how-platform-works__schema-floor--" + mod, type="button", data-index= index)
+						span.visually-hidden= item.title
