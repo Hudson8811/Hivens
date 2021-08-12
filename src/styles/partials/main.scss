@@ -5,6 +5,10 @@ html {
 body {
   font-family: $mainFont;
   color: $black;
+
+  &.scroll-blocked {
+    overflow: hidden;
+  }
 }
 
 a {
