@@ -6,7 +6,7 @@ $(document).ready(function() {
 	// Equal height to dropdown parts
 	setTimeout(function () {
 		equalDropdownHeight();
-	}, 100);
+	}, 700);
 
 	function equalDropdownHeight() {
 		dropdowns.find('.dropdown__left').each(function () {
