@@ -23,21 +23,22 @@ html(lang="ru")
 		//-link(href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet")
 		link(href="css/main.min.css" rel="stylesheet")
 
-		title= `${page.title}`
+    title= `${page.title}`
 
-	body
-		block header
-			include ../partials/header
+  body
+    block header
+      include ../partials/header
+      include ../partials/main-menu
 
-		main.main
-			block main
+    main.main
+      block main
 
-		block footer
-			include ../partials/footer
+    block footer
+      include ../partials/footer
 
-		block modals
+    block modals
 
-		//-script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
-		script(src="js/main.min.js")
+    //-script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
+    script(src="js/main.min.js")
 
-		block scripts
+    block scripts
