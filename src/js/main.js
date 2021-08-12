@@ -34,3 +34,5 @@
 //= ./partials/records-carousel.js
 //= ./partials/blog-carousel.js
 //= ./partials/slider-anim.js
+//= ./partials/main-menu.js
+//= ./partials/header.js

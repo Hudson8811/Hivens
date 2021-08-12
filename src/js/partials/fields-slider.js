@@ -1,5 +1,19 @@
 $(window).on("load", () => {
-	const carouselEl = document.querySelector(".fields__slider");
+	const carouselEl = document.querySelector(".fields__slider"),
+		showBtns = carouselEl.querySelectorAll('.fields__slide-show');
+
+	if (showBtns) {
+		showBtns.forEach(function (el) {
+			el.addEventListener('click', function (e) {
+				let text = el.querySelector('span');
+
+				e.preventDefault();
+				el.classList.toggle('rotate');
+				el.previousElementSibling.classList.toggle('show');
+				text.innerText === 'показать' ? text.innerText = 'скрыть' : text.innerText = 'показать';
+			});
+		});
+	}
 
 	if (carouselEl) {
 		const businessCasesCarousel = new Swiper(carouselEl, {
