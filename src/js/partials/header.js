@@ -4,15 +4,21 @@ $(document).ready(function() {
 		links = parent.find('.dropdown__link');
 
 	// Equal height to dropdown parts
-	dropdowns.find('.dropdown__left').each(function () {
-		var subMenu = $(this).find('.dropdown__submenu');
+	setTimeout(function () {
+		equalDropdownHeight();
+	}, 100);
 
-		if ($(this).outerHeight() > subMenu.outerHeight()) {
-			subMenu.outerHeight($(this).outerHeight());
-		} else {
-			$(this).outerHeight(subMenu.outerHeight());
-		}
-	});
+	function equalDropdownHeight() {
+		dropdowns.find('.dropdown__left').each(function () {
+			var subMenu = $(this).find('.dropdown__submenu');
+
+			if ($(this).outerHeight() > subMenu.outerHeight()) {
+				subMenu.outerHeight($(this).outerHeight());
+			} else {
+				$(this).outerHeight(subMenu.outerHeight());
+			}
+		});
+	}
 
 	links.each(function () {
 		var subMenu = $(this).find('.dropdown__submenu');
