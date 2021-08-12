@@ -332,6 +332,10 @@
 			margin-right: 15px;
 		}
 
+		&:not(.nav-list__dropdown-item) a {
+			padding-bottom: 10px;
+		}
+
 		a {
 			display: flex;
 			justify-content: flex-start;

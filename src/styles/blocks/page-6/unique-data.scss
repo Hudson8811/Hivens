@@ -83,7 +83,11 @@
 			color: #ffffff;
 
 			@include max(1270) {
-				font-size: vw(18, 1270);
+				font-size: vw(10, 1270);
+			}
+
+			@include max(sm) {
+				font-size: vw(10, 767);
 			}
 		}
 	}

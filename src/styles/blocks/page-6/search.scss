@@ -98,6 +98,10 @@
     &__button {
       width: auto;
 
+      &.active {
+        background-color: $green-9e;
+      }
+
       &:nth-child(1) {
         margin-right: 49px;
       }

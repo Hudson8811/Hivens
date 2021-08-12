@@ -294,6 +294,17 @@
 				padding: 0 27px;
 				flex-direction: column;
 			}
+
+			&.show {
+				max-height: 100px;
+				transition: max-height 0.5s ease;
+			}
+
+			&--hidden {
+				max-height: 0;
+				overflow: hidden;
+				transition: max-height 0.5s ease;
+			}
 		}
 
 		&-item {
@@ -379,9 +390,18 @@
 			color: $citrus;
 			margin: 30px auto 0 auto;
 
+			&.rotate {
+				svg {
+					transform: rotate(180deg);
+				}
+			}
+
 			svg {
+				width: 132px;
+				height: 32px;
 				fill: $citrus;
 				margin-right: 4px;
+				transition: transform 0.3s ease;
 			}
 		}
 	}
