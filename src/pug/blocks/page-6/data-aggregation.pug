@@ -11,9 +11,10 @@ section.data-aggregation
 					+icon('chevron-up')
 				.data-aggregation__slider.swiper-container
 					.swiper-wrapper.accordion
-						each slide in dataAggregationSlides
+						each slide, index in dataAggregationSlides
+							- const accItMod = index ? '' : 'active';
 							.data-aggregation__slide.swiper-slide
-								.data-aggregation__accordion-item.accordion-item(data-goal= slide.goal, data-goal-target= slide.goalTarget, data-users= slide.users, data-users-target= slide.usersTarget, data-retention= slide.retention, data-retention-target= slide.retentionTarget, data-duration= slide.duration, data-duration-target= slide.durationTarget)
+								.data-aggregation__accordion-item.accordion-item(class= accItMod, data-goal= slide.goal, data-goal-target= slide.goalTarget, data-users= slide.users, data-users-target= slide.usersTarget, data-retention= slide.retention, data-retention-target= slide.retentionTarget, data-duration= slide.duration, data-duration-target= slide.durationTarget)
 									.accordion-item__header
 										span= slide.title
 										.accordion-item__arrow

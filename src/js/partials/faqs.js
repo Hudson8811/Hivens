@@ -8,7 +8,7 @@ $(window).on('load', () => {
   const filters = document.querySelectorAll('.faqs__filter[data-target]');
   const items = document.querySelectorAll('.accordion__item');
 
-  if (accordion && filters) {
+  if (accordion && filters.length) {
 
     accordion.addEventListener('click', e => {
       const target = e.target;
@@ -50,8 +50,9 @@ $(window).on('load', () => {
           initFilterCarousel();
           isInit = true;
         } else if (width > breakpoint && isInit) {
-          filterCarousel.destroy();
+          //console.log(filterCarousel)
           isInit = false;
+          filterCarousel.destroy();
         }
       });
 
@@ -93,4 +94,4 @@ $(window).on('load', () => {
       }
     }
   }
-})
+});
