@@ -95,9 +95,9 @@ $(document).ready(function() {
 		x: -500
 	}, 's3')
 	.to('.anim-pic--7', 1.5, {
-		x: -266,
-		y: -81,
-		scale: 0.4
+		x: window.innerWidth > 767 ? -266 : -131,
+		y: window.innerWidth > 767 ? -81 : 100,
+		scale: window.innerWidth > 1279 ? 0.4 : 0.3
 	}, 's3')
 	.fromTo('.anim-pic--8', 1.5, {
 		x: 480
@@ -129,8 +129,8 @@ $(document).ready(function() {
 		y: -60
 	}, 's5')
 	.to('.anim-pic--7', 1.5, {
-		x: -184,
-		y: -25,
+		x: window.innerWidth > 767 ? -184 : -82,
+		y: window.innerWidth > 767 ? -25 : 140,
 		scale: 0.2,
 		opacity: 0
 	}, 's5')

@@ -1,4 +1,4 @@
-- const CRYPTO_SOLUTION_ITEMS = ['Relational Blockchain', 'Fraud Reduction', 'Next Generation Wallet', 'Recovery Nodes', 'Relational Blockchain', 'Fraud Reduction', 'Next Generation Wallet', 'Recovery Nodes'];
+- const CRYPTO_SOLUTION_ITEMS = [{title: 'Функциональные ноды', text: 'Конфигурируйте Ноды (Улей) под потребности или расширяйте в нужный момент'}, {title: 'Пчелы для нод', text: 'Выбирайте нужный функционал (Пчел) в вашей Ноде (Улье)'}, {title: 'Маркетплейс платформа', text: 'Находите, покупайте нужную информацию при помощи маркетплейса'}, {title: 'Токен HIV', text: 'Внутренняя валюта для осуществления всех расчетов в экосистеме'}, {title: 'Крипто кошелек', text: 'Кошелек нового поколениядля хранения, обмена, стейкинга и других финансовых операций'}, {title: 'Биржа обмена токенов', text: 'Покупайте и выводите токены HIV всегда по самому выгодному курсу.'} ];
 
 section.crypto-solution
   .crypto-solution__container.container 
@@ -8,11 +8,12 @@ section.crypto-solution
     
     .crypto-solution__list.swiper-container.__js_crypto-solution-carousel
       .swiper-wrapper
-        each item in CRYPTO_SOLUTION_ITEMS
+        each item, index in CRYPTO_SOLUTION_ITEMS
           .crypto-solution__item.swiper-slide
-            .crypto-solution__item-image 
-            h3.crypto-solution__item-title= item 
-            .crypto-solution__item-text Contributors and members est et expedita distinctio. Nam libero tempore
+            .crypto-solution__item-image
+              img(src="images/page-5/crypto-solution-" + (index + 1) + ".jpg", srcset="images/page-5/crypto-solution-" + (index + 1) + "@2x.jpg 2x", width="324", height="331", alt="")
+            h3.crypto-solution__item-title= item.title
+            .crypto-solution__item-text= item.text
       
       .swiper-navigation
         button.swiper-button-prev(type="button")

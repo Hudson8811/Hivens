@@ -132,11 +132,13 @@ window.onload = () => {
         }
         
         if (currentDot) {
+      
           const target = currentDot.dataset.target
+          //console.log(currentDot, target)
 
           if (width > breakpoint) {
             slides.forEach(it => {
-              if (it.dataset.zoom === target) {
+              if (it.dataset.target === target) {
                 it.classList.toggle('hide');
               } else {
                 it.classList.add('hide');
@@ -144,14 +146,13 @@ window.onload = () => {
             });
           } else {
             const index = parseInt(currentDot.dataset.index, 10);
-            changeZoom(target);
-            //carousel.slideTo(index);
+            carousel.slideTo(index);
+            changeZoom(currentDot);
           }
         } else {
           slides.forEach(it => it.classList.add('hide'));
         }
 
-        //console.log(e.target)
       });
     }
 
@@ -182,6 +183,7 @@ window.onload = () => {
       carousel = new Swiper(carouselEl, {
         speed: 300,
         slidesPerView: 'auto',
+        loop: true,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -192,13 +194,12 @@ window.onload = () => {
           },
           afterInit: function (swiper) {
             sceneInner.classList.add('hide');
-            const target = swiper.slides[swiper.activeIndex].dataset.zoom;
-            changeZoom(target);
-            //console.log(swiper.slides)
+            const el = swiper.slides[swiper.activeIndex];
+            changeZoom(el);
           },
-          slideChangeTransitionStart: function (swiper) {
-            const target = swiper.slides[swiper.activeIndex].dataset.zoom;
-            changeZoom(target);
+          slideChange: function (swiper) {
+            const el = swiper.slides[swiper.activeIndex];
+            changeZoom(el);
           }
         }
       });
@@ -241,15 +242,19 @@ window.onload = () => {
       }
     }
 
-    function changeZoom(target) {
+    function changeZoom(el) {
+      const target = el.dataset.target;
+
       if (target === 'guards') {
         gsap.to(zoomEl, zoom[target]);
         gsap.to(zoomElGuards1, zoom.guards1);
         gsap.to(zoomElGuards2, zoom.guards2);
+
       } else {
         gsap.to(zoomEl, zoom[target]);
         gsap.to(zoomElGuards1, zoom[target]);
         gsap.to(zoomElGuards2, zoom[target]);
+
       }
 
       zoomImages.forEach(it => {
