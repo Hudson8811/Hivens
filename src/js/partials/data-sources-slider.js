@@ -1,4 +1,4 @@
-$(document).ready(function () {
+window.addEventListener('load', () => {
 	function toggleDataSourcesSlider() {
 		const dataSources = document.querySelector(".data-sources");
 
@@ -6,18 +6,27 @@ $(document).ready(function () {
 			return;
 		}
 
-		const dataSourcesSlider = new Swiper(".data-sources__description", {
-			slidesPerView: "auto",
-			spaceBetween: 24,
-			navigation: {
-				nextEl: ".data-sources__button-next--long-arrow",
-			},
-			breakpoints: {
-				768: {
-					enabled: false,
-				},
-			},
-		});
+		const mediaList = window.matchMedia("(max-width: 768px)");
+		let dataSourcesSlider = null;
+
+		changeSliderState();
+		mediaList.addEventListener("change", changeSliderState);
+
+		function changeSliderState() {
+			if (mediaList.matches) {
+				dataSourcesSlider = new Swiper(".data-sources__description", {
+					slidesPerView: "auto",
+					spaceBetween: 24,
+					navigation: {
+						nextEl: ".data-sources__button-next--long-arrow",
+					}
+				});
+			} else {
+				if (dataSourcesSlider) {
+					dataSourcesSlider.destroy();
+				}
+			}
+		}
 	}
 
 	toggleDataSourcesSlider();

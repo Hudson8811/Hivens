@@ -123,12 +123,12 @@
     }
 
     @include max(sm) {
-      position: relative;
+      position: static;
       display: flex;
       flex-direction: row-reverse;
       justify-content: flex-end;
       width: 221px;
-      margin-right: 38px;
+      //margin-right: 38px;
     }
 
     &--right {
@@ -149,6 +149,10 @@
 
         @include max(1270) {
           max-width: vw(125, 1270);
+        }
+
+        @include max(sm) {
+          max-width: 166px;
         }
       }
     }
@@ -198,6 +202,10 @@
         @include max(1270) {
           max-width: vw(183, 1270);
         }
+
+        @include max(sm) {
+          max-width: 166px;
+        }
       }
     }
 
@@ -213,6 +221,10 @@
 
         @include max(1270) {
           max-width: vw(187, 1270);
+        }
+
+        @include max(sm) {
+          max-width: 166px;
         }
       }
     }
