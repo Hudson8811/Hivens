@@ -300,6 +300,7 @@
 
       .accordion-item__body {
         padding: 14px 0 50px 24px;
+        max-height: none;
 
         @include max(lg) {
           padding: 14px 24px 50px;

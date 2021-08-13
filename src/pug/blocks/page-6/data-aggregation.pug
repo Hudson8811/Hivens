@@ -9,8 +9,8 @@ section.data-aggregation
 			.data-aggregation__slider-wrapper 
 				button.data-aggregation__button-prev
 					+icon('chevron-up')
-				.data-aggregation__slider.swiper-container
-					.swiper-wrapper.accordion
+				.data-aggregation__slider.accordion.swiper-container
+					.swiper-wrapper
 						each slide, index in dataAggregationSlides
 							- const accItMod = index ? '' : 'active';
 							.data-aggregation__slide.swiper-slide
