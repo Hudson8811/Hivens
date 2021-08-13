@@ -38,39 +38,51 @@ $(document).ready(function () {
 	}
 
 	// Equal height to dropdown parts
-	setTimeout(function () {
+	$(window).resize(function () {
 		equalDropdownHeight();
-	}, 700);
+	});
 
-  function equalDropdownHeight() {
-    dropdowns.find(".dropdown__left").each(function () {
-      var subMenu = $(this).find(".dropdown__submenu");
+	equalDropdownHeight();
 
-      if ($(this).outerHeight() > subMenu.outerHeight()) {
-        subMenu.outerHeight($(this).outerHeight());
-      } else {
-        $(this).outerHeight(subMenu.outerHeight());
-      }
-    });
+	function equalDropdownHeight() {
+		setTimeout(function () {
+			dropdowns.find(".dropdown__left").each(function () {
+				var subMenu = $(this).find(".dropdown__submenu");
+
+				if ($(this).outerHeight() > subMenu.outerHeight()) {
+					subMenu.outerHeight($(this).outerHeight());
+				} else {
+					$(this).outerHeight(subMenu.outerHeight());
+				}
+			});
+		}, 700);
   }
 
-  links.each(function () {
-    var subMenu = $(this).find(".dropdown__submenu");
+	$(window).resize(function () {
+		setSubmenuPos();
+	});
 
-    if (
-      $(this).outerWidth() + subMenu.outerWidth() >
-        $(window).width() - $(this).offset().left ||
-      $(this).outerWidth() + $(this).find(".dropdown__center").outerWidth() >
-        $(window).width() - $(this).offset().left
-    ) {
-      $(this).addClass("reverse");
+  setSubmenuPos();
 
-      if (subMenu.offset().left < 0) {
-        $(this).removeClass("reverse").addClass("column");
-        subMenu.outerWidth($(window).width() - subMenu.offset().left);
-      }
-    }
-  });
+  function setSubmenuPos() {
+		links.each(function () {
+			var subMenu = $(this).find(".dropdown__submenu");
+
+			if (
+					$(this).outerWidth() + subMenu.outerWidth() >
+					$(window).width() - $(this).offset().left ||
+					$(this).outerWidth() + $(this).find(".dropdown__center").outerWidth() >
+					$(window).width() - $(this).offset().left
+			) {
+				$(this).addClass("reverse");
+
+				if (subMenu.offset().left < 0) {
+					$(this).removeClass("reverse").addClass("column");
+					subMenu.outerWidth($(window).width() - subMenu.offset().left);
+				}
+			}
+		});
+	}
 
   var userDropdown = parent.find(".dropdown-user");
   var userDropdownLink = userDropdown.find("a.dropdown-user-link");
