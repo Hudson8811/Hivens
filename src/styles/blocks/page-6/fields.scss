@@ -297,14 +297,19 @@
       }
 
       &.show {
-        max-height: 100px;
+        max-height: 2000px;
         transition: max-height 0.5s ease;
       }
 
       &--hidden {
+        margin-top: 10px;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.5s ease;
+
+        @include max(sm) {
+          flex-wrap: nowrap;
+        }
       }
     }
 
