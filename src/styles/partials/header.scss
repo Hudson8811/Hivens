@@ -50,8 +50,8 @@
       }
     }
 
-		&__links {
-			display: flex;
+    &__links {
+      display: flex;
 
       @include max(xs) {
         display: none;
@@ -89,64 +89,66 @@
           fill: #6e6b7b;
         }
 
-				&:nth-child(2) {
-					margin-right: 15px;
-				}
+        &:nth-child(2) {
+          margin-right: 15px;
+        }
       }
     }
 
-		&__sub-menu {
-			position: absolute;
-			top: 105%;
-			left: -20px;
-			z-index: 10;
-			display: none;
-			flex-direction: column;
-			list-style: none;
-			width: auto;
-			font-size: 15px;
-			line-height: 180%;
-			color: #1a1919;
-			border-radius: 6px;
-			box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-			overflow: hidden;
-			background-color: #fff;
+    &__sub-menu {
+      position: absolute;
+      top: 105%;
+      left: -20px;
+      z-index: 10;
+      display: none;
+      flex-direction: column;
+      list-style: none;
+      width: auto;
+      font-size: 15px;
+      line-height: 180%;
+      color: #1a1919;
+      border-radius: 6px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      background-color: #fff;
 
-			& > .header-top__sub-menu-item--separated {
-				border-top: 1px solid $white-eb;
-			}
+      & > .header-top__sub-menu-item--separated {
+        border-top: 1px solid $white-eb;
+      }
 
-			& > .header-top__sub-menu-item--separated ~ .header-top__sub-menu-item--separated {
-				border: none;
-			}
+      &
+        > .header-top__sub-menu-item--separated
+        ~ .header-top__sub-menu-item--separated {
+        border: none;
+      }
 
-			&-item {
-				transition: 0.4s;
-				color: #6E6B7B;
+      &-item {
+        transition: 0.4s;
+        color: #6e6b7b;
 
-				a {
-					display: flex;
-					justify-content: flex-start;
-					transition: 0.4s;
-					padding: 9px 16px;
-					font-size: 12.1081px;
-					line-height: 15px;
-					letter-spacing: 0.345946px;
-					text-decoration: none;
-					white-space: nowrap;
-					color: #4B4B4B;
+        a {
+          display: flex;
+          justify-content: flex-start;
+          transition: 0.4s;
+          padding: 9px 16px;
+          font-size: 12.1081px;
+          line-height: 15px;
+          letter-spacing: 0.345946px;
+          text-decoration: none;
+          white-space: nowrap;
+          color: #4b4b4b;
 
-					@include hover {
-						background: rgba(115, 103, 240, 0.12);
-						color: $purple;
-					}
+          @include hover {
+            background: rgba(115, 103, 240, 0.12);
+            color: $purple;
+          }
 
-					svg {
-						fill: #4b4b4b;
-					}
-				}
-			}
-		}
+          svg {
+            fill: #4b4b4b;
+          }
+        }
+      }
+    }
   }
 
   &__logo {
@@ -182,9 +184,9 @@
   }
 
   &__link {
-		display: flex;
-		align-items: flex-start;
-		position: relative;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
     font-weight: 600;
     font-size: 11px;
     line-height: 13px;
@@ -194,12 +196,12 @@
       margin-right: 24px;
     }
 
-		a {
-			font-weight: 600;
-			font-size: 11px;
-			line-height: 13px;
-			color: #4B4B4B;
-		}
+    a {
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 13px;
+      color: #4b4b4b;
+    }
 
     svg {
       fill: #4b4b4b;
@@ -303,12 +305,11 @@
         overflow: visible;
       }
 
-      a {
+      .search__btn {
         position: relative;
-        width: 20px;
+        width: 26px;
         overflow: hidden;
         justify-content: flex-end;
-        pointer-events: none;
 
         span {
           display: none;
@@ -335,7 +336,7 @@
         font-size: 14px;
       }
     }
-    a {
+    .search__btn {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -344,6 +345,7 @@
       font-size: 11px;
       line-height: 13px;
       letter-spacing: 0.366667px;
+      cursor: pointer;
 
       svg {
         flex-shrink: 0;
@@ -581,7 +583,7 @@
     &.reverse {
       > a {
         padding: 11px 18px 11px 0;
-				justify-content: flex-start;
+        justify-content: flex-start;
 
         svg {
           order: -1;
