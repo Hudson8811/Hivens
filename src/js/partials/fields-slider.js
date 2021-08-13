@@ -1,8 +1,9 @@
 $(window).on("load", () => {
-	const carouselEl = document.querySelector(".fields__slider"),
-		showBtns = carouselEl.querySelectorAll('.fields__slide-show');
+	const carouselEl = document.querySelector(".fields__slider");
 
-	if (showBtns) {
+	if (carouselEl) {
+		const showBtns = carouselEl.querySelectorAll('.fields__slide-show');
+
 		showBtns.forEach(function (el) {
 			el.addEventListener('click', function (e) {
 				let text = el.querySelector('span');
@@ -13,9 +14,7 @@ $(window).on("load", () => {
 				text.innerText === 'показать' ? text.innerText = 'скрыть' : text.innerText = 'показать';
 			});
 		});
-	}
 
-	if (carouselEl) {
 		const businessCasesCarousel = new Swiper(carouselEl, {
 			//loop: true,
 			speed: 300,
@@ -68,7 +67,7 @@ $(window).on("load", () => {
 
 		function filterSlides(current) {
 			const activeFilter =
-				current || document.querySelector(".fields__filter.active");
+					current || document.querySelector(".fields__filter.active");
 			const target = activeFilter.dataset.target;
 
 			if (current) {

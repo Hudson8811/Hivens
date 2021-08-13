@@ -5,9 +5,20 @@ header.header
 				a(href="#").logo.header__logo
 					+icon('logo')
 				.header-top__links 
-					a(href="#").header__link Экосистема
-					a(href="#").header__link Платформа
-						+icon('chevron-down')(width="20" height="14")
+					.header__link
+						a(href="#") Экосистема
+					.header__link.header__link--dropdown
+						a(href="#") Платформа
+							+icon('chevron-down')(width="20" height="14")
+						ul.header-top__sub-menu
+							li.header-top__sub-menu-item
+								a(href="#") Something else
+							li.header-top__sub-menu-item
+								a(href="#") Something else
+							li.header-top__sub-menu-item
+								a(href="#") Something else
+							li.header-top__sub-menu-item.header-top__sub-menu-item--separated
+								a(href="#") Separated link
 			.header-top__col
 				.header-burger 
 					span
