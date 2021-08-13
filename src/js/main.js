@@ -6,6 +6,7 @@
 //= ./libs/gsap.min.js
 //= ./libs/TweenMax.min.js
 //= ./libs/imageMapResizer.min.js
+//= ./libs/perfectScrollbar.min.js
 
 //= ./partials/equal-height.js
 //= ./partials/main.js

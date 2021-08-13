@@ -10,15 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		parrent.classList.toggle("active");
 
 		if (accordionText) {
-			accordionText.style.maxHeight = parrent.classList.contains("active")
-				? accordionText.scrollHeight + 200 + "px"
-				: null;
+			//accordionText.style.maxHeight = parrent.classList.contains("active")
+			//	? accordionText.scrollHeight + 200 + "px"
+			//	: null;
 		}
 		//dataAggregationSlider.update();
-		//dataAggregationSlider.updateProgress();
-		
-		//console.log(dataAggregationSlider.virtualSize);
-		//console.log(getNewSize())
 	};
 
 	const toggleAccordion = () => {
@@ -34,12 +30,14 @@ document.addEventListener("DOMContentLoaded", function () {
 					const activeItem = item.querySelector(".active");
 
 					activeItem.classList.remove("active");
-					activeItem.querySelector(".accordion-item__body").style.maxHeight = 0;
+					//activeItem.querySelector(".accordion-item__body").style.maxHeight = 0;
 				}
 
 				if (target) {
 					toggleCurrentItem(target);
 				}
+				dataAggregationSlider.update();
+				dataAggregationSlider.updateSlides();
 			});
 		});
 
@@ -123,39 +121,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		const activeItemBody = document.querySelector('.accordion-item.active .accordion-item__body');
 		
-		/*console.log(dataAggregationSlider);
-		console.log(dataAggregationSlider.virtualSize);
-		console.log(getNewSize())*/
 
-		activeItemBody.style.maxHeight = activeItemBody.scrollHeight + 200 + 'px';
+		//activeItemBody.style.maxHeight = activeItemBody.scrollHeight + 200 + 'px';
 		changeAvgSessionBlock(activeItemBody.parentElement);
-		//dataAggregationSlider.update();
-		//dataAggregationSlider.updateProgress();
-
-		
-		
-		//dataAggregationSlider.update()
-		//dataAggregationSlider.updateSize()
-		
-		//dataAggregationSlider.updateProgress()
-		//dataAggregationSlider.updateSlides();
-		
-		//dataAggregationSlider.virtualSize = getNewSize();
-
-
-		//console.log(dataAggregationSlider.virtualSize);
-
-
+		dataAggregationSlider.update();
 	}
-
-	/*function getNewSize() {
-		const arr = dataAggregationSlider.slides.map(it => {
-			const mt = parseInt(window.getComputedStyle(it).getPropertyValue('margin-top'), 10);
-			const mb = parseInt(window.getComputedStyle(it).getPropertyValue('margin-bottom'), 10);
-			return it.offsetHeight //+ mt + mb;
-		})
-		return arr//.reduce((acc, current) => acc + current);
-	}*/
 
 	function changeAvgSessionBlock(item) {
 		const goalOutput = document.getElementById("goal");
