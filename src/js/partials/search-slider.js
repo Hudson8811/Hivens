@@ -3,7 +3,8 @@ $(document).ready(function () {
 		const search = document.querySelector(".search"),
 				filterBtns = document.querySelectorAll('.search-filters__button:not(.search-filters__button--dropdown)'),
 				dropBtn = document.querySelector('.search-filters__button--dropdown'),
-				dropLinks = document.querySelectorAll('.search-filters__dropdown a');
+				dropLinks = document.querySelectorAll('.search-filters__dropdown a'),
+				dropdown = dropBtn.querySelector('.search-filters__dropdown');
 
 		if (!search) {
 			return;
@@ -18,20 +19,26 @@ $(document).ready(function () {
 		});
 
 		dropBtn.addEventListener('click', function (e) {
-			if (!this.querySelector('.search-filters__dropdown').classList.contains('open')) {
-				this.querySelector('.search-filters__dropdown').classList.add('open');
+			if (!dropdown.classList.contains('open')) {
+				dropdown.classList.add('open');
 				filterBtns.forEach(n => n.classList.remove('active'));
 			} else {
 				dropLinks.forEach(function (el) {
 					if (e.target === el) {
 						e.preventDefault();
 						dropBtn.querySelector('span').textContent = el.textContent + '...';
-						dropBtn.querySelector('.search-filters__dropdown').classList.remove('open');
+						dropdown.classList.remove('open');
 						dropBtn.classList.add('active');
 					}
 				});
 			}
 		});
+
+		document.addEventListener('click', function (e) {
+			if (!(e.target == dropdown || dropdown.contains(e.target)) && !(e.target == dropBtn) && dropdown.classList.contains('open')) {
+				dropdown.classList.remove('open');
+			}
+		}, true);
 
 		const searchSlider = new Swiper(".search-filters", {
 			slidesPerView: "auto",
