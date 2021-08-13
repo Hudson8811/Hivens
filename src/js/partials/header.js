@@ -163,13 +163,16 @@ $(document).ready(function () {
     });
   }
 
-  var searchBtn = parent.find(".header__search>a"),
+  var searchBtn = parent.find(".search__btn"),
     searchBlock = parent.find(".header__search"),
     searchClose = parent.find(".search__btn-close");
 
   searchBtn.on("click", function (e) {
-    e.preventDefault();
-    searchBlock.addClass("header__search--active");
+    if (!searchBlock.hasClass("header__search--active")) {
+      e.preventDefault();
+      searchBlock.addClass("header__search--active");
+    } else {
+    }
   });
 
   searchClose.on("click", function () {
