@@ -892,7 +892,14 @@ header.header
                         a(href='#') Скачать сейчас
                 img(src='images/bee-2.png', srcset='images/bee-2@2x.png 2x', alt='')
       .search.header__search
-        a(href="#") Поиск
+        a(href="#") 
+          span Поиск
           +icon('search')(width="20" height="20")
+        .header__input-group
+          input.search-input.header__search-input(placeholder="Поиск" type="text")
+          button.search__btn-close 
+            svg(xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x")
+              line(x1="18" y1="6" x2="6" y2="18")
+              line(x1="6" y1="6" x2="18" y2="18")
 
 
