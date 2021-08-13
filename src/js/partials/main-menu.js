@@ -30,6 +30,7 @@ $(window).on("load", function () {
       }
 
       if (dropdownItem) {
+        event.preventDefault();
         let dropdown = dropdownItem.closest("li");
         let closestOpenedDropdownItem = dropdownItem.closest("li.open");
         const subList = dropdown.querySelector("ul");
@@ -88,7 +89,10 @@ $(window).on("load", function () {
           $(dropdown).animate(
             {
               height:
-                $(toggleLink).outerHeight() + $(subList).outerHeight() + "px",
+                $(toggleLink).outerHeight() +
+                $(subList).outerHeight() +
+                10 +
+                "px",
             },
             250
           );
