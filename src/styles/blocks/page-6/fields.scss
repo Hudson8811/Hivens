@@ -68,7 +68,6 @@
   &__filter {
     cursor: pointer;
     height: auto;
-    transition: 0.4s linear;
 
     &.active {
       .fields__filter {
@@ -129,8 +128,8 @@
       svg {
         @include max(sm) {
           fill: $green-9e;
+          transition: 0.4s linear;
         }
-        transition: 0.4s linear;
       }
     }
 
@@ -323,9 +322,12 @@
         @include max(1200) {
           font-size: vw(10, 1200);
         }
+        @include max(1000) {
+          font-size: vw(8, 1200);
+        }
 
         @include max(sm) {
-          font-size: vw(10, 767);
+          font-size: vw(8, 767);
         }
 
         &--people {
@@ -355,9 +357,15 @@
             @include max(1200) {
               font-size: vw(7, 1200);
             }
+            @include max(1000) {
+              font-size: vw(5.5, 1200);
+            }
 
             @include max(sm) {
-              font-size: vw(7, 767);
+              font-size: vw(6.5, 767);
+            }
+            @include max(450) {
+              font-size: vw(6.2, 767);
             }
           }
         }
@@ -372,8 +380,16 @@
               font-size: vw(13, 1200);
             }
 
+            @include max(1000) {
+              font-size: vw(11, 1200);
+            }
+
             @include max(sm) {
               font-size: vw(13, 767);
+            }
+
+            @include max(450) {
+              font-size: vw(11, 767);
             }
           }
 
@@ -399,8 +415,15 @@
             @include max(1200) {
               font-size: vw(7, 1200);
             }
+
+            @include max(1000) {
+              font-size: vw(5.6, 1200);
+            }
             @include max(sm) {
               font-size: vw(7, 767);
+            }
+            @include max(576) {
+              font-size: vw(6.3, 767);
             }
           }
         }
@@ -415,8 +438,15 @@
               font-size: vw(12, 1200);
             }
 
+            @include max(1000) {
+              font-size: vw(10, 1200);
+            }
+
             @include max(sm) {
               font-size: vw(12, 767);
+            }
+            @include max(450) {
+              font-size: vw(11, 767);
             }
           }
           &-price {
@@ -431,9 +461,19 @@
               font-size: vw(10, 1200);
               max-width: vw(60, 1200);
             }
+
+            @include max(md) {
+              font-size: vw(8.5, 1200);
+              max-width: vw(50, 1200);
+            }
             @include max(sm) {
               font-size: vw(10, 767);
-              max-width: vw(60, 767);
+              max-width: vw(56, 767);
+            }
+
+            @include max(450) {
+              font-size: vw(9, 767);
+              max-width: vw(50, 767);
             }
           }
         }
@@ -463,7 +503,7 @@
               font-size: vw(8, 1200);
             }
             @include max(sm) {
-              font-size: vw(8, 767);
+              font-size: vw(7.5, 767);
             }
           }
 
@@ -488,8 +528,11 @@
             @include max(1200) {
               font-size: vw(11, 1200);
             }
+            @include max(1000) {
+              font-size: vw(9.5, 1200);
+            }
             @include max(sm) {
-              font-size: vw(11, 767);
+              font-size: vw(9.5, 767);
             }
           }
         }
@@ -503,8 +546,14 @@
             @include max(1200) {
               font-size: vw(11, 1200);
             }
+            @include max(1000) {
+              font-size: vw(9, 1200);
+            }
             @include max(sm) {
               font-size: vw(11, 767);
+            }
+            @include max(450) {
+              font-size: vw(9.5, 767);
             }
           }
           &-location {
@@ -513,7 +562,7 @@
             font-size: 10px;
 
             @include max(1200) {
-              font-size: vw(10, 1200);
+              font-size: vw(8.5, 1200);
             }
 
             @include max(sm) {

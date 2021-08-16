@@ -33,8 +33,9 @@ $(window).on("load", () => {
     });
 
     const filtersSlider = new Swiper(".fields__categories", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
+      slidesPerView: 1,
+      spaceBetween: -55,
+      slideToClickedSlide: true,
       breakpoints: {
         768: {
           enabled: false,
