@@ -14,55 +14,42 @@ window.addEventListener('load', () => {
 		const floorsHelpButtonsWrapper = floors.querySelector(".how-platform-works__schema-floors");
 		const floorsHelpButtons = floors.querySelectorAll(".how-platform-works__schema-floor");
 
-		//floors.removeEventListener("click", clickHandler)
-
 		const borderPositionY = [20.1, 28.1, 35.9, 43.8, 51.8, 61.7, 72.2, 82.7];
 		const borderPositionX = [50, 50, 50, 50, 50, 50, 50, 56.5];
 
 		if (floorsHelpButtons) {
-			floorsHelpButtons.forEach((it, index) => it.addEventListener('click', e => {
-				const zoomedImage = floors.querySelector("img.active");
-				zoomedImage.classList.remove("active");
-				zoomImages[index].classList.add("active");
+			floorsHelpButtons.forEach((it) => it.addEventListener('click', () => {
+				const index = parseInt(it.dataset.index, 10);
+				changeFloors(index);
 
 				if (schemaSlider) {
-					console.log(index)
 					schemaSlider.slideTo(index);
-					console.log(schemaSlider.activeIndex)
-
-					zoomBorder.style.cssText = `
-						top: ${borderPositionY[index]}%;
-						left: ${borderPositionX[index]}%;
-						width: ${schemaSlider.activeIndex === 7 ? 41 : 34.1}%;
-					`;
-				} 
+				}
 			}));
 		}
 
+		floors.addEventListener("click", clickHandler);
+
 		function clickHandler(event) {
 			let target = event.target;
-
 			target = target.closest(".how-platform-works__item");
-			
 
 			if (target) {
-				const zoomedImage = floors.querySelector("img.active");
-				zoomedImage.classList.remove("active");
+				const index = schemaSlider ? parseInt(target.dataset.swiperSlideIndex, 10) : Array.from(floorsItems).indexOf(target);
 
-				floorsItems.forEach((item, index) => {
-					if (item === target) {
-						zoomImages[index].classList.add("active");
-					}
-				});
+				changeFloors(index);
+
+				if (schemaSlider) {
+					schemaSlider.slideTo(index)
+				}
 			}
 		}
 
 		let schemaSlider;
 
 		function adaptive(media) {
-			//console.log(media.matches);
 			if (media.matches) {
-				floors.removeEventListener("click", clickHandler);
+				//floors.removeEventListener("click", clickHandler);
 				schemaSlider = new Swiper(".how-platform-works__content", {
 					loop: true,
 					slidesPerView: "auto",
@@ -70,35 +57,21 @@ window.addEventListener('load', () => {
 					navigation: {
 						nextEl: ".swiper-button-next",
 					},
+					on: {
+						activeIndexChange: function (swiper) {
+							changeFloors(swiper.realIndex);
+						}
+					}
 				});
 
-				slideChangeHandler();
 				floors.querySelector('.how-platform-works__schema-image').append(floorsHelpButtonsWrapper);
 			} else {
-				floors.addEventListener("click", clickHandler);
 				floors.append(floorsHelpButtonsWrapper);
 
 				if (schemaSlider) {
 					schemaSlider.destroy();
 				}
 			}
-		}
-
-		function slideChangeHandler() {
-			schemaSlider.on("activeIndexChange", function () {
-				zoomImages.forEach((item, index) => {
-					item.classList.remove("active");
-
-					if (schemaSlider.activeIndex === index) {
-						item.classList.add("active");
-						zoomBorder.style.cssText = `
-							top: ${borderPositionY[index]}%;
-							left: ${borderPositionX[index]}%;
-							width: ${schemaSlider.activeIndex === 7 ? 41 : 34.1}%;
-						`;
-					}
-				});
-			});
 		}
 
 		function checkWidth() {
@@ -109,6 +82,18 @@ window.addEventListener('load', () => {
 			media.addEventListener("change", adaptive);
 		}
 
+		function changeFloors(index) {
+			const zoomedImage = floors.querySelector("img.active");
+			zoomedImage.classList.remove("active");
+			zoomImages[index].classList.add("active");
+
+			zoomBorder.style.cssText = `
+				top: ${borderPositionY[index]}%;
+				left: ${borderPositionX[index]}%;
+				width: ${index === 7 ? 41 : 34.1}%;
+			`;
+		}
+		
 		checkWidth();
 	}
 
