@@ -33,8 +33,9 @@ $(window).on("load", () => {
     });
 
     const filtersSlider = new Swiper(".fields__categories", {
-      slidesPerView: "auto",
-      spaceBetween: 20,
+      slidesPerView: 1,
+      spaceBetween: -55,
+      slideToClickedSlide: true,
       breakpoints: {
         768: {
           enabled: false,
@@ -68,10 +69,10 @@ $(window).on("load", () => {
       });
     }
 
-		function filterSlides(current) {
-			const activeFilter =
-					current || document.querySelector(".fields__filter.active");
-			const target = activeFilter.dataset.target;
+    function filterSlides(current) {
+      const activeFilter =
+        current || document.querySelector(".fields__filter.active");
+      const target = activeFilter.dataset.target;
 
       if (current) {
         fieldsCarouselEl.classList.add("opacity");
