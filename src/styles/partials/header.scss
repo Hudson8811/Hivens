@@ -458,10 +458,14 @@
   position: absolute;
   display: flex;
   top: 86%;
-  transform-origin: top;
-  transform: rotateX(-90deg);
+  visibility: hidden;
   border-radius: 6px;
   background-color: $white;
+  transition: visibility 0.3s linear;
+
+  &.open {
+    visibility: visible;
+  }
 
   &__submenu {
     width: 690px;
@@ -547,7 +551,7 @@
       }
     }
 
-    @include hover {
+    &.open {
       background-color: #f8f8f8;
 
       .dropdown__submenu {
