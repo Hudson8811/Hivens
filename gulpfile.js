@@ -31,7 +31,7 @@ function startwatch() {
 	watch(['src/**/*.js', '!src/**/*.min.js'], scripts);
 	watch('src/**/styles/**/*', styles);
 	watch('src/**/*.html').on('change', browserSync.reload);
-	watch('src/images/**/*', images);
+	watch('src/images/**/*', copyImages);
 	watch('src/pug/**/*.pug', pugHtml);
 	watch('src/sprite/**/*.svg', icons);
 }
@@ -53,7 +53,7 @@ function scripts() {
 		.pipe(rigger())
 		.pipe(sourcemaps.init())
 		.pipe(concat('main.min.js'))
-		//.pipe(uglify())
+		.pipe(uglify())
 		.pipe(sourcemaps.write('./maps'))
 		.pipe(dest('build/js/'))
 		.pipe(browserSync.stream())

@@ -281,7 +281,227 @@
     }
 
     &-image {
+      position: relative;
       margin-top: 16px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      &-text {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        color: $white;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 1;
+
+        @include max(1200) {
+          font-size: vw(10, 1200);
+        }
+
+        @include max(sm) {
+          font-size: vw(10, 767);
+        }
+
+        &--people {
+          &-social {
+            top: 60%;
+            left: 17.2%;
+            font-size: 11px;
+
+            @include max(1200) {
+              font-size: vw(11, 1200);
+            }
+
+            @include max(sm) {
+              font-size: vw(11, 767);
+            }
+          }
+
+          &-phone {
+            top: 27%;
+            left: 74%;
+          }
+          &-email {
+            top: 70%;
+            left: 71%;
+            font-size: 7px;
+
+            @include max(1200) {
+              font-size: vw(7, 1200);
+            }
+
+            @include max(sm) {
+              font-size: vw(7, 767);
+            }
+          }
+        }
+
+        &--websites {
+          &-ip {
+            top: 17%;
+            left: 26%;
+            font-size: 13px;
+
+            @include max(1200) {
+              font-size: vw(13, 1200);
+            }
+
+            @include max(sm) {
+              font-size: vw(13, 767);
+            }
+          }
+
+          &-www {
+            top: 26%;
+            left: 66.2%;
+            font-size: 10px;
+
+            @include max(1200) {
+              font-size: vw(10, 1200);
+            }
+
+            @include max(sm) {
+              font-size: vw(10, 767);
+            }
+          }
+
+          &-email {
+            top: 80%;
+            left: 60.2%;
+            font-size: 7px;
+
+            @include max(1200) {
+              font-size: vw(7, 1200);
+            }
+            @include max(sm) {
+              font-size: vw(7, 767);
+            }
+          }
+        }
+
+        &--goods {
+          &-date {
+            top: 23%;
+            left: 29%;
+            font-size: 12px;
+
+            @include max(1200) {
+              font-size: vw(12, 1200);
+            }
+
+            @include max(sm) {
+              font-size: vw(12, 767);
+            }
+          }
+          &-price {
+            top: 23%;
+            left: 64%;
+            font-size: 10px;
+            line-height: 1.2;
+            max-width: 60px;
+            text-align: center;
+
+            @include max(1200) {
+              font-size: vw(10, 1200);
+              max-width: vw(60, 1200);
+            }
+            @include max(sm) {
+              font-size: vw(10, 767);
+              max-width: vw(60, 767);
+            }
+          }
+        }
+
+        &--company {
+          &-social {
+            top: 17.5%;
+            left: 32.5%;
+            font-size: 8px;
+
+            @include max(1200) {
+              font-size: vw(8, 1200);
+            }
+            @include max(sm) {
+              font-size: vw(8, 767);
+            }
+          }
+        }
+
+        &--addresses {
+          &-date {
+            top: 18.5%;
+            left: 29%;
+            font-size: 8px;
+
+            @include max(1200) {
+              font-size: vw(8, 1200);
+            }
+            @include max(sm) {
+              font-size: vw(8, 767);
+            }
+          }
+
+          &-city {
+            top: 49.6%;
+            left: 24%;
+            font-size: 11px;
+
+            @include max(1200) {
+              font-size: vw(11, 1200);
+            }
+            @include max(sm) {
+              font-size: vw(11, 767);
+            }
+          }
+
+          &-area {
+            top: 15.5%;
+            left: 62%;
+            font-size: 11px;
+
+            @include max(1200) {
+              font-size: vw(11, 1200);
+            }
+            @include max(sm) {
+              font-size: vw(11, 767);
+            }
+          }
+        }
+
+        &--services {
+          &-date {
+            top: 49.6%;
+            left: 22.3%;
+            font-size: 11px;
+
+            @include max(1200) {
+              font-size: vw(11, 1200);
+            }
+            @include max(sm) {
+              font-size: vw(11, 767);
+            }
+          }
+          &-location {
+            top: 32.5%;
+            left: 62.6%;
+            font-size: 10px;
+
+            @include max(1200) {
+              font-size: vw(10, 1200);
+            }
+
+            @include max(sm) {
+              font-size: vw(10, 767);
+            }
+          }
+        }
+      }
     }
 
     &-list {

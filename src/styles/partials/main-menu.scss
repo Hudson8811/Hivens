@@ -438,19 +438,23 @@
 .main-menu .navbar-header .navbar-brand {
   display: flex;
   align-items: center;
-  margin-top: 1.35rem;
   font-size: inherit;
 }
 
 .main-menu .navbar-header .navbar-brand .brand-logo img {
   max-width: 36px;
 }
-
+.main-menu .navbar-header .navbar-brand .brand-logo {
+  svg {
+    width: 31px;
+    height: 31px;
+  }
+}
 .main-menu .navbar-header .navbar-brand .brand-text {
-  color: #7367f0;
-  padding-left: 1rem;
+  color: #7d7d7d;
+  padding-left: 5px;
   margin-bottom: 0;
-  font-weight: 600;
+  font-weight: bold;
   letter-spacing: 0.01rem;
   font-size: 1.45rem;
   -webkit-animation: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) 0s normal forwards 1
@@ -530,7 +534,7 @@
 
 .navbar-nav {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
