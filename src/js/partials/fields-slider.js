@@ -68,10 +68,10 @@ $(window).on("load", () => {
       });
     }
 
-		function filterSlides(current) {
-			const activeFilter =
-					current || document.querySelector(".fields__filter.active");
-			const target = activeFilter.dataset.target;
+    function filterSlides(current) {
+      const activeFilter =
+        current || document.querySelector(".fields__filter.active");
+      const target = activeFilter.dataset.target;
 
       if (current) {
         fieldsCarouselEl.classList.add("opacity");

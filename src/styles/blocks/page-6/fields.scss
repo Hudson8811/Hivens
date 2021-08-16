@@ -73,26 +73,34 @@
     &.active {
       .fields__filter {
         &-text {
-          font-weight: 700;
-          transition: 0.4s linear;
+          @include min(sm) {
+            font-weight: 700;
+            transition: 0.4s linear;
+          }
 
           span {
             &::after {
-              width: calc(100% + 24px);
-              transition: 0.4s linear;
+              @include min(sm) {
+                width: calc(100% + 24px);
+                transition: 0.4s linear;
+              }
             }
           }
         }
 
         &-icon {
-          border: 2px solid $green-9e;
-          transition: 0.4s linear;
+          @include min(sm) {
+            border: 2px solid $green-9e;
+            transition: 0.4s linear;
+          }
         }
       }
 
       svg {
-        fill: $green-9e;
-        transition: 0.4s linear;
+        @include min(sm) {
+          fill: $green-9e;
+          transition: 0.4s linear;
+        }
       }
     }
 
@@ -119,7 +127,9 @@
       }
 
       svg {
-        fill: $green-9e;
+        @include max(sm) {
+          fill: $green-9e;
+        }
         transition: 0.4s linear;
       }
     }
@@ -147,11 +157,21 @@
         stroke: $gray-c7;
       }
 
-      &.active,
+      &.active {
+        &:nth-child(5) {
+          svg {
+            @include min(sm) {
+              stroke: $green-9e;
+            }
+          }
+        }
+      }
       &.swiper-slide-active {
         &:nth-child(5) {
           svg {
-            stroke: $green-9e;
+            @include max(sm) {
+              stroke: $green-9e;
+            }
           }
         }
       }
