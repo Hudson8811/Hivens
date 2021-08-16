@@ -78,7 +78,7 @@ $(document).ready(function () {
           $(this).outerHeight(subMenu.outerHeight());
         }
       });
-    }, 800);
+    }, 0);
   }
 
   $(window).resize(function () {
