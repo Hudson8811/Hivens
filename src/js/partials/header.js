@@ -2,7 +2,8 @@ $(document).ready(function () {
   var parent = $(".header"),
     dropdowns = parent.find(".dropdown"),
     links = parent.find(".dropdown__link"),
-    dropdownSimpleLink = parent.find(".header__link--dropdown");
+    dropdownSimpleLink = parent.find(".header__link--dropdown"),
+		dropdownExtendedLinks = parent.find('.nav-list__dropdown-item');
 
   var scrollableContainer = $(".ps");
 
@@ -35,9 +36,29 @@ $(document).ready(function () {
       },
       function () {
         $(this).find(".header-top__sub-menu").slideUp(100);
-      }
-    );
-  }
+			}
+		);
+
+		dropdownExtendedLinks.each(function () {
+			var that = $(this);
+
+			that.hover(
+					function () {
+						that.find('.dropdown').addClass('open').fadeIn(300);
+					},
+					function () {
+						that.find('.dropdown').removeClass('open').fadeOut(300);
+					}
+			);
+
+			that.find('.dropdown__link').each(function () {
+				$(this).mouseenter(function () {
+					that.find('.dropdown__link').removeClass('open');
+					$(this).addClass('open');
+				});
+			});
+		});
+	}
 
   // Equal height to dropdown parts
   $(window).resize(function () {
@@ -57,7 +78,7 @@ $(document).ready(function () {
           $(this).outerHeight(subMenu.outerHeight());
         }
       });
-    }, 700);
+    }, 100);
   }
 
   $(window).resize(function () {

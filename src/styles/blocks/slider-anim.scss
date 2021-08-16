@@ -572,6 +572,9 @@
 
 	.slider-prev,
 	.slider-next {
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 87px;
 		height: 87px;
 		padding: 10px;
