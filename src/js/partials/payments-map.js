@@ -8,7 +8,7 @@ $(window).on('load', () => {
   const pinsWrapper = document.querySelector('.payments-map__wrapper');
   const buttonsWrapper = document.querySelector('.payments-map__buttons');
   const map = document.querySelector('.payments-map__map');
-  const container = document.querySelector('.payments-map__container');
+  const mapWrapper = document.querySelector('.payments-map__wrapper');
 
   if (filters && pins && pinsWrapper) {
     if (width <= breakpoint) {
@@ -81,44 +81,44 @@ $(window).on('load', () => {
       });
     }
 
-    map.addEventListener('touchstart', e => {
-      if (width < map.offsetWidth) {
-        const startX = e.changedTouches[0].clientX;
+    mapWrapper.addEventListener('scroll', function() {
 
-        map.addEventListener("touchend", eEnd => {
-          const endX = eEnd.changedTouches[0].clientX;
-          endX < startX ? moveToEndMap() : moveToBeginMap();
-        });
-      }
-    })
-
-    
-
-    function moveToEndMap() {
-      map.style.transform = 'translateX(-' + (map.offsetWidth - container.offsetWidth) + 'px)';
-      if (toBeginBtn && toEndBtn) {
+      if (Math.ceil(mapWrapper.offsetWidth + mapWrapper.scrollLeft) >= map.offsetWidth) {
         toEndBtn.classList.add('hide');
         toBeginBtn.classList.remove('hide');
+      } else if (mapWrapper.scrollLeft === 0) {
+        toEndBtn.classList.remove('hide');
+        toBeginBtn.classList.add('hide');
+      } else {
+        toEndBtn.classList.remove('hide');
+        toBeginBtn.classList.remove('hide');
+      }
+    });
+
+
+
+    function moveToEndMap() {
+      if (map.offsetWidth > mapWrapper.offsetWidth) {
+        mapWrapper.scrollBy({
+          top: 0,
+          left: map.offsetWidth - mapWrapper.offsetWidth,
+          behavior: 'smooth'
+        });
       }
     }
 
     function moveToBeginMap() {
-      map.style.transform = 'translateX(0)';
-      if (toBeginBtn && toEndBtn) {
-        toBeginBtn.classList.add('hide');
-        toEndBtn.classList.remove('hide');
+      if (map.offsetWidth > mapWrapper.offsetWidth) {
+        mapWrapper.scrollBy({
+          top: 0,
+          left: -mapWrapper.scrollLeft,
+          behavior: 'smooth'
+        });
       }
     }
 
     function changeBtnVisibility() {
       width < map.offsetWidth ? buttonsWrapper.classList.remove('hide') : buttonsWrapper.classList.add('hide');
-    }
-
-    function qq() {
-      el.addEventListener("touchstart", handleStart, false);
-  el.addEventListener("touchend", handleEnd, false);
-  el.addEventListener("touchcancel", handleCancel, false);
-  el.addEventListener("touchmove", handleMove, false);
     }
   }
 });
