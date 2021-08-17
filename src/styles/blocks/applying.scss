@@ -97,6 +97,25 @@
       margin: 0 auto;
     }
 
+    &--sales {
+      span {
+        top: 8%;
+        left: 56%;
+      }
+    }
+    &--hr {
+      span {
+        top: 4%;
+        left: 22%;
+      }
+    }
+    &--managers {
+      span {
+        top: 8%;
+        left: 25%;
+      }
+    }
+
     img {
       display: block;
       width: 100%;

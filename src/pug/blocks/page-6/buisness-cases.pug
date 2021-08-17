@@ -23,8 +23,7 @@ section.business-cases
 						span Менеджмент
 					a.button.business-cases__filter.swiper-slide.button--rounded.button--outline-green(type="button", data-target="management")
 						span Менеджмент
-			
-		
+
 			.business-cases__carousel.swiper-container 
 				.swiper-wrapper
 					each item in SLIDES
@@ -32,8 +31,8 @@ section.business-cases
 							.business-cases__card-inner
 								.business-cases__card-image
 									img(src="images/page-6/business-cases/slide-img-" + item.img + ".jpg", srcset="images/page-6/business-cases/slide-img-" + item.img + "@2x.jpg 2x", alt="")
-									if item.img === '1'
-										.business-cases__card-image-text market
+									
+									.business-cases__card-image-text(class="business-cases__card-image-text--" + item.category) market
 								.business-cases__card-content 
 									ul.business-cases__card-list
 										each text, index in item.text
