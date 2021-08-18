@@ -94,7 +94,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         accordion.addEventListener("click", mobileClickHandler);
+        changeAvgSessionBlock(activeMobileItem);
       } else {
+        
         const avgSessionsMobile = document.querySelectorAll(
           ".avg-sessions--mobile"
         );
@@ -102,6 +104,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (avgSessionsMobile.length) {
           avgSessionsMobile.forEach((item) => item.remove());
         }
+        
+        const activeItem = document.querySelector(
+          ".accordion-item.active"
+        );
+        changeAvgSessionBlock(activeItem);
       }
     }
   }
@@ -120,28 +127,38 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleDataAggregationSlider();
     toggleAccordion();
 
-    const activeItemBody = document.querySelector(
-      ".accordion-item.active .accordion-item__body"
-    );
+    let activeItem = document.querySelector('.accordion-item.active');
+    const activeItemBody = document.querySelector('.accordion-item__body');
+    //console.log(activeItem)
 
     //activeItemBody.style.maxHeight = activeItemBody.scrollHeight + 200 + 'px';
-    changeAvgSessionBlock(activeItemBody.parentElement);
+    
+    changeAvgSessionBlock(activeItem);
     dataAggregationSlider.update();
   }
 
   function changeAvgSessionBlock(item) {
-    const goalOutput = document.getElementById("goal");
+    const isMobile = document.documentElement.clientWidth <= 767;
+
+    let goalOutput, usersOutput, retentionOutput, durationOutput = null;
+
+    if (isMobile) {
+      goalOutput = item.querySelector("#goal");
+      usersOutput = item.querySelector("#users");
+      retentionOutput = item.querySelector("#retention");
+      durationOutput = item.querySelector("#duration");
+    } else {
+      goalOutput = document.getElementById("goal");
+      usersOutput = document.getElementById("users");
+      retentionOutput = document.getElementById("retention");
+      durationOutput = document.getElementById("duration");
+    }
+
+
     const goalProgress = goalOutput.querySelector(".scale__progress-fill");
-    const usersOutput = document.getElementById("users");
     const usersProgress = usersOutput.querySelector(".scale__progress-fill");
-    const retentionOutput = document.getElementById("retention");
-    const retentionProgress = retentionOutput.querySelector(
-      ".scale__progress-fill"
-    );
-    const durationOutput = document.getElementById("duration");
-    const durationProgress = durationOutput.querySelector(
-      ".scale__progress-fill"
-    );
+    const retentionProgress = retentionOutput.querySelector(".scale__progress-fill");
+    const durationProgress = durationOutput.querySelector(".scale__progress-fill");
 
     const goal = item.dataset.goal;
     const goalTarget = item.dataset.goalTarget;
