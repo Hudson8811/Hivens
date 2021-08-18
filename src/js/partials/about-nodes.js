@@ -97,6 +97,7 @@ window.onload = () => {
         e.preventDefault();
       }
     });
+
     showBeehiveBtn.addEventListener('click', (e) => {
       if (sceneInner.classList.contains('hide')) {
         if (width > breakpoint) {
@@ -160,6 +161,8 @@ window.onload = () => {
       sceneInner.classList.remove('hide');
       initCarousel();
       isInit = true;
+      
+      scene.addEventListener('click', onSlideClick);
     }
 
     window.addEventListener('resize', (e) => {
@@ -171,11 +174,13 @@ window.onload = () => {
         initCarousel();
         isInit = true;
         area.removeEventListener('click', closeBeehive);
+        scene.addEventListener('click', onSlideClick);
       } else if (width > breakpoint && isInit) {
         carousel.destroy();
         isInit = false;
         sceneInner.classList.add('hide');
         area.addEventListener('click', closeBeehive);
+        scene.removeEventListener('click', onSlideClick);
       }
     });
 
@@ -270,6 +275,16 @@ window.onload = () => {
         gsap.to(it, vars);
       });
       
+    }
+
+    function onSlideClick(e) {
+      const slide = e.target.closest('.about-nodes__item');
+
+      if (slide) {
+        const index = parseInt(slide.dataset.swiperSlideIndex, 10);
+        changeZoom(slide);
+        carousel.slideTo(index);
+      };
     }
   }
 
