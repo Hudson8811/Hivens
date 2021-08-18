@@ -101,6 +101,7 @@
     @include max(md) {
       width: calc(100% - 392px);
       align-self: flex-start;
+      overflow: hidden;
     }
 
     @include max(sm) {
