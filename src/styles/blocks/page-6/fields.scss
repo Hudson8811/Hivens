@@ -393,8 +393,11 @@
               font-size: vw(11, 1200);
             }
 
-            @include max(sm) {
+            @include max(840) {
               left: 25.5%;
+            }
+
+            @include max(sm) {
               font-size: vw(13, 767);
             }
 

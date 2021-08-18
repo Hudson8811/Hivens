@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function checkWidth() {
-    const media = window.matchMedia("(max-width: 768px)");
+    const media = window.matchMedia("(max-width: 767px)");
 
     sectionAdaptive(media);
 

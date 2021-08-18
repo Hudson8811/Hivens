@@ -30,7 +30,7 @@
 
     @include max(md) {
       margin-top: 23px;
-      margin-right: -32px;
+      //margin-right: -32px;
     }
 
     .swiper-wrapper {
@@ -71,13 +71,21 @@
     position: relative;
 
     @include max(md) {
-      margin: 67px -32px 0;
+      //margin: 67px -15px 0;
+
+      margin: 67px 0 0;
+    }
+
+    @include max(sm) {
+      //margin: 67px -32px 0;
+      margin: 67px 0 0;
     }
   }
 
   &__slide {
     display: flex;
     padding: 0 103px;
+    box-sizing: border-box;
 
     @include max(md) {
       flex-direction: column;
