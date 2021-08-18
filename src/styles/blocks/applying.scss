@@ -93,39 +93,14 @@
     margin-right: 49px;
 
     @include max(md) {
-      height: 244px;
+      max-width: 90%;
+      height: auto;
+      //height: 244px;
       margin: 0 auto;
     }
 
-    &--sales {
-      span {
-        top: 8%;
-        left: 56%;
-      }
-    }
-    &--hr {
-      span {
-        top: 4%;
-        left: 22%;
-      }
-    }
-    &--managers {
-      span {
-        top: 8%;
-        left: 25%;
-      }
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      //object-fit: contain;
-      //margin-top: 34px;
-
-      @include max(md) {
-        margin-top: 0;
-      }
+    @include max(sm) {
+      max-width: 100%;
     }
 
     span {
@@ -138,8 +113,81 @@
       left: 19%;
 
       @include max(md) {
-        top: 12px;
-        left: 83px;
+        font-size: vw(12, 375);
+        top: 8%;
+      }
+
+      @include max(sm) {
+        top: 7%;
+      }
+      @include max(xs) {
+        top: 6%;
+      }
+    }
+
+    &--sales {
+      span {
+        top: 8%;
+        left: 56%;
+
+        @include max(md) {
+          top: 10%;
+        }
+
+        @include max(sm) {
+          top: 9%;
+        }
+
+        @include max(xs) {
+          top: 8%;
+        }
+      }
+    }
+    &--hr {
+      span {
+        top: 4%;
+        left: 22%;
+
+        @include max(md) {
+          top: 6%;
+        }
+
+        @include max(sm) {
+          top: 5%;
+        }
+
+        @include max(xs) {
+          top: 4%;
+        }
+      }
+    }
+    &--managers {
+      span {
+        top: 8%;
+        left: 25%;
+
+        @include max(md) {
+          top: 10%;
+        }
+
+        @include max(sm) {
+          top: 9%;
+        }
+        @include max(xs) {
+          top: 8%;
+        }
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      //object-fit: contain;
+      //margin-top: 34px;
+
+      @include max(md) {
+        margin-top: 0;
       }
     }
   }
@@ -156,6 +204,10 @@
     flex-wrap: wrap;
 
     @include max(md) {
+      justify-content: space-around;
+    }
+
+    @include max(sm) {
       justify-content: space-between;
     }
   }
@@ -166,8 +218,13 @@
     margin-bottom: 25px;
 
     @include max(md) {
+      width: auto;
       flex-direction: column;
       align-items: center;
+    }
+
+    @include max(sm) {
+      width: 48%;
     }
 
     &:first-child {
