@@ -23,6 +23,10 @@
     border-radius: 7px;
     position: relative;
 
+    @include max(md) {
+      height: 333px;
+    }
+
     @include max(sm) {
       height: auto;
 
