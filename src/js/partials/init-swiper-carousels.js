@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
     {selector: '.__js_rating-carousel'},
     {selector: '.__js-why-crypto-carousel'},
     {selector: '.__js_crypto-solution-carousel'},
-    {selector: '.__js_crypto-line-carousel'},
+    {selector: '.__js_crypto-line-carousel', breakpoint: 1079},
     {selector: '.__js_team-carousel'},
     {selector: '.__js_advisors-carousel'},
     {selector: '.__js_partners-carousel'},

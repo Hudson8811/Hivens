@@ -1,420 +1,420 @@
 .footer {
-	width: 100%;
-	padding: 276px 0 144px;
-	color: $white;
-	background-image: url("../images/footer-bg.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-
-	@include min(xxl) {
-		padding: 15vw 0 144px;
-	}
-
-	@include max(sm) {
-		padding: 160px 0 240px;
-		background-image: url("../images/footer-bg-small.png");
-	}
-
-	@include max(xxs) {
-		padding: 95px 0 240px;
-	}
-
-	&__title {
-		max-width: 610px;
-		margin: 0 auto;
-		font-size: 32px;
-		line-height: 39px;
-		font-weight: 500;
-		text-align: center;
-
-		@include max(sm) {
-			max-width: 247px;
-			font-size: 24px;
-			line-height: 29px;
-		}
-	}
-
-	&__browse {
-		text-align: center;
-		margin-top: 52px;
-		margin-bottom: 89px;
-
-		@include max(sm) {
-			margin-top: 38px;
-			margin-bottom: 49px;
-		}
-
-		a {
-			display: inline-flex;
-			align-items: center;
-			font-size: 16px;
-			line-height: 19px;
-			color: $white;
-
-			@include max(sm) {
-				font-size: 12px;
-				line-height: 15px;
-			}
-
-			@include hover {
-				svg {
-					animation: link-arrow-hover 0.5s linear;
-				}
-			}
-		}
-
-		svg {
-			width: 66px;
-			height: 10px;
-			fill: $white;
-			margin-left: 35px;
-
-			@include max(sm) {
-				width: 52px;
-				height: 8px;
-				margin-left: 25px;
-			}
-		}
-	}
-
-	&__search-dictionary {
-		margin-top: 62px !important;
-
-		@include max(md) {
-			margin-top: 56px !important;
-		}
-	}
-
-	&__line {
-		width: 100%;
-		height: 1px;
-		background-color: $white;
-		margin: 94px 0 80px;
-
-		@include max(md) {
-			margin: 50px 0 38px;
-		}
-	}
-
-	&__menu {
-		display: flex;
-		flex-wrap: wrap;
-		overflow: hidden;
-	}
-
-	&__menu-item {
-		display: flex;
-		flex-direction: column;
-		width: auto;
-		padding: 12px 39px 0 25px;
-		border-left: 1px solid $white-eb;
-
-		@include max(lg) {
-			padding: 12px 15px 0;
-		}
-
-		@include max(md) {
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content: center;
-			width: 50%;
-			border-left: 0;
-			padding: 0;
-		}
-
-		a {
-			font-size: 15.8438px;
-			line-height: 24px;
-			font-weight: 700;
-			color: $white;
-			position: relative;
-
-			@include max(lg) {
-				font-size: 14px;
-				line-height: 20px;
-			}
-
-			@include max(md) {
-				font-size: 12px;
-				line-height: 18px;
-				margin: 0 8.5px 8px;
-			}
-
-			@include hover {
-				text-decoration: underline;
-			}
-
-			&.dot {
-				&::before {
-					content: '';
-					display: block;
-					width: 8px;
-					height: 8px;
-					border-radius: 50%;
-					background-color: $white;
-					position: absolute;
-					top: 6px;
-					left: -12px;
-				}
-			}
-
-			+ a {
-				margin-top: 38px;
-
-				@include max(lg) {
-					margin-top: 25px;
-				}
-
-				@include max(md) {
-					margin-top: 0;
-				}
-			}
-
-			&.top-link {
-				text-transform: uppercase;
-
-				@include max(md) {
-					display: block;
-					width: 100%;
-					text-align: center;
-					margin-bottom: 12px;
-				}
-			}
-		}
-	}
-
-	&__col {
-		padding-left: 107px;
-
-		@include max(lg) {
-			padding-left: 0;
-			margin: 0 auto;
-		}
-
-		@include max(md) {
-			display: none;
-		}
-	}
-
-	&__login {
-		display: block;
-		font-size: 15.8438px;
-		line-height: 24px;
-		font-weight: 700;
-		color: $white;
-		margin-top: 16px;
-		transition: opacity 0.3s ease;
-
-		@include max(md) {
-			font-size: 12px;
-			line-height: 18px;
-			text-align: center;
-		}
-
-		@include hover {
-			opacity: 0.65;
-		}
-	}
-
-	&__nickname {
-		font-size: 15.8438px;
-		line-height: 24px;
-		font-weight: 700;
-		color: $white;
-		padding-top: 11px;
-
-		@include max(md) {
-			font-size: 12px;
-			line-height: 18px;
-			text-align: center;
-		}
-	}
-
-	&__login-mobile {
-		display: none;
-
-		@include max(md) {
-			display: block;
-		}
-	}
-
-	&__trial {
-		width: 160px;
-		margin: 27px auto 0;
-
-		@include max(md) {
-			width: 137px;
-		}
-	}
-
-	&__pagination {
-		display: none;
-		justify-content: center;
-		width: 100%;
-		margin-top: 33px;
-
-		@include max(md) {
-			display: flex;
-		}
-	}
-
-	.swiper-pagination-bullet {
-		width: 30.15px;
-		height: 8px;
-		border-radius: 5px;
-		background-color: rgba($white, 0.5);
-		cursor: pointer;
-		position: relative;
-		overflow: hidden;
-
-		&::before {
-			content: '';
-			display: block;
-			width: 0;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
-			background-color: $white;
-			transition: width 0.3s ease;
-		}
-
-		&:not(:last-child) {
-			margin-right: 7.14px;
-		}
-
-		&.swiper-pagination-bullet-active {
-			&::before {
-				width: 100%;
-			}
-		}
-	}
-
-	&__social {
-		margin-top: 85px;
-
-		@include max(md) {
-			margin-top: 47px;
-		}
-	}
-
-	&__bottom-links {
-		font-size: 15.8438px;
-		line-height: 19px;
-		text-align: center;
-		margin-top: 63px;
-
-		@include max(md) {
-			font-size: 12px;
-			line-height: 15px;
-			margin-top: 39px;
-		}
-
-		span {
-			padding-right: 10px;
-
-			@include max(md) {
-				display: block;
-				padding-right: 0;
-				padding-bottom: 5px;
-			}
-
-			br {
-				display: none;
-
-				@include max(md) {
-					display: block;
-				}
-			}
-		}
-
-		a {
-			display: inline-block;
-			padding-left: 18px;
-			position: relative;
-			color: $white;
-			transition: color 0.3s ease;
-
-			@include max(md) {
-				padding-left: 0;
-				margin-bottom: 13px;
-			}
-
-			&:not(:last-child) {
-				margin-right: 16px;
-
-				@include max(md) {
-					margin-right: 0;
-				}
-			}
-
-			@include hover {
-				color: rgba($white, 0.65);
-			}
-
-			&::before {
-				content: '';
-				display: block;
-				width: 10px;
-				height: 10px;
-				background-color: $white;
-				border-radius: 50%;
-				position: absolute;
-				top: 50%;
-				left: 0;
-				transform: translateY(-50%);
-
-				@include max(md) {
-					display: none;
-				}
-			}
-
-			&.dot {
-				@include max(md) {
-					margin-left: 25px;
-				}
-
-				&::before {
-					content: '';
-					display: block;
-					width: 10px;
-					height: 10px;
-					background-color: $white;
-					border-radius: 50%;
-					position: absolute;
-					top: 50%;
-					left: -3px;
-					transform: translateY(-50%);
-
-					@include max(md) {
-						width: 8px;
-						height: 8px;
-						left: -16px;
-					}
-				}
-			}
-		}
-	}
-
-	&__copyrights {
-		font-size: 15.8438px;
-		line-height: 19px;
-		text-align: center;
-		margin-top: 28px;
-
-		@include max(md) {
-			font-size: 12px;
-			line-height: 15px;
-			opacity: 0.5;
-			margin-top: 38px;
-		}
-
-		br {
-			display: none;
-
-			@include max(md) {
-				display: block;
-			}
-		}
-	}
+  width: 100%;
+  padding: 276px 0 144px;
+  color: $white;
+  background-image: url("../images/footer-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include min(xxl) {
+    padding: 15vw 0 144px;
+  }
+
+  @include max(sm) {
+    padding: 160px 0 29px;
+    background-image: url("../images/footer-bg-small.png");
+  }
+
+  @include max(xxs) {
+    padding: 95px 0 29px;
+  }
+
+  &__title {
+    max-width: 610px;
+    margin: 0 auto;
+    font-size: 32px;
+    line-height: 39px;
+    font-weight: 500;
+    text-align: center;
+
+    @include max(sm) {
+      max-width: 247px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__browse {
+    text-align: center;
+    margin-top: 52px;
+    margin-bottom: 89px;
+
+    @include max(sm) {
+      margin-top: 38px;
+      margin-bottom: 49px;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      font-size: 16px;
+      line-height: 19px;
+      color: $white;
+
+      @include max(sm) {
+        font-size: 12px;
+        line-height: 15px;
+      }
+
+      @include hover {
+        svg {
+          animation: link-arrow-hover 0.5s linear;
+        }
+      }
+    }
+
+    svg {
+      width: 66px;
+      height: 10px;
+      fill: $white;
+      margin-left: 35px;
+
+      @include max(sm) {
+        width: 52px;
+        height: 8px;
+        margin-left: 25px;
+      }
+    }
+  }
+
+  &__search-dictionary {
+    margin-top: 62px !important;
+
+    @include max(md) {
+      margin-top: 56px !important;
+    }
+  }
+
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    margin: 94px 0 80px;
+
+    @include max(md) {
+      margin: 50px 0 38px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  &__menu-item {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 12px 39px 0 25px;
+    border-left: 1px solid $white-eb;
+
+    @include max(lg) {
+      padding: 12px 15px 0;
+    }
+
+    @include max(md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 50%;
+      border-left: 0;
+      padding: 0;
+    }
+
+    a {
+      font-size: 15.8438px;
+      line-height: 24px;
+      font-weight: 700;
+      color: $white;
+      position: relative;
+
+      @include max(lg) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      @include max(md) {
+        font-size: 12px;
+        line-height: 18px;
+        margin: 0 8.5px 8px;
+      }
+
+      @include hover {
+        text-decoration: underline;
+      }
+
+      &.dot {
+        &::before {
+          content: "";
+          display: block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $white;
+          position: absolute;
+          top: 6px;
+          left: -12px;
+        }
+      }
+
+      + a {
+        margin-top: 38px;
+
+        @include max(lg) {
+          margin-top: 25px;
+        }
+
+        @include max(md) {
+          margin-top: 0;
+        }
+      }
+
+      &.top-link {
+        text-transform: uppercase;
+
+        @include max(md) {
+          display: block;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+
+  &__col {
+    padding-left: 107px;
+
+    @include max(lg) {
+      padding-left: 0;
+      margin: 0 auto;
+    }
+
+    @include max(md) {
+      display: none;
+    }
+  }
+
+  &__login {
+    display: block;
+    font-size: 15.8438px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $white;
+    margin-top: 16px;
+    transition: opacity 0.3s ease;
+
+    @include max(md) {
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+    }
+
+    @include hover {
+      opacity: 0.65;
+    }
+  }
+
+  &__nickname {
+    font-size: 15.8438px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $white;
+    padding-top: 11px;
+
+    @include max(md) {
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+    }
+  }
+
+  &__login-mobile {
+    display: none;
+
+    @include max(md) {
+      display: block;
+    }
+  }
+
+  &__trial {
+    width: 160px;
+    margin: 27px auto 0;
+
+    @include max(md) {
+      width: 137px;
+    }
+  }
+
+  &__pagination {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    margin-top: 33px;
+
+    @include max(md) {
+      display: flex;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 30.15px;
+    height: 8px;
+    border-radius: 5px;
+    background-color: rgba($white, 0.5);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: $white;
+      transition: width 0.3s ease;
+    }
+
+    &:not(:last-child) {
+      margin-right: 7.14px;
+    }
+
+    &.swiper-pagination-bullet-active {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+
+  &__social {
+    margin-top: 85px;
+
+    @include max(md) {
+      margin-top: 47px;
+    }
+  }
+
+  &__bottom-links {
+    font-size: 15.8438px;
+    line-height: 19px;
+    text-align: center;
+    margin-top: 63px;
+
+    @include max(md) {
+      font-size: 12px;
+      line-height: 15px;
+      margin-top: 39px;
+    }
+
+    span {
+      padding-right: 10px;
+
+      @include max(md) {
+        display: block;
+        padding-right: 0;
+        padding-bottom: 5px;
+      }
+
+      br {
+        display: none;
+
+        @include max(md) {
+          display: block;
+        }
+      }
+    }
+
+    a {
+      display: inline-block;
+      padding-left: 18px;
+      position: relative;
+      color: $white;
+      transition: color 0.3s ease;
+
+      @include max(md) {
+        padding-left: 0;
+        margin-bottom: 13px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 16px;
+
+        @include max(md) {
+          margin-right: 0;
+        }
+      }
+
+      @include hover {
+        color: rgba($white, 0.65);
+      }
+
+      &::before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: $white;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+
+        @include max(md) {
+          display: none;
+        }
+      }
+
+      &.dot {
+        @include max(md) {
+          margin-left: 25px;
+        }
+
+        &::before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          background-color: $white;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: -3px;
+          transform: translateY(-50%);
+
+          @include max(md) {
+            width: 8px;
+            height: 8px;
+            left: -16px;
+          }
+        }
+      }
+    }
+  }
+
+  &__copyrights {
+    font-size: 15.8438px;
+    line-height: 19px;
+    text-align: center;
+    margin-top: 28px;
+
+    @include max(md) {
+      font-size: 12px;
+      line-height: 15px;
+      opacity: 0.5;
+      margin-top: 38px;
+    }
+
+    br {
+      display: none;
+
+      @include max(md) {
+        display: block;
+      }
+    }
+  }
 }

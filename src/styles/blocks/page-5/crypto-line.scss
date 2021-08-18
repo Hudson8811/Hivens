@@ -42,7 +42,7 @@
   &__list {
     overflow: visible;
 
-    @include max(sm) {
+    @include max(md) {
       &::before {
         content: "";
         position: absolute;
@@ -59,10 +59,10 @@
     .swiper-wrapper {
       width: auto;
       flex-wrap: wrap;
-      margin-left: -83px;
+      //margin-left: -83px;
       margin-top: -40px;
 
-      @include max(sm) {
+      @include max(md) {
         width: 100%;
         flex-wrap: nowrap;
         margin-left: 0;
@@ -73,7 +73,7 @@
     .swiper-navigation {
       display: none;
 
-      @include max(sm) {
+      @include max(md) {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -84,7 +84,7 @@
         cursor: pointer;
         appearance: none;
 
-        @include max(sm) {
+        @include max(md) {
           padding-left: 0;
           padding-right: 0;
         }
@@ -111,7 +111,7 @@
         opacity: 0;
         pointer-events: none;
 
-        @include max(sm) {
+        @include max(md) {
           display: none;
         }
       }
@@ -120,11 +120,12 @@
 
   &__item {
     width: 100%;
-    max-width: 106px;
+    max-width: calc(100% / 7);
     margin-top: 40px;
-    margin-left: 83px;
+    //margin-left: 83px;
 
-    @include max(sm) {
+    @include max(md) {
+      max-width: 106px;
       margin-left: 0;
       margin-top: 0;
       margin-right: 30px;

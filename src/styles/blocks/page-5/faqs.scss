@@ -60,7 +60,7 @@
       margin-bottom: -5px;
       justify-content: center;
 
-      @include max(sm) {
+      @include max(md) {
         flex-wrap: nowrap;
         margin-top: 0;
         margin-bottom: 0;
@@ -86,7 +86,7 @@
     margin: 5px 32px;
     //padding: 10px 23px;
 
-    @include max(sm) {
+    @include max(md) {
       margin: 0 62px 0 0;
     }
   }
