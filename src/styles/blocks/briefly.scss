@@ -606,13 +606,14 @@
     #{$self}__content {
       grid-column: 2;
       padding-left: 0;
-      padding-bottom: 38px;
+      padding-bottom: 44px;
       background-image: url("../images/briefly/bg-3.svg");
       background-position: left 50% bottom 0;
 
       @include max(md) {
         grid-column: 1 / span 2;
         grid-row: 2;
+        max-width: none;
         margin-bottom: 40px;
         padding-left: 15px;
       }

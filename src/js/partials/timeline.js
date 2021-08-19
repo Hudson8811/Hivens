@@ -169,7 +169,6 @@ $(window).on('load', () => {
       slides.forEach((it, index) => {
         const method = index < 7 ? 'add' : 'remove';
         it.classList[method]('timeline__item--active');
-        console.log(index, method, it);
       });
     }
 
