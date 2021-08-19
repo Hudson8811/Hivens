@@ -608,7 +608,7 @@
       padding-left: 0;
       padding-bottom: 44px;
       background-image: url("../images/briefly/bg-3.svg");
-      background-position: left 50% bottom 0;
+      background-position: left 0 bottom 0;
 
       @include max(md) {
         grid-column: 1 / span 2;

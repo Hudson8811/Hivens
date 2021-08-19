@@ -1,18 +1,12 @@
 window.addEventListener('load', () => {
   let width = document.documentElement.clientWidth;
   const blogCarouselOptions = {
-    slidesPerView: 'auto',//1.6,
+    slidesPerView: 'auto',
     speed: 300,
-    //spaceBetween: 19,
     loop: true,
     navigation: {
       nextEl: '.slider-next-long'
-    },
-    /*breakpoints: {
-      768: {
-        slidesPerView: 2.6
-      }
-    }*/
+    }
   }
   const elements = [
     {selector: '.__js_steps-carousel'},

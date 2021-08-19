@@ -1,7 +1,7 @@
 .platform-preview {
   padding: 70px 0;
 
-  @include max(767) {
+  @include max(sm) {
     padding: 40px 0;
   }
 
@@ -11,26 +11,40 @@
     grid-template-rows: auto 1fr;
     column-gap: 37px;
 
-    @include max(1079) {
-      grid-template-columns: 1fr 375px;
+    @include max(md) {
+      //grid-template-columns: 1fr 375px;
+      display: block;
     }
 
-    @include max(767) {
+    @include max(sm) {
       display: block;
     }
   }
 
-  &__title {
+  &__header {
     grid-column: 2;
     margin-bottom: 28px;
 
-    @include max(1079) {
+    @include max(md) {
       grid-column: 1;
-      max-width: 530px;
+      margin-bottom: 35px;
+      //
+      display: flex;
+      justify-content: center;
+    }
+    @include max(sm) {
+      //margin-bottom: 35px;
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    @include max(md) {
+      //max-width: 530px;
       margin-left: 15px;
     }
 
-    @include max(767) {
+    @include max(sm) {
       margin-bottom: 35px;
       margin-left: 0;
     }
@@ -48,11 +62,14 @@
     }
 
     @include max(1079) {
-      grid-row: 2;
-      align-self: start;
+      //grid-row: 2;
+      //align-self: start;
+      //
+      max-width: 703px;
+      margin: 0 auto 35px;
     }
 
-    @include max(767) {
+    @include max(sm) {
       width: calc(100% + 64px);
       left: 50%;
       transform: translateX(-50%);
@@ -117,7 +134,7 @@
           border-bottom-right-radius: 0;
         }
 
-        @include max(767) {
+        @include max(sm) {
           top: 5%;
           left: 9.6%;
           width: auto;
@@ -143,7 +160,12 @@
           font-size: vw(6, 1270);
         }
 
-        @include max(767) {
+        @include max(md) {
+          top: 85.2%;
+          left: 53.4%;
+        }
+
+        @include max(sm) {
           top: 86.2%;
           left: 45%;
           font-size: vw(4, 375);
@@ -168,7 +190,12 @@
           font-size: vw(9, 1270);
         }
 
-        @include max(767) {
+        @include max(md) {
+          top: 77%;
+          left: 69.3%;
+        }
+
+        @include max(sm) {
           top: 77.4%;
           left: 66.3%;
           font-size: vw(6, 375);
@@ -193,13 +220,13 @@
     @include max(1270) {
     }
 
-    @include max(1079) {
+    @include max(md) {
       grid-row: 1 / span 2;
       padding-bottom: 50px;
       background-size: 66% auto;
     }
 
-    @include max(767) {
+    @include max(sm) {
       padding-bottom: vw(123, 375);
       background-size: 90% auto;
       background-position: left 50% bottom 0;
@@ -218,7 +245,7 @@
     vertical-align: top;
     margin-top: 38px;
 
-    @include max(767) {
+    @include max(sm) {
       margin-top: 30px;
     }
 

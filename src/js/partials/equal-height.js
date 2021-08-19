@@ -1,6 +1,6 @@
-$(document).ready(function() {
+$(document).on('load', function() {
 	// Set equal height to elems in footer carousel
-	$(window).resize(function () {
+	$(window).on('resize', function () {
 		setEqualHeight($('.footer__menu-item'));
 		//setEqualHeight($('.blog__item'));
 	});
