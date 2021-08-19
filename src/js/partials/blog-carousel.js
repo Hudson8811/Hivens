@@ -9,14 +9,10 @@ if (blogCarouselEl) {
 		checkBreakpoint();
 
 		function checkBreakpoint() {
-			if (breakpoint.matches === true) {
-				if (blogCarousel !== undefined) {
-					blogCarousel.destroy(true, true);
-				}
-
-				return;
-			} else if (breakpoint.matches === false) {
-				return initBlogCarousel();
+			if (breakpoint.matches && blogCarousel) {
+				blogCarousel.destroy();
+			} else if (!breakpoint.matches && !blogCarousel) {
+				 initBlogCarousel();
 			}
 		}
 

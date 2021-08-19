@@ -1,5 +1,19 @@
 window.addEventListener('load', () => {
   let width = document.documentElement.clientWidth;
+  const blogCarouselOptions = {
+    slidesPerView: 'auto',//1.6,
+    speed: 300,
+    //spaceBetween: 19,
+    loop: true,
+    navigation: {
+      nextEl: '.slider-next-long'
+    },
+    /*breakpoints: {
+      768: {
+        slidesPerView: 2.6
+      }
+    }*/
+  }
   const elements = [
     {selector: '.__js_steps-carousel'},
     {selector: '.__js_rating-carousel'},
@@ -11,13 +25,22 @@ window.addEventListener('load', () => {
     {selector: '.__js_partners-carousel'},
     {selector: '.__js_token-sale-carousel'},
     {selector: '.__js_node-types-carousel'},
-    {selector: '.__js_documents-carousel', breakpoint: 1079}
+    {selector: '.__js_documents-carousel', breakpoint: 1079},
+    {selector: '.__js_blog-carousel', breakpoint: 1079, options: blogCarouselOptions}
   ];
 
   elements.forEach(it => {
     const carouselEl = document.querySelector(it.selector);
     let isInit = false;
     let carousel = null;
+    const options = it.options || {
+      speed: 300,
+      slidesPerView: 'auto',
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    }
 
     if (carouselEl) {
       let isInit = false;
@@ -42,17 +65,11 @@ window.addEventListener('load', () => {
       });
 
       function initCarousel(el) {
-        carousel = new Swiper(el, {
-          speed: 300,
-          slidesPerView: 'auto',
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
+        carousel = new Swiper(el, options);
       }
     }
   });
 
   
 });
+

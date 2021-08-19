@@ -24,7 +24,7 @@
     position: relative;
 
     @include max(md) {
-      height: 290px;
+      height: 206px;
     }
 
     @include max(sm) {
@@ -53,12 +53,14 @@
   }
 
   &__content {
-    padding: 40px 30px 48px 31px;
-    background-color: $white;
+    min-height: 214px;
     margin-top: -7px;
+    padding: 40px 30px 20px 31px;
+    background-color: $white;
 
     @include max(md) {
-      padding: 25px 13px 39px 15px;
+      min-height: 113px;
+      padding: 25px 13px 20px 15px;
     }
   }
 
