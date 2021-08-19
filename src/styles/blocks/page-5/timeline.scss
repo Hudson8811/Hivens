@@ -143,7 +143,7 @@
         opacity: 0;
         pointer-events: none;
 
-        @include max(sm) {
+        @include max(md) {
           display: none;
         }
       }

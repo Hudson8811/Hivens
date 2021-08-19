@@ -120,7 +120,7 @@ $(window).on('load', () => {
         }
       });
 
-      //pathPrepare(line);
+      pathPrepare(line);
       line.style.strokeDasharray = length;
       line.style.strokeDashoffset = length - startLineLengthOffset;
       setLineAnimation();
@@ -136,7 +136,7 @@ $(window).on('load', () => {
       if (width <= breakpoint && !isInit) {
         initCarousel();
         isInit = true;
-        prepareSlides();
+        window.removeEventListener('scroll', setLineAnimation);
       } else if (width > breakpoint && isInit) {
         carousel.destroy();
         isInit = false;
@@ -144,15 +144,11 @@ $(window).on('load', () => {
         slides.forEach(it => {
           it.classList.remove('timeline__item--active');
         });
+        pathPrepare(line);
 
         setLineAnimation();
+        window.addEventListener('scroll', setLineAnimation);
       }
-
-
-
-      slides.forEach(it => {
-        width <= breakpoint ? it.classList.add('timeline__item--active') :  it.classList.remove('timeline__item--active');
-      });
     });
 
     function initCarousel() {
@@ -163,6 +159,9 @@ $(window).on('load', () => {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+        on: {
+          afterInit: prepareSlides
+        }
       });
     }
 
@@ -170,6 +169,7 @@ $(window).on('load', () => {
       slides.forEach((it, index) => {
         const method = index < 7 ? 'add' : 'remove';
         it.classList[method]('timeline__item--active');
+        console.log(index, method, it);
       });
     }
 
