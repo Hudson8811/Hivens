@@ -1,9 +1,11 @@
 $(window).on("load", function () {
+
   const toggleMenu = () => {
     const menuBtn = document.querySelector(".header-burger");
     const mainMenu = document.querySelector(".main-menu");
     const menuOverlay = document.querySelector(".sidenav-overlay");
     let $listItem = null;
+
 
     menuBtn.addEventListener("click", (e) => {
       const target = e.target;
@@ -15,7 +17,7 @@ $(window).on("load", function () {
       }
     });
 
-    mainMenu.addEventListener("click", (event) => {
+    mainMenu.onclick = (event) => {
       let target = event.target;
 
       let btnClose = target.closest("a[data-toggle=collapse]");
@@ -29,6 +31,7 @@ $(window).on("load", function () {
         document.body.classList.remove("scroll-blocked");
       }
 
+      
       if (dropdownItem) {
         event.preventDefault();
         let dropdown = dropdownItem.closest("li");
@@ -98,7 +101,9 @@ $(window).on("load", function () {
           );
         }, 50);
       }
-    });
+      
+      
+    };
 
     menuOverlay.addEventListener("click", () => {
       if (mainMenu.classList.contains("menu-open")) {
