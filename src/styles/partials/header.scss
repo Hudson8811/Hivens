@@ -1082,7 +1082,7 @@
 }
 
 .header .notification-text {
-  margin-bottom: 0.5rem;
+  margin-top: 4px;
   font-size: 11.6667px;
   color: #b9b9c3;
 }
@@ -1224,8 +1224,8 @@ label {
 
 .custom-switch .custom-control-label:after {
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 5px;
+  left: 3px;
   box-shadow: -1px 2px 3px 0 rgba(34, 41, 47, 0.2);
   background-color: #ffffff;
   transition: all 0.15s ease-out;
@@ -1308,7 +1308,7 @@ label {
 
 .header .media-body {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
 }
 

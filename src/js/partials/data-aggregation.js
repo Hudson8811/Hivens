@@ -138,47 +138,49 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function changeAvgSessionBlock(item) {
-    const isMobile = document.documentElement.clientWidth <= 767;
+    setTimeout(function () {
+      const isMobile = document.documentElement.clientWidth <= 767;
 
-    let goalOutput, usersOutput, retentionOutput, durationOutput = null;
+      let goalOutput, usersOutput, retentionOutput, durationOutput = null;
 
-    if (isMobile) {
-      goalOutput = item.querySelector("#goal");
-      usersOutput = item.querySelector("#users");
-      retentionOutput = item.querySelector("#retention");
-      durationOutput = item.querySelector("#duration");
-    } else {
-      goalOutput = document.getElementById("goal");
-      usersOutput = document.getElementById("users");
-      retentionOutput = document.getElementById("retention");
-      durationOutput = document.getElementById("duration");
-    }
+      if (isMobile) {
+        goalOutput = item.querySelector("#goal");
+        usersOutput = item.querySelector("#users");
+        retentionOutput = item.querySelector("#retention");
+        durationOutput = item.querySelector("#duration");
+      } else {
+        goalOutput = document.getElementById("goal");
+        usersOutput = document.getElementById("users");
+        retentionOutput = document.getElementById("retention");
+        durationOutput = document.getElementById("duration");
+      }
 
 
-    const goalProgress = goalOutput.querySelector(".scale__progress-fill");
-    const usersProgress = usersOutput.querySelector(".scale__progress-fill");
-    const retentionProgress = retentionOutput.querySelector(".scale__progress-fill");
-    const durationProgress = durationOutput.querySelector(".scale__progress-fill");
+      const goalProgress = goalOutput.querySelector(".scale__progress-fill");
+      const usersProgress = usersOutput.querySelector(".scale__progress-fill");
+      const retentionProgress = retentionOutput.querySelector(".scale__progress-fill");
+      const durationProgress = durationOutput.querySelector(".scale__progress-fill");
 
-    const goal = item.dataset.goal;
-    const goalTarget = item.dataset.goalTarget;
-    const users = item.dataset.users;
-    const usersTarget = item.dataset.usersTarget;
-    const retention = item.dataset.retention;
-    const retentionTarget = item.dataset.retentionTarget;
-    const duration = item.dataset.duration;
-    const durationTarget = item.dataset.durationTarget;
+      const goal = item.dataset.goal;
+      const goalTarget = item.dataset.goalTarget;
+      const users = item.dataset.users;
+      const usersTarget = item.dataset.usersTarget;
+      const retention = item.dataset.retention;
+      const retentionTarget = item.dataset.retentionTarget;
+      const duration = item.dataset.duration;
+      const durationTarget = item.dataset.durationTarget;
 
-    goalOutput.querySelector("span").textContent = "$" + goal;
-    usersOutput.querySelector("span").textContent = users + "K";
-    retentionOutput.querySelector("span").textContent = retention + "%";
-    durationOutput.querySelector("span").textContent = duration + "yr";
+      goalOutput.querySelector("span").textContent = "$" + goal;
+      usersOutput.querySelector("span").textContent = users + "K";
+      retentionOutput.querySelector("span").textContent = retention + "%";
+      durationOutput.querySelector("span").textContent = duration + "yr";
 
-    goalProgress.style.width = Math.floor((goal / goalTarget) * 100) + "%";
-    usersProgress.style.width = Math.floor((users / usersTarget) * 100) + "%";
-    retentionProgress.style.width =
-      Math.floor((retention / retentionTarget) * 100) + "%";
-    durationProgress.style.width =
-      Math.floor((duration / durationTarget) * 100) + "%";
+      goalProgress.style.width = Math.floor((goal / goalTarget) * 100) + "%";
+      usersProgress.style.width = Math.floor((users / usersTarget) * 100) + "%";
+      retentionProgress.style.width =
+          Math.floor((retention / retentionTarget) * 100) + "%";
+      durationProgress.style.width =
+          Math.floor((duration / durationTarget) * 100) + "%";
+    }, 200);
   }
 });

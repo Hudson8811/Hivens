@@ -178,7 +178,11 @@
     border-radius: 7.57836px;
 
     @include max(lg) {
-      padding: 8px 75px 8px 14px;
+      padding: 8px 134px 8px 14px;
+    }
+
+    @include max(md) {
+      padding: 8px 92px 8px 14px;
     }
 
     &::placeholder {

@@ -1,5 +1,6 @@
 .faqs {
   padding: 70px 0;
+  overflow: hidden;
 
   @include max(sm) {
     padding: 30px 0 40px;
@@ -68,9 +69,11 @@
         flex-wrap: nowrap;
         margin-top: 0;
         margin-bottom: 0;
-        //justify-content: flex-start;
+        justify-content: flex-start;
+      }
 
-        &::before {
+      &::before {
+        @include max(sm) {
           content: "";
           position: absolute;
           top: 0;
@@ -81,10 +84,6 @@
           height: 100%;
           background-color: $white;
         }
-      }
-
-      @include max(sm) {
-        justify-content: flex-start;
       }
     }
   }

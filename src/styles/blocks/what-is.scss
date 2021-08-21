@@ -102,6 +102,16 @@
 
 		@include max(md) {
 			display: none;
+			width: 400px;
+			height: 428px;
+		}
+
+		@media (min-width: 1080px) and (max-width: 1200px) {
+			width: 439px;
+			height: 470px;
+		}
+
+		@include max(xs) {
 			width: 230px;
 			height: 239px;
 		}
@@ -122,6 +132,20 @@
 			left: 250px;
 
 			@include max(md) {
+				font-size: 7px;
+				line-height: 9px;
+				top: 131px;
+				left: 178px;
+			}
+
+			@media (min-width: 1080px) and (max-width: 1200px) {
+				font-size: 12px;
+				line-height: 14px;
+				top: 142px;
+				left: 187px;
+			}
+
+			@include max(xs) {
 				font-size: 5px;
 				line-height: 6px;
 				top: 72px;
