@@ -13,7 +13,6 @@ window.addEventListener('load', () => {
 			applyingCarousel = new Swiper('.__js_applying-carousel', {
 				slidesPerView: 1,
 				speed: 300,
-				loop: true,
 				navigation: false,
 				observer: true,
 				observeParents: true,
@@ -26,6 +25,7 @@ window.addEventListener('load', () => {
 				},
 				breakpoints: {
 					1080: {
+						loop: true,
 						navigation: {
 							prevEl: '.slider-prev',
 							nextEl: '.slider-next'
@@ -64,6 +64,9 @@ window.addEventListener('load', () => {
 					}
 				}
 			});
+
+			applyingCarousel.controller.control = applyingPagiCarousel;
+			applyingPagiCarousel.controller.control = applyingCarousel;
 		}
 	}
 });
