@@ -63,7 +63,7 @@
 
     &-text {
       position: absolute;
-      top: 5.8%;
+      top: 5.2%;
       left: 5.2%;
       font-weight: bold;
       font-size: 17px;
@@ -173,6 +173,10 @@
         @include hover {
           background-color: $green-9e;
           color: $white;
+
+          svg {
+            fill: $white;
+          }
         }
 
         &.separated {
