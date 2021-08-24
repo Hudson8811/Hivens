@@ -102,7 +102,7 @@ window.onload = () => {
       if (sceneInner.classList.contains('hide')) {
         if (width > breakpoint) {
           scene.append(setOverlay(closeBeehive));
-          document.body.style.overflow = 'hidden';
+          //document.body.style.overflow = 'hidden';
           document.body.style.marginRight = getScrollbarWidth() + 'px';
         }
         window.scrollTo({
