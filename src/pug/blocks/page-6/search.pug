@@ -7,15 +7,21 @@ section.search.search-section
 				form.search__form(action="#")
 					.search-filters
 						.swiper-wrapper 
-							+button('People', 'button search-filters__button swiper-slide button--rounded button--outline-green active', 'person')(type="button")
-							+button('Services', 'button search-filters__button swiper-slide button--rounded button--outline-green', 'services-hand')(type="button")
-							+button('Company', 'button search-filters__button swiper-slide button--rounded button--outline-green', 'company')(type="button")
+							+button('People', 'button search-filters__button swiper-slide button--rounded button--outline-green active', 'person')(type="button", data-id="1")
+							+button('Services', 'button search-filters__button swiper-slide button--rounded button--outline-green', 'services-hand')(type="button", data-id="2")
+							+button('Company', 'button search-filters__button swiper-slide button--rounded button--outline-green', 'company')(type="button", data-id="3")
 							button.button.search-filters__button.search-filters__button--dropdown.swiper-slide.search-filters__button--more.button--rounded.button--outline-green(type="button")
 								span ...
 								.search-filters__dropdown
-									a(href='#') Websites
-									a(href='#') Products
-									a(href='#') Objects
+									a(href='#', data-id="4")
+										+icon('globe')
+										span Websites
+									a(href='#', data-id="5")
+										+icon('marker')
+										span Products
+									a(href='#', data-id="6")
+										+icon('goods')
+										span Objects
 					.search__input-group
 						input(type="text" placeholder="Enter name, email, url or any neighorhood").search__input
 						button.search__input-button 
@@ -24,5 +30,5 @@ section.search.search-section
 				p.search__text Search by name, phone, address, or email to confidentially lookup information about people you know such as yourself, friends, family, acquaintances, and old classmates.
 
 			.search__image
-				img(src="images/page-6/search.png", srcset="images/page-6/search@2x.png 2x", alt="Поиск")
+				img(src="images/page-6/search/1.png", srcset="images/page-6/search/1@2x.png 2x", alt="Поиск")
 				span.search__image-text people

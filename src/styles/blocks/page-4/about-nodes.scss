@@ -88,6 +88,8 @@
       left: 0;
       z-index: 1001;
       //background-color: rgba(yellow, 0.4);
+      overflow: auto;
+      margin-top: -60px;
       transition: opacity 0.3s ease;
 
       @include max(sm) {

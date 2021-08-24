@@ -128,7 +128,14 @@
       }
 
       &--dropdown {
-        width: 126px;
+        width: 155px;
+
+        &:active,
+        &:focus {
+          svg {
+            fill: $white;
+          }
+        }
       }
     }
 
@@ -148,6 +155,10 @@
       &.open {
         opacity: 1;
         pointer-events: auto;
+
+        svg {
+          fill: $green-9e;
+        }
       }
 
       a {
