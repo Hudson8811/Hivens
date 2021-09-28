@@ -146,3 +146,49 @@ input {
     opacity: 0;
   }
 }
+
+/* Стартовая страница */
+.start-page {
+  width: 100%;
+  height: 100vh;
+  padding: 50px 0 100px;
+  background: url("../images/first-bg.png") no-repeat top;
+  background-size: cover;
+  color: $white;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-size: 42px;
+
+    @include max(sm) {
+      font-size: 32px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      a {
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 500;
+        color: $white;
+
+        @include max(sm) {
+          font-size: 16px;
+          line-height: 28px;
+        }
+
+        @include hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,14 +1,25 @@
-extends ../layouts/default
+extends ../layouts/components
 
 block vars
 	-
 		const page = {
-			title: 'Главная'
+			title: 'Проект "Дайвинг" - разводящая'
 		};
+		const pages = [
+			{name: 'Page-1', url: 'page-1.html'},
+			{name: 'Page-2', url: 'page-2.html'},
+			{name: 'Page-3', url: 'page-3.html'},
+			{name: 'Page-4', url: 'page-4.html'},
+			{name: 'Page-5', url: 'page-5.html'},
+			{name: 'Page-6', url: 'page-6.html'},
+			{name: 'Slider page', url: 'page-slider.html'},
+		]
 
 block main
-	include ../blocks/first-screen.pug
-	include ../blocks/records.pug
-	include ../blocks/applying.pug
-	include ../blocks/what-is.pug
-	include ../blocks/blog.pug
+	section.start-page
+		.container.start-page__container
+			h1.start-page__title Hivens
+			ul
+				each item in pages
+					li
+						a(href= item.url, target="_blank")= item.name
