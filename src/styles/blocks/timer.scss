@@ -27,7 +27,7 @@
     //max-width: 94px;
     height: 94px;
     font-size: 30px;
-    line-height: (36.57 / 30);
+    line-height: calc(36.57 / 30);
     font-weight: 600;
     color: $white;
     border-radius: 12px;
@@ -45,7 +45,7 @@
   &__caption {
     margin-top: 10px;
     font-size: 14px;
-    line-height: (18.5 / 14);
+    line-height: calc(18.5 / 14);
     font-weight: 500;
     color: $green-9e;
     text-align: center;
@@ -58,7 +58,7 @@
   &__expired {
     width: 100%;
     font-size: 20px;
-    line-height: (24 / 20);
+    line-height: calc(24 / 20);
     font-weight: 500;
     color: $white;
     text-align: center;

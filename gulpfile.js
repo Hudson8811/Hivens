@@ -3,7 +3,7 @@ const { src, dest, parallel, series, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
 const cleancss = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
@@ -31,7 +31,7 @@ function startwatch() {
 	watch(['src/**/*.js', '!src/**/*.min.js'], scripts);
 	watch('src/**/styles/**/*', styles);
 	watch('src/**/*.html').on('change', browserSync.reload);
-	watch('src/images/**/*', copyImages);
+	watch('src/images/**/*', images);
 	watch('src/pug/**/*.pug', pugHtml);
 	watch('src/sprite/**/*.svg', icons);
 }
@@ -97,13 +97,6 @@ function images() {
 		.pipe(browserSync.stream())
 }
 
-function copyImages() {
-	return src('src/images/**/*')
-		.pipe(newer('build/images/'))
-		.pipe(dest('build/images/'))
-		.pipe(browserSync.stream());
-}
-
 function icons() {
 	return src('src/sprite/**/*.svg')
 			.pipe(plumber())
@@ -126,11 +119,6 @@ function icons() {
 			.pipe(browserSync.stream())
 }
 
-function favicons() {
-	return src('src/favicons/*.*')
-		.pipe(dest('build/favicons'));
-}
-
 function cleanimg() {
 	return del('build/images/**/*', { force: true })
 }
@@ -148,9 +136,7 @@ exports.styles = styles;
 exports.fonts = fonts;
 exports.images = images;
 exports.icons = icons;
-exports.copyImages = copyImages;
-exports.favicons = favicons;
 
-exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images, icons, favicons);
+exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images, icons);
 
-exports.default = parallel(pugHtml, fonts, styles, scripts, copyImages,/*images,*/ icons, favicons, browsersync, startwatch);
+exports.default = parallel(pugHtml, fonts, styles, scripts, images, icons, browsersync, startwatch);

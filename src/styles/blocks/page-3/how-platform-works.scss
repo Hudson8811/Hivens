@@ -74,7 +74,7 @@
         align-items: center;
         color: #fff;
         font-size: 17px;
-        line-height: (19 / 17);
+        line-height: calc(19 / 17);
 
         @include max(1270) {
           font-size: vw(17, 1270);

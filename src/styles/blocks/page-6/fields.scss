@@ -216,7 +216,7 @@
       width: 100%;
       font-size: 14px;
       font-weight: normal;
-      line-height: (21 / 14);
+      line-height: calc(21 / 14);
 
       span {
         display: inline-block;
@@ -298,7 +298,7 @@
     &-title {
       font-weight: 500;
       font-size: 21px;
-      line-height: (26 / 21);
+      line-height: calc(26 / 21);
       text-align: center;
       color: $green-9e;
     }
@@ -645,7 +645,7 @@
       width: 45%;
       font-weight: 500;
       font-size: 16px;
-      line-height: (20 / 16);
+      line-height: calc(20 / 16);
       letter-spacing: 0.4px;
       color: $green-9e;
       margin-top: 10px;
@@ -716,7 +716,7 @@
       padding: 10px;
       font-weight: 500;
       font-size: 16px;
-      line-height: (20 / 16);
+      line-height: calc(20 / 16);
       letter-spacing: 0.4px;
       color: $citrus;
       margin: 30px auto 0 auto;

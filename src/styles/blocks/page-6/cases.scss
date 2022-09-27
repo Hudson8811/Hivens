@@ -277,7 +277,7 @@
     &-title {
       font-weight: bold;
       font-size: 12px;
-      line-height: (18 / 12);
+      line-height: calc(18 / 12);
       color: $dark-gray-6e;
 
       @include max(1270) {

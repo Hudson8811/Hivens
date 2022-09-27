@@ -127,7 +127,7 @@
           left: 21.8%;
           max-width: 110px;
           font-size: 14px;
-          line-height: (15 / 14);
+          line-height: calc(15 / 14);
           color: $green-9e;
           font-weight: 700;
           text-align: center;
@@ -165,7 +165,7 @@
           top: 69.5%;
           left: 64.4%;
           font-size: 14px;
-          line-height: (15 / 14);
+          line-height: calc(15 / 14);
           color: $white;
           font-weight: 700;
 
@@ -254,7 +254,7 @@
       margin-bottom: 49px;
       padding: 3px 26px 3px 15px;
       font-size: 49px;
-      line-height: (60 / 49);
+      line-height: calc(60 / 49);
       color: $white;
       text-align: center;
       background-color: $citrus;
@@ -336,7 +336,7 @@
       max-width: 294px;
       margin: 0 auto 20px;
       font-size: 14px;
-      line-height: (21 / 14);
+      line-height: calc(21 / 14);
       color: $dark-gray-6e;
       text-align: center;
 

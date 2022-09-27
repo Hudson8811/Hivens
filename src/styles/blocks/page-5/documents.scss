@@ -78,7 +78,7 @@
   &__subtitle {
     margin-top: 31px;
     font-size: 14px;
-    line-height: (21 / 14);
+    line-height: calc(21 / 14);
     color: $dark-gray-6e;
     text-transform: uppercase;
     font-weight: 600;
@@ -87,7 +87,7 @@
   &__text {
     margin-top: 30px;
     font-size: 14px;
-    line-height: (21 / 14);
+    line-height: calc(21 / 14);
     color: $dark-gray-6e;
   }
 

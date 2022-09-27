@@ -118,7 +118,7 @@
     &-name {
       padding: 8px 16px 9px;
       font-size: 14px;
-      line-height: (21 / 14);
+      line-height: calc(21 / 14);
       font-weight: 700;
       color: $white;
       border-radius: 6px 6px 0 0;
@@ -128,7 +128,7 @@
     &-main {
       padding: 14px 16px;
       font-size: 14px;
-      line-height: (21 / 14);
+      line-height: calc(21 / 14);
       color: $dark-gray-6e;
     }
   }

@@ -8,7 +8,7 @@
     padding: 20px 10px 21px;
 
     font-size: 21px;
-    line-height: (25.6 / 21);
+    line-height: calc(25.6 / 21);
     font-weight: 500;
     color: $white;
     text-align: center;
@@ -20,7 +20,7 @@
   &__datetime,
   &__main {
     font-size: 14px;
-    line-height: (21 / 14);
+    line-height: calc(21 / 14);
     color: $dark-gray-6e;
     text-align: center;
   }

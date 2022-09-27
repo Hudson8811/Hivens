@@ -155,21 +155,21 @@
   &__count {
     font-weight: 600;
     font-size: 24px;
-    line-height: (29 / 24);
+    line-height: calc(29 / 24);
     color: #5e5873;
   }
 
   &__name {
     font-weight: 500;
     font-size: 14px;
-    line-height: (23 / 14);
+    line-height: calc(23 / 14);
     margin-top: 4px;
   }
 
   &__text {
     font-weight: normal;
     font-size: 16px;
-    line-height: (20 / 16);
+    line-height: calc(20 / 16);
     color: $dark-gray-6e;
     margin-top: 19px;
   }
@@ -177,7 +177,7 @@
   &__term {
     &--absolute {
       font-size: 14px;
-      line-height: (21 / 14);
+      line-height: calc(21 / 14);
       text-align: right;
       color: #6e6b7b;
       position: absolute;
@@ -227,7 +227,7 @@
   &__percents {
     font-weight: normal;
     font-size: 16px;
-    line-height: (20 / 16);
+    line-height: calc(20 / 16);
     color: $green-9e;
     margin-right: 8px;
     display: inline-block;
@@ -324,7 +324,7 @@
       span {
         font-weight: 500;
         font-size: 15px;
-        line-height: (24 / 15);
+        line-height: calc(24 / 15);
         color: #5e5873;
       }
     }

@@ -60,14 +60,14 @@
 		&-title {
 			font-weight: 500;
 			font-size: 18px;
-			line-height: (22 / 18);
+			line-height: calc(22 / 18);
 			color: $green-9e;
 		}
 
 		&-text {
 			font-weight: 500;
 			font-size: 14px;
-			line-height: (18 / 14);
+			line-height: calc(18 / 14);
 			color: $green-9e;
 			margin-top: 9px;
 		}

@@ -335,7 +335,7 @@
     &-title {
       font-weight: 600;
       font-size: 12px;
-      line-height: (18 / 12);
+      line-height: calc(18 / 12);
       color: $green-9e;
 
       @include max(1105) {
@@ -349,7 +349,7 @@
 
     &-subtitle {
       font-size: 10px;
-      line-height: (12 / 10);
+      line-height: calc(12 / 10);
       color: $green-9e;
       margin-top: 3px;
 
@@ -519,7 +519,7 @@
         margin-left: -7px;
         margin-top: -20px;
         font-size: 12px;
-        line-height: (18 / 12);
+        line-height: calc(18 / 12);
         font-weight: 700;
         text-transform: uppercase;
         color: $green-9e;
@@ -570,7 +570,7 @@
 
     font-weight: 500;
     font-size: 7.82989px;
-    line-height: (10 / 7.82989);
+    line-height: calc(10 / 7.82989);
     color: $citrus;
 
     @include max(1105) {

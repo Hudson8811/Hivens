@@ -29,7 +29,7 @@
 
     font-size: 14px;
     color: $dark-gray-6e;
-    line-height: (21 / 14);
+    line-height: calc(21 / 14);
     text-align: center;
 
     @include max(sm) {
@@ -897,7 +897,7 @@
     &-title {
       margin: 0 0 11px;
       font-size: 14px;
-      line-height: (17 / 14);
+      line-height: calc(17 / 14);
       color: $white;
       font-weight: 700;
       text-transform: uppercase;
@@ -910,7 +910,7 @@
       @include max(sm) {
         margin: 0;
         font-size: 12px;
-        line-height: (18 / 12);
+        line-height: calc(18 / 12);
         color: $dark-gray-6e;
         text-transform: none;
       }
@@ -918,7 +918,7 @@
 
     &-text {
       font-size: 8px;
-      line-height: (11 / 8);
+      line-height: calc(11 / 8);
       color: $white;
       font-weight: 500;
 
@@ -928,7 +928,7 @@
 
       @include max(sm) {
         font-size: 12px;
-        line-height: (18 / 12);
+        line-height: calc(18 / 12);
         color: $dark-gray-6e;
         font-weight: 400;
       }

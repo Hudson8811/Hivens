@@ -46,7 +46,7 @@
     color: $gray-ba;
     font-weight: 700;
     font-size: 20px;
-    line-height: (29 / 20);
+    line-height: calc(29 / 20);
 
     @include max(1270) {
       font-size: vw(20, 1270);
@@ -97,7 +97,7 @@
   &__span {
     display: block;
     font-size: 11px;
-    line-height: (29 / 11);
+    line-height: calc(29 / 11);
 
     @include max(1270) {
       font-size: vw(11, 1270);

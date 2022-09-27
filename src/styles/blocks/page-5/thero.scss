@@ -29,7 +29,7 @@
   &__title {
     margin-bottom: 39px;
     font-size: 39px;
-    line-height: (48 / 39);
+    line-height: calc(48 / 39);
     font-weight: 400;
     color: $white;
 
@@ -47,7 +47,7 @@
   &__text {
     margin-bottom: 39px;
     font-size: 24px;
-    line-height: (29 / 24);
+    line-height: calc(29 / 24);
     font-weight: 500;
     color: $white;
 
@@ -112,7 +112,7 @@
     &-title {
       margin-bottom: 22px;
       font-size: 28px;
-      line-height: (34 / 28);
+      line-height: calc(34 / 28);
       font-weight: 500;
       color: $white;
 
@@ -159,7 +159,7 @@
     &-title {
       margin-bottom: 27px;
       font-size: 28px;
-      line-height: (34 / 28);
+      line-height: calc(34 / 28);
       font-weight: 500;
       color: $white;
       text-align: center;
@@ -202,7 +202,7 @@
     &-heading {
       max-width: 160px;
       font-size: 14px;
-      line-height: (18.5 / 14);
+      line-height: calc(18.5 / 14);
       font-weight: 500;
       color: $green-9e;
       text-transform: uppercase;
@@ -228,7 +228,7 @@
 
     &-text {
       font-size: 28px;
-      line-height: (34 / 28);
+      line-height: calc(34 / 28);
       font-weight: 500;
       color: $white;
       text-transform: uppercase;
@@ -269,7 +269,7 @@
       @include max(md) {
         padding: 6px 15px;
         font-size: 8px;
-        line-height: (10 / 8);
+        line-height: calc(10 / 8);
         letter-spacing: 0.24px;
       }
     }

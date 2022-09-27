@@ -109,3 +109,121 @@
 		}
 	}
 }
+
+
+
+		.text-modal-first-screen {
+			position: fixed;
+			z-index: 9999;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			pointer-events: none;
+			visibility: hidden;
+			&__back {
+				background-color: rgba($color: #000000, $alpha: 0.4);
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				opacity: 0;
+				transition: all 0.3s ease 0s;
+			}
+			&__container {
+				margin: 1.75rem auto;
+				max-width: 500px;
+				transition: transform 0.3s ease-out;
+				pointer-events: none;
+				opacity: 0;
+				transform: translate(0, -20%);
+			}
+			&__content {
+				box-shadow: 0 5px 20px 0 rgb(34 41 47 / 10%);
+				overflow: visible;
+				background-clip: padding-box;
+				background-color: #fff;
+				border: 0 solid rgba(34, 41, 47, .2);
+				border-radius: 0.357rem;
+				display: flex;
+				flex-direction: column;
+				outline: 0;
+				pointer-events: auto;
+				position: relative;
+				width: 100%;
+			}
+
+				&__header {
+					background-color: #f8f8f8;
+					align-items: center;
+					border-bottom: 0 solid #ebe9f1;
+					border-top-left-radius: 0.357rem;
+					border-top-right-radius: 0.357rem;
+					display: flex;
+					flex-shrink: 0;
+					justify-content: space-between;
+					padding: 0.8rem 1.4rem;
+				}
+
+				&__title {}
+
+				&__close {
+					background-color: #fff;
+					border-radius: 0.357rem;
+					box-shadow: 0 5px 20px 0 rgb(34 41 47 / 10%);
+					opacity: 1;
+					padding: 0.8rem;
+					position: relative;
+					transform: translate(18px, -10px);
+					transition: all .23s ease .1s;
+					border: 0;
+					border-radius: 0.357rem;
+					box-sizing: content-box;
+					color: currentColor;
+					height: 0.75rem;
+					opacity: .4;
+					padding: 0.25em;
+					width: 0.75rem;
+					cursor: pointer;
+					&::before,&::after{
+						content:'';
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						background-color: #000000;
+						width: 60%;
+						height: 1px;
+					}
+					&::before{
+						transform: translate(-50%, -50%) rotate(45deg);
+					}
+					&::after{
+						transform: translate(-50%, -50%) rotate(-45deg);
+					}
+				}
+
+				&__body {
+					flex: 1 1 auto;
+					padding: 0.8rem 1.4rem;
+					position: relative;
+				}
+
+				&__subtitle {}
+
+				&__text {}
+
+			&.js-text-modal-active {
+				visibility: visible;
+				.text-modal-first-screen__back {
+					pointer-events: auto;
+					opacity: 1;
+				}
+				.text-modal-first-screen__container {
+					pointer-events: auto;
+					opacity: 1;
+					transform: translate(0, 0);
+				}
+			}
+		}

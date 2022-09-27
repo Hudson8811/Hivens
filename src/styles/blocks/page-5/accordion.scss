@@ -38,7 +38,7 @@
       width: 100%;
       padding: 0 16px 0 0;
       font-size: 15px;
-      line-height: (24 / 15);
+      line-height: calc(24 / 15);
       color: $gray-5e;
       font-weight: 500;
       text-align: left;
@@ -72,7 +72,7 @@
       padding-top: 26px;
       font-size: 14px;
       min-height: 97px;
-      line-height: (21 / 14);
+      line-height: calc(21 / 14);
       color: $dark-gray-6e;
 
       @include max(sm) {

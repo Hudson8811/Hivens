@@ -165,7 +165,7 @@
         top: vw(20, 1270);
         left: vw(68, 1270);
         border-radius: vw(3, 1270);
-        width: calc(100% - $p);
+        width: calc(100% - #{$p});
         height: vw(3, 1270);
       }
 
@@ -181,7 +181,7 @@
     &-text {
       margin-bottom: 10px;
       font-size: 12px;
-      line-height: (13.5 / 12);
+      line-height: calc(13.5 / 12);
       color: $green-9e;
       font-weight: 700;
 
@@ -249,7 +249,7 @@
     min-height: 157px;
     padding-left: 16px;
     font-size: 14px;
-    line-height: (18.5 / 14);
+    line-height: calc(18.5 / 14);
     font-weight: 500;
     color: $dark-gray-6e;
 

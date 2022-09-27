@@ -136,7 +136,7 @@
       padding: 22px 42px 22px 32px;
 
       font-size: 15px;
-      line-height: (24 / 15);
+      line-height: calc(24 / 15);
       color: $black;
       font-weight: 500;
       background-color: $smoky;

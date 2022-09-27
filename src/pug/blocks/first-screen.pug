@@ -4,10 +4,22 @@ section.first-screen
 			source(media='(max-width: 1079px)', srcset='images/first-bg-small.png')
 			img(src='images/first-bg.png', alt='')
 	.container.first-screen__container
-		+play('https://www.youtube.com/embed/tEPB7uzKuh4', 'first-screen__play')
+		+play('', 'first-screen__play')
 		.first-screen__title Hivens
 		.first-screen__subtitle Decentralization <br> Data Ecosystem and <br> Marketplace <br> Platform
 		include search-main.pug
 		label.field.field--checkbox.first-screen__privacy
 			input(type='checkbox', name='policy')
 			span Соглашаюсь с правилами пользования сайтом и политикой приватности
+
+	.text-modal-first-screen
+		.text-modal-first-screen__back 
+		.text-modal-first-screen__container
+			.text-modal-first-screen__content
+				.text-modal-first-screen__header 
+					.text-modal-first-screen__title Basic Modal
+					.text-modal-first-screen__close
+				.text-modal-first-screen__body
+					.text-modal-first-screen__subtitle Check First Paragraph
+					.text-modal-first-screen__text
+						|Oat cake ice cream candy chocolate cake chocolate cake cotton candy dragée apple pie. Brownie carrot cake candy canes bonbon fruitcake topping halvah. Cake sweet roll cake cheesecake cookie chocolate cake liquorice.

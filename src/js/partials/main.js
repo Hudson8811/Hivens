@@ -31,4 +31,19 @@ $(window).on('load', function() {
 			}
 		})
 	}
+
+	const first_screen_play = document.querySelector('.first-screen__play');
+	const text_modal_first_screen = document.querySelector('.text-modal-first-screen');
+	const text_modal_first_screen_close = document.querySelector('.text-modal-first-screen__close');
+	const text_modal_first_screen_back = document.querySelector('.text-modal-first-screen__back');
+	
+	first_screen_play.addEventListener("click", function(e) {
+		text_modal_first_screen.classList.add('js-text-modal-active');
+	});
+	text_modal_first_screen_close.addEventListener("click", function(e) {
+		text_modal_first_screen.classList.remove('js-text-modal-active');
+	});
+	text_modal_first_screen_back.addEventListener("click", function(e) {
+		text_modal_first_screen.classList.remove('js-text-modal-active');
+	});
 })

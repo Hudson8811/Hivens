@@ -9,7 +9,7 @@
   margin-right: auto;
 
   font-size: 71px;
-  line-height: (86.55 / 71);
+  line-height: calc(86.55 / 71);
   color: $citrus;
   font-weight: 600;
 
@@ -274,7 +274,7 @@
     margin: 0;
     justify-content: flex-start;
     font-size: 54px;
-    line-height: (65.89 / 54);
+    line-height: calc(65.89 / 54);
 
     @include max(1270) {
       max-width: vw(537, 1270);
