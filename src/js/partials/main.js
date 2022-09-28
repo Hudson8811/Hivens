@@ -32,7 +32,7 @@ $(window).on('load', function() {
 		})
 	}
 
-	const first_screen_play = document.querySelector('.first-screen__play');
+	const first_screen_play = document.querySelector('.text-modal-btn');
 	const text_modal_first_screen = document.querySelector('.text-modal-first-screen');
 	const text_modal_first_screen_close = document.querySelector('.text-modal-first-screen__close');
 	const text_modal_first_screen_back = document.querySelector('.text-modal-first-screen__back');
