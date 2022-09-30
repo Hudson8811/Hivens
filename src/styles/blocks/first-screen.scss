@@ -121,6 +121,8 @@
 			height: 100%;
 			pointer-events: none;
 			visibility: hidden;
+			padding: 0 40px;
+			overflow: hidden;
 			&__back {
 				background-color: rgba($color: #000000, $alpha: 0.4);
 				position: absolute;
@@ -134,11 +136,11 @@
 			}
 			&__container {
 				margin: 1.75rem auto;
-				max-width: 500px;
 				transition: transform 0.3s ease-out;
 				pointer-events: none;
 				opacity: 0;
 				transform: translate(0, -20%);
+				position: relative;
 			}
 			&__content {
 				box-shadow: 0 5px 20px 0 rgb(34 41 47 / 10%);
@@ -153,6 +155,16 @@
 				pointer-events: auto;
 				position: relative;
 				width: 100%;
+				padding: 60px 0;
+				.slider-anim {
+					padding: 0;
+				}
+				.slider-prev {
+					left: 20px;
+				}
+				.slider-next {
+					right: 20px;
+				}
 			}
 
 				&__header {
@@ -175,8 +187,10 @@
 					box-shadow: 0 5px 20px 0 rgb(34 41 47 / 10%);
 					opacity: 1;
 					padding: 0.8rem;
-					position: relative;
-					transform: translate(18px, -10px);
+					position: absolute;
+					top: 0;
+					right: 0;
+					transform: translate(30px, 0px);
 					transition: all .23s ease .1s;
 					border: 0;
 					border-radius: 0.357rem;
