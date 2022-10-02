@@ -32,21 +32,23 @@ $(window).on('load', function() {
 		})
 	}
 
-	const text_modal_btn = document.querySelector('.text-modal-btn');
-	const text_modal_first_screen = document.querySelector('.text-modal-first-screen');
-	const text_modal_first_screen_close = document.querySelector('.text-modal-first-screen__close');
-	const text_modal_first_screen_back = document.querySelector('.text-modal-first-screen__back');
-	const body_ovh = document.querySelector('body');
-	text_modal_btn.addEventListener("click", function(e) {
-		text_modal_first_screen.classList.add('js-text-modal-active');
-		body_ovh.style.cssText=`overflow: hidden`;
-	});
-	text_modal_first_screen_close.addEventListener("click", function(e) {
-		text_modal_first_screen.classList.remove('js-text-modal-active');
-		body_ovh.style.cssText=`overflow: visible`;
-	});
-	text_modal_first_screen_back.addEventListener("click", function(e) {
-		text_modal_first_screen.classList.remove('js-text-modal-active');
-		body_ovh.style.cssText=`overflow: visible`;
-	});
+	if ($('.text-modal-btn').length > 0){
+        const text_modal_btn = document.querySelector('.text-modal-btn');
+        const text_modal_first_screen = document.querySelector('.text-modal-first-screen');
+        const text_modal_first_screen_close = document.querySelector('.text-modal-first-screen__close');
+        const text_modal_first_screen_back = document.querySelector('.text-modal-first-screen__back');
+        const body_ovh = document.querySelector('body');
+        text_modal_btn.addEventListener("click", function(e) {
+            text_modal_first_screen.classList.add('js-text-modal-active');
+            body_ovh.style.cssText=`overflow: hidden`;
+        });
+        text_modal_first_screen_close.addEventListener("click", function(e) {
+            text_modal_first_screen.classList.remove('js-text-modal-active');
+            body_ovh.style.cssText=`overflow: visible`;
+        });
+        text_modal_first_screen_back.addEventListener("click", function(e) {
+            text_modal_first_screen.classList.remove('js-text-modal-active');
+            body_ovh.style.cssText=`overflow: visible`;
+        });
+    }
 })
