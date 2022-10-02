@@ -58,6 +58,20 @@ function scripts() {
 		.pipe(dest('build/js/'))
 		.pipe(browserSync.stream())
 }
+function scriptsJquery() {
+	return src([
+		//'node_modules/jquery/dist/jquery.min.js',
+		'src/js/jquery.js',
+	])
+		.pipe(plumber())
+		.pipe(rigger())
+		//.pipe(sourcemaps.init())
+		.pipe(concat('jquery.js'))
+		//.pipe(uglify())
+		//.pipe(sourcemaps.write('./maps'))
+		.pipe(dest('build/js/'))
+		.pipe(browserSync.stream())
+}
 
 function styles() {
 	return src('src/styles/main.scss')
@@ -132,11 +146,12 @@ exports.browsersync = browsersync;
 exports.startwatch = startwatch;
 exports.pugHtml = pugHtml;
 exports.scripts = scripts;
+exports.scriptsJquery = scriptsJquery;
 exports.styles = styles;
 exports.fonts = fonts;
 exports.images = images;
 exports.icons = icons;
 
-exports.build = series(cleandist, pugHtml, fonts, styles, scripts, images, icons);
+exports.build = series(cleandist, pugHtml, fonts, styles, scriptsJquery, scripts, images, icons);
 
-exports.default = parallel(pugHtml, fonts, styles, scripts, images, icons, browsersync, startwatch);
+exports.default = parallel(pugHtml, fonts, styles, scriptsJquery, scripts, images, icons, browsersync, startwatch);
