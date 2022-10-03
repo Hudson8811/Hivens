@@ -2,6 +2,8 @@ $(window).on("load", () => {
   const fieldsCarouselEl = document.querySelector(".fields__slider");
 
   if (fieldsCarouselEl) {
+  	const btnTextHide = fieldsCarouselEl.dataset.hide;
+  	const btnTextShow = fieldsCarouselEl.dataset.show;
     const showBtns = fieldsCarouselEl.querySelectorAll(".fields__slide-show");
     showBtns.forEach(function (el) {
       el.addEventListener("click", function (e) {
@@ -10,9 +12,9 @@ $(window).on("load", () => {
         e.preventDefault();
         el.classList.toggle("rotate");
         el.previousElementSibling.classList.toggle("show");
-        text.innerText === "показать"
-          ? (text.innerText = "скрыть")
-          : (text.innerText = "показать");
+        text.innerText === btnTextShow
+          ? (text.innerText = btnTextHide)
+          : (text.innerText = btnTextShow);
       });
     });
   }

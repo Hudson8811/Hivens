@@ -1,12 +1,12 @@
 window.addEventListener('load', () => {
 	let breakpoint = window.matchMedia('(min-width: 1080px)'),
-			applyingPagiCarousel,
-			bullet = ['Маркетинг', 'Продажи', 'Рекрутинг', 'Менеджмент'];
+			applyingPagiCarousel;
 	
 	const applyingCarouselEl = document.querySelector('.__js_applying-carousel');
 	const applyingPagiCarouselEl = document.querySelector('.__js_applying-pagi-carousel');
 
 	if (applyingCarouselEl && applyingPagiCarouselEl) {
+		let bullet = applyingPagiCarouselEl.dataset.bullets.split(",");
 		initApplyingSlider();
 
 		function initApplyingSlider() {
