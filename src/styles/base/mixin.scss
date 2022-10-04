@@ -79,13 +79,16 @@
 }
 
 @function vw($px, $resolutiond: 1920) {
-	@return calc((#{$px} / #{$resolutiond}) * 100)+'vw';
+	$temp: #{math.div($px, $resolutiond) * 100};
+	@return $temp +'vw';
 }
 
 @function vwm($px, $resolutiond: 1080) {
-	@return calc((#{$px} / #{$resolutiond}) * 100)+'vw';
+	$temp: #{math.div($px, $resolutiond) * 100};
+	@return $temp +'vw';
 }
 
 @function vws($px, $resolutiond: 375) {
-	@return calc((#{$px} / #{$resolutiond}) * 100)+'vw';
+	$temp: #{math.div($px, $resolutiond) * 100};
+	@return $temp +'vw';
 }
