@@ -607,48 +607,24 @@
 	.slider-prev {
 		left: 0;
 
-		@include max(lg) {
-			left: vwm(-0.5);
-		}
 
-		@include max(sm) {
-			left: vws(-0.5);
-		}
 
 		svg {
 			transform: rotate(90deg);
 
-			@include max(lg) {
-				right: vwm(0.3);
-			}
 
-			@include max(sm) {
-				right: vws(0.3);
-			}
 		}
 	}
 
 	.slider-next {
 		right: 0;
 
-		@include max(lg) {
-			right: vwm(-0.5);
-		}
 
-		@include max(sm) {
-			right: vws(-0.5);
-		}
 
 		svg {
 			transform: rotate(-90deg);
 
-			@include max(lg) {
-				left: vwm(0.3);
-			}
-
-			@include max(sm) {
-				left: vws(0.3);
-			}
+			
 		}
 	}
 }
