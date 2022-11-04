@@ -5,7 +5,7 @@ section.business-cases
 		header.business-cases__header
 			+title('Кейсы использования по Бизнес-задачам', 'h2', 'business-cases__title')
 		.business-cases__content 
-			.business-cases__filters.swiper-container
+			.business-cases__filters.swiper-container.swiper
 				.swiper-wrapper
 					a.button.business-cases__filter.swiper-slide.button--rounded.button--outline-green.active(type="button", data-target="marketing")
 						span Маркетинг
@@ -24,7 +24,7 @@ section.business-cases
 					a.button.business-cases__filter.swiper-slide.button--rounded.button--outline-green(type="button", data-target="management")
 						span Менеджмент
 
-			.business-cases__carousel.swiper-container 
+			.business-cases__carousel.swiper-container.swiper
 				.swiper-wrapper
 					each item in SLIDES
 						.business-cases__card.swiper-slide(data-category= item.category)
