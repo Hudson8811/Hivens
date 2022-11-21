@@ -1,0 +1,45 @@
+section.data-types.node--nft__slider
+	.container 
+		header.data-types__header 
+			+title('Выбирайте NFT из категорий', 'h2', 'data-types__title')
+		p.about-nodes__text.node--nft__slider__text
+				| Чтобы получить и активировать ноду, нужно выбрать любой из 3 типов ульев и минимум по одной пчеле из каждой категории: рабочая пчела, пчела королева, пчела трутень.
+		.data-types__slider-container
+			button.swiper-button-prev.data-types__button-prev
+				+icon('chevron-left')
+			button.swiper-button-next.data-types__button-next
+				+icon('chevron-right')
+			button.swiper-button-next.data-types__button-next--long-arrow
+				+icon('arrow-next-icon')
+			.data-types__slider.swiper-container.swiper.node__slider
+				.swiper-wrapper.node__slider__wraper 
+					.data-types__card.swiper-slide
+						img(src="images/page-7/node__bee__6.png", srcset="images/page-7/node__bee__6@2x.png 2x", alt="")
+						.data-types__card-content 
+							.data-types__card-title Рабочие пчелы
+							.data-types__card-text 16 видов
+					.data-types__card.swiper-slide
+						img(src="images/page-7/node__bee__9.png", srcset="images/page-7/node__bee__9@2x.png 2x", alt="")
+						.data-types__card-content 
+							.data-types__card-title Пчелы-королевы
+							.data-types__card-text 3 вида
+					.data-types__card.swiper-slide
+						img(src="images/page-7/node__bee__6.png", srcset="images/page-7/node__bee__6@2x.png 2x", alt="")
+						.data-types__card-content 
+							.data-types__card-title Пчелы-трутни
+							.data-types__card-text 3 вида
+					.data-types__card.swiper-slide
+						img(src="images/page-7/node-nft__9.png", srcset="images/page-7/node-nft__9@2x.png 2x", alt="")
+						.data-types__card-content 
+							.data-types__card-title Мини ноды
+							.data-types__card-text 4 вида
+					.data-types__card.swiper-slide
+						img(src="images/page-7/node-nft__5.png", srcset="images/page-7/node-nft__5@2x.png 2x", alt="")
+						.data-types__card-content 
+							.data-types__card-title Стандарт ноды
+							.data-types__card-text 4 вида
+					.data-types__card.swiper-slide
+						img(src="images/page-7/node-nft__1.png", srcset="images/page-7/node-nft__1@2x.png 2x", alt="")
+						.data-types__card-content 
+							.data-types__card-title Мастер ноды
+							.data-types__card-text 4 вида

@@ -1,0 +1,24 @@
+.swiper-wrapper.node__slider__wraper  {
+	align-items: stretch;
+}
+.node__slider__wraper .data-types__card.swiper-slide {
+	height: auto;
+	width: 180px;
+	img {
+		width: 100%;
+		height: 160px;
+		object-fit: contain;
+		object-position: top center;
+	}
+	.data-types__card-title {
+		font-size: 16px;
+	}
+}
+
+	
+.about-nodes__text.node--nft__slider__text {
+	margin-top: 37px;
+}
+.cookies.visible {
+	display: none !important;
+}
