@@ -22,3 +22,13 @@
 .cookies.visible {
 	display: none !important;
 }
+@include max(sm) {
+	.node--nft__slider{
+		.data-types__header {
+			padding-left: 15px;
+			justify-content: flex-start;
+		}
+
+	}
+	
+}

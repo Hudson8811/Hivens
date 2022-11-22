@@ -13,6 +13,7 @@
 //= ./partials/services-section.js
 //= ./partials/init-swiper-carousels.js
 //= ./partials/faqs.js
+//= ./partials/beens-nft.js
 //= ./partials/timer.js
 //= ./partials/payments-map.js
 //= ./partials/timeline.js
