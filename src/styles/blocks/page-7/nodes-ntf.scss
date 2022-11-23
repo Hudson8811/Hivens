@@ -131,12 +131,13 @@
 				text-align: right;
 				color: #5E5873;
 				&::before {
+					top:3px;
 					position: relative;
 					display: inline-block;
 					margin-right: 8px;
 					width: 17px;
 					height: 17px;
-					content: url("../../../images/page-7/bees-nft__item__desc__right__cost__img.svg");
+					content: url("../images/page-7/bees-nft__item__desc__right__cost__img.svg");
 				}
 			}
 		}
