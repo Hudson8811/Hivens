@@ -1,20 +1,20 @@
 - const FAQ_FILTERS_NODE = [{text: 'Все', target: 'allNodes'},  {text: 'Мини Ноды', target: 'MiniNodes'},  {text: 'Стандарт Ноды', target: 'StandardNodes'}, {text: 'Мастер Ноды', target: 'MasterNodes'}];
 
-section.faqs.section__node-nft
+section.faqs.section__node-nft.js-filtered-container
 	.faqs__container.container 
 		header.data-types__header 
 			+title('Приобретайте NFT Nodes с функциональным обеспечением!', 'h2', 'data-types__title')
 		p.about-nodes__text.node--nft__slider__text
 				| NFT Nodes имеет 3 типа и по 4 уровня каждая. У каждой ноды своя вместимость пчел, базовый функционал и возможности в экосистеме	
 		
-		.faqs__filters.swiper-container.__js_faq-filters
+		.faqs__filters.swiper-container.js-filtered-swiper#nodesFilter
 			.swiper-wrapper 
 				each item, index in FAQ_FILTERS_NODE 
 					- let cl = index === 0 ? ' active' : '';
-					+button(item.text, 'faqs__filterNode faqs__filter swiper-slide button--rounded button--outline-green' + cl, '', '')(type="button", data-target= item.target)
+					+button(item.text, 'faqs__filterNode faqs__filter js-filtered-tab swiper-slide button--rounded button--outline-green' + cl, '', '')(type="button", data-target= item.target)
 		
-		.node-nft__list 
-			a.node-nft__item(class= actCl, data-category="MasterNodes, allNodes")
+		.node-nft__list.js-filtered-items
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="MasterNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__1.png", srcset="images/page-7/node-nft__1@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left
@@ -26,7 +26,7 @@ section.faqs.section__node-nft
 						.node-nft__item__desc__right__price Price
 						.node-nft__item__desc__right__cost 28.888
 				.node-nft__item__btn Buy now	
-			a.node-nft__item(class= actCl, data-category="MasterNodes, allNodes")
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="MasterNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__2.png", srcset="images/page-7/node-nft__2@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left
@@ -38,7 +38,7 @@ section.faqs.section__node-nft
 						.node-nft__item__desc__right__price Price
 						.node-nft__item__desc__right__cost 28.888
 				.node-nft__item__btn Buy now	
-			a.node-nft__item(class= actCl, data-category="MasterNodes, allNodes")
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="MasterNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__3.png", srcset="images/page-7/node-nft__3@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left
@@ -50,7 +50,7 @@ section.faqs.section__node-nft
 						.node-nft__item__desc__right__price Price
 						.node-nft__item__desc__right__cost 28.888
 				.node-nft__item__btn Buy now	
-			a.node-nft__item(class= actCl, data-category="MasterNodes, allNodes")
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="MasterNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__4.png", srcset="images/page-7/node-nft__4@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left
@@ -62,7 +62,7 @@ section.faqs.section__node-nft
 						.node-nft__item__desc__right__price Price
 						.node-nft__item__desc__right__cost 28.888
 				.node-nft__item__btn Buy now	
-			a.node-nft__item(class= actCl, data-category="StandardNodes, allNodes")
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="StandardNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__5.png", srcset="images/page-7/node-nft__5@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left
@@ -74,7 +74,7 @@ section.faqs.section__node-nft
 						.node-nft__item__desc__right__price Price
 						.node-nft__item__desc__right__cost 28.888
 				.node-nft__item__btn Buy now	
-			a.node-nft__item(class= actCl, data-category="StandardNodes, allNodes")
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="StandardNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__6.png", srcset="images/page-7/node-nft__6@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left
@@ -86,7 +86,7 @@ section.faqs.section__node-nft
 						.node-nft__item__desc__right__price Price
 						.node-nft__item__desc__right__cost 28.888
 				.node-nft__item__btn Buy now	
-			a.node-nft__item(class= actCl, data-category="StandardNodes, allNodes")
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="StandardNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__7.png", srcset="images/page-7/node-nft__7@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left
@@ -98,7 +98,7 @@ section.faqs.section__node-nft
 						.node-nft__item__desc__right__price Price
 						.node-nft__item__desc__right__cost 28.888
 				.node-nft__item__btn Buy now	
-			a.node-nft__item(class= actCl, data-category="StandardNodes, allNodes")
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="StandardNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__8.png", srcset="images/page-7/node-nft__8@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left
@@ -110,7 +110,7 @@ section.faqs.section__node-nft
 						.node-nft__item__desc__right__price Price
 						.node-nft__item__desc__right__cost 28.888
 				.node-nft__item__btn Buy now	
-			a.node-nft__item(class= actCl, data-category="MiniNodes, allNodes")
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="MiniNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__9.png", srcset="images/page-7/node-nft__9@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left
@@ -122,7 +122,7 @@ section.faqs.section__node-nft
 						.node-nft__item__desc__right__price Price
 						.node-nft__item__desc__right__cost 28.888
 				.node-nft__item__btn Buy now	
-			a.node-nft__item(class= actCl, data-category="MiniNodes, allNodes")
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="MiniNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__10.png", srcset="images/page-7/node-nft__10@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left
@@ -134,7 +134,7 @@ section.faqs.section__node-nft
 						.node-nft__item__desc__right__price Price
 						.node-nft__item__desc__right__cost 28.888
 				.node-nft__item__btn Buy now	
-			a.node-nft__item(class= actCl, data-category="MiniNodes, allNodes")
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="MiniNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__11.png", srcset="images/page-7/node-nft__11@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left
@@ -146,7 +146,7 @@ section.faqs.section__node-nft
 						.node-nft__item__desc__right__price Price
 						.node-nft__item__desc__right__cost 28.888
 				.node-nft__item__btn Buy now	
-			a.node-nft__item(class= actCl, data-category="MiniNodes, allNodes")
+			a.node-nft__item.js-filtered-item(class= actCl, data-category="MiniNodes, allNodes")
 				img.node-nft__item__img(src="images/page-7/node-nft__12.png", srcset="images/page-7/node-nft__12@2x.png 2x", alt="") 
 				.node-nft__item__desc 
 					.node-nft__item__desc__left

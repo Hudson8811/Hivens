@@ -12,9 +12,9 @@ section.faqs
       .swiper-wrapper 
         each item, index in FAQ_FILTERS 
           - let cl = index === 0 ? ' active' : '';
-          +button(item.text, 'faqs__filter swiper-slide button--rounded button--outline-green' + cl, '', '')(type="button", data-target= item.target)
+          +button(item.text, 'faqs__filter js-faqs__filter swiper-slide button--rounded button--outline-green' + cl, '', '')(type="button", data-target= item.target)
     
-    .faqs__accordion.accordion
+    .faqs__accordion.accordion.js-accordion
       each item, index in QUESTIONS
         - let actCl = index === 0 ? ' accordion__item--active': '';
         .accordion__item(class= actCl, data-category= item.category)

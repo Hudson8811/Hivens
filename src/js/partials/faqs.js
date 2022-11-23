@@ -3,9 +3,9 @@ $(window).on('load', () => {
   let width = document.documentElement.clientWidth;
   let isInit = false;
   const breakpoint = 1079;
-  const accordion = document.querySelector('.accordion');
+  const accordion = document.querySelector('.js-accordion');
   const activeClass = 'accordion__item--active';
-  const filters = document.querySelectorAll('.faqs__filter[data-target]');
+  const filters = document.querySelectorAll('.js-faqs__filter[data-target]');
   const items = document.querySelectorAll('.accordion__item');
 
   if (accordion && filters.length) {
@@ -67,7 +67,7 @@ $(window).on('load', () => {
   
 
   function filterAccordion(current) {
-    const activeFilter = current || document.querySelector('.faqs__filter.active');
+    const activeFilter = current || document.querySelector('.js-faqs__filter.active');
     const target = activeFilter ? activeFilter.dataset.target : null;
 
     if (current) {

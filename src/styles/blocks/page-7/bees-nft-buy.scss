@@ -161,10 +161,7 @@
 
 	}
 }
-.bees-nft__item[hidden] {
-	display: none;
-	opacity: 0;
-}
+
 .bees-nft__item:hover {
 	transition: all .5s;
 	.bees-nft__item__btn {
@@ -178,6 +175,20 @@
 .about-nodes__text.bees-nft__text {
 	margin-bottom: 37px;
 	margin-top: 37px;
+}
+
+
+.js-filtered-items{
+	$self: &;
+	transition: opacity 0.3s ease;
+
+	&.opacity {
+		opacity: 0;
+	}
+}
+.js-filtered-item[hidden] {
+	display: none;
+	opacity: 0;
 }
 
 // @include max(sm) {

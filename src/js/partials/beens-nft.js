@@ -1,197 +1,93 @@
 $(window).on('load', () => {
-  let filterCarousel = null;
-  let width = document.documentElement.clientWidth;
-  let isInit = false;
-  const breakpoint = 1079;
-  const accordion = document.querySelector('.bees-nft__list');
-  const activeClass = 'accordion__item--active';
-  const filters = document.querySelectorAll('.faqs__filterBeer[data-target]');
-  const items = document.querySelectorAll('.bees-nft__item');
+  if($('.js-filtered-container').length > 0){
+    $('.js-filtered-container').each(function (){
+      let filterCarousel = null;
+      let width = document.documentElement.clientWidth;
+      let isInit = false;
+      let breakpoint = 1079;
 
-  if (accordion && filters.length) {
+      let container = $(this);
+      let section = container.find('.js-filtered-items');
+      let filters = container.find('.js-filtered-tab[data-target]');
+      let items = container.find('.js-filtered-item');
+      let swiperSlider = $(this).find('.js-filtered-swiper');
 
-    accordion.addEventListener('click', e => {
-      const target = e.target;
-      
-      if (target.closest('.accordion__item-header')) {
-        if (target.parentElement.classList.contains(activeClass)) {
-          target.parentElement.classList.remove(activeClass);
-        } else {
-          items.forEach(it => {
-            it.classList.remove(activeClass)
-          });
-          target.parentElement.classList.add(activeClass);
-        }
-      }
-    });
-
-    if (filters) {
-      if (width <= breakpoint) {
-        initFilterCarousel();
-        isInit = true;
-      }
-      
-      filterAccordion();
-
-      filters.forEach(it => {
-        it.addEventListener('click', function() {
-          filters.forEach(it => {
-            it.classList.remove('active')
-          });
-          it.classList.add('active');
-          filterAccordion(this);
-        })
-      });
-
-      window.addEventListener('resize', () => {
-        width = document.documentElement.clientWidth;
-
-        if (width <= breakpoint && !isInit) {
-          initFilterCarousel();
-          isInit = true;
-        } else if (width > breakpoint && isInit) {
-          //console.log(filterCarousel)
-          isInit = false;
-          filterCarousel.destroy();
-        }
-      });
-
-      function initFilterCarousel() {
-        filterCarousel = new Swiper('.__js_faq-filters', {
+      const initFilterSwiper = function() {
+        let this_ID = swiperSlider.attr('id');
+        filterCarousel = new Swiper('#'+this_ID, {
           speed: 300,
           slidesPerView: 'auto'
         });
       }
-    }
-  }
-  
 
-  function filterAccordion(current) {
-    const activeFilter = current || document.querySelector('.faqs__filter.active');
-    const target = activeFilter ? activeFilter.dataset.target : null;
-
-    if (current) {
-      accordion.classList.add('opacity');
-      
-      accordion.addEventListener('transitionend', () => {
-        for (item of items) {
-          let categories = item.dataset.category.split(',');
-					console.log(item)
-          categories = categories.map(it => {
-            return it.trim()
-          });
-          item.hidden = !categories.includes(target);
+      const filterSwiper = function(current) {
+        let activeFilter;
+        if (current) {
+          activeFilter = $(current)
+        } else {
+          activeFilter = container.find('.js-filtered-tab.active')
         }
-        accordion.classList.remove('opacity');
-      });
+        let target = activeFilter ? activeFilter.data('target') : null;
+        if (current) {
+          section.addClass('opacity');
+          section.on('transitionend', () => {
+            items.each(function() {
+              let categories = $(this).data('category').split(',');
+              categories = categories.map(it => {
+                return it.trim()
+              });
+              if (categories.indexOf(target.toString()) != -1){
+                $(this).removeAttr('hidden');
+              } else {
+                $(this).prop('hidden', true);
+              }
+            });
+            section.removeClass('opacity');
+          });
 
-    } else {
-      for (item of items) {
-        let categories = item.dataset.category.split(',');
-        categories = categories.map(it => {
-          return it.trim()
-        });
-        item.hidden = !categories.includes(target);
+        } else {
+          for (item of items) {
+            let categories = item.dataset.category.split(',');
+            categories = categories.map(it => {
+              return it.trim()
+            });
+            item.hidden = !categories.includes(target);
+          }
+        }
       }
-    }
+
+      if (section && filters.length) {
+        if (filters) {
+          if (width <= breakpoint) {
+            initFilterSwiper();
+            isInit = true;
+          }
+
+          filterSwiper();
+
+          filters.each(function (){
+            $(this).on('click',function (){
+              filters.removeClass('active');
+              $(this).addClass('active');
+              filterSwiper(this);
+            })
+          })
+
+          window.addEventListener('resize', () => {
+            width = document.documentElement.clientWidth;
+            if (width <= breakpoint && !isInit) {
+              initFilterSwiper();
+              isInit = true;
+            } else if (width > breakpoint && isInit) {
+              isInit = false;
+              filterCarousel.destroy();
+            }
+          });
+
+
+        }
+      }
+
+    });
   }
-
-
-	// let filterCarouselNode = null;
-  // let widthNode = document.documentElement.clientWidth;
-  // let isInitNode = false;
-  // const breakpointNode = 1079;
-  // const accordionNode = document.querySelector('.node-nft__list ');
-  // const activeClassNode = 'accordion__item--active';
-  // const filtersNode = document.querySelectorAll('.faqs__filterNode[data-target]');
-  // const itemsNode = document.querySelectorAll('.node-nft__item');
-	// console.log(itemsNode)
-
-  // if (accordionNode && filtersNode.length) {
-
-  //   accordionNode.addEventListener('click', e => {
-  //     const target = e.target;
-      
-  //     if (target.closest('.accordion__item-header')) {
-  //       if (target.parentElement.classList.contains(activeClassNode)) {
-  //         target.parentElement.classList.remove(activeClassNode);
-  //       } else {
-  //         itemsNode.forEach(it => {
-  //           it.classList.remove(activeClassNode)
-  //         });
-  //         target.parentElement.classList.add(activeClassNode);
-  //       }
-  //     }
-  //   });
-
-  //   if (filtersNode) {
-  //     if (widthNode <= breakpointNode) {
-  //       initFilterCarousel();
-  //       isInitNode = true;
-  //     }
-      
-  //     filterAccordion();
-
-  //     filtersNode.forEach(it => {
-  //       it.addEventListener('click', function() {
-  //         filtersNode.forEach(it => {
-  //           it.classList.remove('active')
-  //         });
-  //         it.classList.add('active');
-  //         filterAccordion(this);
-  //       })
-  //     });
-
-  //     window.addEventListener('resize', () => {
-  //       widthNode = document.documentElement.clientWidth;
-
-  //       if (widthNode <= breakpointNode && !isInitNode) {
-  //         initFilterCarousel();
-  //         isInitNode = true;
-  //       } else if (widthNode > breakpointNode && isInitNode) {
-  //         //console.log(filterCarousel)
-  //         isInitNode = false;
-  //         filterCarouselNode.destroy();
-  //       }
-  //     });
-
-  //     function initFilterCarousel() {
-  //       filterCarouselNode = new Swiper('.__js_faq-filters', {
-  //         speed: 300,
-  //         slidesPerView: 'auto'
-  //       });
-  //     }
-  //   }
-  // }
-  
-
-  // function filterAccordion(current) {
-  //   const activeFilter = current || document.querySelector('.faqs__filterNode.active');
-  //   const target = activeFilter ? activeFilter.dataset.target : null;
-
-  //   if (current) {
-  //     accordionNode.classList.add('opacity');
-      
-  //     accordionNode.addEventListener('transitionend', () => {
-  //       for (item of items) {
-  //         let categories = item.dataset.category.split(',');
-	// 				console.log(item)
-  //         categories = categories.map(it => {
-  //           return it.trim()
-  //         });
-  //         item.hidden = !categories.includes(target);
-  //       }
-  //       accordionNode.classList.remove('opacity');
-  //     });
-
-  //   } else {
-  //     for (item of items) {
-  //       let categories = item.dataset.category.split(',');
-  //       categories = categories.map(it => {
-  //         return it.trim()
-  //       });
-  //       item.hidden = !categories.includes(target);
-  //     }
-  //   }
-  // }
 });
