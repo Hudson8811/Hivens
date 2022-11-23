@@ -6,6 +6,9 @@
 	width: 100%;
 	padding-top: 70px;
 	padding-bottom: 70px;
+	.button--outline-green.active{
+		pointer-events: auto;
+	}
 }
 .bees-nft__list {
 	position: relative;
