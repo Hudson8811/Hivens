@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  var searchSlider;
   function toggleSearchSlider() {
     const search = document.querySelector(".search-section");
 
@@ -20,6 +21,7 @@ $(document).ready(function () {
         dropBtn.classList.remove("active");
         filterBtns.forEach((n) => n.classList.remove("active"));
         el.classList.add("active");
+        searchSlider.slideTo($(this).index());
       });
     });
 
@@ -65,8 +67,10 @@ $(document).ready(function () {
       true
     );
 
-    const searchSlider = new Swiper(".search-filters", {
+    searchSlider = new Swiper(".search-filters", {
       slidesPerView: "auto",
+      preventClicks :true,
+      a11y: false,
       breakpoints: {
         768: {
           slidesPerView: "auto",

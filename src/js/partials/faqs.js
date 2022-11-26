@@ -12,7 +12,7 @@ $(window).on('load', () => {
 
     accordion.addEventListener('click', e => {
       const target = e.target;
-      
+
       if (target.closest('.accordion__item-header')) {
         if (target.parentElement.classList.contains(activeClass)) {
           target.parentElement.classList.remove(activeClass);
@@ -30,7 +30,7 @@ $(window).on('load', () => {
         initFilterCarousel();
         isInit = true;
       }
-      
+
       filterAccordion();
 
       filters.forEach(it => {
@@ -39,6 +39,7 @@ $(window).on('load', () => {
             it.classList.remove('active')
           });
           it.classList.add('active');
+          filterCarousel.slideTo($(this).index());
           filterAccordion(this);
         })
       });
@@ -59,12 +60,14 @@ $(window).on('load', () => {
       function initFilterCarousel() {
         filterCarousel = new Swiper('.__js_faq-filters', {
           speed: 300,
-          slidesPerView: 'auto'
+          slidesPerView: 'auto',
+          preventClicks :true,
+          a11y: false,
         });
       }
     }
   }
-  
+
 
   function filterAccordion(current) {
     const activeFilter = current || document.querySelector('.js-faqs__filter.active');
@@ -72,7 +75,7 @@ $(window).on('load', () => {
 
     if (current) {
       accordion.classList.add('opacity');
-      
+
       accordion.addEventListener('transitionend', () => {
         for (item of items) {
           let categories = item.dataset.category.split(',');

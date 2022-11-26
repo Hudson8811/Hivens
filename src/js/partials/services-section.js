@@ -19,7 +19,7 @@ $(window).on('load', () => {
 
     const filtersBtns = document.querySelectorAll('.services-section__filter[data-target]');
     const slides = document.querySelectorAll('.services-section__card');
-    
+
     if (width <= breakpoint) {
       initFilterCarousel();
       isInit = true;
@@ -35,6 +35,7 @@ $(window).on('load', () => {
           });
 
           this.classList.add('active');
+          filterCarousel.slideTo($(this).index());
           filterSlides(this);
         })
       });
@@ -42,7 +43,7 @@ $(window).on('load', () => {
 
     window.addEventListener('resize', () => {
       width = document.documentElement.clientWidth;
-        
+
       if (width <= breakpoint && !isInit) {
         initFilterCarousel();
         isInit = true;
@@ -56,7 +57,9 @@ $(window).on('load', () => {
       filterCarousel = new Swiper('.services-section__filters', {
         speed: 300,
         slidesPerView: 'auto',
-        spaceBetween: 34
+        spaceBetween: 34,
+        preventClicks :true,
+        a11y: false,
       });
     }
 
@@ -78,7 +81,7 @@ $(window).on('load', () => {
           }
           servicesCarousel.update();
         }, 550)
-      
+
       } else {
         for (slide of slides) {
           let categories = slide.dataset.category.split(',');

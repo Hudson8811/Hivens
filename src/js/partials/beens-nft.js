@@ -16,7 +16,9 @@ $(window).on('load', () => {
         let this_ID = swiperSlider.attr('id');
         filterCarousel = new Swiper('#'+this_ID, {
           speed: 300,
-          slidesPerView: 'auto'
+          slidesPerView: 'auto',
+          preventClicks :true,
+          a11y: false,
         });
       }
 
@@ -69,6 +71,7 @@ $(window).on('load', () => {
             $(this).on('click',function (){
               filters.removeClass('active');
               $(this).addClass('active');
+              filterCarousel.slideTo($(this).index());
               filterSwiper(this);
             })
           })

@@ -10,6 +10,8 @@ $(window).on('load', () => {
     const slider = new Swiper(sliderEl, {
       slidesPerView: 1,
 			speed: 300,
+      preventClicks :true,
+      a11y: false,
 			navigation: {
         nextEl: '.slider-next',
         prevEl: '.slider-prev',
@@ -29,7 +31,7 @@ $(window).on('load', () => {
 
     window.addEventListener('resize', () => {
       width = document.documentElement.clientWidth;
-        
+
       if (width <= breakpoint && !isInit) {
         initCarousel();
         isInit = true;

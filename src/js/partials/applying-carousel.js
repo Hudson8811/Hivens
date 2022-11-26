@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
 	let breakpoint = window.matchMedia('(min-width: 1080px)'),
 			applyingPagiCarousel;
-	
+
 	const applyingCarouselEl = document.querySelector('.__js_applying-carousel');
 	const applyingPagiCarouselEl = document.querySelector('.__js_applying-pagi-carousel');
 
@@ -55,6 +55,8 @@ window.addEventListener('load', () => {
 				slidesPerView: 2.24,
 				speed: 300,
 				spaceBetween: 34,
+				preventClicks: true,
+				a11y: false,
 				breakpoints: {
 					561: {
 						slidesPerView: 3.24

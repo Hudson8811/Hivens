@@ -28,6 +28,8 @@ $(window).on("load", () => {
 				speed: 300,
 				slidesPerView: "auto",
 				spaceBetween: 34,
+				preventClicks :true,
+				a11y: false,
 			});
 		}
 
@@ -43,6 +45,7 @@ $(window).on("load", () => {
 					});
 
 					this.classList.add("active");
+					filterCarousel.slideTo($(this).index());
 					filterSlides(this);
 				});
 			});

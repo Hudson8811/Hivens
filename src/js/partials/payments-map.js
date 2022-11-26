@@ -15,7 +15,7 @@ $(window).on('load', () => {
       initFilterCarousel();
       isInit = true;
     }
-    
+
     filterPins();
 
     filters.forEach(it => {
@@ -24,6 +24,7 @@ $(window).on('load', () => {
           it.classList.remove('active')
         });
         it.classList.add('active');
+        filterCarousel.slideTo($(this).index());
         filterPins(this);
       })
     });
@@ -43,7 +44,9 @@ $(window).on('load', () => {
     function initFilterCarousel() {
       filterCarousel = new Swiper('.__js_pins-filters', {
         speed: 300,
-        slidesPerView: 'auto'
+        slidesPerView: 'auto',
+        preventClicks :true,
+        a11y: false,
       });
     }
 

@@ -235,7 +235,18 @@
 			}
 		}
 
-		&:focus,
+
+		&:focus{
+			@media (min-width: 1080px) {
+				background-color: $green-9e;
+				border-color: $green-9e;
+			}
+
+			@media (max-width: 1079px) {
+				background-color: transparent;
+			}
+		}
+
 		&:active,
 		&.active {
 			background-color: $green-9e;
@@ -259,7 +270,18 @@
 					}
 				}
 
-				&:focus,
+				&:focus{
+					@media (min-width: 1080px) {
+						background: rgba($green-9e, 0.2);
+					}
+
+					@media (max-width: 1079px) {
+						background-color: transparent;
+						border-color: $green-9e;
+						color: $green-9e;
+					}
+				}
+
 				&:active,
 				&.active {
 					background: rgba($green-9e, 0.2);
@@ -585,14 +607,27 @@
 			}
 		}
 
-		&:focus,
+
+		&:focus{
+			@media (min-width: 1080px) {
+				color: $white;
+				border-color: $green-9e;
+				background-color: $green-9e;
+			}
+
+			@media (max-width: 1079px) {
+				color: #82868b;
+				border-color: #00a79e;
+				background-color: transparent;
+			}
+		}
+
 		&:active,
 		&.active {
 			color: $white;
 			border-color: $green-9e;
 			background-color: $green-9e;
 		}
-
 		&.active {
 			pointer-events: none;
 		}

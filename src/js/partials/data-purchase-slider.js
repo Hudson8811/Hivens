@@ -15,7 +15,12 @@ $(document).ready(function () {
 		thumbs: {
 			swiper: purchaseDotsSlider,
 		},
+		preventClicks :true,
+		a11y: false,
 	});
+
+
+
 
 	purchaseSlider.on("slideChange", function () {
 		const dotActive = purchaseDotsWrapper.querySelector(".active");
@@ -25,6 +30,7 @@ $(document).ready(function () {
 
 		dotActive.classList.remove("active");
 		thumbActive.classList.add("active");
+		purchaseDotsSlider.slideTo($(dotActive).index());
 	});
 
 	function checkWidth() {
