@@ -3,6 +3,8 @@ $(document).ready(function () {
 
 	const purchaseDotsSlider = new Swiper(purchaseDotsWrapper, {
 		slidesPerView: "auto",
+		preventClicks: true,
+		a11y: false,
 	});
 
 	const purchaseSlider = new Swiper(".data-purchase__slider", {
@@ -30,7 +32,7 @@ $(document).ready(function () {
 
 		dotActive.classList.remove("active");
 		thumbActive.classList.add("active");
-		purchaseDotsSlider.slideTo($(dotActive).index());
+		purchaseDotsSlider.slideTo(purchaseSlider.activeIndex/*$(dotActive).index()-1*/);
 	});
 
 	function checkWidth() {

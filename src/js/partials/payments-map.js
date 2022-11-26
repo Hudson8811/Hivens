@@ -20,12 +20,13 @@ $(window).on('load', () => {
 
     filters.forEach(it => {
       it.addEventListener('click', function() {
+        if($(it).hasClass('active')){return;}
         filters.forEach(it => {
           it.classList.remove('active')
         });
         it.classList.add('active');
-        filterCarousel.slideTo($(this).index());
         filterPins(this);
+        filterCarousel.slideTo($(this).index());
       })
     });
 

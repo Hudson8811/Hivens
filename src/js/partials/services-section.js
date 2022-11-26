@@ -30,13 +30,14 @@ $(window).on('load', () => {
 
       filtersBtns.forEach(it => {
         it.addEventListener('click', function(e) {
+          if($(it).hasClass('active')){return;}
           filtersBtns.forEach(it => {
             it.classList.remove('active');
           });
 
           this.classList.add('active');
-          filterCarousel.slideTo($(this).index());
           filterSlides(this);
+          filterCarousel.slideTo($(this).index());
         })
       });
     }

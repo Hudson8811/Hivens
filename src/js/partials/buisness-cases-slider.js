@@ -28,8 +28,13 @@ $(window).on("load", () => {
 				speed: 300,
 				slidesPerView: "auto",
 				spaceBetween: 34,
-				preventClicks :true,
+				preventClicks: true,
 				a11y: false,
+				/*breakpoints: {
+				  768: {
+					spaceBetween: 'auto',
+				  },
+				},*/
 			});
 		}
 
@@ -40,13 +45,14 @@ $(window).on("load", () => {
 
 			filtersBtns.forEach((it) => {
 				it.addEventListener("click", function (e) {
+					if ($(it).hasClass('active')) { return; }
 					filtersBtns.forEach((it) => {
 						it.classList.remove("active");
 					});
 
 					this.classList.add("active");
-					filterCarousel.slideTo($(this).index());
 					filterSlides(this);
+					filterCarousel.slideTo($(this).index());
 				});
 			});
 

@@ -69,10 +69,11 @@ $(window).on('load', () => {
 
           filters.each(function (){
             $(this).on('click',function (){
+              if($(this).hasClass('active')){return;}
               filters.removeClass('active');
               $(this).addClass('active');
-              filterCarousel.slideTo($(this).index());
               filterSwiper(this);
+              filterCarousel.slideTo($(this).index());
             })
           })
 
