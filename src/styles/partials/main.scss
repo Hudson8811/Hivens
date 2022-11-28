@@ -2,6 +2,7 @@ html {
   font-size: 16px;
   font-weight: 400;
 }
+
 body {
   font-family: $mainFont;
   color: $black;
@@ -92,7 +93,7 @@ input {
   padding: 40px 0;
   background-color: #fff;
 
-  & + & {
+  &+& {
     box-shadow: 0 -1px 0 0 #333;
   }
 }
@@ -141,6 +142,7 @@ input {
     transform: scale(1);
     opacity: 1;
   }
+
   100% {
     transform: scale(7);
     opacity: 0;
@@ -191,4 +193,10 @@ input {
       }
     }
   }
+}
+
+
+.slider-container-disabled-all-arrows .swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
 }

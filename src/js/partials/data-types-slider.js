@@ -19,7 +19,19 @@ $(document).ready(function () {
 				767: {
 					spaceBetween: 30,
 				},
-			},
+			}
+
+		}).on('afterInit slideChange resize', function (swiper) {
+			var sliderConainer=$(swiper.wrapperEl).closest('.data-types__slider-container');
+
+			if(sliderConainer.find('.swiper-button-prev.data-types__button-prev.swiper-button-disabled, .swiper-button-next.data-types__button-next.swiper-button-disabled').length===2){
+				sliderConainer.addClass('slider-container-disabled-all-arrows');
+			}
+			else{
+				sliderConainer.removeClass('slider-container-disabled-all-arrows');
+			}
+
+			console.log();
 		});
 	}
 
