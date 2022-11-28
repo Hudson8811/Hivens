@@ -19,14 +19,17 @@ $(window).on('load', () => {
     filterPins();
 
     filters.forEach(it => {
-      it.addEventListener('click', function() {
-        if($(it).hasClass('active')){return;}
+      it.addEventListener('click', function () {
+        if ($(it).hasClass('active')) { return; }
         filters.forEach(it => {
           it.classList.remove('active')
         });
         it.classList.add('active');
         filterPins(this);
-        filterCarousel.slideTo($(this).index());
+
+        if (typeof (filterCarousel) !== 'undefined' && filterCarousel !== null) {
+          filterCarousel.slideTo($(this).index());
+        }
       })
     });
 
@@ -46,7 +49,7 @@ $(window).on('load', () => {
       filterCarousel = new Swiper('.__js_pins-filters', {
         speed: 300,
         slidesPerView: 'auto',
-        preventClicks :true,
+        preventClicks: true,
         a11y: false,
       });
     }
@@ -85,7 +88,7 @@ $(window).on('load', () => {
       });
     }
 
-    mapWrapper.addEventListener('scroll', function() {
+    mapWrapper.addEventListener('scroll', function () {
 
       if (Math.ceil(mapWrapper.offsetWidth + mapWrapper.scrollLeft) >= map.offsetWidth) {
         toEndBtn.classList.add('hide');

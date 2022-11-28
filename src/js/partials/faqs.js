@@ -41,7 +41,10 @@ $(window).on('load', () => {
           });
           it.classList.add('active');
           filterAccordion(this);
-          filterCarousel.slideTo($(this).index());
+
+					if(typeof(filterCarousel)!=='undefined' && filterCarousel !== null){
+            filterCarousel.slideTo($(this).index());
+					}
         })
       });
 

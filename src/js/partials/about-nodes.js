@@ -3,7 +3,7 @@ window.onload = () => {
   let isInit = false;
   let carousel = null;
   const breakpoint = 767;
-  
+
   const carouselEl = document.querySelector('.__js_about-nodes-carousel');
   const showBeehiveBtn = document.querySelector('.about-nodes__btn');
   const scene = document.querySelector('.about-nodes__scene');
@@ -131,9 +131,9 @@ window.onload = () => {
           e.preventDefault();
           return;
         }
-        
+
         if (currentDot) {
-      
+
           const target = currentDot.dataset.target
           //console.log(currentDot, target)
 
@@ -147,7 +147,10 @@ window.onload = () => {
             });
           } else {
             const index = parseInt(currentDot.dataset.index, 10);
-            carousel.slideTo(index);
+            if (typeof (carousel) !== 'undefined' && carousel !== null) {
+              carousel.slideTo(index);
+            }
+
             changeZoom(currentDot);
           }
         } else {
@@ -161,7 +164,7 @@ window.onload = () => {
       sceneInner.classList.remove('hide');
       initCarousel();
       isInit = true;
-      
+
       scene.addEventListener('click', onSlideClick);
     }
 
@@ -194,7 +197,7 @@ window.onload = () => {
           prevEl: '.swiper-button-prev',
         },
         on: {
-          beforeInit: function(swiper) {
+          beforeInit: function (swiper) {
             sceneInner.classList.remove('hide');
           },
           afterInit: function (swiper) {
@@ -215,9 +218,9 @@ window.onload = () => {
       const overlay = scene.querySelector('.about-nodes__overlay');
       sceneOuter.classList.remove('hide');
       sceneInner.classList.add('hide');
-        zoomEl.removeAttribute('style');
-        zoomElGuards1.removeAttribute('style');
-        zoomElGuards2.removeAttribute('style');
+      zoomEl.removeAttribute('style');
+      zoomElGuards1.removeAttribute('style');
+      zoomElGuards2.removeAttribute('style');
 
       if (overlay) {
         sceneInner.addEventListener('transitionend', () => {
@@ -225,7 +228,7 @@ window.onload = () => {
 
           document.body.style.overflow = '';
           document.body.style.marginRight = '';
-        }, {once: true});
+        }, { once: true });
       }
     }
 
@@ -234,10 +237,10 @@ window.onload = () => {
       sceneOuter.classList.remove('hide');
 
       //if (isInit) {
-        sceneInner.classList.add('hide');
-        zoomEl.removeAttribute('style');
-        zoomElGuards1.removeAttribute('style');
-        zoomElGuards2.removeAttribute('style');
+      sceneInner.classList.add('hide');
+      zoomEl.removeAttribute('style');
+      zoomElGuards1.removeAttribute('style');
+      zoomElGuards2.removeAttribute('style');
       //}
 
       if (overlay) {
@@ -263,7 +266,7 @@ window.onload = () => {
       }
 
       zoomImages.forEach(it => {
-        const vars = {duration: .3};
+        const vars = { duration: .3 };
 
         if (it.dataset.id === target) {
           vars.opacity = 1;
@@ -274,7 +277,7 @@ window.onload = () => {
         }
         gsap.to(it, vars);
       });
-      
+
     }
 
     function onSlideClick(e) {
@@ -283,7 +286,10 @@ window.onload = () => {
       if (slide) {
         const index = parseInt(slide.dataset.swiperSlideIndex, 10);
         changeZoom(slide);
-        carousel.slideTo(index);
+
+        if(typeof(carousel)!=='undefined' && carousel !== null){
+          carousel.slideTo(index);
+        }
       };
     }
   }
@@ -296,8 +302,8 @@ window.onload = () => {
   }
 
   function getScrollbarWidth() {
-    var block = $('<div>').css({'height':'50px','width':'50px'});
-    var indicator = $('<div>').css({'height':'200px'});
+    var block = $('<div>').css({ 'height': '50px', 'width': '50px' });
+    var indicator = $('<div>').css({ 'height': '200px' });
 
     $('body').append(block.append(indicator));
 

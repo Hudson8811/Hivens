@@ -52,7 +52,10 @@ $(window).on("load", () => {
 
 					this.classList.add("active");
 					filterSlides(this);
-					filterCarousel.slideTo($(this).index());
+					if (typeof (filterCarousel) !== 'undefined' && filterCarousel !== null) {
+						filterCarousel.slideTo($(this).index());
+					}
+
 				});
 			});
 

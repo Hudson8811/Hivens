@@ -8,8 +8,8 @@ $(document).ready(function () {
     }
 
     const filterBtns = document.querySelectorAll(
-        ".search-filters__button:not(.search-filters__button--dropdown)"
-      ),
+      ".search-filters__button:not(.search-filters__button--dropdown)"
+    ),
       dropBtn = document.querySelector(".search-filters__button--dropdown"),
       dropLinks = document.querySelectorAll(".search-filters__dropdown a"),
       dropdown = dropBtn.querySelector(".search-filters__dropdown"),
@@ -21,7 +21,10 @@ $(document).ready(function () {
         dropBtn.classList.remove("active");
         filterBtns.forEach((n) => n.classList.remove("active"));
         el.classList.add("active");
-        searchSlider.slideTo($(this).index());
+
+        if (typeof (searchSlider) !== 'undefined' && searchSlider !== null) {
+          searchSlider.slideTo($(this).index());
+        }
       });
     });
 
@@ -40,10 +43,10 @@ $(document).ready(function () {
       } else {
         dropLinks.forEach(function (el, index) {
           if (e.target === el ||
-              e.target === el.querySelector('span') ||
-              e.target === el.querySelector('svg') ||
-              e.target === el.querySelector('use') ||
-              e.target === el.querySelector('path')) {
+            e.target === el.querySelector('span') ||
+            e.target === el.querySelector('svg') ||
+            e.target === el.querySelector('use') ||
+            e.target === el.querySelector('path')) {
             e.preventDefault();
             dropBtn.querySelector("span").innerHTML = el.innerHTML + "...";
             dropdown.classList.remove("open");
@@ -69,7 +72,7 @@ $(document).ready(function () {
 
     searchSlider = new Swiper(".search-filters", {
       slidesPerView: "auto",
-      preventClicks :true,
+      preventClicks: true,
       a11y: false,
       breakpoints: {
         768: {

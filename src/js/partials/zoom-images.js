@@ -39,8 +39,8 @@ window.addEventListener('load', () => {
 
 				changeFloors(index);
 
-				if (schemaSlider) {
-					schemaSlider.slideTo(index)
+				if(typeof(schemaSlider)!=='undefined' && schemaSlider !== null){
+					schemaSlider.slideTo(index);
 				}
 			}
 		}
@@ -93,7 +93,7 @@ window.addEventListener('load', () => {
 				width: ${index === 7 ? 41 : 34.1}%;
 			`;
 		}
-		
+
 		checkWidth();
 	}
 

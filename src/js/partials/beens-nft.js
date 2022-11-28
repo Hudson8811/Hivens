@@ -73,7 +73,10 @@ $(window).on('load', () => {
               filters.removeClass('active');
               $(this).addClass('active');
               filterSwiper(this);
-              filterCarousel.slideTo($(this).index());
+
+              if(typeof(filterCarousel)!=='undefined' && filterCarousel !== null){
+                filterCarousel.slideTo($(this).index());
+              }
             })
           })
 
