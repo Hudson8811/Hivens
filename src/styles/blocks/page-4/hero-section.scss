@@ -33,11 +33,19 @@
     }
 
     &--nodes {
-      left: 20px;
+      @include min(1290) {
+        left: -35px;
+      }
+      img{
+        @include min(1290) {
+          max-width: 97% !important;
+        }
+      }
 
       @include max(sm) {
         left: 0;
       }
+
     }
 
     &-text {
