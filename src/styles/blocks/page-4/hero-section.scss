@@ -34,12 +34,7 @@
 
     &--nodes {
       @include min(1290) {
-        left: -2px;
-      }
-      img{
-        @include min(1290) {
-          max-width: 97% !important;
-        }
+        left: -11px;
       }
 
       @include max(sm) {
